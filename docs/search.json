@@ -68,5 +68,61 @@
     "title": "Syllabus",
     "section": "Resources",
     "text": "Resources\n\nCourse Website and Moodle\nThe course website will be regularly updated with lecture slides, project information, assignments, and other course resources. Assignments and grades will be submitted via Moodle. You should check both regularly.\n\n\nComputing\nThe use of the R statistical computing environment with the RStudio interface is thoroughly integrated into the course. You have two options for using RStudio:\n\nThe server version of RStudio on the web. The advantage of using the server version is that all of your work will be stored in the cloud, where it is automatically saved and backed up. This means that you can access your work from any computer with a web browser (Firefox is recommended) and an Internet connection.\nA desktop version of RStudio installed on your machine. The downside to this approach is that your work is only stored locally, and you will have to manage your own installation.\n\nNote that you do not have to choose one or the other – you may use both. However, it is important that you understand the distinction so that you can keep track of your work. Both R and RStudio are free and open-source, and are installed on most computer labs on campus. Please see the Resources page for help with R.\n\n\nUse of Technology during Class\nAs we will always be using our computers to attend this course, I hope it goes without saying that while the class is in session, you should resist the temptation to use your computer or cell phone for personal email, web browsing, social media, or any activity that’s not related to the class.\n\n\nWriting\nYour ability to communicate results, which may be technical in nature, to your audience, which is likely to be non-technical, is critical to your success as a data analyst. The assignments in this class will place an emphasis on the clarity of your writing.\n\n\nExtra Help\nThere are Statistics TAs available from 7:00-9:00pm on Sunday–Thursday evenings in Sabin-Reed 301. In addition, the Spinelli Center for Quantitative Learning (Seeley 207) supports students doing quantitative work across the curriculum. Your fellow students are also an excellent source for explanations, tips, etc.\n\n\nTentative Schedule\nPlease refer to the complete day-to-day schedule for more detailed information."
+  },
+  {
+    "objectID": "lectures/01_intro_to_experimental.html#welcome-to-sds-290",
+    "href": "lectures/01_intro_to_experimental.html#welcome-to-sds-290",
+    "title": "Research Design and Analysis",
+    "section": "Welcome to SDS 290!",
+    "text": "Welcome to SDS 290!\nComplete the course questionnaire: https://bit.ly/sds290survey"
+  },
+  {
+    "objectID": "lectures/01_intro_to_experimental.html#introductions",
+    "href": "lectures/01_intro_to_experimental.html#introductions",
+    "title": "Research Design and Analysis",
+    "section": "Introductions",
+    "text": "Introductions\nWho am I?\n\nProf. Randi Garcia\nShe/her pronouns\nMy goals for this course\nFavorite animal: Hamsters!\n\n========================================================\n\nPigs"
+  },
+  {
+    "objectID": "lectures/01_intro_to_experimental.html#goals",
+    "href": "lectures/01_intro_to_experimental.html#goals",
+    "title": "Research Design and Analysis",
+    "section": "Goals",
+    "text": "Goals\nNow it is your turn. But first, let’s do a 2-minute free write\n\nOn a piece of paper (or blank word-processing file).\nFor 2 minutes, write about:\n\nYour goals for this course,\nWhat you hope to learn, and\nSome fun things you’ll do over Spring semester\n\nPollEverywhere!"
+  },
+  {
+    "objectID": "lectures/01_intro_to_experimental.html#introductions-1",
+    "href": "lectures/01_intro_to_experimental.html#introductions-1",
+    "title": "Research Design and Analysis",
+    "section": "Introductions",
+    "text": "Introductions\nIn groups of three introduce yourselves…\n\nName\nPronouns\nOne goal for this course\nFavorite animal"
+  },
+  {
+    "objectID": "lectures/01_intro_to_experimental.html#introduction-to-sdsmth-290",
+    "href": "lectures/01_intro_to_experimental.html#introduction-to-sdsmth-290",
+    "title": "Research Design and Analysis",
+    "section": "Introduction to SDS/MTH 290",
+    "text": "Introduction to SDS/MTH 290\n\nCourse website at https://bit.ly/sds290fall2021\nSyllabus"
+  },
+  {
+    "objectID": "lectures/01_intro_to_experimental.html#our-first-experiment",
+    "href": "lectures/01_intro_to_experimental.html#our-first-experiment",
+    "title": "Research Design and Analysis",
+    "section": "Our First Experiment",
+    "text": "Our First Experiment\nincremental: true\nGet in breakout groups of ~8 we will discuss.\nAs you participate in the experiment remember: - what you saw - what you did - the order in which it happened.\nTo participate, find the experiment link in the course schedule!!"
+  },
+  {
+    "objectID": "lectures/01_intro_to_experimental.html#our-first-experiment-1",
+    "href": "lectures/01_intro_to_experimental.html#our-first-experiment-1",
+    "title": "Research Design and Analysis",
+    "section": "Our First Experiment",
+    "text": "Our First Experiment\nincremental: true In your groups: - Take turns describing what you saw/did. - Your objective, as a group, is to describe the FULL experimental design.\nDiscussion questions: - What were all of the possibilities? How do you think that was determined? - Which conditions were distributed across people, and which within people? - What do you think are the possible research questions answered by this study?"
+  },
+  {
+    "objectID": "lectures/01_intro_to_experimental.html",
+    "href": "lectures/01_intro_to_experimental.html",
+    "title": "Research Design and Analysis",
+    "section": "",
+    "text": "Complete the course questionnaire: https://bit.ly/sds290survey"
   }
 ]

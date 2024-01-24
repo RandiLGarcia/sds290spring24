@@ -19,5 +19,11 @@
   },
   "homework.qmd": {
     "homework.html": "1aafffe6"
+  },
+  "lectures/01_intro_to_experimental.qmd": {
+    "01_intro_to_experimental.html": "5f75a88b"
+  },
+  "lectures/01_intro_to_experimental copy.qmd": {
+    "01_intro_to_experimental copy.pptx": "41c9236f"
   }
 }
