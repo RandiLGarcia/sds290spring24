@@ -7,7 +7,7 @@ format: revealjs
 
 ## Welcome to **SDS 290**!
 
-Complete the course questionnaire: https://bit.ly/sds290survey
+Complete the course questionnaire: https://bit.ly/sds290spring24
 
 ## Introductions
 
@@ -20,11 +20,8 @@ Who am I?
 
 ========================================================
 
-![Pigs](01_intro_to_experimental-figure/pigs3.jpeg)
-
-------------------------------------------------------------------------
-
-![Pigs](01_intro_to_experimental-figure/pigs2.JPG)
+![Pigs](pics/pigs3.jpeg)
+![Pigs](pics/pigs2.JPG)
 
 ## Goals
 
@@ -53,27 +50,19 @@ In groups of three introduce yourselves...
 
 ## Our First Experiment
 
-incremental: true 
+incremental: true
 
 Get in breakout groups of \~8 we will discuss.
 
-As you participate in the experiment remember: 
-- what you saw - what you did 
-- the order in which it happened.
+As you participate in the experiment remember: - what you saw - what you did - the order in which it happened.
 
 To participate, find the experiment link in the course schedule!!
 
 ## Our First Experiment
 
-incremental: true 
-In your groups: 
-- Take turns describing what you saw/did. 
-- Your objective, as a group, is to describe the FULL experimental design.
+incremental: true In your groups: - Take turns describing what you saw/did. - Your objective, as a group, is to describe the FULL experimental design.
 
-Discussion questions: 
-- What were all of the possibilities? How do you think that was determined? 
-- Which conditions were distributed *across* people, and which *within* people? 
-- What do you think are the possible research questions answered by this study?
+Discussion questions: - What were all of the possibilities? How do you think that was determined? - Which conditions were distributed *across* people, and which *within* people? - What do you think are the possible research questions answered by this study?
 
 <!-- New Section -->
 

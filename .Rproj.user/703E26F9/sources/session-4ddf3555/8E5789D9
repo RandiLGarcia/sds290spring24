@@ -3,7 +3,7 @@
     "path": "~/Dropbox/Teaching/SDS-290/Spring2024-sds290/www-quarto/_quarto.yml",
     "project_path": "_quarto.yml",
     "type": "yaml",
-    "hash": "870501769",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1706121528984.0,
@@ -12,8 +12,8 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "33,54",
-        "scrollLine": "20"
+        "cursorPosition": "34,36",
+        "scrollLine": "27"
     },
     "folds": "",
     "lastKnownWriteTime": 1706126336,
