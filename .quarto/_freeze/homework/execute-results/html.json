@@ -1,0 +1,15 @@
+{
+  "hash": "12adf5046ee77e76f9d23ff371a413aa",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: 'Homework'\n---\n\n\n1.  Due Friday, September 3rd and 10th:\n    -   HW #1a: Record your names on Moodle name coach\n    -   HW #1b: [CITI Training](HW1b_CITI-Training.pdf)\n    -   [HW #1c: Getting started with R](labs/intro_to_r.html)\n2.  Due Friday, September 17th:\n    -   HW #2: 5.11, 5.16, 5.18, 5.27 (a only), 5.32\n3.  Due Friday, September 24th:\n    -   HW #3: 5.38, 5.54, 5.59, 5.60, 5.70\n4.  Due Friday, October 1st:\n    -   HW #4: 5.36, 5.43, 5.46, 5.61\n5.  Due Friday, October 15th:\n    -   HW #5: 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)\n6.  Due Friday, November 5th:\n    -   HW #6: 6.1, 6.5, 6.26, 6.36, 6.37\n7.  Due Friday, November 12th:\n    -   HW #7: 7.5, 7.7, 7.8, 7.11, 7.12, find a peer-reviewed journal article that uses ANOVA and upload with your HW.\n8.  Due Friday, November 19th:\n    -   HW #8: 7.20, 7.21, 7.22, 7.34, 7.38\n9.  Due Friday, December 3rd:\n    -   HW #9: 8.1, 8.3, 8.6, 8.12, 8.14\n\n![](https://c.tenor.com/xATuBt2dRhwAAAAM/kitten-cat.gif)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

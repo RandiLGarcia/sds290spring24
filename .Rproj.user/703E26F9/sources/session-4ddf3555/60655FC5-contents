@@ -1,0 +1,139 @@
+name: www
+exclude:
+- makefile
+- gfx
+- lectures/figure
+navbar:
+  title: SDS 290 - Spring 2024
+  left:
+  - text: Home
+    icon: fa-home
+    href: index.html
+  - text: Syllabus
+    href: syllabus.html
+  - text: Schedule
+    href: schedule.html
+  - text: Resources
+    menu:
+    - text: Helpful Links
+      href: resources.html
+    - text: Downloading R and RStudio
+      href: Downloading_R_and_RStudio.pdf
+    - text: Modern Data Science with R
+      href: https://mdsr-book.github.io/mdsr2e/
+    - text: Troubleshooting R Markdown
+      href: https://smithcollege-sds.github.io/sds-www/rmarkdown_problems.html
+    - text: Qualtrics
+      href: https://smithcollege.qualtrics.com/
+    - text: Data Ethics Resources
+      href: data-ethics.html
+  - text: Lectures
+    menu:
+    - text: Notes
+    - text: 01 - Intro to Experimental Design
+      href: lectures/01_intro_to_experimental.html
+    - text: 02 - One-Way ANOVA
+      href: lectures/02_one-way-ANOVA.html
+    - text: 03 - One-Way ANOVA II
+      href: lectures/03_one-way-ANOVAII.html
+    - text: 04 - Inference for ANOVA
+      href: lectures/04_inference-ANOVA.html
+    - text: 05 - ANOVA Conditions
+      href: lectures/05_ANOVA-conditions.html
+    - text: 06 - Confidence Intervals and Effect Sizes
+      href: lectures/06_CI-effect-sizes.html
+    - text: 07 - Multiple Comparisons
+      href: lectures/07_multiple-comparisons.html
+    - text: 08 - Four Designs
+      href: lectures/08_four-designs.html
+    - text: 09 - Intro to Blocking
+      href: lectures/09_intro_to_blocking.html  
+    - text: 10 - Analysis of Complete Block
+      href: lectures/10_complete_block.html       
+    - text: 11 - Assessing the Complete Block  
+      href: lectures/11_assessing_cb.html
+    - text: Exam 1 Review
+      href: lectures/12_exam1_review.html
+    - text: 13 - Two-Way Factorial
+      href: lectures/13_two-way_factorial.html   
+    - text: 14 - Two-Way Factorial (cont.)
+      href: lectures/14_two-way_factorial_II.html 
+    - text: 15 - Assessing Two-Way Factorial Designs
+      href: lectures/15_assess_factorial.html 
+    - text: 16 - Fitting Two-Way Factorial Designs
+      href: lectures/16_fit_factorial.html  
+    - text: 17 - Chapter 7 Catch-up
+      href: lectures/17_catch-up_factorial.html
+    - text: 18 - Mini Project 2 Work Time
+      href: lectures/18_MP2_time.html  
+    - text: 19 - Repeated Measures
+      href: lectures/19_repeated_measures.html  
+    - text: 20 - Repeated Measures (cont.)
+      href: lectures/20_repeated_measures_II.html  
+    - text: 21 - MP2 Data Analysis
+      href: lectures/21_mp2_data_analysis.html
+    - text: 22 - Exam 2 Review
+      href: lectures/22_exam2_review.html       
+  - text: Code
+    menu:
+    - text: 01 - Animal Data
+      href: lectures/01_animal_data.Rmd
+    - text: 02 - Informal ANOVA
+      href: lectures/02_informal_anova.Rmd
+    - text: 03 - Formal ANOVA
+      href: lectures/05_formal_anova.Rmd
+    - text: 04 - SandwichAnts Analysis
+      href: lectures/SandwichAnts_analysis.rmd
+    - text: 05 - Two-Way Factorial Design
+      href: lectures/09_two-way_fac_inR.Rmd    
+    - text: 06 - Complete Block, Spilt-Plot Design in R
+      href: lectures/13_spitplot_design_inR.Rmd       
+#    - text: 06 - Extensions in R
+#      href: lectures/15_extensions_inR.Rmd    
+#    - text: 07 - Multiple Comparisons
+#      href: lectures/18_multiple_comparisons_and_assumptions.Rmd             
+  - text: Homework
+    menu:
+    - text: 'HW1a: Record your names on Moodle'
+      href: http://moodle.smith.edu
+    - text: 'HW1b: CITI Training'
+      href: HW 1b_CITI Training.pdf
+    - text: 'HW1c: Getting started with R'
+      href: labs/intro_to_r.html
+    - text: 'HW2: 5.11, 5.16, 5.18, 5.27 (a only), 5.32'
+      href: homework.html
+    - text: 'HW3: 5.38, 5.54, 5.59, 5.60, 5.70'
+      href: homework.html
+    - text: 'HW4: 5.36, 5.43, 5.46, 5.61'
+      href: homework.html
+    - text: 'HW5: 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)'
+      href: homework.html
+    - text: 'HW6: 6.1, 6.5, 6.26, 6.36, 6.37'
+      href: homework.html
+    - text: 'HW7: 7.5, 7.7, 7.8, 7.11, 7.12, journal article'
+      href: homework.html  
+    - text: 'HW8: 7.20, 7.21, 7.22, 7.34, 7.38'
+      href: homework.html      
+    - text: 'HW9: 8.1, 8.3, 8.6, 8.12, 8.14'      
+      href: homework.html          
+  - text: Projects
+    menu:
+#    - text: Project
+    - text: 'Mini project 1'
+      href: mini-project-1.html
+    - text: 'Mini Project 2'
+      href: mini-project-2.html
+#    - text: Advice
+  - text: Book Zoom OHs
+    href: https://randigarcia.youcanbook.me/
+output:
+  html_document:
+    theme: journal
+    highlight: textmate
+    css: include/randilgarcia.css
+    include:
+      after_body: include/after_body.html
+    lib_dir: site_libs
+    self_contained: no
+output_dir: docs
+

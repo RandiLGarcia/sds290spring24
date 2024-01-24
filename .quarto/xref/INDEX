@@ -1,0 +1,23 @@
+{
+  "index.qmd": {
+    "index.html": "1a06cf23"
+  },
+  "about.qmd": {
+    "about.html": "d6971a2d"
+  },
+  "syllabus.qmd": {
+    "syllabus.html": "62be7991"
+  },
+  "schedule.qmd": {
+    "schedule.html": "e1cfeba1"
+  },
+  "homework.Rmd": {
+    "homework.html": "a34c547c"
+  },
+  "index-original.qmd": {
+    "index-original.html": "6c8c626a"
+  },
+  "homework.qmd": {
+    "homework.html": "1aafffe6"
+  }
+}
