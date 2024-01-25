@@ -1,13 +1,17 @@
 ---
-title: "Research Design and Analysis"
+title: "SDS 290 Research Design and Analysis"
 author: Prof Randi Garcia
 date: January 24, 2024
-format: revealjs
+format: 
+  revealjs:
+    theme: default
 ---
 
-## Welcome to **SDS 290**!
+## Welcome to SDS 290!
 
-Complete the course questionnaire: https://bit.ly/sds290spring24
+Please complete the course questionnaire: 
+
+**bit.ly/sds290spring24**
 
 ## Introductions
 
@@ -18,20 +22,24 @@ Who am I?
 -   My goals for this course
 -   Favorite animal: Hamsters!
 
-========================================================
+## Guinea Pigs
+![Tia and Tamera](pics/pigs2.JPG)
 
-![Pigs](pics/pigs3.jpeg)
-![Pigs](pics/pigs2.JPG)
+## Dog and Baby and Teenagers
+![Naomi, Devyn, and Roux](pics/ipad.png)
+
+## Dog and Baby and Teenagers
+![Amelia and Devyn](pics/phone.png)
 
 ## Goals
 
 Now it is your turn. But first, let's do a 2-minute free write
 
--   On a piece of paper (or blank word-processing file).
+-   On a piece of paper (or blank word-processing file)
 -   For 2 minutes, write about:
     -   Your goals for this course,
     -   What you hope to learn, and
-    -   Some fun things you'll do over Spring semester
+    -   Some fun things you're looking forward to this semester
 -   PollEverywhere!
 
 ## Introductions
@@ -43,26 +51,37 @@ In groups of three introduce yourselves...
 -   One goal for this course
 -   Favorite animal
 
-## Introduction to SDS/MTH 290
+## Introduction to SDS 290
 
--   Course website at https://bit.ly/sds290fall2021
--   Syllabus
-
-## Our First Experiment
-
-incremental: true
-
-Get in breakout groups of \~8 we will discuss.
-
-As you participate in the experiment remember: - what you saw - what you did - the order in which it happened.
-
-To participate, find the experiment link in the course schedule!!
+-   Course website at **randilgarcia.github.io/sds290spring24/**
+-   Let's go through the syllabus
 
 ## Our First Experiment
 
-incremental: true In your groups: - Take turns describing what you saw/did. - Your objective, as a group, is to describe the FULL experimental design.
+::: {.incremental}
 
-Discussion questions: - What were all of the possibilities? How do you think that was determined? - Which conditions were distributed *across* people, and which *within* people? - What do you think are the possible research questions answered by this study?
+- Get in breakout groups of \~8 we will discuss.
+- As you participate in the experiment remember: 
+  - what you saw 
+  - what you did 
+  - the order in which it happened.
+- To participate, find the experiment link in the course schedule!!
+
+:::
+
+## Our First Experiment
+
+::: {.incremental}
+
+- In your groups: 
+  - Take turns describing what you saw/did. 
+  - Your objective, as a group, is to describe the FULL experimental design.
+- Discussion questions: 
+  - What were all of the possibilities? How do you think that was determined? 
+  - Which conditions were distributed *across* people, and which *within* people? 
+  - What do you think are the possible research questions answered by this study?
+
+:::
 
 <!-- New Section -->
 

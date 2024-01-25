@@ -95,11 +95,9 @@ website:
       - text: Homework
         menu:
         - text: 'HW1a: Record your names on Moodle'
- #         href: http://moodle.smith.edu
+          href: http://moodle.smith.edu
         - text: 'HW1b: CITI Training'
- #         href: HW 1b_CITI Training.pdf
-        - text: 'HW1c: Getting started with R'
- #         href: labs/intro_to_r.html
+          href: pdfs/HW 1b_CITI Training.pdf
         # - text: 'HW2: 5.11, 5.16, 5.18, 5.27 (a only), 5.32'
         #   href: homework.html
         # - text: 'HW3: 5.38, 5.54, 5.59, 5.60, 5.70'
