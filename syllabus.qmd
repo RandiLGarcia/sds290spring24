@@ -9,7 +9,7 @@ output:
 
 #### Instructor
 
--   Randi Garcia (`rgarcia@smith.edu`). Bass Hall 412. Randi's office hours will be held on Thursdays 2:45p-4:00p, Fridays 10:50a-12:05p, or by appointment. 
+-   Randi Garcia (`rgarcia@smith.edu`). Bass Hall 412. Randi's office hours will be held on Thursdays 2:45p-4:00p, Fridays 10:50a-12:05p, or by appointment.
 
 #### Description and Goals
 
@@ -60,7 +60,7 @@ Much of this course will operate on a collaborative basis, and you are expected 
 
 #### Academic Honor Code Statement
 
-You must always provide appropriate citations for others’ work and ideas. Giving other scholars due credit in your written and oral communication is a fundamental social gesture in academic work—a way for us to acknowledge each other’s scholarship and signify that we respect each other. We’ll treat AI code-completion tools as “collaborators” in this class. Whenever you get help with your programming tasks or writing, it is crucial to provide clear and transparent attribution. Include a comment or annotation in your code and add citations in your text specifying that certain sections were generated with the help of an AI code-completion tool. In general, I prefer you to do the work on your own without the aid of generative AI tools.
+You must always provide appropriate citations for others' work and ideas. Giving other scholars due credit in your written and oral communication is a fundamental social gesture in academic work---a way for us to acknowledge each other's scholarship and signify that we respect each other. We'll treat AI code-completion tools as "collaborators" in this class. Whenever you get help with your programming tasks or writing, it is crucial to provide clear and transparent attribution. Include a comment or annotation in your code and add citations in your text specifying that certain sections were generated with the help of an AI code-completion tool. In general, I prefer you to do the work on your own without the aid of generative AI tools.
 
 Cases of dishonesty, plagiarism, or other infractions, will be reported to the Academic Honor Board. You must always provide appropriate citations for others' work and ideas. Giving other scholars due credit in your written and oral communication is a fundamental social gesture in academic work---a way for us to acknowledge each other's scholarship and signify that we respect each other.
 
@@ -102,7 +102,7 @@ Assignment <- c("Homework", "Participation", "Exams",
 
 `Percent of Total` <- c("40%", "10%", "20%", "10%", "20%", "100%")
 
-`Due Date` <- c("Fridays", "Daily", "Oct 22 and Dec 10", "Oct 20", "Dec 17", "")
+`Due Date` <- c("Fridays", "Daily", "Mar 14 and May 2", "Mar 29", "May 10", "")
 
 kable(cbind(Assignment, `Percent of Total`, `Due Date`))
 ```

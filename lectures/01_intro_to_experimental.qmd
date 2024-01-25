@@ -4,12 +4,13 @@ author: Prof Randi Garcia
 date: January 24, 2024
 format: 
   revealjs:
+    scrollable: true
     theme: default
 ---
 
 ## Welcome to SDS 290!
 
-Please complete the course questionnaire: 
+Please complete the course questionnaire:
 
 **bit.ly/sds290spring24**
 
@@ -23,12 +24,15 @@ Who am I?
 -   Favorite animal: Hamsters!
 
 ## Guinea Pigs
+
 ![Tia and Tamera](pics/pigs2.JPG)
 
 ## Dog and Baby and Teenagers
+
 ![Naomi, Devyn, and Roux](pics/ipad.png)
 
 ## Dog and Baby and Teenagers
+
 ![Amelia and Devyn](pics/phone.png)
 
 ## Goals
@@ -58,28 +62,28 @@ In groups of three introduce yourselves...
 
 ## Our First Experiment
 
-::: {.incremental}
+::: incremental
 
-- Get in breakout groups of \~8 we will discuss.
-- As you participate in the experiment remember: 
-  - what you saw 
-  - what you did 
-  - the order in which it happened.
-- To participate, find the experiment link in the course schedule!!
+-   Get in breakout groups of \~8 we will discuss.
+-   As you participate in the experiment remember:
+    -   what you saw
+    -   what you did
+    -   the order in which it happened.
+-   To participate, find the experiment link in the course schedule!!
 
 :::
 
 ## Our First Experiment
 
-::: {.incremental}
+::: incremental
 
-- In your groups: 
-  - Take turns describing what you saw/did. 
-  - Your objective, as a group, is to describe the FULL experimental design.
-- Discussion questions: 
-  - What were all of the possibilities? How do you think that was determined? 
-  - Which conditions were distributed *across* people, and which *within* people? 
-  - What do you think are the possible research questions answered by this study?
+-   In your groups:
+    -   Take turns describing what you saw/did.
+    -   Your objective, as a group, is to describe the FULL experimental design.
+-   Discussion questions:
+    -   What were all of the possibilities? How do you think that was determined?
+    -   Which conditions were distributed *across* people, and which *within* people?
+    -   What do you think are the possible research questions answered by this study?
 
 :::
 
