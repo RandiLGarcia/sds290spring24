@@ -29,11 +29,7 @@ Who am I?
 
 ## Dog and Baby and Teenagers
 
-![Naomi, Devyn, and Roux](pics/ipad.png)
-
-## Dog and Baby and Teenagers
-
-![Amelia and Devyn](pics/phone.png)
+Come to my office hours if you want to see pics of Naomi, Amelia, Devyn, and Roux!
 
 ## Goals
 
@@ -63,20 +59,17 @@ In groups of three introduce yourselves...
 ## Our First Experiment
 
 ::: incremental
-
 -   Get in breakout groups of \~8 we will discuss.
 -   As you participate in the experiment remember:
     -   what you saw
     -   what you did
     -   the order in which it happened.
 -   To participate, find the experiment link in the course schedule!!
-
 :::
 
 ## Our First Experiment
 
 ::: incremental
-
 -   In your groups:
     -   Take turns describing what you saw/did.
     -   Your objective, as a group, is to describe the FULL experimental design.
@@ -84,7 +77,6 @@ In groups of three introduce yourselves...
     -   What were all of the possibilities? How do you think that was determined?
     -   Which conditions were distributed *across* people, and which *within* people?
     -   What do you think are the possible research questions answered by this study?
-
 :::
 
 <!-- New Section -->
