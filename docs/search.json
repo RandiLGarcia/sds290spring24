@@ -319,7 +319,7 @@
     "href": "lectures/02_one-way-ANOVA.html#announcements",
     "title": "One-Way ANOVA",
     "section": "Announcements",
-    "text": "Announcements\n\nHomework 1a was due last Friday\nHomework 1b due on Friday 2/2\n\nSDS 290 Slack channels for HW questions\n\nHomework 2 will be submitted on gradescope\n\nOffice hours (Bass 412)\n\nThurs 2:45p - 4:00p\nFri 10:50a - 12:05p"
+    "text": "Announcements\n\nHomework 1a was due last Friday\nHomework 1b due on Friday 2/2\n\nSDS 290 Slack channels for HW questions\n\nHomework 2 will be submitted on gradescope\nOffice hours (Bass 412)\n\nThurs 2:45p - 4:00p\nFri 10:50a - 12:05p"
   },
   {
     "objectID": "lectures/02_one-way-ANOVA.html#why-model",
@@ -403,7 +403,7 @@
     "href": "lectures/02_one-way-ANOVA.html#one-way-anova",
     "title": "One-Way ANOVA",
     "section": "One-Way ANOVA",
-    "text": "One-Way ANOVA\n\nOne factor (explanatory variable) with any number of levels.\nOne quantitative (non-binary) response variable.\n\n\n\n# A tibble: 6 × 2\n  graduation chalk_est\n       &lt;dbl&gt;     &lt;dbl&gt;\n1       2022        16\n2       2023        25\n3       2023        17\n4       2022        24\n5       2023        30\n6       2021        36"
+    "text": "One-Way ANOVA\n\nOne factor (explanatory variable) with any number of levels.\nOne quantitative (non-binary) response variable.\n\n\n\n# A tibble: 6 × 2\n  graduation chalk_est\n       &lt;dbl&gt;     &lt;dbl&gt;\n1       2024      NA  \n2       2025       2.5\n3       2025      23.4\n4       2025      15  \n5       2025      20  \n6       2025      20"
   },
   {
     "objectID": "lectures/02_one-way-ANOVA.html#one-way-anova-1",
@@ -635,5 +635,12 @@
     "title": "One-Way ANOVA II",
     "section": "F-ratios and the F-distribution",
     "text": "F-ratios and the F-distribution\nFinally, the ratio of these two MS’s is called the F ratio. The following quantity is our test statistic for the null hypothesis that there are no treatment effects.\n\\[F = \\frac{{MS}_{Treatments}}{{MS}_{E}}\\]\nIf the null hypothesis is true, then F is a random variable \\(\\sim F({df}_{Treatments}, {df}_{E})\\). The F-distribution.\n\nqplot(x = rf(500, 3, 4), geom = \"density\")"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#data-cleaning",
+    "href": "lectures/02_one-way-ANOVA.html#data-cleaning",
+    "title": "One-Way ANOVA",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning"
   }
 ]

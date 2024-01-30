@@ -13,7 +13,7 @@ format:
 -   Homework 1a was due last Friday
 -   [Homework 1b](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://randilgarcia.github.io/sds290spring24/pdfs/HW%201b_CITI%20Training.pdf) due on Friday 2/2
     -   SDS 290 Slack channels for HW questions
--   Homework 2 will be submitted on gradescope    
+-   Homework 2 will be submitted on gradescope
 -   Office hours (Bass 412)
     -   Thurs 2:45p - 4:00p
     -   Fri 10:50a - 12:05p
@@ -70,14 +70,12 @@ format:
 ## What made this study an "Experiment"?
 
 ::: incremental
-
-- Can you assign experimental material to conditions? 
-- You have created those conditions 
-- If the material already comes in different "varieties", then it's an *observational* study 
-  - People with different psychiatric illnesses 
-  - Different species of plants 
-- Sometimes one study will have both **experimental** and **observational** explanatory variables.
-
+-   Can you assign experimental material to conditions?
+-   You have created those conditions
+-   If the material already comes in different "varieties", then it's an *observational* study
+    -   People with different psychiatric illnesses
+    -   Different species of plants
+-   Sometimes one study will have both **experimental** and **observational** explanatory variables.
 :::
 
 ## Defining Terms
@@ -112,22 +110,30 @@ Our data will be "off" in a systematic, non-random, way
 -   One factor (explanatory variable) with any number of levels.
 -   One quantitative (non-binary) response variable.
 
-```{r, message=FALSE, warning=FALSE, size="tiny"}
+```{r, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(readr)
 
 survey <- read_csv("https://randilgarcia.github.io/sds290spring24/data/class_survey_data.csv")
 
 survey %>%
-  select(grad, chalk_est) %>%
+  select(graduation, chalk_est) %>%
   head()
 ```
 
 ## One-Way ANOVA
 
 ```{r}
-qplot(x = graduation, y = chalk_est, data = survey)
+qplot(x = as.factor(graduation), y = chalk_est, data = survey)
 ```
+
+## Data Cleaning
+
+```{r}
+survey <- survey %>%
+  filter(chalk_est < 100)
+```
+
 
 ## One-Way ANOVA
 
