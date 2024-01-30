@@ -119,7 +119,7 @@ library(readr)
 survey <- read_csv("https://randilgarcia.github.io/sds290spring24/data/class_survey_data.csv")
 
 survey %>%
-  select(graduation, chalk_est) %>%
+  select(grad, chalk_est) %>%
   head()
 ```
 
