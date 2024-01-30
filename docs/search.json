@@ -319,7 +319,7 @@
     "href": "lectures/02_one-way-ANOVA.html#announcements",
     "title": "One-Way ANOVA",
     "section": "Announcements",
-    "text": "Announcements\n\nHomework 1a was due last Friday\nHomework 1b due on Friday 2/2\n\nSDS 290 Slack channels for HW questions\n\nHomework 2 will be submitted on gradescope\nOffice hours (Bass 412)\n\nThurs 2:45p - 4:00p\nFri 10:50a - 12:05p"
+    "text": "Announcements\n\nHomework 1a was due last Friday\nHomework 1b due on Friday 2/2\n\nSDS 290 Slack channels for HW questions\n\nHomework 2 will be submitted on gradescope\nOffice hours (Bass 412)\n\nThurs 2:45p - 4:00p\nFri office hours cancelled this week"
   },
   {
     "objectID": "lectures/02_one-way-ANOVA.html#why-model",
@@ -403,28 +403,28 @@
     "href": "lectures/02_one-way-ANOVA.html#one-way-anova",
     "title": "One-Way ANOVA",
     "section": "One-Way ANOVA",
-    "text": "One-Way ANOVA\n\nOne factor (explanatory variable) with any number of levels.\nOne quantitative (non-binary) response variable.\n\n\n\n# A tibble: 6 × 2\n  graduation chalk_est\n       &lt;dbl&gt;     &lt;dbl&gt;\n1       2024      NA  \n2       2025       2.5\n3       2025      23.4\n4       2025      15  \n5       2025      20  \n6       2025      20"
+    "text": "One-Way ANOVA\n\nOne factor (explanatory variable) with any number of levels.\nOne quantitative (non-binary) response variable.\n\n\nlibrary(tidyverse)\nlibrary(readr)\n\nsurvey &lt;- read_csv(\"https://randilgarcia.github.io/sds290spring24/data/class_survey_data.csv\")\n\nsurvey %&gt;%\n  select(graduation, chalk_est) %&gt;%\n  head()\n\n# A tibble: 6 × 2\n  graduation chalk_est\n       &lt;dbl&gt;     &lt;dbl&gt;\n1       2024      NA  \n2       2025       2.5\n3       2025      23.4\n4       2025      15  \n5       2025      20  \n6       2025      20"
   },
   {
     "objectID": "lectures/02_one-way-ANOVA.html#one-way-anova-1",
     "href": "lectures/02_one-way-ANOVA.html#one-way-anova-1",
     "title": "One-Way ANOVA",
     "section": "One-Way ANOVA",
-    "text": "One-Way ANOVA"
+    "text": "One-Way ANOVA\n\nqplot(x = as.factor(graduation), y = chalk_est, data = survey)"
   },
   {
     "objectID": "lectures/02_one-way-ANOVA.html#one-way-anova-2",
     "href": "lectures/02_one-way-ANOVA.html#one-way-anova-2",
     "title": "One-Way ANOVA",
     "section": "One-Way ANOVA",
-    "text": "One-Way ANOVA"
+    "text": "One-Way ANOVA\n\nqplot(x = graduation, y = chalk_est, data = survey, geom = \"boxplot\")"
   },
   {
     "objectID": "lectures/02_one-way-ANOVA.html#one-way-anova-3",
     "href": "lectures/02_one-way-ANOVA.html#one-way-anova-3",
     "title": "One-Way ANOVA",
     "section": "One-Way ANOVA",
-    "text": "One-Way ANOVA"
+    "text": "One-Way ANOVA\n\nqplot(x = factor(graduation), y = chalk_est, data = survey, geom = \"boxplot\")"
   },
   {
     "objectID": "lectures/02_one-way-ANOVA.html#the-meats",
@@ -641,6 +641,6 @@
     "href": "lectures/02_one-way-ANOVA.html#data-cleaning",
     "title": "One-Way ANOVA",
     "section": "Data Cleaning",
-    "text": "Data Cleaning"
+    "text": "Data Cleaning\n\nsurvey &lt;- survey %&gt;%\n  filter(chalk_est &lt; 100)"
   }
 ]

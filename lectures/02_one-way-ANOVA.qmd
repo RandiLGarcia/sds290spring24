@@ -16,7 +16,7 @@ format:
 -   Homework 2 will be submitted on gradescope
 -   Office hours (Bass 412)
     -   Thurs 2:45p - 4:00p
-    -   Fri 10:50a - 12:05p
+    -   Fri office hours cancelled this week
 
 ## Why Model?
 
@@ -110,7 +110,7 @@ Our data will be "off" in a systematic, non-random, way
 -   One factor (explanatory variable) with any number of levels.
 -   One quantitative (non-binary) response variable.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 library(tidyverse)
 library(readr)
 
@@ -123,27 +123,26 @@ survey %>%
 
 ## One-Way ANOVA
 
-```{r}
+```{r, echo=TRUE}
 qplot(x = as.factor(graduation), y = chalk_est, data = survey)
 ```
 
 ## Data Cleaning
 
-```{r}
+```{r, echo=TRUE}
 survey <- survey %>%
   filter(chalk_est < 100)
 ```
 
-
 ## One-Way ANOVA
 
-```{r}
+```{r, echo=TRUE}
 qplot(x = graduation, y = chalk_est, data = survey, geom = "boxplot")
 ```
 
 ## One-Way ANOVA
 
-```{r}
+```{r, echo=TRUE}
 qplot(x = factor(graduation), y = chalk_est, data = survey, geom = "boxplot")
 ```
 
