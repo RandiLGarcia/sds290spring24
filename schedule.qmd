@@ -4,6 +4,7 @@ title: "Schedule"
 
 Please read the specified sections *before* class that day.
 
+::: {#past style="color: lightgray"}
 ## Week 1
 
 #### Tue, Jan 23
@@ -13,7 +14,6 @@ Please read the specified sections *before* class that day.
 #### Thurs, Jan 25
 
 -   Introduction to the course
--   Four-step process
 -   [Course questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSdzrD35V7bkrvaTUIMUMo9nzx6e5fmzpDg6ceiYFbZOBBPuPw/viewform?usp=sf_link)
 -   [Short experiment](https://smithcollege.qualtrics.com/jfe/form/SV_71nqdhEpN8frd6B)
 -   Homework:
@@ -28,10 +28,13 @@ Please read the specified sections *before* class that day.
     -   Read **Stat2** Ch. 0 (PDF on Moodle)
     -   **HW #1a due today at 11:55p**
 
+:::
+
 ## Week 2
 
 #### Tue, Jan 30
 
+-   Four-step process
 -   One-way ANOVA
 -   Homework due today:
     -   Read **Stat2** Ch. 5.1-5.2 (Moodle)

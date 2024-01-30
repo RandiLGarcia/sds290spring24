@@ -130,14 +130,14 @@
     "href": "schedule.html#week-1",
     "title": "Schedule",
     "section": "Week 1",
-    "text": "Week 1\n\nTue, Jan 23\n\nNo class\n\n\n\nThurs, Jan 25\n\nIntroduction to the course\nFour-step process\nCourse questionnaire\nShort experiment\nHomework:\n\nHW #1a: record your name on Moodle\nHW #1b: CITI training\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Jan 26\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nRead Stat2 Ch. 0 (PDF on Moodle)\nHW #1a due today at 11:55p"
+    "text": "Week 1\n\nTue, Jan 23\n\nNo class\n\n\n\nThurs, Jan 25\n\nIntroduction to the course\nCourse questionnaire\nShort experiment\nHomework:\n\nHW #1a: record your name on Moodle\nHW #1b: CITI training\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Jan 26\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nRead Stat2 Ch. 0 (PDF on Moodle)\nHW #1a due today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-2",
     "href": "schedule.html#week-2",
     "title": "Schedule",
     "section": "Week 2",
-    "text": "Week 2\n\nTue, Jan 30\n\nOne-way ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.1-5.2 (Moodle)\n\n\n\n\nThurs, Feb 1\n\nOne-way ANOVA (cont.)\nHomework due today:\n\nRead Stat2 Ch. 5.3\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Feb 2\n\nOffice hours: cancelled today\nHomework due today:\n\nHW #1b due today at 11:55p"
+    "text": "Week 2\n\nTue, Jan 30\n\nFour-step process\nOne-way ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.1-5.2 (Moodle)\n\n\n\n\nThurs, Feb 1\n\nOne-way ANOVA (cont.)\nHomework due today:\n\nRead Stat2 Ch. 5.3\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Feb 2\n\nOffice hours: cancelled today\nHomework due today:\n\nHW #1b due today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-3",
@@ -313,5 +313,159 @@
     "title": "Schedule",
     "section": "Finals Week - MP2 due",
     "text": "Finals Week - MP2 due\n\nTue, May 7\n\nFinals week\n\n\n\nThurs, May 9\n\nFinals week\n\n\n\nFri, May 10\n\nMP2 due today at 11:55p"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#announcements",
+    "href": "lectures/02_one-way-ANOVA.html#announcements",
+    "title": "One-Way ANOVA",
+    "section": "Announcements",
+    "text": "Announcements\n\nHomework 1a was due last Friday\nHomework 1b due on Friday 2/2\n\nSDS 290 Slack channels for HW questions\n\nHomework 2 will be submitted on gradescope\n\nOffice hours (Bass 412)\n\nThurs 2:45p - 4:00p\nFri 10:50a - 12:05p"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#why-model",
+    "href": "lectures/02_one-way-ANOVA.html#why-model",
+    "title": "One-Way ANOVA",
+    "section": "Why Model?",
+    "text": "Why Model?\n\nMaking Predictions\nUnderstanding Relationships\nAssessing Differences"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#why-model-1",
+    "href": "lectures/02_one-way-ANOVA.html#why-model-1",
+    "title": "One-Way ANOVA",
+    "section": "Why Model?",
+    "text": "Why Model?\n\nMaking Predictions\nUnderstanding Relationships\nAssessing Differences"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#step-process",
+    "href": "lectures/02_one-way-ANOVA.html#step-process",
+    "title": "One-Way ANOVA",
+    "section": "4 Step Process",
+    "text": "4 Step Process\n\nChoose the model: What type of model?\nFit the model to the data\nAssess the model: Is the model adequate? Could it be simpler? Are assumptions met?\nUse: Answer the question of interest"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#step-process-1",
+    "href": "lectures/02_one-way-ANOVA.html#step-process-1",
+    "title": "One-Way ANOVA",
+    "section": "4 Step Process",
+    "text": "4 Step Process\n\nChoose the model: What type of model?\n\nWe design the experiment and collect the data to match the model.\n\nFit the model to the data\nAssess the model: Is the model adequate? Could it be simpler? Are assumptions met?\nUse: Answer the question of interest"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#our-first-experiment",
+    "href": "lectures/02_one-way-ANOVA.html#our-first-experiment",
+    "title": "One-Way ANOVA",
+    "section": "Our First Experiment",
+    "text": "Our First Experiment"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#our-first-experiment-1",
+    "href": "lectures/02_one-way-ANOVA.html#our-first-experiment-1",
+    "title": "One-Way ANOVA",
+    "section": "Our First Experiment",
+    "text": "Our First Experiment\n\nWhat were all of the possibilities? How do you think that was determined?\nWhich conditions were distributed across people, and which within people?\nWhat do you think are the possible research questions answered by this study?"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#our-first-experiment-2",
+    "href": "lectures/02_one-way-ANOVA.html#our-first-experiment-2",
+    "title": "One-Way ANOVA",
+    "section": "Our First Experiment",
+    "text": "Our First Experiment\n\nWhat were all of the possibilities? How do you think that was determined?\nWhich conditions were distributed across people, and which within people?\nWhat do you think are the possible research questions answered by this study?"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#what-made-this-study-an-experiment",
+    "href": "lectures/02_one-way-ANOVA.html#what-made-this-study-an-experiment",
+    "title": "One-Way ANOVA",
+    "section": "What made this study an “Experiment”?",
+    "text": "What made this study an “Experiment”?\n\n\nCan you assign experimental material to conditions?\nYou have created those conditions\nIf the material already comes in different “varieties”, then it’s an observational study\n\nPeople with different psychiatric illnesses\nDifferent species of plants\n\nSometimes one study will have both experimental and observational explanatory variables."
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#defining-terms",
+    "href": "lectures/02_one-way-ANOVA.html#defining-terms",
+    "title": "One-Way ANOVA",
+    "section": "Defining Terms",
+    "text": "Defining Terms\n\nBalanced Designs: all conditions (or treatments) have the same number of observations.\n\nUnbalanced design do not.\n\nExperimental Units: the element that gets randomized to conditions. We record one score on our response variable per unit.\nFactors and Levels: The factor is the entire explanatory variable. Also called an independent variable. A factor’s levels are the individual conditions (or treatments).\nResponse: The outcome variable. Also called dependent variable. We want to see if our factors have an effect on our response variable."
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#confounding-variables",
+    "href": "lectures/02_one-way-ANOVA.html#confounding-variables",
+    "title": "One-Way ANOVA",
+    "section": "Confounding Variables",
+    "text": "Confounding Variables\nI want to test if smelling a sweet food (fresh cinnamon rolls) versus a non-sweet food (broccoli) has an effect on salivation in humans. So, I recruit some participants to come to my lab, I’ll have to bake the cinnamon rolls and run that condition all at once, so I decide that I will bake my rolls at 9a, then from 10a-12p I will run the cinnamon roll condition. I bring people into individual distraction free rooms, hook them up to the salivation sensor, then bring them a plate with a freshly baked cinnamon roll. I record their salivation. Then, I will run the broccoli condition from 1p-3p, using the exact same measurement procedure.\nAre there any issues with my study?"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#bias",
+    "href": "lectures/02_one-way-ANOVA.html#bias",
+    "title": "One-Way ANOVA",
+    "section": "Bias",
+    "text": "Bias\nOur data will be “off” in a systematic, non-random, way\n\nSampling Bias: Biologist is using a net with large holes to capture a sample of fish from a lake.\nSelection Bias: Assigning the skinnier rats to the good lab chow."
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#one-way-anova",
+    "href": "lectures/02_one-way-ANOVA.html#one-way-anova",
+    "title": "One-Way ANOVA",
+    "section": "One-Way ANOVA",
+    "text": "One-Way ANOVA\n\nOne factor (explanatory variable) with any number of levels.\nOne quantitative (non-binary) response variable.\n\n\n\n# A tibble: 6 × 2\n  graduation chalk_est\n       &lt;dbl&gt;     &lt;dbl&gt;\n1       2022        16\n2       2023        25\n3       2023        17\n4       2022        24\n5       2023        30\n6       2021        36"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#one-way-anova-1",
+    "href": "lectures/02_one-way-ANOVA.html#one-way-anova-1",
+    "title": "One-Way ANOVA",
+    "section": "One-Way ANOVA",
+    "text": "One-Way ANOVA"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#one-way-anova-2",
+    "href": "lectures/02_one-way-ANOVA.html#one-way-anova-2",
+    "title": "One-Way ANOVA",
+    "section": "One-Way ANOVA",
+    "text": "One-Way ANOVA"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#one-way-anova-3",
+    "href": "lectures/02_one-way-ANOVA.html#one-way-anova-3",
+    "title": "One-Way ANOVA",
+    "section": "One-Way ANOVA",
+    "text": "One-Way ANOVA"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#the-meats",
+    "href": "lectures/02_one-way-ANOVA.html#the-meats",
+    "title": "One-Way ANOVA",
+    "section": "The Meats",
+    "text": "The Meats\nOne-Way Design\nThe shelf life of meats is the time a prepackaged cut remains salable, safe, and nutritious. Recent studies suggested controlled gas atmospheres as possible alternatives to existing packaging. To test this, beef steaks (75\\(g\\)) were randomly assigned to packaging with either 1) ambient air in a commercial plastic wrap, 2) vacuum packed, 3) 100% carbon dioxide (\\(CO_2\\)), or 4) a mixture of 1% carbon monoxide (CO), 40% oxygen (\\(O_2\\)), and 59% nitrogen (N). The number of psychrotrophic bacteria on the meat was measured after nine days of storage at 4 degrees C."
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#gender-bias-in-stem",
+    "href": "lectures/02_one-way-ANOVA.html#gender-bias-in-stem",
+    "title": "One-Way ANOVA",
+    "section": "Gender Bias in STEM",
+    "text": "Gender Bias in STEM\nOne-Way Design\nIn a randomized double-blind study (n = 127), science faculty from research-intensive universities rated the application materials of a student who was randomly assigned either a male or female name for a laboratory manager position. Faculty participants rated the male applicant as significantly more hireable than the (identical) female applicant. See materials here"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#acid-rain",
+    "href": "lectures/02_one-way-ANOVA.html#acid-rain",
+    "title": "One-Way ANOVA",
+    "section": "Acid Rain",
+    "text": "Acid Rain\nOne-Way Design\n“Clean” precipitation has a pH in the 5.0 to 5.5 range, but observed precipitation pH in northern New Hampshire is often in the 3.0 to 4.0 range. Is this acid rain hurting trees? 240 six-week-old yellow birch seedlings were randomly assigned to one of 5 groups. Each group received an acid rain mist at the following pH levels: 4.7, 4.0, 3.3, 3.0, and 2.3. After 17 weeks, the seedling were weighed, and their total plant (dry) weight was recorded."
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#leafhopper-survival",
+    "href": "lectures/02_one-way-ANOVA.html#leafhopper-survival",
+    "title": "One-Way ANOVA",
+    "section": "Leafhopper survival",
+    "text": "Leafhopper survival\nOne-Way Design\nIt is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group."
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#work-on-homework-1b",
+    "href": "lectures/02_one-way-ANOVA.html#work-on-homework-1b",
+    "title": "One-Way ANOVA",
+    "section": "Work on Homework 1b",
+    "text": "Work on Homework 1b\nFind instructions here"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#confounding-variables-1",
+    "href": "lectures/02_one-way-ANOVA.html#confounding-variables-1",
+    "title": "One-Way ANOVA",
+    "section": "Confounding Variables",
+    "text": "Confounding Variables\nConfounding variables vary systematically with the levels of the explanatory factor"
   }
 ]
