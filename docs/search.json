@@ -73,8 +73,8 @@
     "objectID": "lectures/01_intro_to_experimental.html#welcome-to-sds-290",
     "href": "lectures/01_intro_to_experimental.html#welcome-to-sds-290",
     "title": "SDS 290 Research Design and Analysis",
-    "section": "Welcome to SDS 290!",
-    "text": "Welcome to SDS 290!\nPlease complete the course questionnaire:\nbit.ly/sds290spring24"
+    "section": "",
+    "text": "Please complete the course questionnaire:\nbit.ly/sds290spring24"
   },
   {
     "objectID": "lectures/01_intro_to_experimental.html#introductions",
@@ -256,7 +256,7 @@
     "href": "lectures/01_intro_to_experimental.html#guinea-pigs",
     "title": "SDS 290 Research Design and Analysis",
     "section": "Guinea Pigs",
-    "text": "Guinea Pigs\n\nTia and Tamera"
+    "text": "Guinea Pigs\n\n\n\nTia and Tamera"
   },
   {
     "objectID": "lectures/01_intro_to_experimental.html#guinea-pigs-1",
@@ -467,5 +467,173 @@
     "title": "One-Way ANOVA",
     "section": "Confounding Variables",
     "text": "Confounding Variables\nConfounding variables vary systematically with the levels of the explanatory factor"
+  },
+  {
+    "objectID": "lectures/code/01_animal_data.html",
+    "href": "lectures/code/01_animal_data.html",
+    "title": "01 - Animal Data",
+    "section": "",
+    "text": "#Data Analysis\nLoading data.\n\nlibrary(tidyverse)\nlibrary(readr)\n\nanimals &lt;- read_csv(\"https://randilgarcia.github.io/sds290fall21/animals.csv\")\n\nCleaning the data\n\nanimals &lt;- animals %&gt;%\n  mutate(pID = seq.int(1, nrow(animals))) %&gt;%\n  select(pID, order, animal, \n         cute_calm, scary_calm, \n         cute_happy, scary_happy, \n         cute_nerv, scary_nerv, \n         cute_scared, scary_scared) %&gt;%\n  mutate_at(vars(cute_calm:scary_scared), as.numeric) %&gt;%\n  slice(3:length(animals))\n\nAnother way to think of the data\n\nanimals_long &lt;- animals %&gt;%\n  gather(var, value, cute_calm:scary_scared) %&gt;%\n  separate(var, c(\"cue\", \"emotion\"), sep = \"_\") %&gt;%\n  spread(emotion, value) \n\nVisualizing the variance\n\n#how do we visualize variability?\nqplot(x = calm, data = animals_long, bins = 5)\n\n\n\n\n\n\n\n\n\n#looking at variability by condition\nggplot(animals_long, aes(x = animal, fill = cue, y = calm)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "lectures/code/02_informal_anova.html",
+    "href": "lectures/code/02_informal_anova.html",
+    "title": "02 - Informal Analysis",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(mosaic)\nlibrary(readr)\n\nanimals &lt;- read_csv(\"https://randilgarcia.github.io/sds290fall21/animals.csv\")\n\nanimals &lt;- animals %&gt;%\n  mutate(student = seq.int(1, nrow(animals))) %&gt;%\n  select(student, order, animal, cute_calm, scary_calm, cute_happy, scary_happy, \n         cute_nerv, scary_nerv, cute_scared, scary_scared) %&gt;%\n  mutate_at(vars(cute_calm:scary_scared), as.numeric) %&gt;%\n  slice(3:length(animals)) %&gt;% \n  filter(!is.na(cute_calm), !is.na(scary_calm)) %&gt;%\n  gather(var, value, cute_calm:scary_scared) %&gt;%\n  separate(var, c(\"cue\", \"emotion\"), sep = \"_\") %&gt;%\n  spread(emotion, value) %&gt;%\n  unite(cell, cue, animal, remove = FALSE) %&gt;%\n  select(student, animal, cue, cell, calm)"
+  },
+  {
+    "objectID": "lectures/code/02_informal_anova.html#assembly-line-instructions",
+    "href": "lectures/code/02_informal_anova.html#assembly-line-instructions",
+    "title": "02 - Informal Analysis",
+    "section": "Assembly Line Instructions",
+    "text": "Assembly Line Instructions\nTo make the set of assembly instructions, first we calculate the effects of all of our structural factors under the Fisher assumptions. We use the data to calculate all of these effects.\nThe chunks of code below calculate all of the pieces we’ll need in our assembly line. Each chunk is a station. The ANOVA conditions assumptions are built into the way we are calculating our assembly line instructions and when simulating the data below.\n\nanimals_sim &lt;- animals %&gt;%\n  mutate(benchmark = mean(calm)) #benckmark is the grand average or grand mean\n\n\nanimals_sim &lt;- animals_sim %&gt;%\n  group_by(animal) %&gt;%\n  mutate(animal_mean = mean(calm),\n         aminal_effect = animal_mean - benchmark) #for each level of animal factor\n\n\nanimals_sim &lt;- animals_sim %&gt;%\n  group_by(cue) %&gt;%\n  mutate(cue_mean = mean(calm),\n         cue_effect = cue_mean - benchmark) #for each level of cue factor\n\n\nanimals_sim &lt;- animals_sim %&gt;%\n  group_by(cell) %&gt;%\n  mutate(cell_mean = mean(calm),\n         interaction_effect = cell_mean - (animal_mean + cue_mean - benchmark)) #for each cell of interaction\n\n\nanimals_sim &lt;- animals_sim %&gt;%\n  group_by(student) %&gt;% \n  mutate(student_mean = mean(calm),\n         student_effect = student_mean - animal_mean) #for each level of student factor, nuisance factor\n\n\nanimals_sim &lt;- animals_sim %&gt;%\n  ungroup() %&gt;%\n  mutate(residuals = calm - (benchmark \n                             + aminal_effect \n                             + cue_effect \n                             + interaction_effect \n                             + student_effect)) %&gt;% #universal factor\n  select(-animal_mean, -cue_mean, \n         -cell_mean, -student_mean) #removing the stuff we don't need\n\nLastly, we create a blank calm variable such that we can simulate it next.\n\nanimals_sim &lt;- animals_sim %&gt;%\n  mutate(calm_sim = NA) #initializing simulated variable"
+  },
+  {
+    "objectID": "lectures/code/02_informal_anova.html#simulating-data",
+    "href": "lectures/code/02_informal_anova.html#simulating-data",
+    "title": "02 - Informal Analysis",
+    "section": "Simulating Data",
+    "text": "Simulating Data\nNext, we can simulate new calm data using our effect size calculations, with some assumptions in mind.\n\nanimals_sim &lt;- animals_sim %&gt;%\n  mutate(calm_sim = benchmark \n         + aminal_effect \n         + cue_effect \n         + interaction_effect \n         + student_effect\n         + rnorm(82, 0, 0.79)) #SIMULATED residuals factor"
+  },
+  {
+    "objectID": "lectures/code/02_informal_anova.html#comparing-simulated-data-to-real-data",
+    "href": "lectures/code/02_informal_anova.html#comparing-simulated-data-to-real-data",
+    "title": "02 - Informal Analysis",
+    "section": "Comparing Simulated Data to Real Data",
+    "text": "Comparing Simulated Data to Real Data\nLet’s visualize the data\n\nParallel dot graph\n\nggplot(animals_sim, aes(x = animal, y = calm_sim, color = cue)) +\n  geom_jitter(height = 0, width = 0.03, alpha = .7)\n\n\n\n\n\n\n\n\n\nggplot(animals, aes(x = animal, y = calm, color = cue)) +\n  geom_jitter(height = 0.10, width = 0.05, alpha = .7)\n\n\n\n\n\n\n\n\n\n\nSide-by-side Boxplots\n\nggplot(animals_sim, aes(x = animal, y = calm_sim, color = cue)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\nggplot(animals_sim, aes(x = animal, y = calm, color = cue)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "lectures/code/02_four_designs.html",
+    "href": "lectures/code/02_four_designs.html",
+    "title": "02 - Four Designs",
+    "section": "",
+    "text": "#Data Analysis\nLoading data.\n\nlibrary(dplyr)\nlibrary(tidyr)\nlibrary(ggplot2)\nlibrary(readr)\n\nanimals &lt;- read_csv(\"https://randilgarcia.github.io/sds290interterm21/animal_data.csv\")\n#hamsters &lt;- read_csv(\"https://randilgarcia.github.io/sds290interterm21/KellysHamsters.csv\")\n\nCleaning the data\n\nanimals &lt;- animals %&gt;%\n  mutate(pID = seq.int(1, nrow(animals))) %&gt;%\n  select(pID, order, animal, \n         cute_calm, scary_calm, \n         cute_happy, scary_happy, \n         cute_nerv, scary_nerv, \n         cute_scared, scary_scared) %&gt;%\n  mutate_at(vars(cute_calm:scary_scared), as.numeric) %&gt;%\n  slice(3:length(animals))\n\nAnother way to think of the data\n\nanimals_long &lt;- animals %&gt;%\n  gather(var, value, cute_calm:scary_scared) %&gt;%\n  separate(var, c(\"cue\", \"emotion\"), sep = \"_\") %&gt;%\n  spread(emotion, value) \n\nVisualizing the variance\n\n#how do we visualize variability?\nqplot(x = calm, data = animals_long, bins = 5)\n\n\n\n\n\n\n\n\n\n#looking at variability by condition\nggplot(animals_long, aes(x = animal, fill = cue, y = calm)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html",
+    "href": "lectures/code/03_one-way-ANOVAII.html",
+    "title": "One-Way ANOVA II",
+    "section": "",
+    "text": "HW1b and HW1c due tomorrow at 11:55p\n\nExercise 5\nAny more questions?\n\nIn-person Office hours (Bass 412)\n\nThurs (today) 1:20-2:35p\n\nZoom Office hours\n\nFull for this week!\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. More info coming soon."
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#announcements",
+    "href": "lectures/code/03_one-way-ANOVAII.html#announcements",
+    "title": "One-Way ANOVA II",
+    "section": "",
+    "text": "HW1b and HW1c due tomorrow at 11:55p\n\nExercise 5\nAny more questions?\n\nIn-person Office hours (Bass 412)\n\nThurs (today) 1:20-2:35p\n\nZoom Office hours\n\nFull for this week!\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. More info coming soon."
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#the-meats",
+    "href": "lectures/code/03_one-way-ANOVAII.html#the-meats",
+    "title": "One-Way ANOVA II",
+    "section": "The Meats",
+    "text": "The Meats\nOne-Way Randomized Design\nThe shelf life of meats is the time a prepackaged cut remains salable, safe, and nutritious. Recent studies suggested controlled gas atmospheres as possible alternatives to existing packaging. To test this, beef steaks (75\\(g\\)) were randomly assigned to packaging with either 1) ambient air in a commercial plastic wrap, 2) vacuum packed, 3) 100% carbon dioxide (\\(CO_2\\)), or 4) a mixture of 1% carbon monoxide (CO), 40% oxygen (\\(O_2\\)), and 59% nitrogen (N). The number of psychrotrophic bacteria on the meat was measured after nine days of storage at 4 degrees C."
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#gender-bias-in-stem",
+    "href": "lectures/code/03_one-way-ANOVAII.html#gender-bias-in-stem",
+    "title": "One-Way ANOVA II",
+    "section": "Gender Bias in STEM",
+    "text": "Gender Bias in STEM\nOne-Way Randomized Design\nIn a randomized double-blind study (n = 127), science faculty from research-intensive universities rated the application materials of a student who was randomly assigned either a male or female name for a laboratory manager position. Faculty participants rated the male applicant as significantly more hireable than the (identical) female applicant. See materials here"
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#acid-rain",
+    "href": "lectures/code/03_one-way-ANOVAII.html#acid-rain",
+    "title": "One-Way ANOVA II",
+    "section": "Acid Rain",
+    "text": "Acid Rain\nOne-Way Randomized Design\n“Clean” precipitation has a pH in the 5.0 to 5.5 range, but observed precipitation pH in northern New Hampshire is often in the 3.0 to 4.0 range. Is this acid rain hurting trees? 240 six-week-old yellow birch seedlings were randomly assigned to one of 5 groups. Each group received an acid rain mist at the following pH levels: 4.7, 4.0, 3.3, 3.0, and 2.3. After 17 weeks, the seedling were weighed, and their total plant (dry) weight was recorded."
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#assembly-line-metaphor-cobb-2008",
+    "href": "lectures/code/03_one-way-ANOVAII.html#assembly-line-metaphor-cobb-2008",
+    "title": "One-Way ANOVA II",
+    "section": "Assembly Line Metaphor (Cobb, 2008)",
+    "text": "Assembly Line Metaphor (Cobb, 2008)\n\nRemembering George Cobb"
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#assembly-line-metaphor",
+    "href": "lectures/code/03_one-way-ANOVAII.html#assembly-line-metaphor",
+    "title": "One-Way ANOVA II",
+    "section": "Assembly Line Metaphor",
+    "text": "Assembly Line Metaphor\n\nYou book used the CAT scan metaphor: \\[Body = Skeleton + Organ\\:System + Everything\\:Else\\]\nI prefer the assembly line metaphor, but whatever makes sense to you!"
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#simulation-in-r-assembly-line-metaphor",
+    "href": "lectures/code/03_one-way-ANOVAII.html#simulation-in-r-assembly-line-metaphor",
+    "title": "One-Way ANOVA II",
+    "section": "Simulation in R: Assembly Line Metaphor",
+    "text": "Simulation in R: Assembly Line Metaphor\n\nAssembly Line Metaphor code"
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#leafhopper-survival",
+    "href": "lectures/code/03_one-way-ANOVAII.html#leafhopper-survival",
+    "title": "One-Way ANOVA II",
+    "section": "Leafhopper survival",
+    "text": "Leafhopper survival\nOne-Way Design\nIt is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group."
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#decomposing-the-data",
+    "href": "lectures/code/03_one-way-ANOVAII.html#decomposing-the-data",
+    "title": "One-Way ANOVA II",
+    "section": "Decomposing the data",
+    "text": "Decomposing the data\n\n\n\n\n\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n1.7\n4.0\n2.7\n2.3\n\n\n\n\n\n\nLet’s draw a factor diagram, including a place for the grand mean and residuals."
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#leafhoppers",
+    "href": "lectures/code/03_one-way-ANOVAII.html#leafhoppers",
+    "title": "One-Way ANOVA II",
+    "section": "Leafhoppers",
+    "text": "Leafhoppers\nBar graph of treatment condition averages."
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#leafhoppers-1",
+    "href": "lectures/code/03_one-way-ANOVAII.html#leafhoppers-1",
+    "title": "One-Way ANOVA II",
+    "section": "Leafhoppers",
+    "text": "Leafhoppers\n\nWe’ll now start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.\nTo the factor diagram, let’s add in the grand mean, the effects for diet, and the residuals\n\n\n\n\n\n\nX.\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n\n1.7\n4.0\n2.7\n2.3\n\n\nmeans\n2.0\n3.8\n2.8\n2.2"
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#one-way-anova-model",
+    "href": "lectures/code/03_one-way-ANOVAII.html#one-way-anova-model",
+    "title": "One-Way ANOVA II",
+    "section": "One-way ANOVA Model",
+    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\n\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#analysis-of-variance-anova",
+    "href": "lectures/code/03_one-way-ANOVAII.html#analysis-of-variance-anova",
+    "title": "One-Way ANOVA II",
+    "section": "Analysis of Variance ANOVA",
+    "text": "Analysis of Variance ANOVA\nFormal ANOVA starts with the simple idea that we can compare our estimate of treatment effect variability to our estimate of chance error variability to measure how large our treatment effect is.  \n\\[Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects = True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error\\] \\[Variability\\:in\\:Residuals = Error\\]  \nWe can construct a comparison, which we will call F:  \n\\[F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}=\\frac{True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error}{Error}\\]  \nIf our null hypothesis, \\({H}_{0}: True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences=0\\), is true, then what would we expect the F-ratio to equal?"
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#sum-of-squares-ss",
+    "href": "lectures/code/03_one-way-ANOVAII.html#sum-of-squares-ss",
+    "title": "One-Way ANOVA II",
+    "section": "Sum of Squares (SS)",
+    "text": "Sum of Squares (SS)\nANOVA measures variability in treatment effects with the sum of squares (\\(SS\\)) divided by the number of units of unique information (\\(df\\)). For the One-Way design:\n\\[{SS}_{Treatments} = n\\sum_{i=1}^{a}(\\bar{y}_{i.}-\\bar{y}_{..})^{2}\\]\n\\[{SS}_{E} = \\sum_{i=1}^{a}\\sum_{j=1}^{n}({y}_{ij}-\\bar{y}_{i.})^{2}\\]\n\\[{SS}_{Total} = {SS}_{Treatments} + {SS}_{E}\\]\nwhere \\(n\\) is the group size, and \\(a\\) is the number of treatments."
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#degrees-of-freedom-df",
+    "href": "lectures/code/03_one-way-ANOVAII.html#degrees-of-freedom-df",
+    "title": "One-Way ANOVA II",
+    "section": "Degrees of Freedom (df)",
+    "text": "Degrees of Freedom (df)\nThe \\(df\\) for a table equals the number of free numbers, the number of slots in the table you can fill in before the pattern of repetitions and adding to zero tell you what the remaining numbers have to be.\n\\[{df}_{Treatments}=a-1\\]\n\\[{df}_{E}=N-a\\]"
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#mean-squares-ms",
+    "href": "lectures/code/03_one-way-ANOVAII.html#mean-squares-ms",
+    "title": "One-Way ANOVA II",
+    "section": "Mean Squares (MS)",
+    "text": "Mean Squares (MS)\nThe ultimate statistic we want to calculate is \\(F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}\\).\nVariability in treatment effects: \\[{MS}_{Treatments}=\\frac{{SS}_{Treatments}}{{df}_{Treatments}}\\]\nVariability in residuals \\[{MS}_{E}=\\frac{{SS}_{E}}{{df}_{E}}\\]"
+  },
+  {
+    "objectID": "lectures/code/03_one-way-ANOVAII.html#f-ratios-and-the-f-distribution",
+    "href": "lectures/code/03_one-way-ANOVAII.html#f-ratios-and-the-f-distribution",
+    "title": "One-Way ANOVA II",
+    "section": "F-ratios and the F-distribution",
+    "text": "F-ratios and the F-distribution\nFinally, the ratio of these two MS’s is called the F ratio. The following quantity is our test statistic for the null hypothesis that there are no treatment effects.\n\\[F = \\frac{{MS}_{Treatments}}{{MS}_{E}}\\]\nIf the null hypothesis is true, then F is a random variable \\(\\sim F({df}_{Treatments}, {df}_{E})\\). The F-distribution.\n\nqplot(x = rf(500, 3, 4), geom = \"density\")"
   }
 ]

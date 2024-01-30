@@ -28,5 +28,17 @@
   },
   "lectures/02_one-way-ANOVA.qmd": {
     "02_one-way-ANOVA.html": "480b97e5"
+  },
+  "lectures/code/02_four_designs.Rmd": {
+    "02_four_designs.html": "46205e23"
+  },
+  "lectures/code/02_informal_anova.Rmd": {
+    "02_informal_anova.html": "22a4f77c"
+  },
+  "lectures/code/03_one-way-ANOVAII.Rmd": {
+    "03_one-way-ANOVAII.html": "2aaea29b"
+  },
+  "lectures/code/01_animal_data.Rmd": {
+    "01_animal_data.html": "fe651985"
   }
 }

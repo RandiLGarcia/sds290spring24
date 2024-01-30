@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Prof Randi Garcia">
-<meta name="dcterms.date" content="2024-01-24">
+<meta name="author" content="Randi L. Garcia">
+<meta name="dcterms.date" content="2021-09-07">
 
-<title>SDS 290 - Spring 2024 - SDS 290 Research Design and Analysis</title>
+<title>SDS 290 - Spring 2024 - 01 - Animal Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,25 +22,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -80,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">SDS 290 - Spring 2024</span>
     </a>
   </div>
@@ -91,15 +125,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../syllabus.html"> 
+    <a class="nav-link" href="../../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../schedule.html"> 
+    <a class="nav-link" href="../../schedule.html"> 
 <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -116,11 +150,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-lectures">    
         <li>
-    <a class="dropdown-item" href="../lectures/01_intro_to_experimental.html">
+    <a class="dropdown-item" href="../../lectures/01_intro_to_experimental.html">
  <span class="dropdown-text">01 - Intro to Experimental Design</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lectures/02_one-way-ANOVA.html">
+    <a class="dropdown-item" href="../../lectures/02_one-way-ANOVA.html">
  <span class="dropdown-text">02 - One-Way ANOVA</span></a>
   </li>  
     </ul>
@@ -143,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">HW1a: Record your names on Moodle</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../pdfs/HW 1b_CITI Training.pdf">
+    <a class="dropdown-item" href="../../pdfs/HW 1b_CITI Training.pdf">
  <span class="dropdown-text">HW1b: CITI Training</span></a>
   </li>  
     </ul>
@@ -168,28 +202,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#welcome-to-sds-290" id="toc-welcome-to-sds-290" class="nav-link active" data-scroll-target="#welcome-to-sds-290">Welcome to SDS 290!</a></li>
-  <li><a href="#introductions" id="toc-introductions" class="nav-link" data-scroll-target="#introductions">Introductions</a></li>
-  <li><a href="#guinea-pigs" id="toc-guinea-pigs" class="nav-link" data-scroll-target="#guinea-pigs">Guinea Pigs</a></li>
-  <li><a href="#dog-and-baby-and-teenagers" id="toc-dog-and-baby-and-teenagers" class="nav-link" data-scroll-target="#dog-and-baby-and-teenagers">Dog and Baby and Teenagers</a></li>
-  <li><a href="#goals" id="toc-goals" class="nav-link" data-scroll-target="#goals">Goals</a></li>
-  <li><a href="#introductions-1" id="toc-introductions-1" class="nav-link" data-scroll-target="#introductions-1">Introductions</a></li>
-  <li><a href="#introduction-to-sds-290" id="toc-introduction-to-sds-290" class="nav-link" data-scroll-target="#introduction-to-sds-290">Introduction to SDS 290</a></li>
-  <li><a href="#our-first-experiment" id="toc-our-first-experiment" class="nav-link" data-scroll-target="#our-first-experiment">Our First Experiment</a></li>
-  <li><a href="#our-first-experiment-1" id="toc-our-first-experiment-1" class="nav-link" data-scroll-target="#our-first-experiment-1">Our First Experiment</a></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="01_intro_to_experimental.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SDS 290 Research Design and Analysis</h1>
+<h1 class="title">01 - Animal Data</h1>
 </div>
 
 
@@ -199,14 +219,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Prof Randi Garcia </p>
+             <p>Randi L. Garcia </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 24, 2024</p>
+      <p class="date">September 7, 2021</p>
     </div>
   </div>
   
@@ -218,109 +238,59 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="welcome-to-sds-290" class="level2">
-<h2 class="anchored" data-anchor-id="welcome-to-sds-290">Welcome to SDS 290!</h2>
-<p>Please complete the course questionnaire:</p>
-<p><strong>bit.ly/sds290spring24</strong></p>
-</section>
-<section id="introductions" class="level2">
-<h2 class="anchored" data-anchor-id="introductions">Introductions</h2>
-<p>Who am I?</p>
-<ul>
-<li>Prof.&nbsp;Randi Garcia</li>
-<li>She/her pronouns</li>
-<li>My goals for this course</li>
-<li>Favorite animal: Hamsters!</li>
-</ul>
-</section>
-<section id="guinea-pigs" class="level2">
-<h2 class="anchored" data-anchor-id="guinea-pigs">Guinea Pigs</h2>
-<div class="quarto-figure quarto-figure-center">
+<p>#Data Analysis</p>
+<p>Loading data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>animals <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://randilgarcia.github.io/sds290fall21/animals.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Cleaning the data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>animals <span class="ot">&lt;-</span> animals <span class="sc">%&gt;%</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pID =</span> <span class="fu">seq.int</span>(<span class="dv">1</span>, <span class="fu">nrow</span>(animals))) <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(pID, order, animal, </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>         cute_calm, scary_calm, </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>         cute_happy, scary_happy, </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>         cute_nerv, scary_nerv, </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>         cute_scared, scary_scared) <span class="sc">%&gt;%</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_at</span>(<span class="fu">vars</span>(cute_calm<span class="sc">:</span>scary_scared), as.numeric) <span class="sc">%&gt;%</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">3</span><span class="sc">:</span><span class="fu">length</span>(animals))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Another way to think of the data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>animals_long <span class="ot">&lt;-</span> animals <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gather</span>(var, value, cute_calm<span class="sc">:</span>scary_scared) <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(var, <span class="fu">c</span>(<span class="st">"cue"</span>, <span class="st">"emotion"</span>), <span class="at">sep =</span> <span class="st">"_"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">spread</span>(emotion, value) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Visualizing the variance</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#how do we visualize variability?</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> calm, <span class="at">data =</span> animals_long, <span class="at">bins =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
 <figure class="figure">
-<p><img src="pics/pigs2.JPG" class="img-fluid figure-img"></p>
-<figcaption>Tia and Tamera</figcaption>
+<p><img src="01_animal_data_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
-</section>
-<section id="dog-and-baby-and-teenagers" class="level2">
-<h2 class="anchored" data-anchor-id="dog-and-baby-and-teenagers">Dog and Baby and Teenagers</h2>
-<p>Come to my office hours if you want to see pics of Naomi, Amelia, Devyn, and Roux!</p>
-</section>
-<section id="goals" class="level2">
-<h2 class="anchored" data-anchor-id="goals">Goals</h2>
-<p>Now it is your turn. But first, let’s do a 2-minute free write</p>
-<ul>
-<li>On a piece of paper (or blank word-processing file)</li>
-<li>For 2 minutes, write about:
-<ul>
-<li>Your goals for this course,</li>
-<li>What you hope to learn, and</li>
-<li>Some fun things you’re looking forward to this semester</li>
-</ul></li>
-<li>PollEverywhere!</li>
-</ul>
-</section>
-<section id="introductions-1" class="level2">
-<h2 class="anchored" data-anchor-id="introductions-1">Introductions</h2>
-<p>In groups of three introduce yourselves…</p>
-<ul>
-<li>Name</li>
-<li>Pronouns</li>
-<li>One goal for this course</li>
-<li>Favorite animal</li>
-</ul>
-</section>
-<section id="introduction-to-sds-290" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-to-sds-290">Introduction to SDS 290</h2>
-<ul>
-<li>Course website at <strong>randilgarcia.github.io/sds290spring24/</strong></li>
-<li>Let’s go through the syllabus</li>
-</ul>
-</section>
-<section id="our-first-experiment" class="level2">
-<h2 class="anchored" data-anchor-id="our-first-experiment">Our First Experiment</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Get in breakout groups of ~8 we will discuss.</li>
-<li>As you participate in the experiment remember:
-<ul class="incremental">
-<li>what you saw</li>
-<li>what you did</li>
-<li>the order in which it happened.</li>
-</ul></li>
-<li>To participate, find the experiment link in the course schedule!!</li>
-</ul>
 </div>
-</section>
-<section id="our-first-experiment-1" class="level2">
-<h2 class="anchored" data-anchor-id="our-first-experiment-1">Our First Experiment</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>In your groups:
-<ul class="incremental">
-<li>Take turns describing what you saw/did.</li>
-<li>Your objective, as a group, is to describe the FULL experimental design.</li>
-</ul></li>
-<li>Discussion questions:
-<ul class="incremental">
-<li>What were all of the possibilities? How do you think that was determined?</li>
-<li>Which conditions were distributed <em>across</em> people, and which <em>within</em> people?</li>
-<li>What do you think are the possible research questions answered by this study?</li>
-</ul></li>
-</ul>
 </div>
-<!-- New Section -->
-<!-- ==================================== -->
-<!-- type: section -->
-<!-- Prompt Slide -->
-<!-- ==================================== -->
-<!-- type: prompt -->
-<!-- Sample Variance -->
-<!-- ======================================================== -->
-<!-- $$\sigma^2 = \frac{\sum_{i=1}^{n}(x_i - \mu)^2} {n-1}$$ -->
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#looking at variability by condition</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(animals_long, <span class="fu">aes</span>(<span class="at">x =</span> animal, <span class="at">fill =</span> cue, <span class="at">y =</span> calm)) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_animal_data_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
