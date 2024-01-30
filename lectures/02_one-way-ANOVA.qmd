@@ -116,7 +116,7 @@ Our data will be "off" in a systematic, non-random, way
 library(tidyverse)
 library(readr)
 
-survey <- read_csv("https://randilgarcia.github.io/sds290fall21/class_surveyData.csv")
+survey <- read_csv("https://randilgarcia.github.io/sds290spring24/data/class_survey_data.csv")
 
 survey %>%
   select(graduation, chalk_est) %>%
