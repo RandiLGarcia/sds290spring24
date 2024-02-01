@@ -120,104 +120,106 @@ It is reasonable to assume that the structure of a sugar molecule has something 
 -   [Animal Data](https://randilgarcia.github.io/sds290fall21/code/01_animal_data.qmd)
 -   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290fall21/code/02_informal_anova.qmd)
 
-<!-- ## Leafhopper survival -->
+## Leafhopper survival
 
-<!-- One-Way Design -->
+One-Way Design
 
-<!-- It is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group. -->
+It is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group.
 
-<!-- ## Decomposing the data -->
+## Decomposing the data
 
-<!-- ```{r, echo = FALSE, message=FALSE, warning=FALSE} -->
-<!-- library(knitr) -->
-<!-- library(tidyverse) -->
-<!-- library(mosaic) -->
+```{r, echo = FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(tidyverse)
+library(mosaic)
 
-<!-- kable(data.frame(control = c(2.3,1.7), sucrose = c(3.6, 4.0), glucose = c(2.9,2.7), fructose = c(2.1,2.3))) -->
-<!-- ``` -->
+kable(data.frame(control = c(2.3,1.7), sucrose = c(3.6, 4.0), glucose = c(2.9,2.7), fructose = c(2.1,2.3)))
+```
 
-<!-- -   Let's draw a factor diagram, including a place for the grand mean and residuals. -->
+-   Let's draw a factor diagram, including a place for the grand mean and residuals.
 
-<!-- ## Leafhoppers -->
+## Leafhoppers
 
-<!-- Bar graph of treatment condition averages. -->
+Bar graph of treatment condition averages.
 
-<!-- ```{r, echo=FALSE} -->
-<!-- leaf <- data.frame(diet = c("control","control","sucrose", "sucrose", "glucose", "glucose", "fructose","fructose"), days = c(2.3,1.7,3.6,4.0,2.9,2.7,2.1,2.3)) -->
-<!-- leaf %>% -->
-<!--   group_by(diet) %>% -->
-<!--   summarise(means = mean(days)) %>% -->
-<!--   mutate(bench = mean(means)) %>% -->
-<!-- ggplot(aes(x = diet, y = means)) + -->
-<!--   geom_bar(stat = "identity") + -->
-<!--   geom_hline(aes(yintercept = bench), color = "red")  -->
+```{r, echo=FALSE}
+leaf <- data.frame(diet = c("control","control","sucrose", "sucrose", "glucose", "glucose", "fructose","fructose"), days = c(2.3,1.7,3.6,4.0,2.9,2.7,2.1,2.3))
+leaf %>%
+  group_by(diet) %>%
+  summarise(means = mean(days)) %>%
+  mutate(bench = mean(means)) %>%
+ggplot(aes(x = diet, y = means)) +
+  geom_bar(stat = "identity") +
+  geom_hline(aes(yintercept = bench), color = "red")
 
 
-<!-- leaf <- leaf %>% -->
-<!--   mutate(benchmark = mean(days)) %>% -->
-<!--   group_by(diet) %>% -->
-<!--   mutate(grp_mean = mean(days), -->
-<!--          diet_effect = grp_mean - benchmark) %>% -->
-<!--   ungroup() %>% -->
-<!--   mutate(fitted = benchmark + diet_effect, -->
-<!--          resid = days - grp_mean, -->
-<!--          resid_alt = days - fitted) -->
-<!-- ``` -->
+leaf <- leaf %>%
+  mutate(benchmark = mean(days)) %>%
+  group_by(diet) %>%
+  mutate(grp_mean = mean(days),
+         diet_effect = grp_mean - benchmark) %>%
+  ungroup() %>%
+  mutate(fitted = benchmark + diet_effect,
+         resid = days - grp_mean,
+         resid_alt = days - fitted)
+```
 
-<!-- ## Leafhoppers -->
+## Leafhoppers
 
-<!-- -   We'll now start thinking about if those differences in treatment effects are real, or could possibly be due to chance error. -->
-<!-- -   To the factor diagram, let's add in the grand mean, the effects for diet, and the residuals -->
+-   We'll now start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.
+-   To the **factor diagram**, let's add in the grand mean, the effects for diet, and the residuals
 
-<!-- ```{r, echo = FALSE} -->
-<!-- kable(data.frame(' ' = c("","","means"), control = c(2.3,1.7, 2.0), sucrose = c(3.6, 4.0, 3.8), glucose = c(2.9,2.7,2.8), fructose = c(2.1,2.3,2.2))) -->
-<!-- ``` -->
+```{r, echo = FALSE}
+kable(data.frame(' ' = c("","","group averages"), control = c(2.3,1.7, 2.0), sucrose = c(3.6, 4.0, 3.8), glucose = c(2.9,2.7,2.8), fructose = c(2.1,2.3,2.2)))
+```
 
-<!-- ## One-way ANOVA Model -->
+## One-way ANOVA Model
 
-<!-- $$Y = f(X) + \epsilon$$ For t-test our model is: $$Y = \mu_i + \epsilon$$ For One-Way ANOVA our model is: $$Y = \mu + \alpha_i + \epsilon$$ where $\mu$ is the grand mean, $\alpha_i$ is the treatment effect (difference from the grand mean for the $i^{th}$ group), and $\epsilon$ is the residual. -->
+$$Y = f(X) + \epsilon$$ For t-test our model is: $$Y = \mu_i + \epsilon$$ For One-Way ANOVA our model is: $$Y = \mu + \alpha_i + \epsilon$$ where $\mu$ is the grand mean, $\alpha_i$ is the treatment effect (difference from the grand mean for the $i^{th}$ group), and $\epsilon$ is the residual.
 
-<!-- ### Note about using SLR for categorical variables -->
+### Note about using SLR for categorical variables
 
-<!-- When we have a binary explanatory variable, X, where X is an indicator of category 2: -->
+When we have a binary explanatory variable, X, where X is an indicator of category 2:
 
-<!-- $$Y = \beta_0+\beta_1X_{indicator}+\epsilon$$ where $\beta_0$ is the mean of category 1, and $\beta_1$ is the difference between the mean of category 1 and the mean of category 2. -->
+$$Y = \beta_0+\beta_1X_{indicator}+\epsilon$$ where $\beta_0$ is the mean of category 1, and $\beta_1$ is the difference between the mean of category 1 and the mean of category 2.
 
-<!-- ## Analysis of Variance ANOVA -->
+## Analysis of Variance ANOVA
 
-<!-- Formal ANOVA starts with the simple idea that we can compare our estimate of **treatment effect variability** to our estimate of **chance error variability** to measure how large our treatment effect is.  \ -->
-<!-- $$Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects = True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error$$ $$Variability\:in\:Residuals = Error$$  \ -->
-<!-- We can construct a comparison, which we will call F:  \ -->
-<!-- $$F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}=\frac{True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error}{Error}$$  \ -->
-<!-- If our null hypothesis, ${H}_{0}: True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences=0$, is true, then what would we expect the F-ratio to equal? -->
+Formal ANOVA starts with the simple idea that we can compare our estimate of **treatment effect variability** to our estimate of **chance error variability** to measure how large our treatment effect is.  \
+$$Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects = True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error$$ $$Variability\:in\:Residuals = Error$$  \
+We can construct a comparison, which we will call F:  \
+$$F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}=\frac{True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error}{Error}$$  \
+If our null hypothesis, ${H}_{0}: True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences=0$, is true, then what would we expect the F-ratio to equal?
 
-<!-- ## Sum of Squares (SS) -->
+## Sum of Squares (SS)
 
-<!-- ANOVA measures variability in treatment effects with the sum of squares ($SS$) divided by the number of units of unique information ($df$). For the One-Way design: -->
+ANOVA measures variability in treatment effects with the sum of squares ($SS$) divided by the number of units of unique information ($df$). For the One-Way design:
 
-<!-- $${SS}_{Treatments} = n\sum_{i=1}^{a}(\bar{y}_{i.}-\bar{y}_{..})^{2}$$ -->
+$${SS}_{Treatments} = n\sum_{i=1}^{a}(\bar{y}_{i.}-\bar{y}_{..})^{2}$$
 
-<!-- $${SS}_{E} = \sum_{i=1}^{a}\sum_{j=1}^{n}({y}_{ij}-\bar{y}_{i.})^{2}$$ -->
+$${SS}_{E} = \sum_{i=1}^{a}\sum_{j=1}^{n}({y}_{ij}-\bar{y}_{i.})^{2}$$
 
-<!-- $${SS}_{Total} = {SS}_{Treatments} + {SS}_{E}$$ -->
+$${SS}_{Total} = {SS}_{Treatments} + {SS}_{E}$$
 
-<!-- where $n$ is the group size, and $a$ is the number of treatments. -->
+where $n$ is the group size, and $a$ is the number of treatments.
 
-<!-- ## Degrees of Freedom (df) -->
+## Degrees of Freedom (df)
 
-<!-- The $df$ for a table equals the number of free numbers, the number of slots in the table you can fill in before the pattern of repetitions and adding to zero tell you what the remaining numbers have to be. -->
+The $df$ for a table equals the number of free numbers, the number of slots in the table you can fill in before the pattern of repetitions and adding to zero tell you what the remaining numbers have to be.
 
-<!-- $${df}_{Treatments}=a-1$$ -->
+$${df}_{Treatments}=a-1$$
 
-<!-- $${df}_{E}=N-a$$ -->
+$${df}_{E}=N-a$$
 
-<!-- ## Mean Squares (MS) -->
+## Mean Squares (MS)
 
-<!-- The ultimate statistic we want to calculate is $F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}$. -->
+The ultimate statistic we want to calculate is 
 
-<!-- **Variability in treatment effects**: $${MS}_{Treatments}=\frac{{SS}_{Treatments}}{{df}_{Treatments}}$$ -->
+$$F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}$$
 
-<!-- **Variability in residuals** $${MS}_{E}=\frac{{SS}_{E}}{{df}_{E}}$$ -->
+**Variability in treatment effects**: $${MS}_{Treatments}=\frac{{SS}_{Treatments}}{{df}_{Treatments}}$$
+
+**Variability in residuals** $${MS}_{E}=\frac{{SS}_{E}}{{df}_{E}}$$
 
 <!-- ## F-ratios and the F-distribution -->
 

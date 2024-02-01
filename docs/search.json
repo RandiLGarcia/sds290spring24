@@ -647,8 +647,8 @@
     "objectID": "lectures/03_one-way-ANOVAII.html#announcements",
     "href": "lectures/03_one-way-ANOVAII.html#announcements",
     "title": "One-Way ANOVA II",
-    "section": "",
-    "text": "Homework 1b due on Friday 2/2\nHomework 2 will be submitted on gradescope (more info to come)\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFri office hours cancelled this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
+    "section": "Announcements",
+    "text": "Announcements\n\nHomework 1b due on Friday 2/2\nHomework 2 will be submitted on gradescope (more info to come)\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFri office hours cancelled this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#confounding-variables",
@@ -683,7 +683,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#one-way-anova-1",
     "title": "One-Way ANOVA II",
     "section": "One-Way ANOVA",
-    "text": "One-Way ANOVA\n\nqplot(x = as.factor(graduation), y = chalk_est, data = survey)\n\nWarning: Removed 4 rows containing missing values (geom_point)."
+    "text": "One-Way ANOVA\n\nqplot(x = as.factor(graduation), y = chalk_est, data = survey)"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#data-cleaning",
@@ -697,7 +697,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#one-way-anova-2",
     "title": "One-Way ANOVA II",
     "section": "One-Way ANOVA",
-    "text": "One-Way ANOVA\n\nqplot(x = graduation, y = chalk_est, data = survey, geom = \"boxplot\")\n\nWarning: Continuous x aesthetic -- did you forget aes(group=...)?"
+    "text": "One-Way ANOVA\n\nqplot(x = graduation, y = chalk_est, data = survey, geom = \"boxplot\")"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#one-way-anova-3",
@@ -781,7 +781,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#leafhoppers-1",
     "title": "One-Way ANOVA II",
     "section": "Leafhoppers",
-    "text": "Leafhoppers\n\nWe’ll now start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.\nTo the factor diagram, let’s add in the grand mean, the effects for diet, and the residuals\n\n\n\n\n\n\nX.\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n\n1.7\n4.0\n2.7\n2.3\n\n\nmeans\n2.0\n3.8\n2.8\n2.2"
+    "text": "Leafhoppers\n\nWe’ll now start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.\nTo the factor diagram, let’s add in the grand mean, the effects for diet, and the residuals\n\n\n\n\n\n\nX.\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n\n1.7\n4.0\n2.7\n2.3\n\n\ngroup averages\n2.0\n3.8\n2.8\n2.2"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#one-way-anova-model",
@@ -816,7 +816,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#mean-squares-ms",
     "title": "One-Way ANOVA II",
     "section": "Mean Squares (MS)",
-    "text": "Mean Squares (MS)\nThe ultimate statistic we want to calculate is \\(F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}\\).\nVariability in treatment effects: \\[{MS}_{Treatments}=\\frac{{SS}_{Treatments}}{{df}_{Treatments}}\\]\nVariability in residuals \\[{MS}_{E}=\\frac{{SS}_{E}}{{df}_{E}}\\]"
+    "text": "Mean Squares (MS)\nThe ultimate statistic we want to calculate is\n\\[F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}\\]\nVariability in treatment effects: \\[{MS}_{Treatments}=\\frac{{SS}_{Treatments}}{{df}_{Treatments}}\\]\nVariability in residuals \\[{MS}_{E}=\\frac{{SS}_{E}}{{df}_{E}}\\]"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#f-ratios-and-the-f-distribution",
