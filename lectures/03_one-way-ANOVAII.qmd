@@ -10,11 +10,11 @@ format:
 
 ## Announcements
 
-- [Homework 1b](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://randilgarcia.github.io/sds290spring24/pdfs/HW%201b_CITI%20Training.pdf) due on Friday 2/2
-- Homework 2 will be submitted on gradescope (more info to come)
-- Office hours (Bass 412)
-    - Today: 2:45p - 4:00p
-    - Fri office hours cancelled this week
+-   [Homework 1b](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://randilgarcia.github.io/sds290spring24/pdfs/HW%201b_CITI%20Training.pdf) due on Friday 2/2
+-   Homework 2 will be submitted on gradescope (more info to come)
+-   Office hours (Bass 412)
+    -   Today: 2:45p - 4:00p
+    -   Fri office hours cancelled this week
 -   Where to get HW help
     -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!
 
@@ -113,12 +113,17 @@ It is reasonable to assume that the structure of a sugar molecule has something 
 -   You book used the CAT scan metaphor: $$Body = Skeleton + Organ\:System + Everything\:Else$$
 -   I prefer the assembly line metaphor, but whatever makes sense to you!
 
-<div class="tenor-gif-embed" data-postid="15055701" data-share-method="host" data-aspect-ratio="1.77778" data-width="50%"><a href="https://tenor.com/view/rabbit-work-mooncake-factory-working-rabbit-cute-gif-15055701">Rabbit Work GIF</a>from <a href="https://tenor.com/search/rabbit-gifs">Rabbit GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+::: {.tenor-gif-embed data-postid="15055701" data-share-method="host" data-aspect-ratio="1.77778" data-width="50%"}
+<a href="https://tenor.com/view/rabbit-work-mooncake-factory-working-rabbit-cute-gif-15055701">Rabbit Work GIF</a>from <a href="https://tenor.com/search/rabbit-gifs">Rabbit GIFs</a>
+:::
 
+```{=html}
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+```
 ## Simulation in R: Assembly Line Metaphor
 
--   [Animal Data](https://randilgarcia.github.io/sds290fall21/code/01_animal_data.qmd)
--   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290fall21/code/02_informal_anova.qmd)
+-   [Animal Data](https://randilgarcia.github.io/sds290spring24/code/01_animal_data.qmd)
+-   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290spring24/code/02_informal_anova.qmd)
 
 ## Leafhopper survival
 
@@ -213,7 +218,7 @@ $${df}_{E}=N-a$$
 
 ## Mean Squares (MS)
 
-The ultimate statistic we want to calculate is 
+The ultimate statistic we want to calculate is
 
 $$F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}$$
 
@@ -230,7 +235,9 @@ $$F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:
 <!-- If the null hypothesis is true, then F is a random variable $\sim F({df}_{Treatments}, {df}_{E})$. The [F-distribution](https://en.wikipedia.org/wiki/F-distribution). -->
 
 <!-- ```{r, eval=FALSE} -->
+
 <!-- qplot(x = rf(500, 3, 4), geom = "density") -->
+
 <!-- ``` -->
 
 <!-- Six Fisher Assumptions -->
