@@ -116,7 +116,13 @@ animals_sim <- animals_sim %>%
          + cue_effect 
          + interaction_effect 
          + student_effect
-         + rnorm(80, 0, 0.79)) #SIMULATED residuals factor
+         + rnorm(80, 0, 1.16)) #SIMULATED residuals factor RMSE from ANOVA
+```
+
+```{r}
+#mod <- aov(calm ~ animal*cue + Error(student), data = animals_sim)
+
+#summary(mod)
 ```
 
 ## Comparing Simulated Data to Real Data

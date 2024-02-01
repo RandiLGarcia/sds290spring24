@@ -2,8 +2,8 @@
     "sortOrder": [
         {
             "columnIndex": 2,
-            "ascending": false
+            "ascending": true
         }
     ],
-    "path": "~/Dropbox/Teaching/SDS-290/Spring2024-sds290/homework/solutions-Fall2021"
+    "path": "~/Dropbox/Teaching/SDS-290/Fall2021-sds290/www/lectures"
 }
