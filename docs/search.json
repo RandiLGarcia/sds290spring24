@@ -648,7 +648,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#announcements",
     "title": "One-Way ANOVA II",
     "section": "Announcements",
-    "text": "Announcements\n\nHW1b and HW1c due tomorrow at 11:55p\n\nExercise 5\nAny more questions?\n\nIn-person Office hours (Bass 412)\n\nThurs (today) 1:20-2:35p\n\nZoom Office hours\n\nFull for this week!\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. More info coming soon."
+    "text": "Announcements\n\nHomework 1b due on Friday 2/2\nHomework 2 will be submitted on gradescope\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFri office hours cancelled this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#confounding-variables",
@@ -746,7 +746,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#assembly-line-metaphor",
     "title": "One-Way ANOVA II",
     "section": "Assembly Line Metaphor",
-    "text": "Assembly Line Metaphor\n\nYou book used the CAT scan metaphor: \\[Body = Skeleton + Organ\\:System + Everything\\:Else\\]\nI prefer the assembly line metaphor, but whatever makes sense to you!"
+    "text": "Assembly Line Metaphor\n\nYou book used the CAT scan metaphor: \\[Body = Skeleton + Organ\\:System + Everything\\:Else\\]\nI prefer the assembly line metaphor, but whatever makes sense to you!\n\n\nRabbit Work GIFfrom Rabbit GIFs"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#simulation-in-r-assembly-line-metaphor",

@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Prof Randi Garcia">
   <meta name="dcterms.date" content="2024-02-01">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -222,7 +222,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -407,22 +408,16 @@ Prof Randi Garcia
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li>HW1b and <a href="https://randilgarcia.github.io/sds290fall21/labs/intro_to_r.html">HW1c</a> due tomorrow at 11:55p
+<li><a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://randilgarcia.github.io/sds290spring24/pdfs/HW 1b_CITI Training.pdf">Homework 1b</a> due on Friday 2/2</li>
+<li>Homework 2 will be submitted on gradescope</li>
+<li>Office hours (Bass 412)
 <ul>
-<li>Exercise 5</li>
-<li>Any more questions?</li>
-</ul></li>
-<li>In-person Office hours (Bass 412)
-<ul>
-<li>Thurs (today) 1:20-2:35p</li>
-</ul></li>
-<li>Zoom Office hours
-<ul>
-<li>Full for this week!</li>
+<li>Today: 2:45p - 4:00p</li>
+<li>Fri office hours cancelled this week</li>
 </ul></li>
 <li>Where to get HW help
 <ul>
-<li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301. More info coming soon.</li>
+<li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!</li>
 </ul></li>
 </ul>
 </section>
@@ -451,14 +446,14 @@ Prof Randi Garcia
 <li>One quantitative (non-binary) response variable.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(readr)</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>survey <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://randilgarcia.github.io/sds290spring24/data/class_survey_data.csv"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5"></a></span>
-<span id="cb1-6"><a href="#cb1-6"></a>survey <span class="sc">%&gt;%</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">select</span>(graduation, chalk_est) <span class="sc">%&gt;%</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a>survey <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://randilgarcia.github.io/sds290spring24/data/class_survey_data.csv"</span>)</span>
+<span id="cb1-5"><a></a></span>
+<span id="cb1-6"><a></a>survey <span class="sc">%&gt;%</span></span>
+<span id="cb1-7"><a></a>  <span class="fu">select</span>(graduation, chalk_est) <span class="sc">%&gt;%</span></span>
+<span id="cb1-8"><a></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
   graduation chalk_est
@@ -475,31 +470,31 @@ Prof Randi Garcia
 <section id="one-way-anova-1" class="slide level2">
 <h2>One-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
 <section id="data-cleaning" class="slide level2">
 <h2>Data Cleaning</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>survey <span class="ot">&lt;-</span> survey <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">filter</span>(chalk_est <span class="sc">&lt;</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>survey <span class="ot">&lt;-</span> survey <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">filter</span>(chalk_est <span class="sc">&lt;</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="one-way-anova-2" class="slide level2">
 <h2>One-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> graduation, <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> graduation, <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
 <section id="one-way-anova-3" class="slide level2">
 <h2>One-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
 <section id="the-meats" class="slide level2">
 <h2>The Meats</h2>
 <p>One-Way Design</p>
@@ -531,143 +526,86 @@ Prof Randi Garcia
 <li>You book used the CAT scan metaphor: <span class="math display">\[Body = Skeleton + Organ\:System + Everything\:Else\]</span></li>
 <li>I prefer the assembly line metaphor, but whatever makes sense to you!</li>
 </ul>
-
-<img data-src="https://thumbs.gfycat.com/MelodicCalculatingBluejay.webp" class="r-stretch"></section>
+<div class="tenor-gif-embed" data-postid="15055701" data-share-method="host" data-aspect-ratio="1.77778" data-width="50%">
+<a href="https://tenor.com/view/rabbit-work-mooncake-factory-working-rabbit-cute-gif-15055701">Rabbit Work GIF</a>from <a href="https://tenor.com/search/rabbit-gifs">Rabbit GIFs</a>
+</div>
+<script type="text/javascript" async="" src="https://tenor.com/embed.js"></script>
+</section>
 <section id="simulation-in-r-assembly-line-metaphor" class="slide level2">
 <h2>Simulation in R: Assembly Line Metaphor</h2>
 <ul>
 <li><a href="https://randilgarcia.github.io/sds290fall21/lectures/02_informal_anova.Rmd">Assembly Line Metaphor code</a></li>
 </ul>
-</section>
-<section id="leafhopper-survival-1" class="slide level2">
-<h2>Leafhopper survival</h2>
-<p>One-Way Design</p>
-<p>It is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group.</p>
-</section>
-<section id="decomposing-the-data" class="slide level2">
-<h2>Decomposing the data</h2>
-<div class="cell">
-<div class="cell-output-display">
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: right;">control</th>
-<th style="text-align: right;">sucrose</th>
-<th style="text-align: right;">glucose</th>
-<th style="text-align: right;">fructose</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">2.3</td>
-<td style="text-align: right;">3.6</td>
-<td style="text-align: right;">2.9</td>
-<td style="text-align: right;">2.1</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">1.7</td>
-<td style="text-align: right;">4.0</td>
-<td style="text-align: right;">2.7</td>
-<td style="text-align: right;">2.3</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<ul>
-<li>Let’s draw a factor diagram, including a place for the grand mean and residuals.</li>
-</ul>
-</section>
-<section id="leafhoppers" class="slide level2">
-<h2>Leafhoppers</h2>
-<p>Bar graph of treatment condition averages.</p>
-
-<img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
-<section id="leafhoppers-1" class="slide level2">
-<h2>Leafhoppers</h2>
-<ul>
-<li>We’ll now start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.</li>
-<li>To the factor diagram, let’s add in the grand mean, the effects for diet, and the residuals</li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">X.</th>
-<th style="text-align: right;">control</th>
-<th style="text-align: right;">sucrose</th>
-<th style="text-align: right;">glucose</th>
-<th style="text-align: right;">fructose</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: right;">2.3</td>
-<td style="text-align: right;">3.6</td>
-<td style="text-align: right;">2.9</td>
-<td style="text-align: right;">2.1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"></td>
-<td style="text-align: right;">1.7</td>
-<td style="text-align: right;">4.0</td>
-<td style="text-align: right;">2.7</td>
-<td style="text-align: right;">2.3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">means</td>
-<td style="text-align: right;">2.0</td>
-<td style="text-align: right;">3.8</td>
-<td style="text-align: right;">2.8</td>
-<td style="text-align: right;">2.2</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="one-way-anova-model" class="slide level2">
-<h2>One-way ANOVA Model</h2>
-<p><span class="math display">\[Y = f(X) + \epsilon\]</span> For t-test our model is: <span class="math display">\[Y = \mu_i + \epsilon\]</span> For One-Way ANOVA our model is: <span class="math display">\[Y = \mu + \alpha_i + \epsilon\]</span> where <span class="math inline">\(\mu\)</span> is the grand mean, <span class="math inline">\(\alpha_i\)</span> is the treatment effect (difference from the grand mean for the <span class="math inline">\(i^{th}\)</span> group), and <span class="math inline">\(\epsilon\)</span> is the residual.</p>
-<h3 id="note-about-using-slr-for-categorical-variables">Note about using SLR for categorical variables</h3>
-<p>When we have a binary explanatory variable, X, where X is an indicator of category 2:</p>
-<p><span class="math display">\[Y = \beta_0+\beta_1X_{indicator}+\epsilon\]</span> where <span class="math inline">\(\beta_0\)</span> is the mean of category 1, and <span class="math inline">\(\beta_1\)</span> is the difference between the mean of category 1 and the mean of category 2.</p>
-</section>
-<section id="analysis-of-variance-anova" class="slide level2">
-<h2>Analysis of Variance ANOVA</h2>
-<p>Formal ANOVA starts with the simple idea that we can compare our estimate of <strong>treatment effect variability</strong> to our estimate of <strong>chance error variability</strong> to measure how large our treatment effect is. &nbsp;<br>
-<span class="math display">\[Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects = True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error\]</span> <span class="math display">\[Variability\:in\:Residuals = Error\]</span> &nbsp;<br>
-We can construct a comparison, which we will call F: &nbsp;<br>
-<span class="math display">\[F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}=\frac{True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error}{Error}\]</span> &nbsp;<br>
-If our null hypothesis, <span class="math inline">\({H}_{0}: True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences=0\)</span>, is true, then what would we expect the F-ratio to equal?</p>
-</section>
-<section id="sum-of-squares-ss" class="slide level2">
-<h2>Sum of Squares (SS)</h2>
-<p>ANOVA measures variability in treatment effects with the sum of squares (<span class="math inline">\(SS\)</span>) divided by the number of units of unique information (<span class="math inline">\(df\)</span>). For the One-Way design:</p>
-<p><span class="math display">\[{SS}_{Treatments} = n\sum_{i=1}^{a}(\bar{y}_{i.}-\bar{y}_{..})^{2}\]</span></p>
-<p><span class="math display">\[{SS}_{E} = \sum_{i=1}^{a}\sum_{j=1}^{n}({y}_{ij}-\bar{y}_{i.})^{2}\]</span></p>
-<p><span class="math display">\[{SS}_{Total} = {SS}_{Treatments} + {SS}_{E}\]</span></p>
-<p>where <span class="math inline">\(n\)</span> is the group size, and <span class="math inline">\(a\)</span> is the number of treatments.</p>
-</section>
-<section id="degrees-of-freedom-df" class="slide level2">
-<h2>Degrees of Freedom (df)</h2>
-<p>The <span class="math inline">\(df\)</span> for a table equals the number of free numbers, the number of slots in the table you can fill in before the pattern of repetitions and adding to zero tell you what the remaining numbers have to be.</p>
-<p><span class="math display">\[{df}_{Treatments}=a-1\]</span></p>
-<p><span class="math display">\[{df}_{E}=N-a\]</span></p>
-</section>
-<section id="mean-squares-ms" class="slide level2">
-<h2>Mean Squares (MS)</h2>
-<p>The ultimate statistic we want to calculate is <span class="math inline">\(F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}\)</span>.</p>
-<p><strong>Variability in treatment effects</strong>: <span class="math display">\[{MS}_{Treatments}=\frac{{SS}_{Treatments}}{{df}_{Treatments}}\]</span></p>
-<p><strong>Variability in residuals</strong> <span class="math display">\[{MS}_{E}=\frac{{SS}_{E}}{{df}_{E}}\]</span></p>
-</section>
-<section id="f-ratios-and-the-f-distribution" class="slide level2">
-<h2>F-ratios and the F-distribution</h2>
-<p>Finally, the ratio of these two MS’s is called the F ratio. The following quantity is our test statistic for the null hypothesis that there are no treatment effects.</p>
-<p><span class="math display">\[F = \frac{{MS}_{Treatments}}{{MS}_{E}}\]</span></p>
-<p>If the null hypothesis is true, then F is a random variable <span class="math inline">\(\sim F({df}_{Treatments}, {df}_{E})\)</span>. The <a href="https://en.wikipedia.org/wiki/F-distribution">F-distribution</a>.</p>
+<!-- ## Leafhopper survival -->
+<!-- One-Way Design -->
+<!-- It is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group. -->
+<!-- ## Decomposing the data -->
+<!-- ```{r, echo = FALSE, message=FALSE, warning=FALSE} -->
+<!-- library(knitr) -->
+<!-- library(tidyverse) -->
+<!-- library(mosaic) -->
+<!-- kable(data.frame(control = c(2.3,1.7), sucrose = c(3.6, 4.0), glucose = c(2.9,2.7), fructose = c(2.1,2.3))) -->
+<!-- ``` -->
+<!-- -   Let's draw a factor diagram, including a place for the grand mean and residuals. -->
+<!-- ## Leafhoppers -->
+<!-- Bar graph of treatment condition averages. -->
+<!-- ```{r, echo=FALSE} -->
+<!-- leaf <- data.frame(diet = c("control","control","sucrose", "sucrose", "glucose", "glucose", "fructose","fructose"), days = c(2.3,1.7,3.6,4.0,2.9,2.7,2.1,2.3)) -->
+<!-- leaf %>% -->
+<!--   group_by(diet) %>% -->
+<!--   summarise(means = mean(days)) %>% -->
+<!--   mutate(bench = mean(means)) %>% -->
+<!-- ggplot(aes(x = diet, y = means)) + -->
+<!--   geom_bar(stat = "identity") + -->
+<!--   geom_hline(aes(yintercept = bench), color = "red")  -->
+<!-- leaf <- leaf %>% -->
+<!--   mutate(benchmark = mean(days)) %>% -->
+<!--   group_by(diet) %>% -->
+<!--   mutate(grp_mean = mean(days), -->
+<!--          diet_effect = grp_mean - benchmark) %>% -->
+<!--   ungroup() %>% -->
+<!--   mutate(fitted = benchmark + diet_effect, -->
+<!--          resid = days - grp_mean, -->
+<!--          resid_alt = days - fitted) -->
+<!-- ``` -->
+<!-- ## Leafhoppers -->
+<!-- -   We'll now start thinking about if those differences in treatment effects are real, or could possibly be due to chance error. -->
+<!-- -   To the factor diagram, let's add in the grand mean, the effects for diet, and the residuals -->
+<!-- ```{r, echo = FALSE} -->
+<!-- kable(data.frame(' ' = c("","","means"), control = c(2.3,1.7, 2.0), sucrose = c(3.6, 4.0, 3.8), glucose = c(2.9,2.7,2.8), fructose = c(2.1,2.3,2.2))) -->
+<!-- ``` -->
+<!-- ## One-way ANOVA Model -->
+<!-- $$Y = f(X) + \epsilon$$ For t-test our model is: $$Y = \mu_i + \epsilon$$ For One-Way ANOVA our model is: $$Y = \mu + \alpha_i + \epsilon$$ where $\mu$ is the grand mean, $\alpha_i$ is the treatment effect (difference from the grand mean for the $i^{th}$ group), and $\epsilon$ is the residual. -->
+<!-- ### Note about using SLR for categorical variables -->
+<!-- When we have a binary explanatory variable, X, where X is an indicator of category 2: -->
+<!-- $$Y = \beta_0+\beta_1X_{indicator}+\epsilon$$ where $\beta_0$ is the mean of category 1, and $\beta_1$ is the difference between the mean of category 1 and the mean of category 2. -->
+<!-- ## Analysis of Variance ANOVA -->
+<!-- Formal ANOVA starts with the simple idea that we can compare our estimate of **treatment effect variability** to our estimate of **chance error variability** to measure how large our treatment effect is.  \ -->
+<!-- $$Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects = True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error$$ $$Variability\:in\:Residuals = Error$$  \ -->
+<!-- We can construct a comparison, which we will call F:  \ -->
+<!-- $$F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}=\frac{True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error}{Error}$$  \ -->
+<!-- If our null hypothesis, ${H}_{0}: True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences=0$, is true, then what would we expect the F-ratio to equal? -->
+<!-- ## Sum of Squares (SS) -->
+<!-- ANOVA measures variability in treatment effects with the sum of squares ($SS$) divided by the number of units of unique information ($df$). For the One-Way design: -->
+<!-- $${SS}_{Treatments} = n\sum_{i=1}^{a}(\bar{y}_{i.}-\bar{y}_{..})^{2}$$ -->
+<!-- $${SS}_{E} = \sum_{i=1}^{a}\sum_{j=1}^{n}({y}_{ij}-\bar{y}_{i.})^{2}$$ -->
+<!-- $${SS}_{Total} = {SS}_{Treatments} + {SS}_{E}$$ -->
+<!-- where $n$ is the group size, and $a$ is the number of treatments. -->
+<!-- ## Degrees of Freedom (df) -->
+<!-- The $df$ for a table equals the number of free numbers, the number of slots in the table you can fill in before the pattern of repetitions and adding to zero tell you what the remaining numbers have to be. -->
+<!-- $${df}_{Treatments}=a-1$$ -->
+<!-- $${df}_{E}=N-a$$ -->
+<!-- ## Mean Squares (MS) -->
+<!-- The ultimate statistic we want to calculate is $F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}$. -->
+<!-- **Variability in treatment effects**: $${MS}_{Treatments}=\frac{{SS}_{Treatments}}{{df}_{Treatments}}$$ -->
+<!-- **Variability in residuals** $${MS}_{E}=\frac{{SS}_{E}}{{df}_{E}}$$ -->
+<!-- ## F-ratios and the F-distribution -->
+<!-- Finally, the ratio of these two MS's is called the F ratio. The following quantity is our test statistic for the null hypothesis that there are no treatment effects. -->
+<!-- $$F = \frac{{MS}_{Treatments}}{{MS}_{E}}$$ -->
+<!-- If the null hypothesis is true, then F is a random variable $\sim F({df}_{Treatments}, {df}_{E})$. The [F-distribution](https://en.wikipedia.org/wiki/F-distribution). -->
+<!-- ```{r, eval=FALSE} -->
+<!-- qplot(x = rf(500, 3, 4), geom = "density") -->
+<!-- ``` -->
 <!-- Six Fisher Assumptions -->
 <!-- ======================================================= -->
 <!-- type: section -->
@@ -727,8 +665,10 @@ If our null hypothesis, <span class="math inline">\({H}_{0}: True\:E\mathit{f}\m
 <!--  + rnorm(64, 0, 0.65) -->
 <!-- ``` -->
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -757,7 +697,6 @@ If our null hypothesis, <span class="math inline">\({H}_{0}: True\:E\mathit{f}\m
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1056,10 +995,9 @@ If our null hypothesis, <span class="math inline">\({H}_{0}: True\:E\mathit{f}\m
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1069,8 +1007,17 @@ If our null hypothesis, <span class="math inline">\({H}_{0}: True\:E\mathit{f}\m
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

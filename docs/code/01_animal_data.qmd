@@ -1,7 +1,7 @@
 ---
 title: "01 - Animal Data"
 author: "Randi L. Garcia"
-date: "September 7, 2021"
+date: "February 1, 2024"
 output: html_document
 ---
 
@@ -13,7 +13,7 @@ Loading data.
 library(tidyverse)
 library(readr)
 
-animals <- read_csv("https://randilgarcia.github.io/sds290fall21/animals.csv")
+animals <- read_csv("https://randilgarcia.github.io/sds290spring24/animals.csv")
 ```
 
 Cleaning the data
@@ -51,6 +51,3 @@ qplot(x = calm, data = animals_long, bins = 5)
 ggplot(animals_long, aes(x = animal, fill = cue, y = calm)) +
   geom_boxplot()
 ```
-
-
-

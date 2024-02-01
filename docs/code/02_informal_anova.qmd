@@ -11,7 +11,7 @@ library(tidyverse)
 library(mosaic)
 library(readr)
 
-animals <- read_csv("https://randilgarcia.github.io/sds290fall21/animals.csv")
+animals <- read_csv("https://randilgarcia.github.io/sds290spring24/data/animals.csv")
 
 animals <- animals %>%
   mutate(student = seq.int(1, nrow(animals))) %>%
@@ -50,7 +50,7 @@ ggplot(animals, aes(x = animal, y = calm, color = cue)) +
 
 To make the set of assembly instructions, first we calculate the effects of all of our structural factors under the Fisher assumptions. We use the data to calculate all of these effects.
 
-The chunks of code below calculate all of the pieces we'll need in our assembly line. Each chunk is a station. The ANOVA conditions assumptions are built into the way we are calculating our assembly line instructions and when simulating the data below. 
+The chunks of code below calculate all of the pieces we'll need in our assembly line. Each chunk is a station. The ANOVA conditions assumptions are built into the way we are calculating our assembly line instructions and when simulating the data below.
 
 ```{r}
 animals_sim <- animals %>%
@@ -98,7 +98,7 @@ animals_sim <- animals_sim %>%
   
 ```
 
-Lastly, we create a blank calm variable such that we can simulate it next.  
+Lastly, we create a blank calm variable such that we can simulate it next.
 
 ```{r, simulation}
 animals_sim <- animals_sim %>%
@@ -107,7 +107,7 @@ animals_sim <- animals_sim %>%
 
 ## Simulating Data
 
-Next, we can simulate new calm data using our effect size calculations, with some assumptions in mind. 
+Next, we can simulate new calm data using our effect size calculations, with some assumptions in mind.
 
 ```{r}
 animals_sim <- animals_sim %>%
@@ -146,5 +146,3 @@ ggplot(animals_sim, aes(x = animal, y = calm_sim, color = cue)) +
 ggplot(animals_sim, aes(x = animal, y = calm, color = cue)) +
   geom_boxplot()
 ```
-
-

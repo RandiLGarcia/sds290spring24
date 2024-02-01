@@ -77,9 +77,9 @@ website:
       - text: Code
         menu:
           - text: 01 - Animal Data
-          #   href: lectures/01_animal_data.Rmd
-          # - text: 02 - Informal ANOVA
-          #   href: lectures/02_informal_anova.Rmd
+            href: lectures/01_animal_data.Rmd
+          - text: 02 - Informal ANOVA
+            href: lectures/02_informal_anova.Rmd
           # - text: 03 - Formal ANOVA
           #   href: lectures/05_formal_anova.Rmd
           # - text: 04 - SandwichAnts Analysis
