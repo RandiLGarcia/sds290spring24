@@ -13,7 +13,7 @@ Loading data.
 library(tidyverse)
 library(readr)
 
-animals <- read_csv("https://randilgarcia.github.io/sds290spring24/animals.csv")
+animals <- read_csv("https://randilgarcia.github.io/sds290spring24/data/animals.csv")
 ```
 
 Cleaning the data

@@ -318,8 +318,8 @@
     "objectID": "lectures/02_one-way-ANOVA.html#announcements",
     "href": "lectures/02_one-way-ANOVA.html#announcements",
     "title": "One-Way ANOVA",
-    "section": "Announcements",
-    "text": "Announcements\n\nHomework 1a was due last Friday\nHomework 1b due on Friday 2/2\n\nSDS 290 Slack channels for HW questions\n\nHomework 2 will be submitted on gradescope\nOffice hours (Bass 412)\n\nThurs 2:45p - 4:00p\nFri office hours cancelled this week"
+    "section": "",
+    "text": "Homework 1a was due last Friday\nHomework 1b due on Friday 2/2\n\nSDS 290 Slack channels for HW questions\n\nHomework 2 will be submitted on gradescope\nOffice hours (Bass 412)\n\nThurs 2:45p - 4:00p\nFri office hours cancelled this week"
   },
   {
     "objectID": "lectures/02_one-way-ANOVA.html#why-model",
@@ -647,8 +647,8 @@
     "objectID": "lectures/03_one-way-ANOVAII.html#announcements",
     "href": "lectures/03_one-way-ANOVAII.html#announcements",
     "title": "One-Way ANOVA II",
-    "section": "Announcements",
-    "text": "Announcements\n\nHomework 1b due on Friday 2/2\nHomework 2 will be submitted on gradescope\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFri office hours cancelled this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
+    "section": "",
+    "text": "Homework 1b due on Friday 2/2\nHomework 2 will be submitted on gradescope (more info to come)\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFri office hours cancelled this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#confounding-variables",
@@ -683,7 +683,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#one-way-anova-1",
     "title": "One-Way ANOVA II",
     "section": "One-Way ANOVA",
-    "text": "One-Way ANOVA\n\nqplot(x = as.factor(graduation), y = chalk_est, data = survey)"
+    "text": "One-Way ANOVA\n\nqplot(x = as.factor(graduation), y = chalk_est, data = survey)\n\nWarning: Removed 4 rows containing missing values (geom_point)."
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#data-cleaning",
@@ -697,7 +697,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#one-way-anova-2",
     "title": "One-Way ANOVA II",
     "section": "One-Way ANOVA",
-    "text": "One-Way ANOVA\n\nqplot(x = graduation, y = chalk_est, data = survey, geom = \"boxplot\")"
+    "text": "One-Way ANOVA\n\nqplot(x = graduation, y = chalk_est, data = survey, geom = \"boxplot\")\n\nWarning: Continuous x aesthetic -- did you forget aes(group=...)?"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#one-way-anova-3",
@@ -753,7 +753,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#simulation-in-r-assembly-line-metaphor",
     "title": "One-Way ANOVA II",
     "section": "Simulation in R: Assembly Line Metaphor",
-    "text": "Simulation in R: Assembly Line Metaphor\n\nAssembly Line Metaphor code"
+    "text": "Simulation in R: Assembly Line Metaphor\n\nAnimal Data\nAssembly Line Metaphor code"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#leafhopper-survival-1",
@@ -1153,5 +1153,19 @@
     "title": "Inference for ANOVA",
     "section": "ANOVA in R",
     "text": "ANOVA in R\n\nAnalyzing the leafhopper data in R. code here"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html",
+    "href": "lectures/03_one-way-ANOVAII.html",
+    "title": "One-Way ANOVA II",
+    "section": "",
+    "text": "Homework 1b due on Friday 2/2\nHomework 2 will be submitted on gradescope (more info to come)\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFri office hours cancelled this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html",
+    "href": "lectures/02_one-way-ANOVA.html",
+    "title": "One-Way ANOVA",
+    "section": "",
+    "text": "Homework 1a was due last Friday\nHomework 1b due on Friday 2/2\n\nSDS 290 Slack channels for HW questions\n\nHomework 2 will be submitted on gradescope\nOffice hours (Bass 412)\n\nThurs 2:45p - 4:00p\nFri office hours cancelled this week"
   }
 ]

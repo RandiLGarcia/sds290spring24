@@ -11,7 +11,7 @@ format:
 ## Announcements
 
 - [Homework 1b](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://randilgarcia.github.io/sds290spring24/pdfs/HW%201b_CITI%20Training.pdf) due on Friday 2/2
-- Homework 2 will be submitted on gradescope
+- Homework 2 will be submitted on gradescope (more info to come)
 - Office hours (Bass 412)
     - Today: 2:45p - 4:00p
     - Fri office hours cancelled this week
@@ -117,7 +117,8 @@ It is reasonable to assume that the structure of a sugar molecule has something 
 
 ## Simulation in R: Assembly Line Metaphor
 
--   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290fall21/lectures/02_informal_anova.Rmd)
+-   [Animal Data](https://randilgarcia.github.io/sds290fall21/code/01_animal_data.qmd)
+-   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290fall21/code/02_informal_anova.qmd)
 
 <!-- ## Leafhopper survival -->
 
