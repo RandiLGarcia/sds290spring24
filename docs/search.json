@@ -137,7 +137,7 @@
     "href": "schedule.html#week-2",
     "title": "Schedule",
     "section": "Week 2",
-    "text": "Week 2\n\nTue, Jan 30\n\nFour-step process\nOne-way ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.1-5.2 (Moodle)\n\n\n\n\nThurs, Feb 1\n\nOne-way ANOVA (cont.)\nHomework due today:\n\nRead Stat2 Ch. 5.3\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Feb 2\n\nOffice hours: cancelled today\nHomework due today:\n\nHW #1b due today at 11:55p"
+    "text": "Week 2\n\nTue, Jan 30\n\nFour-step process\nOne-way ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.1-5.2 (Moodle)"
   },
   {
     "objectID": "schedule.html#week-3",
@@ -642,5 +642,516 @@
     "title": "One-Way ANOVA",
     "section": "Data Cleaning",
     "text": "Data Cleaning\n\nsurvey &lt;- survey %&gt;%\n  filter(chalk_est &lt; 100)"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#announcements",
+    "href": "lectures/03_one-way-ANOVAII.html#announcements",
+    "title": "One-Way ANOVA II",
+    "section": "Announcements",
+    "text": "Announcements\n\nHW1b and HW1c due tomorrow at 11:55p\n\nExercise 5\nAny more questions?\n\nIn-person Office hours (Bass 412)\n\nThurs (today) 1:20-2:35p\n\nZoom Office hours\n\nFull for this week!\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. More info coming soon."
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#confounding-variables",
+    "href": "lectures/03_one-way-ANOVAII.html#confounding-variables",
+    "title": "One-Way ANOVA II",
+    "section": "Confounding Variables",
+    "text": "Confounding Variables\nI want to test if smelling a sweet food (fresh cinnamon rolls) versus a non-sweet food (broccoli) has an effect on salivation in humans. So, I recruit some participants to come to my lab, I’ll have to bake the cinnamon rolls and run that condition all at once, so I decide that I will bake my rolls at 9a, then from 10a-12p I will run the cinnamon roll condition. I bring people into individual distraction free rooms, hook them up to the salivation sensor, then bring them a plate with a freshly baked cinnamon roll. I record their salivation. Then, I will run the broccoli condition from 1p-3p, using the exact same measurement procedure.\nAre there any issues with my study?"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#confounding-variables-1",
+    "href": "lectures/03_one-way-ANOVAII.html#confounding-variables-1",
+    "title": "One-Way ANOVA II",
+    "section": "Confounding Variables",
+    "text": "Confounding Variables\nConfounding variables vary systematically with the levels of the explanatory factor"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#bias",
+    "href": "lectures/03_one-way-ANOVAII.html#bias",
+    "title": "One-Way ANOVA II",
+    "section": "Bias",
+    "text": "Bias\nOur data will be “off” in a systematic, non-random, way\n\nSampling Bias: Biologist is using a net with large holes to capture a sample of fish from a lake.\nSelection Bias: Assigning the skinnier rats to the good lab chow."
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#one-way-anova",
+    "href": "lectures/03_one-way-ANOVAII.html#one-way-anova",
+    "title": "One-Way ANOVA II",
+    "section": "One-Way ANOVA",
+    "text": "One-Way ANOVA\n\nOne factor (explanatory variable) with any number of levels.\nOne quantitative (non-binary) response variable.\n\n\nlibrary(tidyverse)\nlibrary(readr)\n\nsurvey &lt;- read_csv(\"https://randilgarcia.github.io/sds290spring24/data/class_survey_data.csv\")\n\nsurvey %&gt;%\n  select(graduation, chalk_est) %&gt;%\n  head()\n\n# A tibble: 6 × 2\n  graduation chalk_est\n       &lt;dbl&gt;     &lt;dbl&gt;\n1       2024      NA  \n2       2025       2.5\n3       2025      23.4\n4       2025      15  \n5       2025      20  \n6       2025      20"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#one-way-anova-1",
+    "href": "lectures/03_one-way-ANOVAII.html#one-way-anova-1",
+    "title": "One-Way ANOVA II",
+    "section": "One-Way ANOVA",
+    "text": "One-Way ANOVA\n\nqplot(x = as.factor(graduation), y = chalk_est, data = survey)"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#data-cleaning",
+    "href": "lectures/03_one-way-ANOVAII.html#data-cleaning",
+    "title": "One-Way ANOVA II",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning\n\nsurvey &lt;- survey %&gt;%\n  filter(chalk_est &lt; 100)"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#one-way-anova-2",
+    "href": "lectures/03_one-way-ANOVAII.html#one-way-anova-2",
+    "title": "One-Way ANOVA II",
+    "section": "One-Way ANOVA",
+    "text": "One-Way ANOVA\n\nqplot(x = graduation, y = chalk_est, data = survey, geom = \"boxplot\")"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#one-way-anova-3",
+    "href": "lectures/03_one-way-ANOVAII.html#one-way-anova-3",
+    "title": "One-Way ANOVA II",
+    "section": "One-Way ANOVA",
+    "text": "One-Way ANOVA\n\nqplot(x = factor(graduation), y = chalk_est, data = survey, geom = \"boxplot\")"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#the-meats",
+    "href": "lectures/03_one-way-ANOVAII.html#the-meats",
+    "title": "One-Way ANOVA II",
+    "section": "The Meats",
+    "text": "The Meats\nOne-Way Design\nThe shelf life of meats is the time a prepackaged cut remains salable, safe, and nutritious. Recent studies suggested controlled gas atmospheres as possible alternatives to existing packaging. To test this, beef steaks (75\\(g\\)) were randomly assigned to packaging with either 1) ambient air in a commercial plastic wrap, 2) vacuum packed, 3) 100% carbon dioxide (\\(CO_2\\)), or 4) a mixture of 1% carbon monoxide (CO), 40% oxygen (\\(O_2\\)), and 59% nitrogen (N). The number of psychrotrophic bacteria on the meat was measured after nine days of storage at 4 degrees C."
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#gender-bias-in-stem",
+    "href": "lectures/03_one-way-ANOVAII.html#gender-bias-in-stem",
+    "title": "One-Way ANOVA II",
+    "section": "Gender Bias in STEM",
+    "text": "Gender Bias in STEM\nOne-Way Design\nIn a randomized double-blind study (n = 127), science faculty from research-intensive universities rated the application materials of a student who was randomly assigned either a male or female name for a laboratory manager position. Faculty participants rated the male applicant as significantly more hireable than the (identical) female applicant. See materials here"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#acid-rain",
+    "href": "lectures/03_one-way-ANOVAII.html#acid-rain",
+    "title": "One-Way ANOVA II",
+    "section": "Acid Rain",
+    "text": "Acid Rain\nOne-Way Design\n“Clean” precipitation has a pH in the 5.0 to 5.5 range, but observed precipitation pH in northern New Hampshire is often in the 3.0 to 4.0 range. Is this acid rain hurting trees? 240 six-week-old yellow birch seedlings were randomly assigned to one of 5 groups. Each group received an acid rain mist at the following pH levels: 4.7, 4.0, 3.3, 3.0, and 2.3. After 17 weeks, the seedling were weighed, and their total plant (dry) weight was recorded."
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#leafhopper-survival",
+    "href": "lectures/03_one-way-ANOVAII.html#leafhopper-survival",
+    "title": "One-Way ANOVA II",
+    "section": "Leafhopper survival",
+    "text": "Leafhopper survival\nOne-Way Design\nIt is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group."
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#assembly-line-metaphor-cobb-2008",
+    "href": "lectures/03_one-way-ANOVAII.html#assembly-line-metaphor-cobb-2008",
+    "title": "One-Way ANOVA II",
+    "section": "Assembly Line Metaphor (Cobb, 2008)",
+    "text": "Assembly Line Metaphor (Cobb, 2008)\n\nRemembering George Cobb"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#assembly-line-metaphor",
+    "href": "lectures/03_one-way-ANOVAII.html#assembly-line-metaphor",
+    "title": "One-Way ANOVA II",
+    "section": "Assembly Line Metaphor",
+    "text": "Assembly Line Metaphor\n\nYou book used the CAT scan metaphor: \\[Body = Skeleton + Organ\\:System + Everything\\:Else\\]\nI prefer the assembly line metaphor, but whatever makes sense to you!"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#simulation-in-r-assembly-line-metaphor",
+    "href": "lectures/03_one-way-ANOVAII.html#simulation-in-r-assembly-line-metaphor",
+    "title": "One-Way ANOVA II",
+    "section": "Simulation in R: Assembly Line Metaphor",
+    "text": "Simulation in R: Assembly Line Metaphor\n\nAssembly Line Metaphor code"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#leafhopper-survival-1",
+    "href": "lectures/03_one-way-ANOVAII.html#leafhopper-survival-1",
+    "title": "One-Way ANOVA II",
+    "section": "Leafhopper survival",
+    "text": "Leafhopper survival\nOne-Way Design\nIt is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group."
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#decomposing-the-data",
+    "href": "lectures/03_one-way-ANOVAII.html#decomposing-the-data",
+    "title": "One-Way ANOVA II",
+    "section": "Decomposing the data",
+    "text": "Decomposing the data\n\n\n\n\n\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n1.7\n4.0\n2.7\n2.3\n\n\n\n\n\n\nLet’s draw a factor diagram, including a place for the grand mean and residuals."
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#leafhoppers",
+    "href": "lectures/03_one-way-ANOVAII.html#leafhoppers",
+    "title": "One-Way ANOVA II",
+    "section": "Leafhoppers",
+    "text": "Leafhoppers\nBar graph of treatment condition averages."
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#leafhoppers-1",
+    "href": "lectures/03_one-way-ANOVAII.html#leafhoppers-1",
+    "title": "One-Way ANOVA II",
+    "section": "Leafhoppers",
+    "text": "Leafhoppers\n\nWe’ll now start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.\nTo the factor diagram, let’s add in the grand mean, the effects for diet, and the residuals\n\n\n\n\n\n\nX.\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n\n1.7\n4.0\n2.7\n2.3\n\n\nmeans\n2.0\n3.8\n2.8\n2.2"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#one-way-anova-model",
+    "href": "lectures/03_one-way-ANOVAII.html#one-way-anova-model",
+    "title": "One-Way ANOVA II",
+    "section": "One-way ANOVA Model",
+    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#analysis-of-variance-anova",
+    "href": "lectures/03_one-way-ANOVAII.html#analysis-of-variance-anova",
+    "title": "One-Way ANOVA II",
+    "section": "Analysis of Variance ANOVA",
+    "text": "Analysis of Variance ANOVA\nFormal ANOVA starts with the simple idea that we can compare our estimate of treatment effect variability to our estimate of chance error variability to measure how large our treatment effect is.  \n\\[Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects = True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error\\] \\[Variability\\:in\\:Residuals = Error\\]  \nWe can construct a comparison, which we will call F:  \n\\[F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}=\\frac{True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error}{Error}\\]  \nIf our null hypothesis, \\({H}_{0}: True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences=0\\), is true, then what would we expect the F-ratio to equal?"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#sum-of-squares-ss",
+    "href": "lectures/03_one-way-ANOVAII.html#sum-of-squares-ss",
+    "title": "One-Way ANOVA II",
+    "section": "Sum of Squares (SS)",
+    "text": "Sum of Squares (SS)\nANOVA measures variability in treatment effects with the sum of squares (\\(SS\\)) divided by the number of units of unique information (\\(df\\)). For the One-Way design:\n\\[{SS}_{Treatments} = n\\sum_{i=1}^{a}(\\bar{y}_{i.}-\\bar{y}_{..})^{2}\\]\n\\[{SS}_{E} = \\sum_{i=1}^{a}\\sum_{j=1}^{n}({y}_{ij}-\\bar{y}_{i.})^{2}\\]\n\\[{SS}_{Total} = {SS}_{Treatments} + {SS}_{E}\\]\nwhere \\(n\\) is the group size, and \\(a\\) is the number of treatments."
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#degrees-of-freedom-df",
+    "href": "lectures/03_one-way-ANOVAII.html#degrees-of-freedom-df",
+    "title": "One-Way ANOVA II",
+    "section": "Degrees of Freedom (df)",
+    "text": "Degrees of Freedom (df)\nThe \\(df\\) for a table equals the number of free numbers, the number of slots in the table you can fill in before the pattern of repetitions and adding to zero tell you what the remaining numbers have to be.\n\\[{df}_{Treatments}=a-1\\]\n\\[{df}_{E}=N-a\\]"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#mean-squares-ms",
+    "href": "lectures/03_one-way-ANOVAII.html#mean-squares-ms",
+    "title": "One-Way ANOVA II",
+    "section": "Mean Squares (MS)",
+    "text": "Mean Squares (MS)\nThe ultimate statistic we want to calculate is \\(F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}\\).\nVariability in treatment effects: \\[{MS}_{Treatments}=\\frac{{SS}_{Treatments}}{{df}_{Treatments}}\\]\nVariability in residuals \\[{MS}_{E}=\\frac{{SS}_{E}}{{df}_{E}}\\]"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#f-ratios-and-the-f-distribution",
+    "href": "lectures/03_one-way-ANOVAII.html#f-ratios-and-the-f-distribution",
+    "title": "One-Way ANOVA II",
+    "section": "F-ratios and the F-distribution",
+    "text": "F-ratios and the F-distribution\nFinally, the ratio of these two MS’s is called the F ratio. The following quantity is our test statistic for the null hypothesis that there are no treatment effects.\n\\[F = \\frac{{MS}_{Treatments}}{{MS}_{E}}\\]\nIf the null hypothesis is true, then F is a random variable \\(\\sim F({df}_{Treatments}, {df}_{E})\\). The F-distribution."
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html",
+    "href": "lectures/05_ANOVA-conditions.html",
+    "title": "ANOVA Conditions",
+    "section": "",
+    "text": "HW2 due Friday 9/17 11:55p\n\nIn-person Office hours (Bass 412)\n\nThurs 1:20-2:35p\nor by appointment!\n\nZoom Office hours\n\nFull for this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301."
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#announcements",
+    "href": "lectures/05_ANOVA-conditions.html#announcements",
+    "title": "ANOVA Conditions",
+    "section": "",
+    "text": "HW2 due Friday 9/17 11:55p\n\nIn-person Office hours (Bass 412)\n\nThurs 1:20-2:35p\nor by appointment!\n\nZoom Office hours\n\nFull for this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301."
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#review-of-last-class",
+    "href": "lectures/05_ANOVA-conditions.html#review-of-last-class",
+    "title": "ANOVA Conditions",
+    "section": "Review of last class",
+    "text": "Review of last class\n\nIntroduced the motivation behind the Analysis of Variance (ANOVA)\nData decomposition\nComputing the SS, MS, df, and F-ratio\nInference for ANOVA (p-values)"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#anova-for-one-way-anova",
+    "href": "lectures/05_ANOVA-conditions.html#anova-for-one-way-anova",
+    "title": "ANOVA Conditions",
+    "section": "ANOVA for One-Way ANOVA",
+    "text": "ANOVA for One-Way ANOVA\nModel:\n\\[{y}_{ij}=\\mu+{\\alpha}_{i}+{e}_{ij}\\]\nNull hypothesis:\n\\[{H}_{0}:{\\alpha}_{1}={\\alpha}_{2}=...={\\alpha}_{a}=0\\]\nANOVA Source table:\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment\n\\(n\\sum_{i=1}^{a}(\\bar{y}_{i.}-\\bar{y}_{..})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{Treatments}}{{df}_{Treatments}}\\)\n\\(\\frac{{MS}_{Treatments}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{n}({y}_{ij}-\\bar{y}_{i.})^{2}\\)\n\\(N-a\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#running-an-anova-in-r",
+    "href": "lectures/05_ANOVA-conditions.html#running-an-anova-in-r",
+    "title": "ANOVA Conditions",
+    "section": "Running an ANOVA in R",
+    "text": "Running an ANOVA in R\nThree steps:\n\nBoxplots or some data visualization\nDescriptive statistics (n, means, standard deviations)\nANOVA\nCheck assumptions"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#step-1.-boxplots",
+    "href": "lectures/05_ANOVA-conditions.html#step-1.-boxplots",
+    "title": "ANOVA Conditions",
+    "section": "Step 1. Boxplots",
+    "text": "Step 1. Boxplots\n\n#Note that boxplots are a bit silly in this example because n is only 2.\nqplot(x = diet, y = days, data = leaf, geom = \"boxplot\")\n\nWarning: `qplot()` was deprecated in ggplot2 3.4.0."
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#step-2.-descriptive-statistics",
+    "href": "lectures/05_ANOVA-conditions.html#step-2.-descriptive-statistics",
+    "title": "ANOVA Conditions",
+    "section": "Step 2. Descriptive Statistics",
+    "text": "Step 2. Descriptive Statistics\n\nleaf %&gt;%\n  group_by(diet) %&gt;%\n  summarize(n = n(),\n            m = mean(days),\n            sd = sd(days))\n\n# A tibble: 4 × 4\n  diet         n     m    sd\n  &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 control      2   2   0.424\n2 fructose     2   2.2 0.141\n3 glucose      2   2.8 0.141\n4 sucrose      2   3.8 0.283"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#step-3.-anova",
+    "href": "lectures/05_ANOVA-conditions.html#step-3.-anova",
+    "title": "ANOVA Conditions",
+    "section": "Step 3. ANOVA",
+    "text": "Step 3. ANOVA\n\nmod &lt;- lm(days ~ diet, data = leaf)\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: days\n          Df Sum Sq Mean Sq F value   Pr(&gt;F)   \ndiet       3   3.92  1.3067  17.422 0.009248 **\nResiduals  4   0.30  0.0750                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\nWrite a sentence interpreting the One-Way ANOVA results\nThere are statistically significant differences in leafhopper survival rates across diets, \\(F(3, 4) = 17.42\\), \\(p = .009\\).\nOR\nDiet has a statistically significant effect on leafhopper survival rates, \\(F(3, 4) = 17.42\\), \\(p = .009\\)."
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#try-it",
+    "href": "lectures/05_ANOVA-conditions.html#try-it",
+    "title": "ANOVA Conditions",
+    "section": "Try it!",
+    "text": "Try it!\nIn groups of three run all three steps (visualize, descriptive stats, and ANOVA) for the two datasets below. Write a sentence about your conclusion from the ANOVA.\nDataset 1: SandwichAnts\n\nFactor: Bread\nResponse: Ants\n\nDataset 2: Meniscus\n\nFactor: Method\nResponse: Displacement\n\n\nlibrary(Stat2Data)\ndata(\"SandwichAnts\")\n?SandwichAnts"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#anova-conditions",
+    "href": "lectures/05_ANOVA-conditions.html#anova-conditions",
+    "title": "ANOVA Conditions",
+    "section": "ANOVA Conditions",
+    "text": "ANOVA Conditions\nSTOP!!…only under certain conditions can we rely on this inference. There were many assumptions built into:\n\nhow we decomposed the data, and\nour thoughts about residual errors.\n\n\nSimulation in R: Assembly Line Metaphor\n\n\nRecall the Assembly Line Metaphor code"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#anova-conditions-1",
+    "href": "lectures/05_ANOVA-conditions.html#anova-conditions-1",
+    "title": "ANOVA Conditions",
+    "section": "ANOVA Conditions",
+    "text": "ANOVA Conditions\n\n\nC. Constant effects\nA. Additive effects\nS. Same standard deviations\nI. Independent residuals\nN. Normally distributed residuals\nZ. Zero mean residuals"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#c.-constant-effects",
+    "href": "lectures/05_ANOVA-conditions.html#c.-constant-effects",
+    "title": "ANOVA Conditions",
+    "section": "C. Constant effects",
+    "text": "C. Constant effects\nWe assume every observation in a similar condition is affected exactly the same. (Gets the same “true score”).\n\nanimals_sim &lt;- animals %&gt;%\n  mutate(benchmark = mean(calm)) %&gt;%\n  group_by(animal) %&gt;%\n  mutate(animal_mean = mean(calm),\n         aminal_effect = animal_mean - benchmark)"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#a.-additive-effects",
+    "href": "lectures/05_ANOVA-conditions.html#a.-additive-effects",
+    "title": "ANOVA Conditions",
+    "section": "A. Additive effects",
+    "text": "A. Additive effects\nWe add the effects as we go down the assembly line.\nThe interaction effect captures the possibility that conditions have non-additive effects, but it is also added to everything else.\n\ncalm_sim = benchmark\n         + aminal_effect\n         + cue_effect\n         + interaction_effect\n         + student_effect"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#s.-same-standard-deviations",
+    "href": "lectures/05_ANOVA-conditions.html#s.-same-standard-deviations",
+    "title": "ANOVA Conditions",
+    "section": "S. Same standard deviations",
+    "text": "S. Same standard deviations\nThe piece of code for adding error is not dependent on which condition the observations is in.\n\n + rnorm(82, 0, 0.79)"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#i.-independent-residuals",
+    "href": "lectures/05_ANOVA-conditions.html#i.-independent-residuals",
+    "title": "ANOVA Conditions",
+    "section": "I. Independent residuals",
+    "text": "I. Independent residuals\nTakes 82 independent draws from a normal distribution.\n\n + rnorm(82, 0, 0.79)"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#n.-normally-distributed-residuals",
+    "href": "lectures/05_ANOVA-conditions.html#n.-normally-distributed-residuals",
+    "title": "ANOVA Conditions",
+    "section": "N. Normally distributed residuals",
+    "text": "N. Normally distributed residuals\nIt’s rnorm(), and not rbinom() or rpois()…\n\n + rnorm(82, 0, 0.79)"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#z.-zero-mean-residuals",
+    "href": "lectures/05_ANOVA-conditions.html#z.-zero-mean-residuals",
+    "title": "ANOVA Conditions",
+    "section": "Z. Zero mean residuals",
+    "text": "Z. Zero mean residuals\nThe second argument is the mean.\n\n + rnorm(82, 0, 0.79)"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#how-to-check-assumptions",
+    "href": "lectures/05_ANOVA-conditions.html#how-to-check-assumptions",
+    "title": "ANOVA Conditions",
+    "section": "How to check assumptions",
+    "text": "How to check assumptions\n\nC. Constant effects – think about whether it is reasonable.\nA. Additive effects – think about whether it is reasonable.\nS. Same standard deviations – is the biggest SD less than two times as large as the smallest?\nI. Independent residuals – think about whether it is reasonable.\nN. Normally distributed residuals – construct a histogram or normal probability plot of residuals.\nZ. Zero mean residuals – construct a histogram or normal probability plot of residuals."
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz",
+    "href": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz",
+    "title": "ANOVA Conditions",
+    "section": "To check the Residual Assumptions: SINZ",
+    "text": "To check the Residual Assumptions: SINZ\nS: calculate descriptive statistics and divide largest SD by smallest.\n\nleaf %&gt;%\n  group_by(diet) %&gt;%\n  summarize(n = n(),\n            m = mean(days),\n            sd = sd(days))\n\n# A tibble: 4 × 4\n  diet         n     m    sd\n  &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 control      2   2   0.424\n2 fructose     2   2.2 0.141\n3 glucose      2   2.8 0.141\n4 sucrose      2   3.8 0.283\n\n0.424/0.141\n\n[1] 3.007092\n\n\nI: Judge for yourself – what do we think about the leafhopper dishes?"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz-1",
+    "href": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz-1",
+    "title": "ANOVA Conditions",
+    "section": "To check the Residual Assumptions: SINZ",
+    "text": "To check the Residual Assumptions: SINZ\nN: Look at histogram and normal probability plots of residuals.\n\n#normal probability plot of residuals\nplot(mod, which = 2)"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz-2",
+    "href": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz-2",
+    "title": "ANOVA Conditions",
+    "section": "To check the Residual Assumptions: SINZ",
+    "text": "To check the Residual Assumptions: SINZ\nZ: Look at histogram of residuals.\n\n#histogram of residuals\nqplot(x = mod$residuals, bins = 4)"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#try-it-1",
+    "href": "lectures/05_ANOVA-conditions.html#try-it-1",
+    "title": "ANOVA Conditions",
+    "section": "Try it!",
+    "text": "Try it!\nBack in your groups of three, check or discuss the last 4 ANOVA assumptions: The SINZ.\nDataset 1: SandwichAnts\n\nFactor: Bread\nResponse: Ants\n\nDataset 2: Meniscus\n\nFactor: Method\nResponse: Displacement"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#mini-project-1",
+    "href": "lectures/05_ANOVA-conditions.html#mini-project-1",
+    "title": "ANOVA Conditions",
+    "section": "Mini Project 1",
+    "text": "Mini Project 1\nSee Mini Project 1 instructions"
+  },
+  {
+    "objectID": "lectures/05_formal_anova.html",
+    "href": "lectures/05_formal_anova.html",
+    "title": "05 - Formal ANOVA",
+    "section": "",
+    "text": "Loading data\n\nlibrary(dplyr)\nlibrary(mosaic)\nlibrary(ggplot2)\n\nleaf &lt;- data.frame(diet = c(\"control\", \"control\", \"sucrose\", \"sucrose\", \n                            \"glucose\", \"glucose\", \"fructose\", \"fructose\"), \n                   days = c(2.3, 1.7, 3.6, 4.0, 3.0, 2.8, 2.1, 2.3))\n\n\n\nVisualize the means\n\nleaf %&gt;%\n  group_by(diet) %&gt;%\n  summarise(means = mean(days)) %&gt;%\n  mutate(bench = mean(means)) %&gt;%\nggplot(aes(x = diet, y = means)) +\n  geom_bar(stat = \"identity\") +\n  geom_hline(aes(yintercept = bench), color = \"red\") \n\n\n\n\n\n#although only two observations per condition\nleaf %&gt;%\n  group_by(diet) %&gt;%\n  summarise(sd = sd(days))\n\n# A tibble: 4 × 2\n  diet        sd\n  &lt;chr&gt;    &lt;dbl&gt;\n1 control  0.424\n2 fructose 0.141\n3 glucose  0.141\n4 sucrose  0.283\n\n\n\n\nCalculating effects to go in factor diagram\n\nleaf &lt;- leaf %&gt;%\n  mutate(benchmark = mean(days)) %&gt;%\n  group_by(diet) %&gt;%\n  mutate(grp_mean = mean(days),\n         diet_effect = grp_mean - benchmark) %&gt;%\n  ungroup() %&gt;%\n  mutate(fitted = benchmark + diet_effect,\n         resid = days - grp_mean,\n         resid_alt = days - fitted)\n\n\n\nFormal ANOVA\nANOVA for One-Way design\n\nmod &lt;- lm(days ~ diet, data = leaf)\n\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: days\n          Df Sum Sq Mean Sq F value   Pr(&gt;F)   \ndiet       3  3.975   1.325  17.667 0.009015 **\nResiduals  4  0.300   0.075                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\nPairwise tests\nYou will learn much more about what are called post hoc tests next week. But basically, we can do pairwise comparisons, think independent samples t-test between conditions.\nFor example:\n\nleaf %&gt;%\n  filter(diet == \"control\" | diet == \"sucrose\") %&gt;%\n  t.test(days ~ diet, data = .)\n\n\n    Welch Two Sample t-test\n\ndata:  days by diet\nt = -4.9923, df = 1.7423, p-value = 0.0497\nalternative hypothesis: true difference in means between group control and group sucrose is not equal to 0\n95 percent confidence interval:\n -3.593412354 -0.006587646\nsample estimates:\nmean in group control mean in group sucrose \n                  2.0                   3.8 \n\nleaf %&gt;%\n  filter(diet == \"control\" | diet == \"sucrose\") %&gt;%\n  t.test(days ~ diet, data = ., var.equal = TRUE)\n\n\n    Two Sample t-test\n\ndata:  days by diet\nt = -4.9923, df = 2, p-value = 0.03786\nalternative hypothesis: true difference in means between group control and group sucrose is not equal to 0\n95 percent confidence interval:\n -3.3513435 -0.2486565\nsample estimates:\nmean in group control mean in group sucrose \n                  2.0                   3.8 \n\n\nOr using the linear model from above\n\nsummary(mod)\n\n\nCall:\nlm(formula = days ~ diet, data = leaf)\n\nResiduals:\n   1    2    3    4    5    6    7    8 \n 0.3 -0.3 -0.2  0.2  0.1 -0.1 -0.1  0.1 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)    2.0000     0.1936  10.328 0.000496 ***\ndietfructose   0.2000     0.2739   0.730 0.505681    \ndietglucose    0.9000     0.2739   3.286 0.030320 *  \ndietsucrose    1.8000     0.2739   6.573 0.002773 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2739 on 4 degrees of freedom\nMultiple R-squared:  0.9298,    Adjusted R-squared:  0.8772 \nF-statistic: 17.67 on 3 and 4 DF,  p-value: 0.009015\n\nconfint(mod)\n\n                  2.5 %    97.5 %\n(Intercept)   1.4623437 2.5376563\ndietfructose -0.5603608 0.9603608\ndietglucose   0.1396392 1.6603608\ndietsucrose   1.0396392 2.5603608\n\n\nWe probably want to adjust for multiple comparisons to control our experimentwise type I error rate.\n\nTukeyHSD(mod, \"diet\")\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = x)\n\n$diet\n                 diff        lwr     upr     p adj\nfructose-control  0.2 -0.9148496 1.31485 0.8805808\nglucose-control   0.9 -0.2148496 2.01485 0.0962419\nsucrose-control   1.8  0.6851504 2.91485 0.0095276\nglucose-fructose  0.7 -0.4148496 1.81485 0.1884171\nsucrose-fructose  1.6  0.4851504 2.71485 0.0145912\nsucrose-glucose   0.9 -0.2148496 2.01485 0.0962419\n\n4.992^2\n\n[1] 24.92006\n\n-4.9923\n\n[1] -4.9923\n\n24.923\n\n[1] 24.923"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html",
+    "href": "lectures/04_inference-ANOVA.html",
+    "title": "Inference for ANOVA",
+    "section": "",
+    "text": "Grades are posted for HW1a, HW1b, and HW1c\n\nSolution sheet will be avaliable on Moodle on Wed\n\nHW2 posted\n\nIn-person Office hours (Bass 412)\n\nWed 10:50-12:05p\nThurs 1:20-2:35p\nor by appointment!\n\nZoom Office hours\n\nFull for this week!\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\n\nSDS Lounge study space McConnell 209"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#announcements",
+    "href": "lectures/04_inference-ANOVA.html#announcements",
+    "title": "Inference for ANOVA",
+    "section": "",
+    "text": "Grades are posted for HW1a, HW1b, and HW1c\n\nSolution sheet will be avaliable on Moodle on Wed\n\nHW2 posted\n\nIn-person Office hours (Bass 412)\n\nWed 10:50-12:05p\nThurs 1:20-2:35p\nor by appointment!\n\nZoom Office hours\n\nFull for this week!\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\n\nSDS Lounge study space McConnell 209"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#leafhopper-survival",
+    "href": "lectures/04_inference-ANOVA.html#leafhopper-survival",
+    "title": "Inference for ANOVA",
+    "section": "Leafhopper survival",
+    "text": "Leafhopper survival\nOne-Way Design\nIt is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group."
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#decomposing-the-data",
+    "href": "lectures/04_inference-ANOVA.html#decomposing-the-data",
+    "title": "Inference for ANOVA",
+    "section": "Decomposing the data",
+    "text": "Decomposing the data\n\n\n\n\n\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n1.7\n4.0\n2.7\n2.3\n\n\n\n\n\n\nLet’s draw a factor diagram, including a place for the grand mean and residuals."
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#leafhoppers",
+    "href": "lectures/04_inference-ANOVA.html#leafhoppers",
+    "title": "Inference for ANOVA",
+    "section": "Leafhoppers",
+    "text": "Leafhoppers\nBar graph of treatment condition averages."
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#leafhoppers-1",
+    "href": "lectures/04_inference-ANOVA.html#leafhoppers-1",
+    "title": "Inference for ANOVA",
+    "section": "Leafhoppers",
+    "text": "Leafhoppers\n\nWe’ll now start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.\nTo the factor diagram, let’s add in the grand mean, the effects for diet, and the residuals\n\n\n\n\n\n\nX.\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n\n1.7\n4.0\n2.7\n2.3\n\n\nmeans\n2.0\n3.8\n2.8\n2.2"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#one-way-anova-model",
+    "href": "lectures/04_inference-ANOVA.html#one-way-anova-model",
+    "title": "Inference for ANOVA",
+    "section": "One-way ANOVA Model",
+    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\n\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#analysis-of-variance-anova",
+    "href": "lectures/04_inference-ANOVA.html#analysis-of-variance-anova",
+    "title": "Inference for ANOVA",
+    "section": "Analysis of Variance ANOVA",
+    "text": "Analysis of Variance ANOVA\nFormal ANOVA starts with the simple idea that we can compare our estimate of treatment effect variability to our estimate of chance error variability to measure how large our treatment effect is.  \n\\[Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects = True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error\\] \\[Variability\\:in\\:Residuals = Error\\]  \nWe can construct a comparison, which we will call F:  \n\\[F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}=\\frac{True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error}{Error}\\]  \nIf our null hypothesis, \\({H}_{0}: True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences=0\\), is true, then what would we expect the F-ratio to equal?"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#sum-of-squares-ss",
+    "href": "lectures/04_inference-ANOVA.html#sum-of-squares-ss",
+    "title": "Inference for ANOVA",
+    "section": "Sum of Squares (SS)",
+    "text": "Sum of Squares (SS)\nANOVA measures variability in treatment effects with the sum of squares (\\(SS\\)) divided by the number of units of unique information (\\(df\\)). For the One-Way design:\n\\[{SS}_{Treatments} = n\\sum_{i=1}^{a}(\\bar{y}_{i.}-\\bar{y}_{..})^{2}\\]\n\\[{SS}_{E} = \\sum_{i=1}^{a}\\sum_{j=1}^{n}({y}_{ij}-\\bar{y}_{i.})^{2}\\]\n\\[{SS}_{Total} = {SS}_{Treatments} + {SS}_{E}\\]\nwhere \\(n\\) is the group size, and \\(a\\) is the number of treatments."
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#degrees-of-freedom-df",
+    "href": "lectures/04_inference-ANOVA.html#degrees-of-freedom-df",
+    "title": "Inference for ANOVA",
+    "section": "Degrees of Freedom (df)",
+    "text": "Degrees of Freedom (df)\nThe \\(df\\) for a table equals the number of free numbers, the number of slots in the table you can fill in before the pattern of repetitions and adding to zero tell you what the remaining numbers have to be.\n\\[{df}_{Treatments}=a-1\\]\n\\[{df}_{E}=N-a\\]"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#mean-squares-ms",
+    "href": "lectures/04_inference-ANOVA.html#mean-squares-ms",
+    "title": "Inference for ANOVA",
+    "section": "Mean Squares (MS)",
+    "text": "Mean Squares (MS)\nThe ultimate statistic we want to calculate is \\(F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}\\).\nVariability in treatment effects: \\[{MS}_{Treatments}=\\frac{{SS}_{Treatments}}{{df}_{Treatments}}\\]\nVariability in residuals \\[{MS}_{E}=\\frac{{SS}_{E}}{{df}_{E}}\\]"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#f-ratios-and-the-f-distribution",
+    "href": "lectures/04_inference-ANOVA.html#f-ratios-and-the-f-distribution",
+    "title": "Inference for ANOVA",
+    "section": "F-ratios and the F-distribution",
+    "text": "F-ratios and the F-distribution\nFinally, the ratio of these two MS’s is called the F ratio. The following quantity is our test statistic for the null hypothesis that there are no treatment effects.\n\\[F = \\frac{{MS}_{Treatments}}{{MS}_{E}}\\]\nIf the null hypothesis is true, then F is a random variable \\(\\sim F({df}_{Treatments}, {df}_{E})\\). The F-distribution.\n\nqplot(x = rf(500, 3, 4), geom = \"density\")"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#inference-testing-in-anova",
+    "href": "lectures/04_inference-ANOVA.html#inference-testing-in-anova",
+    "title": "Inference for ANOVA",
+    "section": "Inference Testing in ANOVA",
+    "text": "Inference Testing in ANOVA\n\\[{H}_{0}:\\mu_1=\\mu_2=\\mu_3=\\mu_4\\]\nOR, \\({H}_{0}:\\alpha_1=\\alpha_2=\\alpha_3=\\alpha_4=0\\)\n\\[{H}_{A}:some\\:\\mu_i\\neq\\mu_j\\]\nOr \\(H_a: Some\\:\\alpha_i\\neq 0\\). We can find the p-value for our F calculation with the following code\n\npf(17.422, 3, 4, lower.tail = FALSE)"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#anova-source-table",
+    "href": "lectures/04_inference-ANOVA.html#anova-source-table",
+    "title": "Inference for ANOVA",
+    "section": "ANOVA Source Table",
+    "text": "ANOVA Source Table\n\nmod &lt;- lm(days ~ diet, data = leaf)\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: days\n          Df Sum Sq Mean Sq F value   Pr(&gt;F)   \ndiet       3   3.92  1.3067  17.422 0.009248 **\nResiduals  4   0.30  0.0750                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#anova-conditions",
+    "href": "lectures/04_inference-ANOVA.html#anova-conditions",
+    "title": "Inference for ANOVA",
+    "section": "ANOVA Conditions",
+    "text": "ANOVA Conditions\nBut only under certain conditions can we rely on this inference.\n\nSimulation in R: Assembly Line Metaphor\n\n\nRecall the Assembly Line Metaphor code"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#anova-conditions-1",
+    "href": "lectures/04_inference-ANOVA.html#anova-conditions-1",
+    "title": "Inference for ANOVA",
+    "section": "ANOVA Conditions",
+    "text": "ANOVA Conditions\n\n\nC. Constant effects\nA. Additive effects\nS. Same standard deviations\nI. Independent residuals\nN. Normally distributed residuals\nZ. Zero mean residuals"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#c.-constant-effects",
+    "href": "lectures/04_inference-ANOVA.html#c.-constant-effects",
+    "title": "Inference for ANOVA",
+    "section": "C. Constant effects",
+    "text": "C. Constant effects\nWe assume every observation in a similar condition is affected exactly the same. (Gets the same “true score”).\n\nanimals_sim &lt;- animals %&gt;%\n  mutate(benchmark = mean(calm)) %&gt;%\n  group_by(animal) %&gt;%\n  mutate(animal_mean = mean(calm),\n         aminal_effect = animal_mean - benchmark)"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#a.-additive-effects",
+    "href": "lectures/04_inference-ANOVA.html#a.-additive-effects",
+    "title": "Inference for ANOVA",
+    "section": "A. Additive effects",
+    "text": "A. Additive effects\nWe add the effects as we go down the assembly line.\nThe interaction effect captures the possibility that conditions have non-additive effects, but it is also added to everything else.\n\ncalm_sim = benchmark\n         + aminal_effect\n         + cue_effect\n         + interaction_effect\n         + student_effect"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#s.-same-standard-deviations",
+    "href": "lectures/04_inference-ANOVA.html#s.-same-standard-deviations",
+    "title": "Inference for ANOVA",
+    "section": "S. Same standard deviations",
+    "text": "S. Same standard deviations\nThe peice of code for adding error is not dependent on which condition the observations is in.\n\n + rnorm(82, 0, 0.79)"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#i.-independent-residuals",
+    "href": "lectures/04_inference-ANOVA.html#i.-independent-residuals",
+    "title": "Inference for ANOVA",
+    "section": "I. Independent residuals",
+    "text": "I. Independent residuals\nTakes 82 independent draws from a normal distribution.\n\n + rnorm(82, 0, 0.79)"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#n.-normally-distributed-residuals",
+    "href": "lectures/04_inference-ANOVA.html#n.-normally-distributed-residuals",
+    "title": "Inference for ANOVA",
+    "section": "N. Normally distributed residuals",
+    "text": "N. Normally distributed residuals\nIt’s rnorm(), and not rbinom() or rpois()…\n\n + rnorm(82, 0, 0.79)"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#z.-zero-mean-residuals",
+    "href": "lectures/04_inference-ANOVA.html#z.-zero-mean-residuals",
+    "title": "Inference for ANOVA",
+    "section": "Z. Zero mean residuals",
+    "text": "Z. Zero mean residuals\nThe second argument is the mean.\n\n + rnorm(82, 0, 0.79)"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#anova-in-r",
+    "href": "lectures/04_inference-ANOVA.html#anova-in-r",
+    "title": "Inference for ANOVA",
+    "section": "ANOVA in R",
+    "text": "ANOVA in R\n\nAnalyzing the leafhopper data in R. code here"
   }
 ]

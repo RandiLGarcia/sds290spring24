@@ -28,7 +28,7 @@ Please read the specified sections *before* class that day.
     -   Read **Stat2** Ch. 0 (PDF on Moodle)
     -   **HW #1a due today at 11:55p**
 
-:::
+
 
 ## Week 2
 
@@ -38,6 +38,8 @@ Please read the specified sections *before* class that day.
 -   One-way ANOVA
 -   Homework due today:
     -   Read **Stat2** Ch. 5.1-5.2 (Moodle)
+
+:::
 
 #### Thurs, Feb 1
 

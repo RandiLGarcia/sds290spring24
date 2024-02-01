@@ -40,5 +40,17 @@
   },
   "lectures/code/01_animal_data.Rmd": {
     "01_animal_data.html": "fe651985"
+  },
+  "lectures/03_one-way-ANOVAII.qmd": {
+    "03_one-way-ANOVAII.html": "83ae5d31"
+  },
+  "lectures/05_formal_anova.Rmd": {
+    "05_formal_anova.html": "8b70a9d6"
+  },
+  "lectures/05_ANOVA-conditions.Rmd": {
+    "05_ANOVA-conditions.html": "4db7c39d"
+  },
+  "lectures/04_inference-ANOVA.Rmd": {
+    "04_inference-ANOVA.html": "e97567ec"
   }
 }

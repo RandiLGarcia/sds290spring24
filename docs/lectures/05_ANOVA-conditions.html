@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="SDS 290">
+<meta name="dcterms.date" content="2021-09-16">
+
+<title>SDS 290 - Spring 2024 - ANOVA Conditions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SDS 290 - Spring 2024</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li class="dropdown-header">Helpful Links</li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lectures" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Lectures</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-lectures">    
+        <li>
+    <a class="dropdown-item" href="../lectures/01_intro_to_experimental.html" rel="" target="">
+ <span class="dropdown-text">01 - Intro to Experimental Design</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/02_one-way-ANOVA.html" rel="" target="">
+ <span class="dropdown-text">02 - One-Way ANOVA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/03_one-way-ANOVAII.html" rel="" target="">
+ <span class="dropdown-text">03 - One-Way ANOVA II</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-code" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Code</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-code">    
+        <li class="dropdown-header">01 - Animal Data</li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-homework" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Homework</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-homework">    
+        <li>
+    <a class="dropdown-item" href="http://moodle.smith.edu" rel="" target="">
+ <span class="dropdown-text">HW1a: Record your names on Moodle</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../pdfs/HW 1b_CITI Training.pdf" rel="" target="">
+ <span class="dropdown-text">HW1b: CITI Training</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li class="dropdown-header">Mini project 1</li>
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#announcements" id="toc-announcements" class="nav-link active" data-scroll-target="#announcements">Announcements</a></li>
+  <li><a href="#review-of-last-class" id="toc-review-of-last-class" class="nav-link" data-scroll-target="#review-of-last-class">Review of last class</a></li>
+  <li><a href="#anova-for-one-way-anova" id="toc-anova-for-one-way-anova" class="nav-link" data-scroll-target="#anova-for-one-way-anova">ANOVA for One-Way ANOVA</a></li>
+  <li><a href="#running-an-anova-in-r" id="toc-running-an-anova-in-r" class="nav-link" data-scroll-target="#running-an-anova-in-r">Running an ANOVA in R</a></li>
+  <li><a href="#step-1.-boxplots" id="toc-step-1.-boxplots" class="nav-link" data-scroll-target="#step-1.-boxplots">Step 1. Boxplots</a></li>
+  <li><a href="#step-2.-descriptive-statistics" id="toc-step-2.-descriptive-statistics" class="nav-link" data-scroll-target="#step-2.-descriptive-statistics">Step 2. Descriptive Statistics</a></li>
+  <li><a href="#step-3.-anova" id="toc-step-3.-anova" class="nav-link" data-scroll-target="#step-3.-anova">Step 3. ANOVA</a>
+  <ul class="collapse">
+  <li><a href="#write-a-sentence-interpreting-the-one-way-anova-results" id="toc-write-a-sentence-interpreting-the-one-way-anova-results" class="nav-link" data-scroll-target="#write-a-sentence-interpreting-the-one-way-anova-results">Write a sentence interpreting the One-Way ANOVA results</a></li>
+  </ul></li>
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">Try it!</a></li>
+  <li><a href="#anova-conditions" id="toc-anova-conditions" class="nav-link" data-scroll-target="#anova-conditions">ANOVA Conditions</a>
+  <ul class="collapse">
+  <li><a href="#simulation-in-r-assembly-line-metaphor" id="toc-simulation-in-r-assembly-line-metaphor" class="nav-link" data-scroll-target="#simulation-in-r-assembly-line-metaphor">Simulation in R: Assembly Line Metaphor</a></li>
+  </ul></li>
+  <li><a href="#anova-conditions-1" id="toc-anova-conditions-1" class="nav-link" data-scroll-target="#anova-conditions-1">ANOVA Conditions</a></li>
+  <li><a href="#c.-constant-effects" id="toc-c.-constant-effects" class="nav-link" data-scroll-target="#c.-constant-effects">C. Constant effects</a></li>
+  <li><a href="#a.-additive-effects" id="toc-a.-additive-effects" class="nav-link" data-scroll-target="#a.-additive-effects">A. Additive effects</a></li>
+  <li><a href="#s.-same-standard-deviations" id="toc-s.-same-standard-deviations" class="nav-link" data-scroll-target="#s.-same-standard-deviations">S. Same standard deviations</a></li>
+  <li><a href="#i.-independent-residuals" id="toc-i.-independent-residuals" class="nav-link" data-scroll-target="#i.-independent-residuals">I. Independent residuals</a></li>
+  <li><a href="#n.-normally-distributed-residuals" id="toc-n.-normally-distributed-residuals" class="nav-link" data-scroll-target="#n.-normally-distributed-residuals">N. Normally distributed residuals</a></li>
+  <li><a href="#z.-zero-mean-residuals" id="toc-z.-zero-mean-residuals" class="nav-link" data-scroll-target="#z.-zero-mean-residuals">Z. Zero mean residuals</a></li>
+  <li><a href="#how-to-check-assumptions" id="toc-how-to-check-assumptions" class="nav-link" data-scroll-target="#how-to-check-assumptions">How to check assumptions</a></li>
+  <li><a href="#to-check-the-residual-assumptions-sinz" id="toc-to-check-the-residual-assumptions-sinz" class="nav-link" data-scroll-target="#to-check-the-residual-assumptions-sinz">To check the Residual Assumptions: SINZ</a></li>
+  <li><a href="#to-check-the-residual-assumptions-sinz-1" id="toc-to-check-the-residual-assumptions-sinz-1" class="nav-link" data-scroll-target="#to-check-the-residual-assumptions-sinz-1">To check the Residual Assumptions: SINZ</a></li>
+  <li><a href="#to-check-the-residual-assumptions-sinz-2" id="toc-to-check-the-residual-assumptions-sinz-2" class="nav-link" data-scroll-target="#to-check-the-residual-assumptions-sinz-2">To check the Residual Assumptions: SINZ</a></li>
+  <li><a href="#try-it-1" id="toc-try-it-1" class="nav-link" data-scroll-target="#try-it-1">Try it!</a></li>
+  <li><a href="#mini-project-1" id="toc-mini-project-1" class="nav-link" data-scroll-target="#mini-project-1">Mini Project 1</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">ANOVA Conditions</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>SDS 290 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 16, 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="announcements" class="level2">
+<h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
+<ul>
+<li>HW2 due Friday 9/17 11:55p<br>
+</li>
+<li>In-person Office hours (Bass 412)
+<ul>
+<li>Thurs 1:20-2:35p</li>
+<li>or by appointment!</li>
+</ul></li>
+<li>Zoom Office hours
+<ul>
+<li>Full for this week</li>
+</ul></li>
+<li>Where to get HW help
+<ul>
+<li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301.</li>
+</ul></li>
+</ul>
+</section>
+<section id="review-of-last-class" class="level2">
+<h2 class="anchored" data-anchor-id="review-of-last-class">Review of last class</h2>
+<ul>
+<li>Introduced the motivation behind the Analysis of Variance (ANOVA)</li>
+<li>Data decomposition</li>
+<li>Computing the SS, MS, df, and F-ratio</li>
+<li>Inference for ANOVA (p-values)</li>
+</ul>
+</section>
+<section id="anova-for-one-way-anova" class="level2">
+<h2 class="anchored" data-anchor-id="anova-for-one-way-anova">ANOVA for One-Way ANOVA</h2>
+<p>Model:</p>
+<p><span class="math display">\[{y}_{ij}=\mu+{\alpha}_{i}+{e}_{ij}\]</span></p>
+<p>Null hypothesis:</p>
+<p><span class="math display">\[{H}_{0}:{\alpha}_{1}={\alpha}_{2}=...={\alpha}_{a}=0\]</span></p>
+<p>ANOVA Source table:</p>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Source</th>
+<th style="text-align: center;">SS</th>
+<th style="text-align: center;">df</th>
+<th style="text-align: center;">MS</th>
+<th style="text-align: center;">F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Treatment</td>
+<td style="text-align: center;"><span class="math inline">\(n\sum_{i=1}^{a}(\bar{y}_{i.}-\bar{y}_{..})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(a-1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{Treatments}}{{df}_{Treatments}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{Treatments}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Error</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}\sum_{j=1}^{n}({y}_{ij}-\bar{y}_{i.})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N-a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{E}}{{df}_{E}}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="running-an-anova-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="running-an-anova-in-r">Running an ANOVA in R</h2>
+<p>Three steps:</p>
+<ol type="1">
+<li>Boxplots or some data visualization</li>
+<li>Descriptive statistics (n, means, standard deviations)</li>
+<li>ANOVA</li>
+<li>Check assumptions</li>
+</ol>
+</section>
+<section id="step-1.-boxplots" class="level2">
+<h2 class="anchored" data-anchor-id="step-1.-boxplots">Step 1. Boxplots</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Note that boxplots are a bit silly in this example because n is only 2.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> diet, <span class="at">y =</span> days, <span class="at">data =</span> leaf, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: `qplot()` was deprecated in ggplot2 3.4.0.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="05_ANOVA-conditions_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="step-2.-descriptive-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="step-2.-descriptive-statistics">Step 2. Descriptive Statistics</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>leaf <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(diet) <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">m =</span> <span class="fu">mean</span>(days),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(days))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 4
+  diet         n     m    sd
+  &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 control      2   2   0.424
+2 fructose     2   2.2 0.141
+3 glucose      2   2.8 0.141
+4 sucrose      2   3.8 0.283</code></pre>
+</div>
+</div>
+</section>
+<section id="step-3.-anova" class="level2">
+<h2 class="anchored" data-anchor-id="step-3.-anova">Step 3. ANOVA</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(days <span class="sc">~</span> diet, <span class="at">data =</span> leaf)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
+
+Response: days
+          Df Sum Sq Mean Sq F value   Pr(&gt;F)   
+diet       3   3.92  1.3067  17.422 0.009248 **
+Residuals  4   0.30  0.0750                    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<section id="write-a-sentence-interpreting-the-one-way-anova-results" class="level3">
+<h3 class="anchored" data-anchor-id="write-a-sentence-interpreting-the-one-way-anova-results">Write a sentence interpreting the One-Way ANOVA results</h3>
+<p>There are statistically significant differences in leafhopper survival rates across diets, <span class="math inline">\(F(3, 4) = 17.42\)</span>, <span class="math inline">\(p = .009\)</span>.</p>
+<p><strong>OR</strong></p>
+<p>Diet has a statistically significant effect on leafhopper survival rates, <span class="math inline">\(F(3, 4) = 17.42\)</span>, <span class="math inline">\(p = .009\)</span>.</p>
+</section>
+</section>
+<section id="try-it" class="level2">
+<h2 class="anchored" data-anchor-id="try-it">Try it!</h2>
+<p>In groups of three run all three steps (visualize, descriptive stats, and ANOVA) for the two datasets below. Write a sentence about your conclusion from the ANOVA.</p>
+<p><strong>Dataset 1</strong>: <code>SandwichAnts</code></p>
+<ul>
+<li>Factor: <code>Bread</code></li>
+<li>Response: <code>Ants</code></li>
+</ul>
+<p><strong>Dataset 2</strong>: <code>Meniscus</code></p>
+<ul>
+<li>Factor: <code>Method</code></li>
+<li>Response: <code>Displacement</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Stat2Data)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"SandwichAnts"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>?SandwichAnts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="anova-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="anova-conditions">ANOVA Conditions</h2>
+<p><strong>STOP!!</strong>…only under certain conditions can we rely on this inference. There were many assumptions built into:</p>
+<ul>
+<li>how we decomposed the data, and</li>
+<li>our thoughts about residual errors.</li>
+</ul>
+<section id="simulation-in-r-assembly-line-metaphor" class="level3">
+<h3 class="anchored" data-anchor-id="simulation-in-r-assembly-line-metaphor">Simulation in R: Assembly Line Metaphor</h3>
+<p><img src="https://thumbs.gfycat.com/MelodicCalculatingBluejay.webp" class="img-fluid"></p>
+<ul>
+<li>Recall the <a href="https://randilgarcia.github.io/sds290fall21/lectures/02_informal_anova.Rmd">Assembly Line Metaphor code</a></li>
+</ul>
+</section>
+</section>
+<section id="anova-conditions-1" class="level2">
+<h2 class="anchored" data-anchor-id="anova-conditions-1">ANOVA Conditions</h2>
+<p><img src="04_exp_decisions-figure/CA-SINZ2.png" class="img-fluid"></p>
+<ul>
+<li><strong>C</strong>. Constant effects</li>
+<li><strong>A</strong>. Additive effects</li>
+<li><strong>S</strong>. Same standard deviations</li>
+<li><strong>I</strong>. Independent residuals</li>
+<li><strong>N</strong>. Normally distributed residuals</li>
+<li><strong>Z</strong>. Zero mean residuals</li>
+</ul>
+</section>
+<section id="c.-constant-effects" class="level2">
+<h2 class="anchored" data-anchor-id="c.-constant-effects">C. Constant effects</h2>
+<p>We assume every observation in a similar condition is affected exactly the same. (Gets the same “true score”).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>animals_sim <span class="ot">&lt;-</span> animals <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">benchmark =</span> <span class="fu">mean</span>(calm)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(animal) <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">animal_mean =</span> <span class="fu">mean</span>(calm),</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">aminal_effect =</span> animal_mean <span class="sc">-</span> benchmark)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="a.-additive-effects" class="level2">
+<h2 class="anchored" data-anchor-id="a.-additive-effects">A. Additive effects</h2>
+<p>We add the effects as we go down the assembly line.</p>
+<p>The interaction effect captures the possibility that conditions have non-additive effects, but it is also added to everything else.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>calm_sim <span class="ot">=</span> benchmark</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>         <span class="sc">+</span> aminal_effect</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>         <span class="sc">+</span> cue_effect</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>         <span class="sc">+</span> interaction_effect</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>         <span class="sc">+</span> student_effect</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="s.-same-standard-deviations" class="level2">
+<h2 class="anchored" data-anchor-id="s.-same-standard-deviations">S. Same standard deviations</h2>
+<p>The piece of code for adding error is not dependent on which condition the observations is in.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">82</span>, <span class="dv">0</span>, <span class="fl">0.79</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="i.-independent-residuals" class="level2">
+<h2 class="anchored" data-anchor-id="i.-independent-residuals">I. Independent residuals</h2>
+<p>Takes 82 independent draws from a normal distribution.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">82</span>, <span class="dv">0</span>, <span class="fl">0.79</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="n.-normally-distributed-residuals" class="level2">
+<h2 class="anchored" data-anchor-id="n.-normally-distributed-residuals">N. Normally distributed residuals</h2>
+<p>It’s <code>rnorm()</code>, and not <code>rbinom()</code> or <code>rpois()</code>…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">82</span>, <span class="dv">0</span>, <span class="fl">0.79</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="z.-zero-mean-residuals" class="level2">
+<h2 class="anchored" data-anchor-id="z.-zero-mean-residuals">Z. Zero mean residuals</h2>
+<p>The second argument is the mean.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">82</span>, <span class="dv">0</span>, <span class="fl">0.79</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="how-to-check-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-check-assumptions">How to check assumptions</h2>
+<ul>
+<li><p>C. <strong>Constant effects</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>A. <strong>Additive effects</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>S. <strong>Same standard deviations</strong> – is the biggest SD less than two times as large as the smallest?</p></li>
+<li><p>I. <strong>Independent residuals</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>N. <strong>Normally distributed residuals</strong> – construct a histogram or normal probability plot of residuals.</p></li>
+<li><p>Z. <strong>Zero mean residuals</strong> – construct a histogram or normal probability plot of residuals.</p></li>
+</ul>
+</section>
+<section id="to-check-the-residual-assumptions-sinz" class="level2">
+<h2 class="anchored" data-anchor-id="to-check-the-residual-assumptions-sinz">To check the Residual Assumptions: SINZ</h2>
+<p><strong>S</strong>: calculate descriptive statistics and divide largest SD by smallest.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>leaf <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(diet) <span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">m =</span> <span class="fu">mean</span>(days),</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(days))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 4
+  diet         n     m    sd
+  &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 control      2   2   0.424
+2 fructose     2   2.2 0.141
+3 glucose      2   2.8 0.141
+4 sucrose      2   3.8 0.283</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fl">0.424</span><span class="sc">/</span><span class="fl">0.141</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.007092</code></pre>
+</div>
+</div>
+<p><strong>I</strong>: Judge for yourself – what do we think about the leafhopper dishes?</p>
+</section>
+<section id="to-check-the-residual-assumptions-sinz-1" class="level2">
+<h2 class="anchored" data-anchor-id="to-check-the-residual-assumptions-sinz-1">To check the Residual Assumptions: SINZ</h2>
+<p><strong>N</strong>: Look at histogram and normal probability plots of residuals.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#normal probability plot of residuals</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mod, <span class="at">which =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="05_ANOVA-conditions_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="to-check-the-residual-assumptions-sinz-2" class="level2">
+<h2 class="anchored" data-anchor-id="to-check-the-residual-assumptions-sinz-2">To check the Residual Assumptions: SINZ</h2>
+<p><strong>Z</strong>: Look at histogram of residuals.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#histogram of residuals</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> mod<span class="sc">$</span>residuals, <span class="at">bins =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="05_ANOVA-conditions_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="try-it-1" class="level2">
+<h2 class="anchored" data-anchor-id="try-it-1">Try it!</h2>
+<p>Back in your groups of three, check or discuss the last 4 ANOVA assumptions: The <strong>SINZ</strong>.</p>
+<p><strong>Dataset 1</strong>: <code>SandwichAnts</code></p>
+<ul>
+<li>Factor: <code>Bread</code></li>
+<li>Response: <code>Ants</code></li>
+</ul>
+<p><strong>Dataset 2</strong>: <code>Meniscus</code></p>
+<ul>
+<li>Factor: <code>Method</code></li>
+<li>Response: <code>Displacement</code></li>
+</ul>
+</section>
+<section id="mini-project-1" class="level2">
+<h2 class="anchored" data-anchor-id="mini-project-1">Mini Project 1</h2>
+<p>See <a href="https://randilgarcia.github.io/sds290fall21/mini-project-1.html">Mini Project 1 instructions</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
