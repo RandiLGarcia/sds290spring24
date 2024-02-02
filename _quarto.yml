@@ -98,9 +98,9 @@ website:
           href: http://moodle.smith.edu
         - text: 'HW1b: CITI Training'
           href: pdfs/HW 1b_CITI Training.pdf
-        # - text: 'HW2: 5.11, 5.16, 5.18, 5.27 (a only), 5.32'
-        #   href: homework.html
-        # - text: 'HW3: 5.38, 5.54, 5.59, 5.60, 5.70'
+        - text: 'HW2: Click Here'
+          href: homework.html
+        # - text: 'HW3: 5.32, 5.38, 5.54, 5.59, 5.60, 5.70'
         #   href: homework.html
         # - text: 'HW4: 5.36, 5.43, 5.46, 5.61'
         #   href: homework.html

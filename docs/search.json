@@ -32,7 +32,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Due Friday, September 3rd and 10th:\n\nHW #1a: Record your names on Moodle name coach\nHW #1b: CITI Training\nHW #1c: Getting started with R\n\nDue Friday, September 17th:\n\nHW #2: 5.11, 5.16, 5.18, 5.27 (a only), 5.32"
+    "text": "Due Friday, January 26th and February 2nd:\n\nHW #1a: Record your names on Moodle name coach\nHW #1b: CITI Training\n\nDue Friday, February 9th:\n\nHW #2: 0.23, 5.11, 5.16, 5.18, 5.27 (a only)\nClick here for more introduction to R and RStudio"
   },
   {
     "objectID": "syllabus.html",
@@ -137,7 +137,7 @@
     "href": "schedule.html#week-2",
     "title": "Schedule",
     "section": "Week 2",
-    "text": "Week 2\n\nTue, Jan 30\n\nFour-step process\nOne-way ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.1-5.2 (Moodle)"
+    "text": "Week 2\n\nTue, Jan 30\n\nFour-step process\nOne-way ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.1-5.2 (Moodle)\n\n\n\n\nThurs, Feb 1\n\nOne-way ANOVA (cont.)\nHomework due today:\n\nRead Stat2 Ch. 5.3\n\nOffice hours: 2:45p - 4:00p"
   },
   {
     "objectID": "schedule.html#week-3",
@@ -647,8 +647,8 @@
     "objectID": "lectures/03_one-way-ANOVAII.html#announcements",
     "href": "lectures/03_one-way-ANOVAII.html#announcements",
     "title": "One-Way ANOVA II",
-    "section": "",
-    "text": "Homework 1b due on Friday 2/2\nHomework 2 will be submitted on gradescope (more info to come)\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFri office hours cancelled this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
+    "section": "Announcements",
+    "text": "Announcements\n\nHomework 1b due on Friday 2/2\nHomework 2 will be submitted on gradescope (more info to come)\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFri office hours cancelled this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#confounding-variables",
@@ -683,7 +683,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#one-way-anova-1",
     "title": "One-Way ANOVA II",
     "section": "One-Way ANOVA",
-    "text": "One-Way ANOVA\n\nqplot(x = as.factor(graduation), y = chalk_est, data = survey)\n\nWarning: Removed 4 rows containing missing values (geom_point)."
+    "text": "One-Way ANOVA\n\nqplot(x = as.factor(graduation), y = chalk_est, data = survey)"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#data-cleaning",
@@ -697,7 +697,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#one-way-anova-2",
     "title": "One-Way ANOVA II",
     "section": "One-Way ANOVA",
-    "text": "One-Way ANOVA\n\nqplot(x = graduation, y = chalk_est, data = survey, geom = \"boxplot\")\n\nWarning: Continuous x aesthetic -- did you forget aes(group=...)?"
+    "text": "One-Way ANOVA\n\nqplot(x = graduation, y = chalk_est, data = survey, geom = \"boxplot\")"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#one-way-anova-3",
@@ -788,7 +788,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#one-way-anova-model",
     "title": "One-Way ANOVA II",
     "section": "One-way ANOVA Model",
-    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\n\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
+    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#analysis-of-variance-anova",
