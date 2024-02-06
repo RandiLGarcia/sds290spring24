@@ -54,7 +54,7 @@ The chunks of code below calculate all of the pieces we'll need in our assembly 
 
 ```{r}
 animals_sim <- animals %>%
-  mutate(benchmark = mean(calm)) #benckmark is the grand average or grand mean
+  mutate(benchmark = mean(calm)) #benchmark is the grand average or grand mean
 ```
 
 ```{r}

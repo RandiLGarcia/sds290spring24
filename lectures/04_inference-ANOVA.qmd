@@ -12,10 +12,10 @@ format:
 
 -   Grades posted for HW1a and HW1b
 -   Homework 2 posted
-    -   submitted on gradescope
+    -   [Instructions for submitting pdf on gradescope](https://www.youtube.com/watch?v=nksyA0s-Geo)
 -   Office hours (Bass 412)
     -   Thursday: 2:45p - 4:00p
-    -   Friday: 10:50a - 12:05p 
+    -   Friday: 10:50a - 12:05p
 -   Where to get HW help
     -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!
 
@@ -31,12 +31,11 @@ format:
 ```{=html}
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
-
 ## Simulation in R: Assembly Line Metaphor
 
 -   [Animal Data](https://randilgarcia.github.io/sds290spring24/code/01_animal_data.qmd)
 -   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290spring24/code/02_informal_anova.qmd)
-    
+
 ## Leafhopper survival
 
 One-Way Design
@@ -187,10 +186,15 @@ anova(mod)
 <!-- ![](04_exp_decisions-figure/CA-SINZ2.png) -->
 
 <!-- -   C. Constant effects -->
+
 <!-- -   A. Additive effects -->
+
 <!-- -   S. Same standard deviations -->
+
 <!-- -   I. Independent residuals -->
+
 <!-- -   N. Normally distributed residuals -->
+
 <!-- -   Z. Zero mean residuals -->
 
 <!-- ## C. Constant effects -->
@@ -198,11 +202,17 @@ anova(mod)
 <!-- We assume every observation in a similar condition is affected exactly the same. (Gets the same "true score"). -->
 
 <!-- ```{r, eval=FALSE} -->
+
 <!-- animals_sim <- animals %>% -->
+
 <!--   mutate(benchmark = mean(calm)) %>% -->
+
 <!--   group_by(animal) %>% -->
+
 <!--   mutate(animal_mean = mean(calm), -->
+
 <!--          aminal_effect = animal_mean - benchmark) -->
+
 <!-- ``` -->
 
 <!-- ## A. Additive effects -->
@@ -212,11 +222,17 @@ anova(mod)
 <!-- The interaction effect captures the possibility that conditions have non-additive effects, but it is also added to everything else. -->
 
 <!-- ```{r, eval=FALSE} -->
+
 <!-- calm_sim = benchmark -->
+
 <!--          + aminal_effect -->
+
 <!--          + cue_effect -->
+
 <!--          + interaction_effect -->
+
 <!--          + student_effect -->
+
 <!-- ``` -->
 
 <!-- ## S. Same standard deviations -->
@@ -224,7 +240,9 @@ anova(mod)
 <!-- The peice of code for adding error is not dependent on which condition the observations is in. -->
 
 <!-- ```{r, eval=FALSE} -->
+
 <!--  + rnorm(82, 0, 0.79) -->
+
 <!-- ``` -->
 
 <!-- ## I. Independent residuals -->
@@ -232,7 +250,9 @@ anova(mod)
 <!-- Takes 82 independent draws from a normal distribution. -->
 
 <!-- ```{r, eval=FALSE} -->
+
 <!--  + rnorm(82, 0, 0.79) -->
+
 <!-- ``` -->
 
 <!-- ## N. Normally distributed residuals -->
@@ -240,7 +260,9 @@ anova(mod)
 <!-- It's `rnorm()`, and not `rbinom()` or `rpois()`... -->
 
 <!-- ```{r, eval=FALSE} -->
+
 <!--  + rnorm(82, 0, 0.79) -->
+
 <!-- ``` -->
 
 <!-- ## Z. Zero mean residuals -->
@@ -248,7 +270,9 @@ anova(mod)
 <!-- The second argument is the mean. -->
 
 <!-- ```{r, eval=FALSE} -->
+
 <!--  + rnorm(82, 0, 0.79) -->
+
 <!-- ``` -->
 
 <!-- ## ANOVA in R -->
