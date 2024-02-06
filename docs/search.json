@@ -137,7 +137,7 @@
     "href": "schedule.html#week-2",
     "title": "Schedule",
     "section": "Week 2",
-    "text": "Week 2\n\nTue, Jan 30\n\nFour-step process\nOne-way ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.1-5.2 (Moodle)\n\n\n\n\nThurs, Feb 1\n\nOne-way ANOVA (cont.)\nHomework due today:\n\nRead Stat2 Ch. 5.3\n\nOffice hours: 2:45p - 4:00p"
+    "text": "Week 2\n\nTue, Jan 30\n\nFour-step process\nOne-way ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.1-5.2 (Moodle)\n\n\n\n\nThurs, Feb 1\n\nOne-way ANOVA (cont.)\nHomework due today:\n\nRead Stat2 Ch. 5.3\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Feb 2\n\nOffice hours: cancelled today\nHomework due today:\n\nHW #1b due today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-3",
@@ -647,8 +647,8 @@
     "objectID": "lectures/03_one-way-ANOVAII.html#announcements",
     "href": "lectures/03_one-way-ANOVAII.html#announcements",
     "title": "One-Way ANOVA II",
-    "section": "Announcements",
-    "text": "Announcements\n\nHomework 1b due on Friday 2/2\nHomework 2 will be submitted on gradescope (more info to come)\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFri office hours cancelled this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
+    "section": "",
+    "text": "Homework 1b due on Friday 2/2\nHomework 2 will be submitted on gradescope (more info to come)\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFri office hours cancelled this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#confounding-variables",
@@ -788,7 +788,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#one-way-anova-model",
     "title": "One-Way ANOVA II",
     "section": "One-way ANOVA Model",
-    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
+    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\n\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#analysis-of-variance-anova",
@@ -998,14 +998,14 @@
     "href": "lectures/04_inference-ANOVA.html",
     "title": "Inference for ANOVA",
     "section": "",
-    "text": "Grades are posted for HW1a, HW1b, and HW1c\n\nSolution sheet will be avaliable on Moodle on Wed\n\nHW2 posted\n\nIn-person Office hours (Bass 412)\n\nWed 10:50-12:05p\nThurs 1:20-2:35p\nor by appointment!\n\nZoom Office hours\n\nFull for this week!\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\n\nSDS Lounge study space McConnell 209"
+    "text": "Grades posted for HW1a and HW1b\nHomework 2 posted\n\nsubmitted on gradescope\n\nOffice hours (Bass 412)\n\nThursday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#announcements",
     "href": "lectures/04_inference-ANOVA.html#announcements",
     "title": "Inference for ANOVA",
-    "section": "",
-    "text": "Grades are posted for HW1a, HW1b, and HW1c\n\nSolution sheet will be avaliable on Moodle on Wed\n\nHW2 posted\n\nIn-person Office hours (Bass 412)\n\nWed 10:50-12:05p\nThurs 1:20-2:35p\nor by appointment!\n\nZoom Office hours\n\nFull for this week!\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\n\nSDS Lounge study space McConnell 209"
+    "section": "Announcements",
+    "text": "Announcements\n\nGrades posted for HW1a and HW1b\nHomework 2 posted\n\nsubmitted on gradescope\n\nOffice hours (Bass 412)\n\nThursday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#leafhopper-survival",
@@ -1040,14 +1040,14 @@
     "href": "lectures/04_inference-ANOVA.html#one-way-anova-model",
     "title": "Inference for ANOVA",
     "section": "One-way ANOVA Model",
-    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\n\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
+    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#analysis-of-variance-anova",
     "href": "lectures/04_inference-ANOVA.html#analysis-of-variance-anova",
     "title": "Inference for ANOVA",
-    "section": "Analysis of Variance ANOVA",
-    "text": "Analysis of Variance ANOVA\nFormal ANOVA starts with the simple idea that we can compare our estimate of treatment effect variability to our estimate of chance error variability to measure how large our treatment effect is.  \n\\[Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects = True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error\\] \\[Variability\\:in\\:Residuals = Error\\]  \nWe can construct a comparison, which we will call F:  \n\\[F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}=\\frac{True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error}{Error}\\]  \nIf our null hypothesis, \\({H}_{0}: True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences=0\\), is true, then what would we expect the F-ratio to equal?"
+    "section": "Analysis of Variance (ANOVA)",
+    "text": "Analysis of Variance (ANOVA)\nFormal ANOVA starts with the simple idea that we can compare our estimate of treatment effect variability to our estimate of chance error variability to measure how large our treatment effect is.  \n\\[Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects = True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error\\] \\[Variability\\:in\\:Residuals = Error\\]  \nWe can construct a comparison, which we will call F:  \n\\[F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}=\\frac{True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error}{Error}\\]  \nIf our null hypothesis, \\({H}_{0}: True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences=0\\), is true, then what would we expect the F-ratio to equal?"
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#sum-of-squares-ss",
@@ -1096,7 +1096,7 @@
     "href": "lectures/04_inference-ANOVA.html#anova-conditions",
     "title": "Inference for ANOVA",
     "section": "ANOVA Conditions",
-    "text": "ANOVA Conditions\nBut only under certain conditions can we rely on this inference.\n\nSimulation in R: Assembly Line Metaphor\n\n\nRecall the Assembly Line Metaphor code"
+    "text": "ANOVA Conditions\nBut only under certain conditions can we rely on this inference.\nSimulation in R: Assembly Line Metaphor\n\n\nRecall the Assembly Line Metaphor code"
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#anova-conditions-1",
@@ -1110,42 +1110,42 @@
     "href": "lectures/04_inference-ANOVA.html#c.-constant-effects",
     "title": "Inference for ANOVA",
     "section": "C. Constant effects",
-    "text": "C. Constant effects\nWe assume every observation in a similar condition is affected exactly the same. (Gets the same “true score”).\n\nanimals_sim &lt;- animals %&gt;%\n  mutate(benchmark = mean(calm)) %&gt;%\n  group_by(animal) %&gt;%\n  mutate(animal_mean = mean(calm),\n         aminal_effect = animal_mean - benchmark)"
+    "text": "C. Constant effects\nWe assume every observation in a similar condition is affected exactly the same. (Gets the same “true score”)."
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#a.-additive-effects",
     "href": "lectures/04_inference-ANOVA.html#a.-additive-effects",
     "title": "Inference for ANOVA",
     "section": "A. Additive effects",
-    "text": "A. Additive effects\nWe add the effects as we go down the assembly line.\nThe interaction effect captures the possibility that conditions have non-additive effects, but it is also added to everything else.\n\ncalm_sim = benchmark\n         + aminal_effect\n         + cue_effect\n         + interaction_effect\n         + student_effect"
+    "text": "A. Additive effects\nWe add the effects as we go down the assembly line.\nThe interaction effect captures the possibility that conditions have non-additive effects, but it is also added to everything else."
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#s.-same-standard-deviations",
     "href": "lectures/04_inference-ANOVA.html#s.-same-standard-deviations",
     "title": "Inference for ANOVA",
     "section": "S. Same standard deviations",
-    "text": "S. Same standard deviations\nThe peice of code for adding error is not dependent on which condition the observations is in.\n\n + rnorm(82, 0, 0.79)"
+    "text": "S. Same standard deviations\nThe peice of code for adding error is not dependent on which condition the observations is in."
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#i.-independent-residuals",
     "href": "lectures/04_inference-ANOVA.html#i.-independent-residuals",
     "title": "Inference for ANOVA",
     "section": "I. Independent residuals",
-    "text": "I. Independent residuals\nTakes 82 independent draws from a normal distribution.\n\n + rnorm(82, 0, 0.79)"
+    "text": "I. Independent residuals\nTakes 82 independent draws from a normal distribution."
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#n.-normally-distributed-residuals",
     "href": "lectures/04_inference-ANOVA.html#n.-normally-distributed-residuals",
     "title": "Inference for ANOVA",
     "section": "N. Normally distributed residuals",
-    "text": "N. Normally distributed residuals\nIt’s rnorm(), and not rbinom() or rpois()…\n\n + rnorm(82, 0, 0.79)"
+    "text": "N. Normally distributed residuals\nIt’s rnorm(), and not rbinom() or rpois()…"
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#z.-zero-mean-residuals",
     "href": "lectures/04_inference-ANOVA.html#z.-zero-mean-residuals",
     "title": "Inference for ANOVA",
     "section": "Z. Zero mean residuals",
-    "text": "Z. Zero mean residuals\nThe second argument is the mean.\n\n + rnorm(82, 0, 0.79)"
+    "text": "Z. Zero mean residuals\nThe second argument is the mean."
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#anova-in-r",
@@ -1167,5 +1167,19 @@
     "title": "One-Way ANOVA",
     "section": "",
     "text": "Homework 1a was due last Friday\nHomework 1b due on Friday 2/2\n\nSDS 290 Slack channels for HW questions\n\nHomework 2 will be submitted on gradescope\nOffice hours (Bass 412)\n\nThurs 2:45p - 4:00p\nFri office hours cancelled this week"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#assembly-line-metaphor",
+    "href": "lectures/04_inference-ANOVA.html#assembly-line-metaphor",
+    "title": "Inference for ANOVA",
+    "section": "Assembly Line Metaphor",
+    "text": "Assembly Line Metaphor\n\nYou book used the CAT scan metaphor: \\[Body = Skeleton + Organ\\:System + Everything\\:Else\\]\nI prefer the assembly line metaphor, but whatever makes sense to you!\n\n\nRabbit Work GIFfrom Rabbit GIFs"
+  },
+  {
+    "objectID": "lectures/04_inference-ANOVA.html#simulation-in-r-assembly-line-metaphor",
+    "href": "lectures/04_inference-ANOVA.html#simulation-in-r-assembly-line-metaphor",
+    "title": "Inference for ANOVA",
+    "section": "Simulation in R: Assembly Line Metaphor",
+    "text": "Simulation in R: Assembly Line Metaphor\n\nAnimal Data\nAssembly Line Metaphor code"
   }
 ]

@@ -52,5 +52,8 @@
   },
   "lectures/04_inference-ANOVA.Rmd": {
     "04_inference-ANOVA.html": "e97567ec"
+  },
+  "lectures/04_inference-ANOVA.qmd": {
+    "04_inference-ANOVA.html": "9b6eee55"
   }
 }

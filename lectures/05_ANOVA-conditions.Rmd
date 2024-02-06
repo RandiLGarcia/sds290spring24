@@ -8,24 +8,23 @@ output:
     smaller: true
 ---
 
-
 ## Announcements
 
-- HW2 due Friday 9/17 11:55p    
-- In-person Office hours (Bass 412)
-    - Thurs 1:20-2:35p
-    - or by appointment!
-- Zoom Office hours
-    - Full for this week
-- Where to get HW help
-    - [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301.
+-   HW2 due Friday 9/17 11:55p\
+-   In-person Office hours (Bass 412)
+    -   Thurs 1:20-2:35p
+    -   or by appointment!
+-   Zoom Office hours
+    -   Full for this week
+-   Where to get HW help
+    -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301.
 
 ## Review of last class
 
-- Introduced the motivation behind the Analysis of Variance (ANOVA)
-- Data decomposition
-- Computing the SS, MS, df, and F-ratio
-- Inference for ANOVA (p-values)
+-   Introduced the motivation behind the Analysis of Variance (ANOVA)
+-   Data decomposition
+-   Computing the SS, MS, df, and F-ratio
+-   Inference for ANOVA (p-values)
 
 ## ANOVA for One-Way ANOVA
 
@@ -39,11 +38,10 @@ $${H}_{0}:{\alpha}_{1}={\alpha}_{2}=...={\alpha}_{a}=0$$
 
 ANOVA Source table:
 
-| Source | SS | df | MS | F | 
-|------:|:-----:|:-----:|:------:|:------:|
-| Treatment | $n\sum_{i=1}^{a}(\bar{y}_{i.}-\bar{y}_{..})^{2}$ | $a-1$ | $\frac{{SS}_{Treatments}}{{df}_{Treatments}}$ | $\frac{{MS}_{Treatments}}{{MS}_{E}}$ |
-| Error | $\sum_{i=1}^{a}\sum_{j=1}^{n}({y}_{ij}-\bar{y}_{i.})^{2}$ | $N-a$ | $\frac{{SS}_{E}}{{df}_{E}}$ | |
-
+|    Source |                            SS                             |  df   |                      MS                       |                  F                   |
+|--------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+| Treatment |     $n\sum_{i=1}^{a}(\bar{y}_{i.}-\bar{y}_{..})^{2}$      | $a-1$ | $\frac{{SS}_{Treatments}}{{df}_{Treatments}}$ | $\frac{{MS}_{Treatments}}{{MS}_{E}}$ |
+|     Error | $\sum_{i=1}^{a}\sum_{j=1}^{n}({y}_{ij}-\bar{y}_{i.})^{2}$ | $N-a$ |          $\frac{{SS}_{E}}{{df}_{E}}$          |                                      |
 
 ## Running an ANOVA in R
 
@@ -54,10 +52,10 @@ leaf <- data.frame(diet = c("control","control","sucrose", "sucrose", "glucose",
 
 Three steps:
 
-1. Boxplots or some data visualization
-2. Descriptive statistics (n, means, standard deviations)
-3. ANOVA
-4. Check assumptions
+1.  Boxplots or some data visualization
+2.  Descriptive statistics (n, means, standard deviations)
+3.  ANOVA
+4.  Check assumptions
 
 ## Step 1. Boxplots
 
@@ -85,7 +83,7 @@ anova(mod)
 
 ### Write a sentence interpreting the One-Way ANOVA results
 
-There are statistically significant differences in leafhopper survival rates across diets, $F(3, 4) = 17.42$, $p = .009$. 
+There are statistically significant differences in leafhopper survival rates across diets, $F(3, 4) = 17.42$, $p = .009$.
 
 **OR**
 
@@ -93,17 +91,17 @@ Diet has a statistically significant effect on leafhopper survival rates, $F(3, 
 
 ## Try it!
 
-In groups of three run all three steps (visualize, descriptive stats, and ANOVA) for the two datasets below. Write a sentence about your conclusion from the ANOVA. 
+In groups of three run all three steps (visualize, descriptive stats, and ANOVA) for the two datasets below. Write a sentence about your conclusion from the ANOVA.
 
 **Dataset 1**: `SandwichAnts`
 
-- Factor: `Bread`
-- Response: `Ants`
+-   Factor: `Bread`
+-   Response: `Ants`
 
 **Dataset 2**: `Meniscus`
 
-- Factor: `Method`
-- Response: `Displacement`
+-   Factor: `Method`
+-   Response: `Displacement`
 
 ```{r, eval=FALSE}
 library(Stat2Data)
@@ -115,25 +113,25 @@ data("SandwichAnts")
 
 **STOP!!**...only under certain conditions can we rely on this inference. There were many assumptions built into:
 
-- how we decomposed the data, and 
-- our thoughts about residual errors. 
+-   how we decomposed the data, and
+-   our thoughts about residual errors.
 
 ### Simulation in R: Assembly Line Metaphor
 
 ![](https://thumbs.gfycat.com/MelodicCalculatingBluejay.webp)
 
-- Recall the [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290fall21/lectures/02_informal_anova.Rmd)
+-   Recall the [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290fall21/lectures/02_informal_anova.Rmd)
 
 ## ANOVA Conditions
 
 ![](04_exp_decisions-figure/CA-SINZ2.png)
 
-- **C**. Constant effects
-- **A**. Additive effects
-- **S**. Same standard deviations
-- **I**. Independent residuals
-- **N**. Normally distributed residuals
-- **Z**. Zero mean residuals
+-   **C**. Constant effects
+-   **A**. Additive effects
+-   **S**. Same standard deviations
+-   **I**. Independent residuals
+-   **N**. Normally distributed residuals
+-   **Z**. Zero mean residuals
 
 ## C. Constant effects
 
@@ -195,17 +193,17 @@ The second argument is the mean.
 
 ## How to check assumptions
 
-- C. **Constant effects** -- *think* about whether it is reasonable.
+-   C. **Constant effects** -- *think* about whether it is reasonable.
 
-- A. **Additive effects** -- *think* about whether it is reasonable.
+-   A. **Additive effects** -- *think* about whether it is reasonable.
 
-- S. **Same standard deviations** -- is the biggest SD less than two times as large as the smallest?
+-   S. **Same standard deviations** -- is the biggest SD less than two times as large as the smallest?
 
-- I. **Independent residuals** -- *think* about whether it is reasonable.
+-   I. **Independent residuals** -- *think* about whether it is reasonable.
 
-- N. **Normally distributed residuals** -- construct a histogram or normal probability plot of residuals.
+-   N. **Normally distributed residuals** -- construct a histogram or normal probability plot of residuals.
 
-- Z. **Zero mean residuals** -- construct a histogram or normal probability plot of residuals.
+-   Z. **Zero mean residuals** -- construct a histogram or normal probability plot of residuals.
 
 ## To check the Residual Assumptions: SINZ
 
@@ -247,13 +245,13 @@ Back in your groups of three, check or discuss the last 4 ANOVA assumptions: The
 
 **Dataset 1**: `SandwichAnts`
 
-- Factor: `Bread`
-- Response: `Ants`
+-   Factor: `Bread`
+-   Response: `Ants`
 
 **Dataset 2**: `Meniscus`
 
-- Factor: `Method`
-- Response: `Displacement`
+-   Factor: `Method`
+-   Response: `Displacement`
 
 ## Mini Project 1
 
