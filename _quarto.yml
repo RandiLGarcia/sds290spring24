@@ -80,8 +80,8 @@ website:
             href: code/01_animal_data.qmd
           - text: 02 - Informal ANOVA
             href: code/02_informal_anova.qmd
-          # - text: 03 - Formal ANOVA
-          #   href: lectures/05_formal_anova.Rmd
+          - text: SandwichAnts Analysis
+            href: code/SandwichAnts analysis.qmd
           # - text: 04 - SandwichAnts Analysis
           #   href: lectures/SandwichAnts_analysis.rmd
           # - text: 05 - Two-Way Factorial Design
