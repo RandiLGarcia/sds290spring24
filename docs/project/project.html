@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SDS 290 - Spring 2024 - Project Instructions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SDS 290 - Spring 2024</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li class="dropdown-header">Helpful Links</li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lectures" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Lectures</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-lectures">    
+        <li>
+    <a class="dropdown-item" href="../lectures/01_intro_to_experimental.html" rel="" target="">
+ <span class="dropdown-text">01 - Intro to Experimental Design</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/02_one-way-ANOVA.html" rel="" target="">
+ <span class="dropdown-text">02 - One-Way ANOVA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/03_one-way-ANOVAII.html" rel="" target="">
+ <span class="dropdown-text">03 - One-Way ANOVA II</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/04_inference-ANOVA.html" rel="" target="">
+ <span class="dropdown-text">04 - Inference for ANOVA</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-code" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Code</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-code">    
+        <li>
+    <a class="dropdown-item" href="../code/01_animal_data.qmd" rel="" target="">
+ <span class="dropdown-text">01 - Animal Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../code/02_informal_anova.qmd" rel="" target="">
+ <span class="dropdown-text">02 - Informal ANOVA</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-homework" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Homework</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-homework">    
+        <li>
+    <a class="dropdown-item" href="http://moodle.smith.edu" rel="" target="">
+ <span class="dropdown-text">HW1a: Record your names on Moodle</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../pdfs/HW 1b_CITI Training.pdf" rel="" target="">
+ <span class="dropdown-text">HW1b: CITI Training</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../homework.html" rel="" target="">
+ <span class="dropdown-text">HW2: Click Here</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../project/mini-project-1.html" rel="" target="">
+ <span class="dropdown-text">Mini project 1</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#group-formation" id="toc-group-formation" class="nav-link active" data-scroll-target="#group-formation">Group Formation</a></li>
+  <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">Assignment</a>
+  <ul class="collapse">
+  <li><a href="#smith-botanic-garden" id="toc-smith-botanic-garden" class="nav-link" data-scroll-target="#smith-botanic-garden">Smith Botanic Garden</a></li>
+  <li><a href="#smith-museum-of-art" id="toc-smith-museum-of-art" class="nav-link" data-scroll-target="#smith-museum-of-art">Smith Museum of Art</a></li>
+  <li><a href="#exective-education-office" id="toc-exective-education-office" class="nav-link" data-scroll-target="#exective-education-office">Exective Education Office</a></li>
+  </ul></li>
+  <li><a href="#general-rules" id="toc-general-rules" class="nav-link" data-scroll-target="#general-rules">General Rules</a></li>
+  <li><a href="#timeline" id="toc-timeline" class="nav-link" data-scroll-target="#timeline">Timeline</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#components" id="toc-components" class="nav-link" data-scroll-target="#components">Components</a>
+  <ul class="collapse">
+  <li><a href="#proposal" id="toc-proposal" class="nav-link" data-scroll-target="#proposal">Proposal</a>
+  <ul class="collapse">
+  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
+  </ul></li>
+  <li><a href="#technical-report" id="toc-technical-report" class="nav-link" data-scroll-target="#technical-report">Technical Report</a>
+  <ul class="collapse">
+  <li><a href="#content-1" id="toc-content-1" class="nav-link" data-scroll-target="#content-1">Content</a></li>
+  <li><a href="#tone" id="toc-tone" class="nav-link" data-scroll-target="#tone">Tone</a></li>
+  <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a></li>
+  <li><a href="#additional-thoughts" id="toc-additional-thoughts" class="nav-link" data-scroll-target="#additional-thoughts">Additional Thoughts</a></li>
+  <li><a href="#poster-presentation" id="toc-poster-presentation" class="nav-link" data-scroll-target="#poster-presentation">Poster Presentation</a></li>
+  <li><a href="#group-dynamic-report" id="toc-group-dynamic-report" class="nav-link" data-scroll-target="#group-dynamic-report">Group Dynamic Report</a></li>
+  </ul></li>
+  <li><a href="#assessment-criteria" id="toc-assessment-criteria" class="nav-link" data-scroll-target="#assessment-criteria">Assessment Criteria</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project Instructions</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>You will conduct a quantitative research study in collaboration with the <strong>Smith Botanic Garden</strong>, the <strong>Smith Art Museum</strong>, or <strong>Smith Executive Education</strong>. A list of potential projects ideas are presented below, and you will work within your chosen framework. Most (if not all) studies will be experimental, meaning you will manipulate factors and randomly assign levels of those factors to units. This task will require you to write a project proposal, design a study, implement that study, collect and analyze relevant data, present your results on a poster and hand in a written report describing your study and its findings. Your project must involve fitting an <em>analysis of variance</em> (ANOVA) model. ANOVA is the primary statistical technique we are learning in this course. The project is an opportunity to apply and synthesize the material we are learning in class to a specific context. It will also give you the opportunity to show off what you’ve learned about data analysis, visualization, and variance decomposition in this course and from other SDS courses you may have taken. It is a major component of the class, and successful completion is required to pass.</p>
+<section id="group-formation" class="level1 unnumbered">
+<h1 class="unnumbered">Group Formation</h1>
+<p>You will work in relatively large groups of four to five, chosen by me (with your input). These are relatively large groups, so I will be giving recommendations for how to effectively divide up the work based on your strengths. Each group will pick a group name, and you will use that name with in all communications from that point forward.</p>
+</section>
+<section id="assignment" class="level1 unnumbered">
+<h1 class="unnumbered">Assignment</h1>
+<p>After picking from one the the potential projects (research ideas below), you will have a field trip to the Botanic Garden Plant House, the Art Museum, or the Exec Ed office. You will be working closely with a point person at each of the partnering units to devlop a study that answers their question. Within your chosen framework (listed below), together with your point-person and me, you will - pose a clear <em>research question</em> that you find interesting, - <em>decide what factor(s)</em> you will manipulate to test your research question, and - decide on an appropriate <em>response variable to measure</em> and the <em>experimental units</em> for your study.</p>
+<p>Think carefully about your experimental units—they are not necessarily plants or people. It might be a <em>Ziploc bag full of seeds</em>, a <em>days worth of social media activity</em> or <em>students walking across a lawn</em>, etc. I will help!</p>
+<p>Your projects might examine the following research questions:</p>
+<section id="smith-botanic-garden" class="level2">
+<h2 class="anchored" data-anchor-id="smith-botanic-garden"><a href="https://garden.smith.edu/">Smith Botanic Garden</a></h2>
+<ol type="1">
+<li><p><strong>Keep off the lawn!</strong> - We have a love/hate relationships with our lawns. To some, lush lawns are a sign of a robust and cultured institution. For others they are biological wastelands. Either way, they take work to maintain. One critical problem with lawns is that they do not handle heavy foot traffic well. Smith relies on fencing to keep foot traffic off the lawns. But might there be a better way to do this that both invites use of lawns for picnicking and lounging, while protecting them from the dreaded goat paths that emerge from people cutting across them?</p></li>
+<li><p><strong>Manicured or Messy?</strong> - There is a general perception at Smith that Alumni are averse to changing the landscape, though data on this is scant. As we head into a new landscape master plan, the planning committee is curious about alumni perceptions of the landscape and whether those perceptions of our current (or anticipated) landscapes might change as alumni learn more about bioproductive landscapes and ecologically friendly landscapes. Does tolerance of “messy” or naturalistic design increase as people learn more about the benefits of less manicured landscapes?</p></li>
+<li><p><strong>How to get people to tell us stuff</strong> - We are in the early phases of wanting to make visitor feedback a normal part of our experience. These so-called talk-back spaces are also a place where the community talks to itself by putting their opinions, ideas, and experiences on display. Talk back spaces could be as simple as a prompt like, “What’s your favorite flower?” or more complicated. What’s the best approach to maximizing engagement with visitors via talk-back spaces?</p></li>
+<li><p><strong>The GardenGram</strong> - What factors increase engagement with the Botanic Garden’s social media accounts (i.e., Instagram)?</p></li>
+<li><p><strong>Inclusivity.com</strong> - Can small content changes on the website landing page influence perceptions on inclusivity?</p></li>
+</ol>
+</section>
+<section id="smith-museum-of-art" class="level2">
+<h2 class="anchored" data-anchor-id="smith-museum-of-art"><a href="https://www.smith.edu/artmuseum">Smith Museum of Art</a></h2>
+<ol type="1">
+<li><p><strong>Art is for everyone</strong> - How can we best convey a sense of welcome and inclusiveness in the building and/or online? Also, how successful are we at this currently?</p></li>
+<li><p><strong>Double Decker Exhibition</strong> - How do visitors encounter, experience, and navigate an exhibition that cuts across 2 floors? What factors might change this experience?</p></li>
+<li><p><strong>Do we really need a label?</strong> - What role do wall labels play in student experiences of the “Art Since 1950” galleries, and how could they be more effective?</p></li>
+<li><p><strong>Art Museum routes</strong> - How do visitors move through the 2nd and 3rd floor permanent collection galleries, and what is most interesting and appealing to them? What factors might alter visitors’ routes and perceptions of interest and appeal?</p></li>
+</ol>
+</section>
+<section id="exective-education-office" class="level2">
+<h2 class="anchored" data-anchor-id="exective-education-office"><a href="https://execed.smith.edu/">Exective Education Office</a></h2>
+<ol type="1">
+<li><p><strong>Education Influencers</strong> - Which social media channels are most effective with our target audiences?</p></li>
+<li><p><strong>Give the people what they want!</strong> - What topics lead to the most engagement with our target audience?</p></li>
+<li><p><strong>Building Community</strong> - What actions help build our social media community (e.g., increase followers)?</p></li>
+<li><p><strong>A/B Testing for Education</strong> - Can small content changes such as subject lines and images increase our click-through rates (social media and email) and open rates (for email)?</p></li>
+</ol>
+<p>These questions are meant to get you started, you should pose the problem that you want to solve as precisely as possible at the outset. Next, identify the factor(s) of interest, the levels of these factors (i.e., treatment conditions), what the experimental unit will be, and think about how you will measure your response variable. What kind of design will give you the clearest answer to your quest, be the most efficient, and the most feasible? You should also make a hypothesis, <em>a priori</em> (before you collect and analyze the data), about the results you expect to see. Remember that each design comes with a <em>set</em> of questions that it can answer. For example, think about the the three important questions from Kelly’s hamster study.</p>
+<p>After our field trips, I will <em>meet with each group and their point person</em> before and after your initial project proposals are due. We will be setting up these meetings for the week before and after your proposal is due. After the inital proposal, a few weeks later you will need to submit a <em>project update/method section draft</em>.</p>
+</section>
+</section>
+<section id="general-rules" class="level1">
+<h1>General Rules</h1>
+<p>You may discuss your project with other students, but each of you will have a different topic, so there is a limit to how much you can help each other. You may consult other sources for information about the non-statistical, substantive issues in your problem, but you should credit these sources in your report. Feel free to consult Randi or the Stats TAs about statistical questions.</p>
+</section>
+<section id="timeline" class="level1 unnumbered">
+<h1 class="unnumbered">Timeline</h1>
+<p>Please see the <a href="project_schedule.html">project schedule</a> for due dates.</p>
+</section>
+<section id="submission" class="level1 unnumbered">
+<h1 class="unnumbered">Submission</h1>
+<p>All deliverables described above must be delivered electronically via Moodle by 11:55pm (five minutes before midnight) on the dates in the schedule. Only one person from the group should submit the group’s product for each checkpoint (with the exception of the Group Dynamic, which is individual).</p>
+</section>
+<section id="components" class="level1">
+<h1>Components</h1>
+<section id="proposal" class="level2">
+<h2 class="anchored" data-anchor-id="proposal">Proposal</h2>
+<p>Count on brainstorming at least half a dozen serious ideas before you can groom one of them into a mature proposal. For the most part, within each general topic, the choice of factors to manipulate is left up to you. Try to pick something that’s interesting yet substantial and worth studying.</p>
+<section id="content" class="level3">
+<h3 class="anchored" data-anchor-id="content">Content</h3>
+<p>Your project proposals should be <strong>a Markdown file (<code>*.Rmd</code>)</strong> containing the following content:</p>
+<ol type="1">
+<li><p>Group Members: List the members of your group</p></li>
+<li><p>Title: Your title</p></li>
+<li><p>Purpose: Describe the general topic/phenomenon you chose to study, as well some focused research questions that you hope to answer. Lastly, some general hypotheses that you intend to test.</p></li>
+<li><p>Response Variable: What is the response variable? What is its scale of measurement? Estimate the range of possible values that it may take on. What instrument/questions will you use to measure it?</p></li>
+<li><p>Experimental Units: Specify what the experimental units will be (i.e.&nbsp; what are the things that you will be assigning treatments to?). Is there any blocking? That is, can you (or will you have to) cluster the smallest units into larger units? Further, describe the larger population/phenomenon to which you’ll try to generalize.</p></li>
+<li><p>Factors and Levels: Describe each factor and the levels of these factors. If you are examining more than one factor, are these factors crossed? How many conditions (cells) does that create? How will you actually conduct this manipulation? Be as specific as you can at this point. What stimuli and materials will you need to create?</p></li>
+<li><p>Overall Design: Formally describe the overall research design that you plan to use for this study? What is its name? How do the factors relate to each other? Is there any blocking? Any factorial crossing? Are some factors manipulated between blocks while other factors are manipulated within blocks?</p></li>
+</ol>
+<!--
+
+Draft and Final Handout
+-----------------------
+
+In conjunction with your oral presentation, you should prepare a single
+8-1/2 by 11 double-sided handout. Your handout should summarize the
+points that you hope to make in your presentation, and provide some
+details that may be hard to capture. If we receive your final handout
+(in PDF format, please no Word documents!) by 5:00am on the day of your
+presentation, we will make copies for you.
+
+-->
+</section>
+</section>
+<section id="technical-report" class="level2">
+<h2 class="anchored" data-anchor-id="technical-report">Technical Report</h2>
+<p>Your technical report will be an annotated R Markdown file (<code>.Rmd</code>) that contains your R code, interspersed with explanations of what the code is doing, and what it tells you about the problem.</p>
+<section id="content-1" class="level3">
+<h3 class="anchored" data-anchor-id="content-1">Content</h3>
+<p>You should <strong>not</strong> need to present <em>all</em> of the R code that you wrote throughout the process of working on this project. Rather, the technical report should contain the <em>minimal</em> set of R code that is necessary to understand your results and findings in full. If you make a claim, it <em>must</em> be justified by explicit calculation. A knowledgeable reviewer should be able to compile your <code>.Rmd</code> file without modification, and verify every statement that you have made. All of the R code necessary to produce your figures and tables <em>must</em> appear in the technical report. In short, the technical report should enable a reviewer to reproduce your work in full.</p>
+</section>
+<section id="tone" class="level3">
+<h3 class="anchored" data-anchor-id="tone">Tone</h3>
+<p>This document should be written for peer reviewers and/or your collaborating partner. You should aim for a level of complexity that is more statistically sophisticated than an article in the <a href="http://www.nytimes.com/pages/science/">Science section of <em>The New York Times</em></a>, but less sophisticated than an academic journal. For example, you may use terms that that you will likely never see in the <em>Times</em> (e.g.&nbsp;bootstrap), but should not dwell on technical points with no obvious ramifications for the reader (e.g.&nbsp;reporting why the F-distribution is used for ratios of chi-square distributed random variables). Your goal for this paper is to convince a statistically-minded reader (e.g.&nbsp;a student in this class, a student from another school who has taken an introductory statistics class, or a Botanic Garden staff member) that you have addressed an interesting research question in a meaningful way. Even a reader with no background in statistics should be able to read your paper and get the gist of it.</p>
+</section>
+<section id="format" class="level3">
+<h3 class="anchored" data-anchor-id="format">Format</h3>
+<p>Your technical report should follow this basic format:</p>
+<ol type="1">
+<li><p>Abstract: a short, one paragraph explanation of your project. The abstract should not consist of more than 5 or 6 sentences, but should relate what you studied and what you found. It need only convey a general sense of what you actually did. The purpose of the abstract is to give a prospective reader enough information to decide if they want to read the full paper.</p></li>
+<li><p>Introduction: an overview of your project. In a few paragraphs, you should explain <em>clearly</em> and <em>precisely</em> what your research question(s) are, why they are interesting, and what contribution you have made towards answering that question. It is important that you say why your study is novel, that is, how you are making steps to give previously unknown answers to important questions. Most readers never make it past the introduction, so this is your chance to hook the reader, and is in many ways the most important part of the paper! You need to cite <em>at least three</em> domain area papers (non-statistics) in your introduction. This is a great place to divide up the work! At the end of your introduction you should give an overview of some specifics of your study design, but not the full details, and end with your hypotheses.</p></li>
+<li><p>Method: a <strong>much</strong> more detailed description of your study design. Describe the factors, each level, if there is crossing, blocks, etc. Here is where you also describe your materials/stimuli. What were your experimental units? How did you measure your responses variable? How did you deliver your manipulation? When did you collect your data and why was this choice made? The method section of a research study is extremely important for others to assess the validity of your findings and to replicate what you found in future studies.</p></li>
+<li><p>Results: an explanation of what your model tells us about the research question. You will be using ANOVA here, but also present visualization that show the data and test the Fisher assumptions. You should interpret effect sizes and CIs in context and explain their relevance. What does your model tell us that we didn’t already know before? You also want to include null results, but be careful about how you interpret them. For example, you may want to say something along the lines of: “we found no evidence that factor <span class="math inline">\(A\)</span> has an effect on response variable <span class="math inline">\(y\)</span>.” On other hand, you probably shouldn’t claim: “there is no effect of factor <span class="math inline">\(A\)</span> on <span class="math inline">\(y\)</span>.”</p></li>
+<li><p>Conclusion: a summary of your findings and a discussion of their limitations. First, remind the reader of the question that you originally set out to answer, and summarize your findings. Second, discuss the limitations of your model, and what could be done to improve it. You might also want to do the same for your data. This is your last opportunity to clarify the scope of your findings before a journalist misinterprets them and makes wild extrapolations! Protect yourself by being clear about what is <em>not</em> implied by your research.</p></li>
+</ol>
+</section>
+<section id="additional-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="additional-thoughts">Additional Thoughts</h3>
+<p>The technical report is <em>not</em> simply a dump of all the R code you wrote during this project. Rather, it is a narrative, with technical details, that describes how you addressed your research question. You should <em>not</em> present tables or figures without a written explanation of the information that is supposed to be conveyed by that table or figure. Keep in mind the distinction between <em>data</em> and <em>information</em>. Data is just numbers, whereas information is the result of analyzing that data and digesting it into meaningful ideas that human beings can understand. Your technical report should allow a reviewer to follow your steps from converting data into information. There is no limit to the length of the technical report, but it should not be longer than it needs to be. You will not receive extra credit for simply describing your data <em>ad infinitum</em>. For example, simply displaying a table with the means and standard deviations of your variables is not meaningful. Writing a sentence that reiterates the content of the table (e.g.&nbsp;“the mean of variable <span class="math inline">\(x\)</span> was 34.5 and the standard deviation was 2.8…”) is equally meaningless. What you should strive to do is interpret these values in context (e.g.&nbsp;“although variables <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> have similar means, the spread of <span class="math inline">\(x_1\)</span> is much larger, suggesting…”).</p>
+<p>You should present figures and tables in your technical report in context. These items should be understandable on their own, in the sense that they have understandable titles, axis labels, legends, and captions. Someone glancing through your technical report should be able to make sense of your figures and tables without having to read the entire report. That said, you should also include a discussion of what you want the reader to learn from your figures and tables.</p>
+<p>Your report should be submitted via Moodle as an R Markdown (<code>.Rmd</code>) file and the corresponding rendered output (<code>.html</code>) file.</p>
+</section>
+<section id="poster-presentation" class="level3">
+<h3 class="anchored" data-anchor-id="poster-presentation">Poster Presentation</h3>
+<p>An effective presentation is an integral part of this project and the scientific process. One of the objectives of this class is to give you experience conveying the results of a technical investigation to a non-technical audience in a way that they can understand. Whether you choose to stay in academia or pursue a career in industry, the ability to communicate clearly is of paramount importance. As a data analyst, the burden of proof is on you to convince your audience that what you are saying is true. If your audience (who may very well be less knowledgeable about statistics than you are) cannot understand your results or their interpretations, then the technical merit of your project is irrelevant.</p>
+<p>You will make poster and present it in a poster session on the last day of class. Your goal should be to convey to your audience a clear understanding of your research question, along with a basic understanding of your model, and how well it addresses the research question you posed. I will give you more details about the poster as well as a poster template towards the end of the semester.</p>
+</section>
+<section id="group-dynamic-report" class="level3">
+<h3 class="anchored" data-anchor-id="group-dynamic-report">Group Dynamic Report</h3>
+<p>Ideally, all group members would be equally involved and able and committed to the project. In reality, it doesn’t always work that way. We’d like to reward people fairly for their efforts in this group endeavor, because it’s inevitable that there will be variation in how high a priority people put on this class and how much effort they put into this project.</p>
+<p>To this end, I’d like each of you (individually) to describe how well (or how poorly!) your project group worked together and shared the load. Also give some specific comments describing each member’s overall effort. Were there certain group members who really put out exceptional effort and deserve special recognition? Conversely, were there group members who really weren’t carrying their own weight? And then, at the end of your assessment, estimate the percentage of the total amount of work/effort done by each member. (Be sure your percentages sum to 100%!)</p>
+<p>For example, suppose you have 3 group members: X, Y and Z. In the (unlikely) event that each member contributed equally, you could assign:</p>
+<ul>
+<li>33.3% for member X, 33.3% for member Y, and 33.3% for member Z</li>
+</ul>
+<p>Or in case person Z did twice as much work as each other member, you could assign:</p>
+<ul>
+<li>25% for member X, 25% for member Y, and 50% for member Z</li>
+</ul>
+<p>Or if member Y didn’t really do squat, you could assign:</p>
+<ul>
+<li>45% for member X, 10% for member Y, and 45% for member Z</li>
+</ul>
+<p>I’ll find a fair way to synthesize the (possibly conflicting) assessments within each group. And eventually I’ll find a way to fairly incorporate this assessment of effort and cooperation in each individual’s overall grade. Don’t pressure one another to give everyone glowing reports unless it’s warranted, and don’t feel pressured to share your reports with one another. Just be fair to yourselves and to one another. Let us know if you have any questions or if you run into any problems.</p>
+</section>
+</section>
+<section id="assessment-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="assessment-criteria">Assessment Criteria</h2>
+<p>Your project will be evaluated based on the following criteria:</p>
+<ul>
+<li><p>General: Is the research question/factors chosen interesting, and substantial, or is it trite, pedantic, and trivial? How much creativity, initiative, and ambition did the group demonstrate? Is the basic question driving the project worth investigating, or is it obviously answerable without a data-based study?</p></li>
+<li><p>Design: Are the variables chosen appropriately and defined clearly, and is it clear how they were measured/observed? Can the effects of nuisance factors be measured for? Is there sufficient data to make meaningful conclusions?</p></li>
+<li><p>Analysis: Are the chosen analyses appropriate for the variables/relationships under investigation, and are the assumptions underlying these analyses met? Do the analyses involve fitting and interpreting an ANOVA model? Are the analyses carried out correctly? Is there an effective mix of graphical, numerical, and inferential analyses? Did the group make appropriate conclusions from the analyses, and are these conclusions justified?</p></li>
+<li><p>Technical Report: How effectively does the written report communicate the goals, procedures, and results of the study? Are the claims adequately supported? How well is the report structured and organized? Does the writing style enhance what the group is trying to communicate? How well is the report edited? Are the statistical claims justified? Are text and analyses effectively interwoven in the technical report? Clear writing, correct spelling, and good grammar are important.</p></li>
+<li><p>Poster Presentation: How effectively does the poster presentation communicate the goals, procedures, and results of the study? Do the presenters seem to be well-rehearsed? Does she appear to be confident in what she is saying? Are her arguments persuasive?</p></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

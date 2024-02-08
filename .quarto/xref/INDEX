@@ -55,5 +55,20 @@
   },
   "lectures/04_inference-ANOVA.qmd": {
     "04_inference-ANOVA.html": "9b6eee55"
+  },
+  "project/mini-project-1.qmd": {
+    "mini-project-1.html": "b0ad68b4"
+  },
+  "project/project_advice.Rmd": {
+    "project_advice.html": "541624c2"
+  },
+  "project/project_schedule.Rmd": {
+    "project_schedule.html": "d87369e6"
+  },
+  "project/project.Rmd": {
+    "project.html": "078c4b65"
+  },
+  "project/mini-project-2.Rmd": {
+    "mini-project-2.html": "ff62ea59"
   }
 }
