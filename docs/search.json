@@ -144,7 +144,7 @@
     "href": "schedule.html#week-3",
     "title": "Schedule",
     "section": "Week 3",
-    "text": "Week 3\n\nTue, Feb 6\n\nInference for ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.4\n\n\n\n\nThurs, Feb 8\n\nANOVA Conditions\nMP1 assignment\nHomework due today:\n\nNo reading for today\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Feb 9\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nHW #2 due today at 11:55p"
+    "text": "Week 3\n\nTue, Feb 6\n\nInference for ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.4"
   },
   {
     "objectID": "schedule.html#week-4",
@@ -836,15 +836,15 @@
     "objectID": "lectures/05_ANOVA-conditions.html#announcements",
     "href": "lectures/05_ANOVA-conditions.html#announcements",
     "title": "ANOVA Conditions",
-    "section": "",
-    "text": "HW2 due Friday 9/17 11:55p\n\nIn-person Office hours (Bass 412)\n\nThurs 1:20-2:35p\nor by appointment!\n\nZoom Office hours\n\nFull for this week\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301."
+    "section": "Announcements",
+    "text": "Announcements\n\nHomework 2 due Friday 11:59p\n\nInstructions for submitting pdf on gradescope\n\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#review-of-last-class",
     "href": "lectures/05_ANOVA-conditions.html#review-of-last-class",
     "title": "ANOVA Conditions",
     "section": "Review of last class",
-    "text": "Review of last class\n\nIntroduced the motivation behind the Analysis of Variance (ANOVA)\nData decomposition\nComputing the SS, MS, df, and F-ratio\nInference for ANOVA (p-values)"
+    "text": "Review of last class\n\nIntroduced the motivation behind the Analysis of Variance (ANOVA)\nData decomposition\nComputing the SS, MS, df, and F-ratio"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#anova-for-one-way-anova",
@@ -865,7 +865,7 @@
     "href": "lectures/05_ANOVA-conditions.html#step-1.-boxplots",
     "title": "ANOVA Conditions",
     "section": "Step 1. Boxplots",
-    "text": "Step 1. Boxplots\n\n#Note that boxplots are a bit silly in this example because n is only 2.\nqplot(x = diet, y = days, data = leaf, geom = \"boxplot\")\n\nWarning: `qplot()` was deprecated in ggplot2 3.4.0."
+    "text": "Step 1. Boxplots\n\n#Note that boxplots are a bit silly in this example because n is only 2.\nqplot(x = diet, y = days, data = leaf, geom = \"boxplot\")"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#step-2.-descriptive-statistics",
@@ -879,7 +879,7 @@
     "href": "lectures/05_ANOVA-conditions.html#step-3.-anova",
     "title": "ANOVA Conditions",
     "section": "Step 3. ANOVA",
-    "text": "Step 3. ANOVA\n\nmod &lt;- lm(days ~ diet, data = leaf)\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: days\n          Df Sum Sq Mean Sq F value   Pr(&gt;F)   \ndiet       3   3.92  1.3067  17.422 0.009248 **\nResiduals  4   0.30  0.0750                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\nWrite a sentence interpreting the One-Way ANOVA results\nThere are statistically significant differences in leafhopper survival rates across diets, \\(F(3, 4) = 17.42\\), \\(p = .009\\).\nOR\nDiet has a statistically significant effect on leafhopper survival rates, \\(F(3, 4) = 17.42\\), \\(p = .009\\)."
+    "text": "Step 3. ANOVA\n\nmod &lt;- lm(days ~ diet, data = leaf)\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: days\n          Df Sum Sq Mean Sq F value   Pr(&gt;F)   \ndiet       3   3.92  1.3067  17.422 0.009248 **\nResiduals  4   0.30  0.0750                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nWrite a sentence interpreting the One-Way ANOVA results\nThere are statistically significant differences in leafhopper survival rates across diets, \\(F(3, 4) = 17.42\\), \\(p = .009\\).\nOR\nDiet has a statistically significant effect on leafhopper survival rates, \\(F(3, 4) = 17.42\\), \\(p = .009\\)."
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#try-it",
@@ -893,7 +893,7 @@
     "href": "lectures/05_ANOVA-conditions.html#anova-conditions",
     "title": "ANOVA Conditions",
     "section": "ANOVA Conditions",
-    "text": "ANOVA Conditions\nSTOP!!…only under certain conditions can we rely on this inference. There were many assumptions built into:\n\nhow we decomposed the data, and\nour thoughts about residual errors.\n\n\nSimulation in R: Assembly Line Metaphor\n\n\nRecall the Assembly Line Metaphor code"
+    "text": "ANOVA Conditions\nSTOP!!…only under certain conditions can we rely on this inference. There were many assumptions built into:\n\nhow we decomposed the data, and\nour thoughts about residual errors.\n\nSimulation in R: Assembly Line Metaphor\n\nRecall the Assembly Line Metaphor and code"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#anova-conditions-1",
@@ -907,7 +907,7 @@
     "href": "lectures/05_ANOVA-conditions.html#c.-constant-effects",
     "title": "ANOVA Conditions",
     "section": "C. Constant effects",
-    "text": "C. Constant effects\nWe assume every observation in a similar condition is affected exactly the same. (Gets the same “true score”).\n\nanimals_sim &lt;- animals %&gt;%\n  mutate(benchmark = mean(calm)) %&gt;%\n  group_by(animal) %&gt;%\n  mutate(animal_mean = mean(calm),\n         aminal_effect = animal_mean - benchmark)"
+    "text": "C. Constant effects\nWe assume every observation in a similar condition is affected exactly the same. (Gets the same “true score”)."
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#a.-additive-effects",
@@ -921,28 +921,28 @@
     "href": "lectures/05_ANOVA-conditions.html#s.-same-standard-deviations",
     "title": "ANOVA Conditions",
     "section": "S. Same standard deviations",
-    "text": "S. Same standard deviations\nThe piece of code for adding error is not dependent on which condition the observations is in.\n\n + rnorm(82, 0, 0.79)"
+    "text": "S. Same standard deviations\nThe piece of code for adding error is not dependent on which condition the observations is in.\n\n + rnorm(80, 0, 1.16)"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#i.-independent-residuals",
     "href": "lectures/05_ANOVA-conditions.html#i.-independent-residuals",
     "title": "ANOVA Conditions",
     "section": "I. Independent residuals",
-    "text": "I. Independent residuals\nTakes 82 independent draws from a normal distribution.\n\n + rnorm(82, 0, 0.79)"
+    "text": "I. Independent residuals\nTakes 80 independent draws from a normal distribution.\n\n + rnorm(80, 0, 1.16)"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#n.-normally-distributed-residuals",
     "href": "lectures/05_ANOVA-conditions.html#n.-normally-distributed-residuals",
     "title": "ANOVA Conditions",
     "section": "N. Normally distributed residuals",
-    "text": "N. Normally distributed residuals\nIt’s rnorm(), and not rbinom() or rpois()…\n\n + rnorm(82, 0, 0.79)"
+    "text": "N. Normally distributed residuals\nIt’s rnorm(), and not rbinom() or rpois()…\n\n + rnorm(80, 0, 1.16)"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#z.-zero-mean-residuals",
     "href": "lectures/05_ANOVA-conditions.html#z.-zero-mean-residuals",
     "title": "ANOVA Conditions",
     "section": "Z. Zero mean residuals",
-    "text": "Z. Zero mean residuals\nThe second argument is the mean.\n\n + rnorm(82, 0, 0.79)"
+    "text": "Z. Zero mean residuals\nThe second argument is the mean.\n\n + rnorm(80, 0, 1.16)"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#how-to-check-assumptions",
@@ -991,7 +991,7 @@
     "href": "lectures/05_formal_anova.html",
     "title": "05 - Formal ANOVA",
     "section": "",
-    "text": "Loading data\n\nlibrary(dplyr)\nlibrary(mosaic)\nlibrary(ggplot2)\n\nleaf &lt;- data.frame(diet = c(\"control\", \"control\", \"sucrose\", \"sucrose\", \n                            \"glucose\", \"glucose\", \"fructose\", \"fructose\"), \n                   days = c(2.3, 1.7, 3.6, 4.0, 3.0, 2.8, 2.1, 2.3))\n\n\n\nVisualize the means\n\nleaf %&gt;%\n  group_by(diet) %&gt;%\n  summarise(means = mean(days)) %&gt;%\n  mutate(bench = mean(means)) %&gt;%\nggplot(aes(x = diet, y = means)) +\n  geom_bar(stat = \"identity\") +\n  geom_hline(aes(yintercept = bench), color = \"red\") \n\n\n\n\n\n#although only two observations per condition\nleaf %&gt;%\n  group_by(diet) %&gt;%\n  summarise(sd = sd(days))\n\n# A tibble: 4 × 2\n  diet        sd\n  &lt;chr&gt;    &lt;dbl&gt;\n1 control  0.424\n2 fructose 0.141\n3 glucose  0.141\n4 sucrose  0.283\n\n\n\n\nCalculating effects to go in factor diagram\n\nleaf &lt;- leaf %&gt;%\n  mutate(benchmark = mean(days)) %&gt;%\n  group_by(diet) %&gt;%\n  mutate(grp_mean = mean(days),\n         diet_effect = grp_mean - benchmark) %&gt;%\n  ungroup() %&gt;%\n  mutate(fitted = benchmark + diet_effect,\n         resid = days - grp_mean,\n         resid_alt = days - fitted)\n\n\n\nFormal ANOVA\nANOVA for One-Way design\n\nmod &lt;- lm(days ~ diet, data = leaf)\n\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: days\n          Df Sum Sq Mean Sq F value   Pr(&gt;F)   \ndiet       3  3.975   1.325  17.667 0.009015 **\nResiduals  4  0.300   0.075                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\nPairwise tests\nYou will learn much more about what are called post hoc tests next week. But basically, we can do pairwise comparisons, think independent samples t-test between conditions.\nFor example:\n\nleaf %&gt;%\n  filter(diet == \"control\" | diet == \"sucrose\") %&gt;%\n  t.test(days ~ diet, data = .)\n\n\n    Welch Two Sample t-test\n\ndata:  days by diet\nt = -4.9923, df = 1.7423, p-value = 0.0497\nalternative hypothesis: true difference in means between group control and group sucrose is not equal to 0\n95 percent confidence interval:\n -3.593412354 -0.006587646\nsample estimates:\nmean in group control mean in group sucrose \n                  2.0                   3.8 \n\nleaf %&gt;%\n  filter(diet == \"control\" | diet == \"sucrose\") %&gt;%\n  t.test(days ~ diet, data = ., var.equal = TRUE)\n\n\n    Two Sample t-test\n\ndata:  days by diet\nt = -4.9923, df = 2, p-value = 0.03786\nalternative hypothesis: true difference in means between group control and group sucrose is not equal to 0\n95 percent confidence interval:\n -3.3513435 -0.2486565\nsample estimates:\nmean in group control mean in group sucrose \n                  2.0                   3.8 \n\n\nOr using the linear model from above\n\nsummary(mod)\n\n\nCall:\nlm(formula = days ~ diet, data = leaf)\n\nResiduals:\n   1    2    3    4    5    6    7    8 \n 0.3 -0.3 -0.2  0.2  0.1 -0.1 -0.1  0.1 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)    2.0000     0.1936  10.328 0.000496 ***\ndietfructose   0.2000     0.2739   0.730 0.505681    \ndietglucose    0.9000     0.2739   3.286 0.030320 *  \ndietsucrose    1.8000     0.2739   6.573 0.002773 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2739 on 4 degrees of freedom\nMultiple R-squared:  0.9298,    Adjusted R-squared:  0.8772 \nF-statistic: 17.67 on 3 and 4 DF,  p-value: 0.009015\n\nconfint(mod)\n\n                  2.5 %    97.5 %\n(Intercept)   1.4623437 2.5376563\ndietfructose -0.5603608 0.9603608\ndietglucose   0.1396392 1.6603608\ndietsucrose   1.0396392 2.5603608\n\n\nWe probably want to adjust for multiple comparisons to control our experimentwise type I error rate.\n\nTukeyHSD(mod, \"diet\")\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = x)\n\n$diet\n                 diff        lwr     upr     p adj\nfructose-control  0.2 -0.9148496 1.31485 0.8805808\nglucose-control   0.9 -0.2148496 2.01485 0.0962419\nsucrose-control   1.8  0.6851504 2.91485 0.0095276\nglucose-fructose  0.7 -0.4148496 1.81485 0.1884171\nsucrose-fructose  1.6  0.4851504 2.71485 0.0145912\nsucrose-glucose   0.9 -0.2148496 2.01485 0.0962419\n\n4.992^2\n\n[1] 24.92006\n\n-4.9923\n\n[1] -4.9923\n\n24.923\n\n[1] 24.923"
+    "text": "Loading data\n\nlibrary(dplyr)\nlibrary(mosaic)\nlibrary(ggplot2)\n\nleaf &lt;- data.frame(diet = c(\"control\", \"control\", \"sucrose\", \"sucrose\", \n                            \"glucose\", \"glucose\", \"fructose\", \"fructose\"), \n                   days = c(2.3, 1.7, 3.6, 4.0, 3.0, 2.8, 2.1, 2.3))\n\n\n\nVisualize the means\n\nleaf %&gt;%\n  group_by(diet) %&gt;%\n  summarise(means = mean(days)) %&gt;%\n  mutate(bench = mean(means)) %&gt;%\nggplot(aes(x = diet, y = means)) +\n  geom_bar(stat = \"identity\") +\n  geom_hline(aes(yintercept = bench), color = \"red\") \n\n\n\n\n\n\n\n\n\n#although only two observations per condition\nleaf %&gt;%\n  group_by(diet) %&gt;%\n  summarise(sd = sd(days))\n\n# A tibble: 4 × 2\n  diet        sd\n  &lt;chr&gt;    &lt;dbl&gt;\n1 control  0.424\n2 fructose 0.141\n3 glucose  0.141\n4 sucrose  0.283\n\n\n\n\nCalculating effects to go in factor diagram\n\nleaf &lt;- leaf %&gt;%\n  mutate(benchmark = mean(days)) %&gt;%\n  group_by(diet) %&gt;%\n  mutate(grp_mean = mean(days),\n         diet_effect = grp_mean - benchmark) %&gt;%\n  ungroup() %&gt;%\n  mutate(fitted = benchmark + diet_effect,\n         resid = days - grp_mean,\n         resid_alt = days - fitted)\n\n\n\nFormal ANOVA\nANOVA for One-Way design\n\nmod &lt;- lm(days ~ diet, data = leaf)\n\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: days\n          Df Sum Sq Mean Sq F value   Pr(&gt;F)   \ndiet       3  3.975   1.325  17.667 0.009015 **\nResiduals  4  0.300   0.075                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\nPairwise tests\nYou will learn much more about what are called post hoc tests next week. But basically, we can do pairwise comparisons, think independent samples t-test between conditions.\nFor example:\n\nleaf %&gt;%\n  filter(diet == \"control\" | diet == \"sucrose\") %&gt;%\n  t.test(days ~ diet, data = .)\n\n\n    Welch Two Sample t-test\n\ndata:  days by diet\nt = -4.9923, df = 1.7423, p-value = 0.0497\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -3.593412354 -0.006587646\nsample estimates:\nmean in group control mean in group sucrose \n                  2.0                   3.8 \n\nleaf %&gt;%\n  filter(diet == \"control\" | diet == \"sucrose\") %&gt;%\n  t.test(days ~ diet, data = ., var.equal = TRUE)\n\n\n    Two Sample t-test\n\ndata:  days by diet\nt = -4.9923, df = 2, p-value = 0.03786\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -3.3513435 -0.2486565\nsample estimates:\nmean in group control mean in group sucrose \n                  2.0                   3.8 \n\n\nOr using the linear model from above\n\nsummary(mod)\n\n\nCall:\nlm(formula = days ~ diet, data = leaf)\n\nResiduals:\n   1    2    3    4    5    6    7    8 \n 0.3 -0.3 -0.2  0.2  0.1 -0.1 -0.1  0.1 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)    2.0000     0.1936  10.328 0.000496 ***\ndietfructose   0.2000     0.2739   0.730 0.505681    \ndietglucose    0.9000     0.2739   3.286 0.030320 *  \ndietsucrose    1.8000     0.2739   6.573 0.002773 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2739 on 4 degrees of freedom\nMultiple R-squared:  0.9298,    Adjusted R-squared:  0.8772 \nF-statistic: 17.67 on 3 and 4 DF,  p-value: 0.009015\n\nconfint(mod)\n\n                  2.5 %    97.5 %\n(Intercept)   1.4623437 2.5376563\ndietfructose -0.5603608 0.9603608\ndietglucose   0.1396392 1.6603608\ndietsucrose   1.0396392 2.5603608\n\n\nWe probably want to adjust for multiple comparisons to control our experimentwise type I error rate.\n\nTukeyHSD(mod, \"diet\")\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = x)\n\n$diet\n                 diff        lwr     upr     p adj\nfructose-control  0.2 -0.9148496 1.31485 0.8805808\nglucose-control   0.9 -0.2148496 2.01485 0.0962419\nsucrose-control   1.8  0.6851504 2.91485 0.0095276\nglucose-fructose  0.7 -0.4148496 1.81485 0.1884171\nsucrose-fructose  1.6  0.4851504 2.71485 0.0145912\nsucrose-glucose   0.9 -0.2148496 2.01485 0.0962419\n\n4.992^2\n\n[1] 24.92006\n\n-4.9923\n\n[1] -4.9923\n\n24.923\n\n[1] 24.923"
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html",
@@ -1004,8 +1004,8 @@
     "objectID": "lectures/04_inference-ANOVA.html#announcements",
     "href": "lectures/04_inference-ANOVA.html#announcements",
     "title": "Inference for ANOVA",
-    "section": "Announcements",
-    "text": "Announcements\n\nGrades posted for HW1a and HW1b\nHomework 2 posted\n\nInstructions for submitting pdf on gradescope\n\nOffice hours (Bass 412)\n\nThursday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
+    "section": "",
+    "text": "Grades posted for HW1a and HW1b\nHomework 2 posted\n\nInstructions for submitting pdf on gradescope\n\nOffice hours (Bass 412)\n\nThursday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#leafhopper-survival",
@@ -1040,7 +1040,7 @@
     "href": "lectures/04_inference-ANOVA.html#one-way-anova-model",
     "title": "Inference for ANOVA",
     "section": "One-way ANOVA Model",
-    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
+    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\n\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#analysis-of-variance-anova",
@@ -1258,5 +1258,75 @@
     "title": "Mini Project 2 Instructions",
     "section": "",
     "text": "The learning goals of this second mini project are\n\nto design an experiment where you have flexibility in your design choices,\nto gain experience discussing design choices, and\nto gain experience distributing research work within a collaborative team, and\nto gain experience presenting your research work in an oral presentation format.\n\nYou will again conduct an online experimental study using survey methodology in groups of about 3. Your experiments will be set up using the Qualtrics survey platform. Your experiments will again utilize vingettes or very simple visual/audio stimuli presentation. In addition to submitting a technical report for MP2, your group will record a 5-to-10 minute presentation of your study, complete with slides. The professor will post these presentations on Moodle for your viewing pleasure.\nYour study is required to have at least one experimental factor, meaning you will manipulate this factor and randomly assign levels of those factors to units. For this second mini project you may pick any design your group likes, but you must have at least two factors of interest. These factors can be a mixture of experimental and observational factors. Your factors may each have more than two levels (but please do not go crazy — a more complex design means you will need a larger sample size!). You may also decide to have blocking in this study. If you decide to have blocks, by far the simplest way to do this with human subjects is by reusing materials, that is, the participants are your blocks and the units are time slots. You might then decide to have one between-subjects factor and one within-subjects factor (creating a split-plot/repeated measures design). Creating blocks with human subjects by grouping people based on some pre-survey responses is just not feasible in the MP2 time frame, I hope you see why…\nThis mini project will require you to design a new study, implement that study in Qualtrics, collect and analyze relevant data, and hand in a short written report describing your study and its findings. You will also submit a recorded presentation of slides. You will complete all of this work in groups of about 3 students. Your project will again involve fitting an analysis of variance (ANOVA) model. The project is an opportunity to apply and synthesize the material we are learning in class to a specific context. It will also give you the opportunity to show off what you have learned about data analysis, visualization, and variance decomposition in this course and from other SDS courses you may have taken. These projects are a major component of the class, and successful completion is required to pass.\n\nResearch Questions\nAfter settling on a research question within your groups, you will begin creating your experimental stimuli and surveys in Qualtrics.\nPicking a good research question might be tricky. But start by brain storming things about people that you are interested in. You might start in your groups by going around an describing your MP1’s to each other. Same examples as for MP1 here: Perhaps you are interested in how stressful people perceive different situations to be, or their helping behavior given different characteristics of a person in need. You might also assess health behaviors — for example, making judgement about which exercises to do, or foods to eat, or which situations might lead people to be more or less likely to want to get vaccinated. Starting with something your are curious about with regards to your own behavior is often and interesting place to start. When choosing your research question the most important feature is that you would be able to write short (two or three sentences) vignettes, varying the scenarios, characteristics, features, etc., to answer your question. Although again I will not be grading specifically on creativity for this assignment, because you are working in groups of three, I expect that you’ll be able to settle on a research question/topic that is relatively interesting. You are welcome to expand on a topic that one of you did for MP1, in fact, I encourage this. A good research program often involves a set of experiments and studies that build on one another. Just make it something very doable that can capture your interest for the last few weeks of this course!\n\n\nHypotheses\nThe topics I list above are meant to get you started, you should pose the question you want to answer as precisely as possible at the outset. Next, identify the factor(s) of interest, the levels of these factors (i.e., treatment conditions), and think about how you will measure your response variable. You should also make hypotheses, a priori (before you collect and analyze the data), about the results you expect to see. Remember that each design comes with a set of questions that it can answer.\nYour hypotheses should include the direction of the effects you expect. For example, if one of your factors is nutrition and the levels are unhealthy and healthy presented across different vingettes, then you might hypothesize that people will rate the healthy condition as more nutritious than the unhealthy condition.\n\n\nGeneral Rules\nYou may discuss your project with students outside of your groups, but each group will have a different topic, so there is a limit to how much you can help each other. You may consult other sources for information about the non-statistical, substantive issues in your problem, but you should credit these sources in your report. Feel free to consult Randi or the Stats TAs about statistical questions.\n\n\nSubmission\nAll deliverables must be delivered electronically via Moodle by the due date. Please submit\n\nyour exported Qualtrics survey experiment,\nthe cleaned data generated by your experiment,\nthe .Rmd file you use to analyze your data,\na link to your presentation slides (Google slides) or powerpoint file, and\na video of your 10 to 15 minute presentation (Zoom is easiest. I want your faces to be visible).\n\nOnly one person from your group needs to submit. I will know who’s in which group and will record your grades accordingly.\n\n\nRecorded Oral Presentation\n\nContent\nYou should not need to present all of the R code that you wrote throughout the process of working on this project. Rather, the oral presentation should contain the minimal set of R code that is necessary to understand your results and findings in full. If you make a claim, it must be justified by explicit calculation. A knowledgeable reviewer should be able to compile your accompanying .Rmd file without modification, and verify every statement that you have made. All of the R code necessary to produce your figures and tables must appear in the accompanying .Rmd file. In short, the oral presentation and accompanying .Rmd file should enable a reviewer to reproduce your work in full.\n\n\nTone\nThis presentation should be recorded for peer reviewers and/or your professor. You should aim for a level of complexity that is more statistically sophisticated than an article in the Science section of The New York Times, but less sophisticated than an academic journal. For example, you may use terms that that you will likely never see in the Times (e.g. bootstrap), but should not dwell on technical points with no obvious ramifications for the listener (e.g. reporting why the F-distribution is used for ratios of chi-square distributed random variables). Your goal for this paper is to convince a statistically-minded listener (e.g. a student in this class, a student from another school who has taken an introductory statistics class that you have addressed your research question in a meaningful way. Even a listener with no background in statistics should be able to watch your presentation and get the gist of it.\n\n\nFormat\nYour oral presentation should follow this basic format:\n\nIntroduction: an overview of your project. In a few sentences, you should explain clearly and precisely what your research question(s) are and what hypotheses you have about them.\nMethod: a detailed description of your study design. Describe the factors, each level, if there is crossing, blocks, etc. Here is where you also describe your materials/stimuli. What were your experimental units? How did you measure your responses variable? How did you deliver your manipulation? The method section of a research study is extremely important for others to assess the validity of your findings and to replicate what you found in future studies.\nResults: an explanation of what your model tells us about the research question. You will be using ANOVA here, but also present visualization that show the data and test the ANOVA conditions. You should interpret effect sizes and CIs in context and explain their relevance. What does your model tell us that we didn’t already know before? You also want to include null results, but be careful about how you interpret them. For example, you may want to say something along the lines of: “we found no evidence that factor \\(A\\) has an effect on response variable \\(y\\).” On other hand, you probably shouldn’t claim: “there is no effect of factor \\(A\\) on \\(y\\).”\nConclusion: a quick summary of your findings and a discussion of their limitations. First, remind the reader of the question that you originally set out to answer, and summarize your findings. Second, discuss the limitations of your model, and what could be done to improve it. You might also want to do the same for your data. This is your last opportunity to clarify the scope of your findings before a journalist misinterprets them and makes wild extrapolations! Protect yourself by being clear about what is not implied by your research. Lastly, include thoughts about future directions for you next research project in this line of inquiry.\n\n\n\nAdditional Thoughts\nThe oral presentation is not simply a dump of all the R code you wrote during this project. Rather, it is a narrative, with technical details, that describes how you addressed your research question. You should not present tables or figures without giving an explanation of the information that is supposed to be conveyed by that table or figure. Keep in mind the distinction between data and information. Data is just numbers, whereas information is the result of analyzing that data and digesting it into meaningful ideas that human beings can understand. Your presentation should allow a reviewer to follow your steps from converting data into information. The presentation should be about 8 to 10 minutes. You will not receive extra credit for simply describing your data ad infinitum. For example, simply displaying a table with the means and standard deviations of your variables is not meaningful. Writing a sentence that reiterates the content of the table (e.g. “the mean of variable \\(x\\) was 34.5 and the standard deviation was 2.8…”) is equally meaningless. What you should strive to do is interpret these values in context (e.g. “although variables \\(x_1\\) and \\(x_2\\) have similar means, the spread of \\(x_1\\) is much larger, suggesting…”).\nIf you do choose to include figures and/or tables, and I think you should, you should present figures and tables in your presentation in context. These items should be understandable on their own, in the sense that they have understandable titles, axis labels, legends, and captions. Someone glancing through your presentation should be able to make sense of your figures and tables without having to read the entire report. That said, you should also include a discussion of what you want the reader to learn from your figures and tables."
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#leafhoppers",
+    "href": "lectures/05_ANOVA-conditions.html#leafhoppers",
+    "title": "ANOVA Conditions",
+    "section": "Leafhoppers",
+    "text": "Leafhoppers\nBar graph of treatment condition averages.\n\n\n\n\n\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n1.7\n4.0\n2.7\n2.3"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#leafhoppers-1",
+    "href": "lectures/05_ANOVA-conditions.html#leafhoppers-1",
+    "title": "ANOVA Conditions",
+    "section": "Leafhoppers",
+    "text": "Leafhoppers\n\nNow we start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.\n\n\n\n\n\n\nX.\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n\n1.7\n4.0\n2.7\n2.3\n\n\nmeans\n2.0\n3.8\n2.8\n2.2"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#one-way-anova-model",
+    "href": "lectures/05_ANOVA-conditions.html#one-way-anova-model",
+    "title": "ANOVA Conditions",
+    "section": "One-way ANOVA Model",
+    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual."
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#analysis-of-variance-anova",
+    "href": "lectures/05_ANOVA-conditions.html#analysis-of-variance-anova",
+    "title": "ANOVA Conditions",
+    "section": "Analysis of Variance (ANOVA)",
+    "text": "Analysis of Variance (ANOVA)\nFormal ANOVA starts with the simple idea that we can compare our estimate of treatment effect variability to our estimate of chance error variability to measure how large our treatment effect is.  \n\\[Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects = True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error\\] \\[Variability\\:in\\:Residuals = Error\\]  \nWe can construct a comparison, which we will call F:  \n\\[F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}=\\frac{True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error}{Error}\\]  \nIf our null hypothesis, \\({H}_{0}: True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences=0\\), is true, then what would we expect the F-ratio to equal?"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#sum-of-squares-ss",
+    "href": "lectures/05_ANOVA-conditions.html#sum-of-squares-ss",
+    "title": "ANOVA Conditions",
+    "section": "Sum of Squares (SS)",
+    "text": "Sum of Squares (SS)\nANOVA measures variability in treatment effects with the sum of squares (\\(SS\\)) divided by the number of units of unique information (\\(df\\)). For the One-Way design:\n\\[{SS}_{Treatments} = n\\sum_{i=1}^{a}(\\bar{y}_{i.}-\\bar{y}_{..})^{2}\\]\n\\[{SS}_{E} = \\sum_{i=1}^{a}\\sum_{j=1}^{n}({y}_{ij}-\\bar{y}_{i.})^{2}\\]\n\\[{SS}_{Total} = {SS}_{Treatments} + {SS}_{E}\\]\nwhere \\(n\\) is the group size, and \\(a\\) is the number of treatments."
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#degrees-of-freedom-df",
+    "href": "lectures/05_ANOVA-conditions.html#degrees-of-freedom-df",
+    "title": "ANOVA Conditions",
+    "section": "Degrees of Freedom (df)",
+    "text": "Degrees of Freedom (df)\nThe \\(df\\) for a table equals the number of free numbers, the number of slots in the table you can fill in before the pattern of repetitions and adding to zero tell you what the remaining numbers have to be.\n\\[{df}_{Treatments}=a-1\\]\n\\[{df}_{E}=N-a\\]"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#mean-squares-ms",
+    "href": "lectures/05_ANOVA-conditions.html#mean-squares-ms",
+    "title": "ANOVA Conditions",
+    "section": "Mean Squares (MS)",
+    "text": "Mean Squares (MS)\nThe ultimate statistic we want to calculate is \\(F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}\\).\nVariability in treatment effects: \\[{MS}_{Treatments}=\\frac{{SS}_{Treatments}}{{df}_{Treatments}}\\]\nVariability in residuals \\[{MS}_{E}=\\frac{{SS}_{E}}{{df}_{E}}\\]"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#f-ratios-and-the-f-distribution",
+    "href": "lectures/05_ANOVA-conditions.html#f-ratios-and-the-f-distribution",
+    "title": "ANOVA Conditions",
+    "section": "F-ratios and the F-distribution",
+    "text": "F-ratios and the F-distribution\nFinally, the ratio of these two MS’s is called the F ratio. The following quantity is our test statistic for the null hypothesis that there are no treatment effects.\n\\[F = \\frac{{MS}_{Treatments}}{{MS}_{E}}\\]\nIf the null hypothesis is true, then F is a random variable \\(\\sim F({df}_{Treatments}, {df}_{E})\\). The F-distribution.\n\nqplot(x = rf(500, 3, 4), geom = \"density\")"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#inference-testing-in-anova",
+    "href": "lectures/05_ANOVA-conditions.html#inference-testing-in-anova",
+    "title": "ANOVA Conditions",
+    "section": "Inference Testing in ANOVA",
+    "text": "Inference Testing in ANOVA\n\\[{H}_{0}:\\mu_1=\\mu_2=\\mu_3=\\mu_4\\]\nOR, \\({H}_{0}:\\alpha_1=\\alpha_2=\\alpha_3=\\alpha_4=0\\)\n\\[{H}_{A}:some\\:\\mu_i\\neq\\mu_j\\]\nOr \\(H_a: Some\\:\\alpha_i\\neq 0\\). We can find the p-value for our F calculation with the following code\n\npf(17.422, 3, 4, lower.tail = FALSE)\n\n[1] 0.009248454"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#anova-source-table-leafhoppers",
+    "href": "lectures/05_ANOVA-conditions.html#anova-source-table-leafhoppers",
+    "title": "ANOVA Conditions",
+    "section": "ANOVA Source Table Leafhoppers",
+    "text": "ANOVA Source Table Leafhoppers\n\nmod &lt;- lm(days ~ diet, data = leaf)\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: days\n          Df Sum Sq Mean Sq F value   Pr(&gt;F)   \ndiet       3   3.92  1.3067  17.422 0.009248 **\nResiduals  4   0.30  0.0750                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   }
 ]

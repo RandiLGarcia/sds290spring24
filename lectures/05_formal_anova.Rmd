@@ -36,7 +36,6 @@ leaf %>%
   summarise(sd = sd(days))
 ```
 
-
 # Calculating effects to go in factor diagram
 
 ```{r}
@@ -84,7 +83,7 @@ summary(mod)
 confint(mod)
 ```
 
-We probably want to adjust for multiple comparisons to control our **experimentwise type I error rate**. 
+We probably want to adjust for multiple comparisons to control our **experimentwise type I error rate**.
 
 ```{r}
 TukeyHSD(mod, "diet")
@@ -94,5 +93,3 @@ TukeyHSD(mod, "diet")
 
 24.923
 ```
-
-

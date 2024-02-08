@@ -37,7 +37,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   Read **Stat2** Ch. 5.1-5.2 (Moodle)
 
-
 #### Thurs, Feb 1
 
 -   One-way ANOVA (cont.)
@@ -51,7 +50,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **HW #1b due today at 11:55p**
 
-:::
 
 ## Week 3
 
@@ -60,6 +58,8 @@ Please read the specified sections *before* class that day.
 -   Inference for ANOVA
 -   Homework due today:
     -   Read **Stat2** Ch. 5.4
+
+:::
 
 #### Thurs, Feb 8
 
