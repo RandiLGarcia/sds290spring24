@@ -50,7 +50,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **HW #1b due today at 11:55p**
 
-
 ## Week 3
 
 #### Tue, Feb 6
@@ -59,7 +58,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   Read **Stat2** Ch. 5.4
 
-:::
 
 #### Thurs, Feb 8
 
@@ -68,6 +66,8 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   No reading for today
 -   **Office hours**: 2:45p - 4:00p
+
+:::
 
 #### Fri, Feb 9
 
