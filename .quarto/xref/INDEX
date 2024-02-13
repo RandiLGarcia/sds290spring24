@@ -73,5 +73,11 @@
   },
   "lectures/05_ANOVA-conditions.qmd": {
     "05_ANOVA-conditions.html": "1e1390d3"
+  },
+  "lectures/06_CI-effect-sizes.qmd": {
+    "06_CI-effect-sizes.html": "a15fee19"
+  },
+  "lectures/07_multiple-comparisons.Rmd": {
+    "07_multiple-comparisons.html": "be197b8a"
   }
 }

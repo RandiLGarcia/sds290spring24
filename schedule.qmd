@@ -58,7 +58,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   Read **Stat2** Ch. 5.4
 
-
 #### Thurs, Feb 8
 
 -   ANOVA Conditions
@@ -67,17 +66,17 @@ Please read the specified sections *before* class that day.
     -   No reading for today
 -   **Office hours**: 2:45p - 4:00p
 
-:::
-
 #### Fri, Feb 9
 
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
     -   **HW #2 due today at 11:55p**
 
+:::
+
 ## Week 4
 
-#### Tue, Feb 12
+#### Tue, Feb 13
 
 -   Confidence intervals and effect sizes
 -   Transformations

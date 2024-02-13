@@ -360,21 +360,3 @@ plot(mod, which = 2)
 #histogram of residuals
 qplot(x = mod$residuals, bins = 4)
 ```
-
-## Try it!
-
-Back in your groups of three, check or discuss the last 4 ANOVA assumptions: The **SINZ**.
-
-**Dataset 1**: `SandwichAnts`
-
--   Factor: `Bread`
--   Response: `Ants`
-
-**Dataset 2**: `Meniscus`
-
--   Factor: `Method`
--   Response: `Displacement`
-
-## Mini Project 1
-
-See [Mini Project 1 instructions](https://randilgarcia.github.io/sds290spring24/project/mini-project-1.html)

@@ -40,8 +40,8 @@ website:
           href: lectures/04_inference-ANOVA.html
         - text: 05 - ANOVA Conditions
           href: lectures/05_ANOVA-conditions.html
-        # - text: 06 - Confidence Intervals and Effect Sizes
-        #   href: lectures/06_CI-effect-sizes.html
+        - text: 06 - Confidence Intervals and Effect Sizes
+          href: lectures/06_CI-effect-sizes.html
         # - text: 07 - Multiple Comparisons
         #   href: lectures/07_multiple-comparisons.html
         # - text: 08 - Four Designs
