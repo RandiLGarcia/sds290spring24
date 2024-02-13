@@ -14,8 +14,8 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
 
 ## Announcements
 
--   Grades are posted for HW2
-    -   Solution sheet will be available on Moodle on Wed
+-   Grades will be posted for HW2 soon
+    -   Solution sheet will be available on Moodle
 -   HW3 posted
 -   Office hours (Bass 412)
     -   Thursday: 2:45p - 4:00p
@@ -210,22 +210,6 @@ But what else do we want to know??
 -   How far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.
 -   Additional effect size option: The overall variance explained by a factor of interest.
 
-## Effect Sizes and Confidence Intervals
-
--   The p-value for our F-ratio only tells us if effects are **detectable**.
-    -   Answers the question: **IS** there an effect?
--   Practical significance is different from **statistical** significance.
-    -   Need to answer the question: How big is **IT**?
--   Which values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)?
-
-Some options:
-
--   A specific group mean.
--   How far away a specific condition is from the grand average (the treatment effect).
--   **How far away a specific condition is from another condition.**
--   How far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.
--   Additional effect size option: The overall variance explained by a factor of interest.
-
 ## Confidence Intervals for Difference Between two Groups
 
 $$(\bar{y_i}-\bar{y_j}) \pm t^*\cdot SD \sqrt{1/n_i+1/n_j}$$
@@ -233,7 +217,6 @@ $$(\bar{y_i}-\bar{y_j}) \pm t^*\cdot SD \sqrt{1/n_i+1/n_j}$$
 -   Where $SD = \sqrt{MSE}$.
 -   $t^*$ depends on the confidence level and df of the error.
 -   $Sample\:size\:factor = \sqrt{1/n_i+1/n_j}$, the larger the sample sizes, the narrower the interval.
--   $\sqrt{{MS}_{res}}*leverage$ is the standard error of the estimate.
 -   $t({df}_{res})$ is the t-value the dictates distance of the interval.
 
 ## Calculating CI between groups in R

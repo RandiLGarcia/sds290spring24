@@ -1334,7 +1334,7 @@
     "href": "lectures/06_CI-effect-sizes.html#announcements",
     "title": "Confidence Intervals and Effect Sizes",
     "section": "Announcements",
-    "text": "Announcements\n\nGrades are posted for HW2\n\nSolution sheet will be available on Moodle on Wed\n\nHW3 posted\nOffice hours (Bass 412)\n\nThursday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301."
+    "text": "Announcements\n\nGrades will be posted for HW2 soon\n\nSolution sheet will be available on Moodle\n\nHW3 posted\nOffice hours (Bass 412)\n\nThursday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#agenda",
@@ -1467,7 +1467,7 @@
     "href": "lectures/06_CI-effect-sizes.html#confidence-intervals-for-difference-between-two-groups",
     "title": "Confidence Intervals and Effect Sizes",
     "section": "Confidence Intervals for Difference Between two Groups",
-    "text": "Confidence Intervals for Difference Between two Groups\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\).\n\\(t^*\\) depends on the confidence level and df of the error.\n\\(Sample\\:size\\:factor = \\sqrt{1/n_i+1/n_j}\\), the larger the sample sizes, the narrower the interval.\n\\(\\sqrt{{MS}_{res}}*leverage\\) is the standard error of the estimate.\n\\(t({df}_{res})\\) is the t-value the dictates distance of the interval."
+    "text": "Confidence Intervals for Difference Between two Groups\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\).\n\\(t^*\\) depends on the confidence level and df of the error.\n\\(Sample\\:size\\:factor = \\sqrt{1/n_i+1/n_j}\\), the larger the sample sizes, the narrower the interval.\n\\(t({df}_{res})\\) is the t-value the dictates distance of the interval."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#calculating-ci-between-groups-in-r",
