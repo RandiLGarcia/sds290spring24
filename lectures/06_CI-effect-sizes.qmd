@@ -1,7 +1,7 @@
 ---
 title: "Confidence Intervals and Effect Sizes"
 author: Prof Randi Garcia, SDS 290
-date: February 13, 2024
+date: February 15, 2024
 format: 
   revealjs:
     scrollable: true
@@ -15,10 +15,10 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
 ## Announcements
 
 -   Grades will be posted for HW2 soon
-    -   Solution sheet will be available on Moodle
--   HW3 posted
+    -   Solution sheet available on Moodle
+-   HW3 due tomorrow night
 -   Office hours (Bass 412)
-    -   Thursday: 2:45p - 4:00p
+    -   Today: 2:45p - 4:00p
     -   Friday: 10:50a - 12:05p
 -   Where to get HW help
     -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301.

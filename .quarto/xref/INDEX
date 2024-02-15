@@ -79,5 +79,8 @@
   },
   "lectures/07_multiple-comparisons.Rmd": {
     "07_multiple-comparisons.html": "be197b8a"
+  },
+  "lectures/06_CI-effect-sizes.Rmd": {
+    "06_CI-effect-sizes.html": "5ebdf431"
   }
 }

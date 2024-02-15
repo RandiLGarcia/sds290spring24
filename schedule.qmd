@@ -72,22 +72,21 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **HW #2 due today at 11:55p**
 
-:::
-
 ## Week 4
 
 #### Tue, Feb 13
 
--   Confidence intervals and effect sizes
 -   Transformations
 -   MP1 topics
 -   Homework due today:
     -   Brainstorm topics for MP1
     -   Read **Stat2** Ch. 5.5-5.6
 
+:::
+
 #### Thurs, Feb 15
 
--   Multiple comparisons
+-   Confidence intervals and effect sizes
 -   Introduction to Qualtrics
 -   Homework due today:
     -   Find potential stimuli (images) for MP1
@@ -105,16 +104,16 @@ Please read the specified sections *before* class that day.
 
 #### Tue, Feb 20
 
--   Four basic designs
+-   Multiple comparisons
 -   Time to work on MP1
 -   Homework due today:
-    -   Read **Cobb** Ch. 1.1-1.3 (PDF on Moodle)
+    -   Work on Qualtrics survey for MP1
 
 #### Thurs, Feb 22
 
--   Blocking
+-   Four basic designs
 -   Homework due today:
-    -   Read **Stat2** Ch 6.1-6.2
+    -   Read **Cobb** Ch. 1.1-1.3 (PDF on Moodle)
 -   **Office hours**: cancelled Rally Day
 
 #### Fri, Feb 23
@@ -127,15 +126,15 @@ Please read the specified sections *before* class that day.
 
 #### Tue, Feb 27
 
--   Blocking (cont.)
+-   Blocking 
 -   Homework due today:
-    -   None
+    -   Read Ch **Stat2** Ch 6.1-6.2
 
 #### Thurs, Feb 29
 
 -   Fitting the model for a block design
 -   Homework due today:
-    -   Read Ch **Stat2** 6.3
+    -   Read Ch **Stat2** Ch 6.3
 -   **Office hours**: 2:45p - 4:00p
 
 #### Fri, Mar 1

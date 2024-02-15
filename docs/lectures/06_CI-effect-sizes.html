@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.549">
+  <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Prof Randi Garcia, SDS 290">
-  <meta name="dcterms.date" content="2024-02-13">
+  <meta name="dcterms.date" content="2024-02-15">
   <title>SDS 290 - Spring 2024 - Confidence Intervals and Effect Sizes</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -222,8 +222,7 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -403,19 +402,19 @@ Prof Randi Garcia, SDS 290
 </div>
 </div>
 
-  <p class="date">2024-02-13</p>
+  <p class="date">2024-02-15</p>
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
 <li>Grades will be posted for HW2 soon
 <ul>
-<li>Solution sheet will be available on Moodle</li>
+<li>Solution sheet available on Moodle</li>
 </ul></li>
-<li>HW3 posted</li>
+<li>HW3 due tomorrow night</li>
 <li>Office hours (Bass 412)
 <ul>
-<li>Thursday: 2:45p - 4:00p</li>
+<li>Today: 2:45p - 4:00p</li>
 <li>Friday: 10:50a - 12:05p</li>
 </ul></li>
 <li>Where to get HW help
@@ -466,22 +465,22 @@ Prof Randi Garcia, SDS 290
 <section id="transformations-example" class="slide level2">
 <h2>Transformations: Example</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(Stat2Data)</span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a></a><span class="fu">data</span>(<span class="st">"Diamonds"</span>)</span>
-<span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> TotalPrice, <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(Stat2Data)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">data</span>(<span class="st">"Diamonds"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> TotalPrice, <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
 <section id="transformations-example-1" class="slide level2">
 <h2>Transformations: Example</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>Diamonds <span class="sc">%&gt;%</span></span>
-<span id="cb2-2"><a></a>  <span class="fu">group_by</span>(Color) <span class="sc">%&gt;%</span></span>
-<span id="cb2-3"><a></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb2-4"><a></a>            <span class="at">m =</span> <span class="fu">mean</span>(TotalPrice, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb2-5"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(TotalPrice, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>Diamonds <span class="sc">%&gt;%</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">group_by</span>(Color) <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb2-4"><a href="#cb2-4"></a>            <span class="at">m =</span> <span class="fu">mean</span>(TotalPrice, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-5"><a href="#cb2-5"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(TotalPrice, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 4
   Color     n     m     sd
@@ -494,7 +493,7 @@ Prof Randi Garcia, SDS 290
 6 I        12 7640.  5461.
 7 J         3 1936.   737.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="dv">10937</span><span class="sc">/</span><span class="dv">736</span> <span class="co">#Yikes!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="dv">10937</span><span class="sc">/</span><span class="dv">736</span> <span class="co">#Yikes!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 14.86005</code></pre>
 </div>
@@ -503,10 +502,10 @@ Prof Randi Garcia, SDS 290
 <section id="transformations-example-2" class="slide level2">
 <h2>Transformations: Example</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> <span class="fu">log</span>(TotalPrice), <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> <span class="fu">log</span>(TotalPrice), <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
 <section id="common-transformations" class="slide level2">
 <h2>Common transformations</h2>
 <p>For the response (Y)…</p>
@@ -516,15 +515,15 @@ Prof Randi Garcia, SDS 290
 <h2>How to transform</h2>
 <p>We can do the transformation directly in the visualization code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> <span class="fu">log</span>(TotalPrice), <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> <span class="fu">log</span>(TotalPrice), <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>OR, we can create a new variable in the dataset</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>Diamonds <span class="ot">&lt;-</span> Diamonds <span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a></a>  <span class="fu">mutate</span>(<span class="at">ln_TotalPrice =</span> <span class="fu">log</span>(TotalPrice))</span>
-<span id="cb8-3"><a></a></span>
-<span id="cb8-4"><a></a><span class="co">#Then, we use the new variable to make our visualization</span></span>
-<span id="cb8-5"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> ln_TotalPrice, <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>Diamonds <span class="ot">&lt;-</span> Diamonds <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">mutate</span>(<span class="at">ln_TotalPrice =</span> <span class="fu">log</span>(TotalPrice))</span>
+<span id="cb8-3"><a href="#cb8-3"></a></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co">#Then, we use the new variable to make our visualization</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> ln_TotalPrice, <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="when-to-use-log-transformation" class="slide level2">
@@ -536,7 +535,7 @@ Prof Randi Garcia, SDS 290
 <li>Variability varies across groups considerably, especially when the spread tracks with the mean.</li>
 </ul>
 </section>
-<section id="diagnostic-plot-to-pick-a-transformation" class="slide level2 scrollable">
+<section id="diagnostic-plot-to-pick-a-transformation" class="slide level2">
 <h2>Diagnostic plot to pick a transformation</h2>
 <p>Steps:</p>
 <ol type="1">
@@ -549,27 +548,27 @@ Prof Randi Garcia, SDS 290
 <h2>Diagnostic plot to pick a transformation: Step 1</h2>
 <p>Save the means and sd’s of groups in a little <strong>dataset</strong>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>ds <span class="ot">&lt;-</span> Diamonds <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">group_by</span>(Color) <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb9-4"><a></a>            <span class="at">m =</span> <span class="fu">mean</span>(TotalPrice),</span>
-<span id="cb9-5"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(TotalPrice))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>ds <span class="ot">&lt;-</span> Diamonds <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">group_by</span>(Color) <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb9-4"><a href="#cb9-4"></a>            <span class="at">m =</span> <span class="fu">mean</span>(TotalPrice),</span>
+<span id="cb9-5"><a href="#cb9-5"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(TotalPrice))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="diagnostic-plot-to-pick-a-transformation-step-2" class="slide level2">
 <h2>Diagnostic plot to pick a transformation: Step 2</h2>
 <p>Make a scatterplot of log(sd) versus log(m) with a <strong>line of best fit</strong>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">log</span>(m), <span class="at">y =</span> <span class="fu">log</span>(sd), <span class="at">data =</span> ds) <span class="sc">+</span></span>
-<span id="cb10-2"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">se =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">log</span>(m), <span class="at">y =</span> <span class="fu">log</span>(sd), <span class="at">data =</span> ds) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">se =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
 <section id="diagnostic-plot-to-pick-a-transformation-step-3" class="slide level2">
 <h2>Diagnostic plot to pick a transformation: Step 3</h2>
 <p>Your transformation will be the response raised to the <strong>power of 1-slope</strong> of that line.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">lm</span>(<span class="fu">log</span>(sd) <span class="sc">~</span> <span class="fu">log</span>(m), <span class="at">data =</span> ds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">lm</span>(<span class="fu">log</span>(sd) <span class="sc">~</span> <span class="fu">log</span>(m), <span class="at">data =</span> ds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -584,17 +583,17 @@ Coefficients:
 <section id="diagnostic-plot-to-pick-a-transformation-step-3-1" class="slide level2">
 <h2>Diagnostic plot to pick a transformation: Step 3</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>p <span class="ot">=</span> <span class="dv">1</span> <span class="sc">-</span> <span class="fl">1.480</span></span>
-<span id="cb13-2"><a></a></span>
-<span id="cb13-3"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> TotalPrice<span class="sc">^</span>p, <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>p <span class="ot">=</span> <span class="dv">1</span> <span class="sc">-</span> <span class="fl">1.480</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> TotalPrice<span class="sc">^</span>p, <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
-<section id="try-it-for-the-hawks" class="slide level2 scrollable">
+<img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="try-it-for-the-hawks" class="slide level2">
 <h2>Try it for the Hawks!</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">library</span>(Stat2Data)</span>
-<span id="cb14-2"><a></a><span class="fu">data</span>(<span class="st">"Hawks"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">library</span>(Stat2Data)</span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">data</span>(<span class="st">"Hawks"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Find a transformation that helps the heterogeneity of variance for Y = Weight and X = Species.</li>
@@ -610,8 +609,8 @@ Coefficients:
 <section id="anova-for-diamonds" class="slide level2">
 <h2>ANOVA for Diamonds</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>modDia <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(TotalPrice) <span class="sc">~</span> Color, <span class="at">data =</span> Diamonds)</span>
-<span id="cb15-2"><a></a><span class="fu">anova</span>(modDia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>modDia <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(TotalPrice) <span class="sc">~</span> Color, <span class="at">data =</span> Diamonds)</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">anova</span>(modDia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -663,30 +662,30 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p><span class="math display">\[(\bar{y_G}-\bar{y_F}) \pm t^*\cdot SD \sqrt{1/n_G+1/n_F}\]</span></p>
 <p>For difference between G (near colorless) and F (colorless)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>MSE <span class="ot">=</span> <span class="fl">0.6771</span> <span class="co">#from our ANOVA source table</span></span>
-<span id="cb17-2"><a></a>df_E <span class="ot">=</span> <span class="dv">344</span> <span class="co">#from our ANOVA source table</span></span>
-<span id="cb17-3"><a></a>t <span class="ot">&lt;-</span> <span class="fu">qt</span>(.<span class="dv">975</span>, df_E) <span class="co">#for 95% CI</span></span>
-<span id="cb17-4"><a></a></span>
-<span id="cb17-5"><a></a>n_g <span class="ot">=</span> <span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"G"</span>)<span class="sc">$</span>n <span class="co">#sample size for G</span></span>
-<span id="cb17-6"><a></a>n_f <span class="ot">=</span> <span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"F"</span>)<span class="sc">$</span>n <span class="co">#sample size for F</span></span>
-<span id="cb17-7"><a></a></span>
-<span id="cb17-8"><a></a>mean_g <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"G"</span>)<span class="sc">$</span>m) <span class="co">#mean for G</span></span>
-<span id="cb17-9"><a></a>mean_f <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"F"</span>)<span class="sc">$</span>m) <span class="co">#mean for F</span></span>
-<span id="cb17-10"><a></a></span>
-<span id="cb17-11"><a></a><span class="co">#Confidence interval</span></span>
-<span id="cb17-12"><a></a>UL <span class="ot">&lt;-</span> (mean_g<span class="sc">-</span>mean_f) <span class="sc">+</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n_g<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n_f) <span class="co">#upper limit</span></span>
-<span id="cb17-13"><a></a>LL <span class="ot">&lt;-</span> (mean_g<span class="sc">-</span>mean_f) <span class="sc">-</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n_g<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n_f) <span class="co">#lower limit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>MSE <span class="ot">=</span> <span class="fl">0.6771</span> <span class="co">#from our ANOVA source table</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>df_E <span class="ot">=</span> <span class="dv">344</span> <span class="co">#from our ANOVA source table</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>t <span class="ot">&lt;-</span> <span class="fu">qt</span>(.<span class="dv">975</span>, df_E) <span class="co">#for 95% CI</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a></span>
+<span id="cb17-5"><a href="#cb17-5"></a>n_g <span class="ot">=</span> <span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"G"</span>)<span class="sc">$</span>n <span class="co">#sample size for G</span></span>
+<span id="cb17-6"><a href="#cb17-6"></a>n_f <span class="ot">=</span> <span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"F"</span>)<span class="sc">$</span>n <span class="co">#sample size for F</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a></span>
+<span id="cb17-8"><a href="#cb17-8"></a>mean_g <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"G"</span>)<span class="sc">$</span>m) <span class="co">#mean for G</span></span>
+<span id="cb17-9"><a href="#cb17-9"></a>mean_f <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"F"</span>)<span class="sc">$</span>m) <span class="co">#mean for F</span></span>
+<span id="cb17-10"><a href="#cb17-10"></a></span>
+<span id="cb17-11"><a href="#cb17-11"></a><span class="co">#Confidence interval</span></span>
+<span id="cb17-12"><a href="#cb17-12"></a>UL <span class="ot">&lt;-</span> (mean_g<span class="sc">-</span>mean_f) <span class="sc">+</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n_g<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n_f) <span class="co">#upper limit</span></span>
+<span id="cb17-13"><a href="#cb17-13"></a>LL <span class="ot">&lt;-</span> (mean_g<span class="sc">-</span>mean_f) <span class="sc">-</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n_g<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n_f) <span class="co">#lower limit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="calculating-ci-between-groups-in-r-1" class="slide level2">
 <h2>Calculating CI between groups in R</h2>
 <p>For difference between G (near colorless) and F (colorless)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>LL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>LL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -0.2035213</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>UL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>UL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.2886875</code></pre>
 </div>
@@ -713,9 +712,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h2>Effect Size (D)</h2>
 <p>For difference between G (near colorless) and F (colorless)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>D <span class="ot">=</span> (mean_g<span class="sc">-</span>mean_f)<span class="sc">/</span><span class="fu">sqrt</span>(MSE)</span>
-<span id="cb22-2"><a></a></span>
-<span id="cb22-3"><a></a>D</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>D <span class="ot">=</span> (mean_g<span class="sc">-</span>mean_f)<span class="sc">/</span><span class="fu">sqrt</span>(MSE)</span>
+<span id="cb22-2"><a href="#cb22-2"></a></span>
+<span id="cb22-3"><a href="#cb22-3"></a>D</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.05175002</code></pre>
 </div>
@@ -733,8 +732,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="r-squared-for-diamond-color" class="slide level2">
 <h2>R-squared for Diamond Color</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>modDia <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(TotalPrice) <span class="sc">~</span> Color, <span class="at">data =</span> Diamonds)</span>
-<span id="cb24-2"><a></a><span class="fu">anova</span>(modDia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>modDia <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(TotalPrice) <span class="sc">~</span> Color, <span class="at">data =</span> Diamonds)</span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="fu">anova</span>(modDia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -747,8 +746,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>R2 <span class="ot">=</span> <span class="fl">29.946</span><span class="sc">/</span>(<span class="fl">29.946+232.913</span>)</span>
-<span id="cb26-2"><a></a>R2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>R2 <span class="ot">=</span> <span class="fl">29.946</span><span class="sc">/</span>(<span class="fl">29.946+232.913</span>)</span>
+<span id="cb26-2"><a href="#cb26-2"></a>R2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.1139242</code></pre>
 </div>
@@ -763,10 +762,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h2>Mini Project 1</h2>
 <p>See <a href="https://randilgarcia.github.io/sds290spring24/project/mini-project-1.html">Mini Project 1 instructions</a></p>
 
-<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
-</div>
 </div>
 </section>
     </div>
@@ -795,6 +792,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
+'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1093,9 +1091,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      function tippyHover(el, contentFn) {
         const config = {
           allowHTML: true,
+          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1105,17 +1104,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start',
+          placement: 'bottom-start'
         };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
