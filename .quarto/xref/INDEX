@@ -82,5 +82,8 @@
   },
   "lectures/06_CI-effect-sizes.Rmd": {
     "06_CI-effect-sizes.html": "5ebdf431"
+  },
+  "lectures/07_multiple-comparisons.qmd": {
+    "07_multiple-comparisons.html": "7836575c"
   }
 }

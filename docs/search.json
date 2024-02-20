@@ -151,7 +151,7 @@
     "href": "schedule.html#week-4",
     "title": "Schedule",
     "section": "Week 4",
-    "text": "Week 4\n\nTue, Feb 13\n\nTransformations\nMP1 topics\nHomework due today:\n\nBrainstorm topics for MP1\nRead Stat2 Ch. 5.5-5.6"
+    "text": "Week 4\n\nTue, Feb 13\n\nTransformations\nMP1 topics\nHomework due today:\n\nBrainstorm topics for MP1\nRead Stat2 Ch. 5.5-5.6\n\n\n\n\nThurs, Feb 15\n\nConfidence intervals and effect sizes\nIntroduction to Qualtrics\nHomework due today:\n\nFind potential stimuli (images) for MP1\nRead Stat2 4.5 (up to, not including, example 4.10)\nRead Stat2 5.7\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Feb 16\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nHW #3 due on today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-5",
@@ -1333,8 +1333,8 @@
     "objectID": "lectures/06_CI-effect-sizes.html#announcements",
     "href": "lectures/06_CI-effect-sizes.html#announcements",
     "title": "Confidence Intervals and Effect Sizes",
-    "section": "Announcements",
-    "text": "Announcements\n\nGrades will be posted for HW2 soon\n\nSolution sheet available on Moodle\n\nHW3 due tomorrow night\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301."
+    "section": "",
+    "text": "Grades will be posted for HW2 soon\n\nSolution sheet available on Moodle\n\nHW3 due tomorrow night\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#agenda",
@@ -1348,7 +1348,7 @@
     "href": "lectures/06_CI-effect-sizes.html#last-time",
     "title": "Confidence Intervals and Effect Sizes",
     "section": "Last time",
-    "text": "Last time\nHow to check assumptions\n\nC. Constant effects – think about whether it is reasonable.\nA. Additive effects – think about whether it is reasonable.\nS. Same standard deviations – is the biggest SD less than two times as large as the smallest?\nI. Independent residuals – think about whether it is reasonable.\nN. Normally distributed residuals – construct a histogram or normal probability plot of residuals.\nZ. Zero mean residuals – construct a histogram or normal probability plot of residuals."
+    "text": "Last time\n\nHow to check assumptions\n\nC. Constant effects – think about whether it is reasonable.\nA. Additive effects – think about whether it is reasonable.\nS. Same standard deviations – is the biggest SD less than two times as large as the smallest?\nI. Independent residuals – think about whether it is reasonable.\nN. Normally distributed residuals – construct a histogram or normal probability plot of residuals.\nZ. Zero mean residuals – construct a histogram or normal probability plot of residuals."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#try-it",
@@ -1453,7 +1453,7 @@
     "href": "lectures/06_CI-effect-sizes.html#effect-sizes-and-confidence-intervals",
     "title": "Confidence Intervals and Effect Sizes",
     "section": "Effect Sizes and Confidence Intervals",
-    "text": "Effect Sizes and Confidence Intervals\n\nThe p-value for our F-ratio only tells us if effects are detectable.\n\nAnswers the question: IS there an effect?\n\nPractical significance is different from statistical significance.\n\nNeed to answer the question: How big is IT?\n\nWhich values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)?\n\nSome options:\n\nA specific group mean.\nHow far away a specific condition is from the grand average (the treatment effect).\nHow far away a specific condition is from another condition.\nHow far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.\nAdditional effect size option: The overall variance explained by a factor of interest."
+    "text": "Effect Sizes and Confidence Intervals\n\nThe p-value for our F-ratio only tells us if effects are detectable.\n\nAnswers the question: IS there an effect?\n\nPractical significance is different from statistical significance.\n\nNeed to answer the question: How big is IT?\n\nWhich values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)?\n\n\nSome options:\n\nA specific group mean.\nHow far away a specific condition is from the grand average (the treatment effect).\nHow far away a specific condition is from another condition.\nHow far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.\nAdditional effect size option: The overall variance explained by a factor of interest."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#effect-sizes-and-confidence-intervals-1",
@@ -1543,8 +1543,8 @@
     "objectID": "lectures/07_multiple-comparisons.html#announcements",
     "href": "lectures/07_multiple-comparisons.html#announcements",
     "title": "Multiple Comparisons",
-    "section": "",
-    "text": "Grades for HW2: See feedback in comments\nHW3 posted\nOffice hours (Bass 412)\n\nThurs 1:20-2:35p (In-person)\nor by appointment\nZoom office hours are full\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nUse #homework3-questions channel on Slack.\nDirect message me on Slack."
+    "section": "Announcements",
+    "text": "Announcements\n\nGrades for HW2: Scale fixed on Moodle\nHW3 being graded now\nHW4 posted, due Friday night\nOffice hours (Bass 412)\n\nThurs cancelled due to Rally Day\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nUse #hw4-questions channel on Slack.\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#notes-on-hw-3",
@@ -1558,7 +1558,7 @@
     "href": "lectures/07_multiple-comparisons.html#agenda",
     "title": "Multiple Comparisons",
     "section": "Agenda",
-    "text": "Agenda\n\nWarm-up\nCI and Effect sizes review\nMultiple comparisons\nMP1 topics time\n\nIntroduction to Qualtrics (maybe Tuesday)"
+    "text": "Agenda\n\nWarm-up\nCI and Effect sizes review\nMultiple comparisons\nMP1 topics time\n\nIntroduction to Qualtrics (video on Moodle)"
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#warm-up-walking-babies-example",
@@ -1600,21 +1600,21 @@
     "href": "lectures/07_multiple-comparisons.html#warm-up-walking-babies-example-5",
     "title": "Multiple Comparisons",
     "section": "Warm-up: Walking Babies Example",
-    "text": "Warm-up: Walking Babies Example\n\nplot(babyMod, which = 2)\n\n\n\n\nN: looks ok with possible skew"
+    "text": "Warm-up: Walking Babies Example\n\nplot(babyMod, which = 2)\n\n\nN: looks ok with possible skew"
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#warm-up-walking-babies-example-6",
     "href": "lectures/07_multiple-comparisons.html#warm-up-walking-babies-example-6",
     "title": "Multiple Comparisons",
     "section": "Warm-up: Walking Babies Example",
-    "text": "Warm-up: Walking Babies Example\n\nqplot(x = babyMod$residuals, bins = 8)\n\n\n\n\nN: normality is satisfied; Z: Yes, centered at zero."
+    "text": "Warm-up: Walking Babies Example\n\nqplot(x = babyMod$residuals, bins = 8)\n\n\nN: normality is satisfied; Z: Yes, centered at zero."
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#last-time",
     "href": "lectures/07_multiple-comparisons.html#last-time",
     "title": "Multiple Comparisons",
     "section": "Last time",
-    "text": "Last time\n\nEffect Sizes and Confidence Intervals\n\nIS there an effect?\n\nThe p-value for our F-ratio only tells us if effects are detectable.\n\nHow big is IT?\n\nPractical significance is different from statistical significance."
+    "text": "Last time\nEffect Sizes and Confidence Intervals\n\nIS there an effect?\n\nThe p-value for our F-ratio only tells us if effects are detectable.\n\nHow big is IT?\n\nPractical significance is different from statistical significance."
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#ci-for-pairwise-group-differences",
@@ -1628,28 +1628,28 @@
     "href": "lectures/07_multiple-comparisons.html#effect-size",
     "title": "Multiple Comparisons",
     "section": "Effect Size",
-    "text": "Effect Size\n\nEffect Size (D)\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere again \\(SD = \\sqrt{MSE}\\)\n\n\nD = (mean_g-mean_f)/sqrt(MSE)\nD\n\n[1] 0.05175002\n\n\nThe difference between the price of nearly colorless diamonds and colorless diamonds is only 0.052 times the size of the typical within-group deviations in price. Such a small difference!"
+    "text": "Effect Size\nEffect Size (D)\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere again \\(SD = \\sqrt{MSE}\\)\n\n\nD = (mean_g-mean_f)/sqrt(MSE)\nD\n\n[1] 0.05175002\n\n\nThe difference between the price of nearly colorless diamonds and colorless diamonds is only 0.052 times the size of the typical within-group deviations in price. Such a small difference!"
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#effect-size-1",
     "href": "lectures/07_multiple-comparisons.html#effect-size-1",
     "title": "Multiple Comparisons",
     "section": "Effect Size",
-    "text": "Effect Size\n\nR-squared for One-Way ANOVA\n\\(R^2\\) is the proportion of total variation explained by the factor:\n\\[R^2 = \\frac{SS_{treatment}}{SS_{Total}}\\]\n\nmodDia &lt;- lm(log(TotalPrice) ~ Color, data = Diamonds)\nanova(modDia)\n\nAnalysis of Variance Table\n\nResponse: log(TotalPrice)\n           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nColor       6  29.946  4.9909  7.3713 1.972e-07 ***\nResiduals 344 232.913  0.6771                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "text": "Effect Size\nR-squared for One-Way ANOVA\n\\(R^2\\) is the proportion of total variation explained by the factor:\n\\[R^2 = \\frac{SS_{treatment}}{SS_{Total}}\\]\n\nmodDia &lt;- lm(log(TotalPrice) ~ Color, data = Diamonds)\nanova(modDia)\n\nAnalysis of Variance Table\n\nResponse: log(TotalPrice)\n           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nColor       6  29.946  4.9909  7.3713 1.972e-07 ***\nResiduals 344 232.913  0.6771                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#effect-size-2",
     "href": "lectures/07_multiple-comparisons.html#effect-size-2",
     "title": "Multiple Comparisons",
     "section": "Effect Size",
-    "text": "Effect Size\n\nR-squared for One-Way ANOVA\n\nR2 = 29.946/(29.946+232.913)\nR2\n\n[1] 0.1139242\n\n\nThe \\(R^2\\) value is 0.11, so about 11% of the variation in the total price of a diamonds is explained by the diamonds’ colors."
+    "text": "Effect Size\nR-squared for One-Way ANOVA\n\nR2 = 29.946/(29.946+232.913)\nR2\n\n[1] 0.1139242\n\n\nThe \\(R^2\\) value is 0.11, so about 11% of the variation in the total price of a diamonds is explained by the diamonds’ colors."
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#try-it-on-the-sandwich-ants-data",
     "href": "lectures/07_multiple-comparisons.html#try-it-on-the-sandwich-ants-data",
     "title": "Multiple Comparisons",
     "section": "Try it on the Sandwich Ants data",
-    "text": "Try it on the Sandwich Ants data\nUse the SandwichAnts dataset to\n\nCheck the ANOVA conditions (SINZ) and test if there are difference in Ants depending on the sandwich Filling using ANOVA. Interpret the results of your analysis in context.\nCalculate the CI and effect size (D) for the difference between HamPickles and PeanutButter, and for the difference between PeanutButter and Vegemite. Interpret the results of your analysis in context.\nCalculate the \\(R^2\\) for Filling and interpret it in a sentence.\n\n\nI’ll do it with you! (and post the code afterwards)"
+    "text": "Try it on the Sandwich Ants data\nUse the SandwichAnts dataset to\n\nCheck the ANOVA conditions (SINZ) and test if there are difference in Ants depending on the sandwich Filling using ANOVA. Interpret the results of your analysis in context.\nCalculate the CI and effect size (D) for the difference between HamPickles and PeanutButter, and for the difference between PeanutButter and Vegemite. Interpret the results of your analysis in context.\nCalculate the \\(R^2\\) for Filling and interpret it in a sentence.\n\nI’ll do it with you! (and post the code afterwards)"
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#multiple-comparisons",
@@ -1677,7 +1677,7 @@
     "href": "lectures/07_multiple-comparisons.html#multiple-comparisons-3",
     "title": "Multiple Comparisons",
     "section": "Multiple Comparisons",
-    "text": "Multiple Comparisons\nIf we want to do all pairwise comparisons for the walking babies, how many comparisons would we need to make?\n\\[{n \\choose k} = \\frac{n!}{k!(n-k)!}\\]\n\nWhen we have more than two levels of a factor of interest, we might want to compare specific groups to see which one differ from each other. We can\n\nCompute a confidence interval for the difference between two groups.\nRun a set of all pairwise comparisons.\nCreate custom contrasts of more complex ideas.\n\n\n\nRecall: our Type I error rate is 5% for one test! If the null hypothesis were true, 1 out of 20 tests we run would be significant."
+    "text": "Multiple Comparisons\nIf we want to do all pairwise comparisons for the walking babies, how many comparisons would we need to make?\n\\[{n \\choose k} = \\frac{n!}{k!(n-k)!}\\]\n\nWhen we have more than two levels of a factor of interest, we might want to compare specific groups to see which one differ from each other. We can\n\nCompute a confidence interval for the difference between two groups.\nRun a set of all pairwise comparisons.\nCreate custom contrasts of more complex ideas.\n\n\nRecall: our Type I error rate is 5% for one test! If the null hypothesis were true, 1 out of 20 tests we run would be significant."
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#adjusting-for-multiple-comparisons",
@@ -1754,7 +1754,7 @@
     "href": "lectures/06_CI-effect-sizes.html",
     "title": "Confidence Intervals and Effect Sizes",
     "section": "",
-    "text": "Grades are posted for HW2\n\nSolution sheet will be available on Moodle on Wed\n\nHW3 posted\n\nIn-person Office hours (Bass 412)\n\nWed 10:50-12:05p (Zoom this week!)\nThurs 1:20-2:35p\nor by appointment\n\nZoom Office hours are full\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301."
+    "text": "Grades will be posted for HW2 soon\n\nSolution sheet available on Moodle\n\nHW3 due tomorrow night\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#try-it-for-the-hawks",
@@ -1762,5 +1762,12 @@
     "title": "Confidence Intervals and Effect Sizes",
     "section": "Try it for the Hawks!",
     "text": "Try it for the Hawks!\n\nlibrary(Stat2Data)\ndata(\"Hawks\")\n\n\nFind a transformation that helps the heterogeneity of variance for Y = Weight and X = Species.\nRun the ANOVA (even if the issue is not completely fixed) and write a sentence interpretation of your ANOVA results.\n\nSteps for finding a transformation:\n\nSave the means and sd’s of groups in a little dataset.\nMake a scatterplot of log(sd) versus log(m) with a line of best fit.\nYour transformation will be the response raised to the power of 1-slope of that line."
+  },
+  {
+    "objectID": "lectures/07_multiple-comparisons.html#notes-on-hw-4",
+    "href": "lectures/07_multiple-comparisons.html#notes-on-hw-4",
+    "title": "Multiple Comparisons",
+    "section": "Notes on HW 4",
+    "text": "Notes on HW 4\n\n5.70: Open ended Hawks culmen"
   }
 ]

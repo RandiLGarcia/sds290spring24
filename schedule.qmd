@@ -82,8 +82,6 @@ Please read the specified sections *before* class that day.
     -   Brainstorm topics for MP1
     -   Read **Stat2** Ch. 5.5-5.6
 
-:::
-
 #### Thurs, Feb 15
 
 -   Confidence intervals and effect sizes
@@ -99,6 +97,8 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
     -   **HW #3 due on today at 11:55p**
+
+:::
 
 ## Week 5
 
@@ -126,7 +126,7 @@ Please read the specified sections *before* class that day.
 
 #### Tue, Feb 27
 
--   Blocking 
+-   Blocking
 -   Homework due today:
     -   Read Ch **Stat2** Ch 6.1-6.2
 
