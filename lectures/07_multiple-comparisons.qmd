@@ -27,7 +27,7 @@ ds <- Diamonds %>%
 
 -   Grades for HW2: Scale fixed on Moodle
 -   HW3 being graded now
--   HW4 posted, due Friday night 
+-   HW4 posted, due Friday night
 -   Office hours (Bass 412)
     -   Thurs cancelled due to Rally Day
     -   Friday: 10:50a - 12:05p
