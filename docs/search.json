@@ -1775,7 +1775,7 @@
     "href": "lectures/08_four-designs.html#announcements",
     "title": "Four Desgins",
     "section": "Announcements",
-    "text": "Announcements\n\nGrades for HW3 posted\nHW4 due Friday 11:55p\n\nOffice hours all on Zoom this week!\n\nWed 10:50-12:05p (drop in)\nThurs 1:20-2:35p (drop in)\nFriday office hours full for this week\nor by appointment\n\nNo class on Thursday (work on MP1)\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework4-questions channel on Slack!\nDirect message me on Slack."
+    "text": "Announcements\n\nGrades for HW3 posted\nHW4 due Friday 11:55p\nOffice hours (Bass 412)\n\nToday cancelled due to Rally Day\nFriday (tomorrow): 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework4-questions channel on Slack!"
   },
   {
     "objectID": "lectures/08_four-designs.html#c-and-sampling-error",
@@ -1845,14 +1845,14 @@
     "href": "lectures/08_four-designs.html#agenda",
     "title": "Four Desgins",
     "section": "Agenda",
-    "text": "Agenda\n\nFour designs\nIntroduction to Qualtrics\nMP1 topics time"
+    "text": "Agenda\n\nFinish up multiple comparisons\nFour designs\nMP1 topics time"
   },
   {
     "objectID": "lectures/08_four-designs.html#kellys-hamster-study",
     "href": "lectures/08_four-designs.html#kellys-hamster-study",
     "title": "Four Desgins",
     "section": "Kelly’s Hamster Study",
-    "text": "Kelly’s Hamster Study\n ## Kelly’s Hamster Study"
+    "text": "Kelly’s Hamster Study"
   },
   {
     "objectID": "lectures/08_four-designs.html#design-principal-1-random-assignment",
@@ -1895,5 +1895,33 @@
     "title": "Four Desgins",
     "section": "Introduction to Qualtrics",
     "text": "Introduction to Qualtrics\n\nLog in to Qualtrics and enter your Smith credentials.\n\nI usually just Google “Smith Qualtrics”"
+  },
+  {
+    "objectID": "lectures/08_four-designs.html#hw4-problem-5.59c-and-sampling-error",
+    "href": "lectures/08_four-designs.html#hw4-problem-5.59c-and-sampling-error",
+    "title": "Four Desgins",
+    "section": "HW4 Problem 5.59c and sampling error",
+    "text": "HW4 Problem 5.59c and sampling error\n\nQuestion: Explain why it’s not sufficient to examine the four sample means, note that they all differ, and conclude that all races do have birth weight distributions that differ from each other.\n\nAnswer: Because this is just one a sample from a population. If we collected another sample we would see slightly different mean birth weights for the four groups. We need to consider if the group differences we see in this sample are greater than the differences we would expect from sample to sample."
+  },
+  {
+    "objectID": "lectures/08_four-designs.html#kellys-hamster-study-2",
+    "href": "lectures/08_four-designs.html#kellys-hamster-study-2",
+    "title": "Four Desgins",
+    "section": "Kelly’s Hamster Study",
+    "text": "Kelly’s Hamster Study"
+  },
+  {
+    "objectID": "lectures/08_four-designs.html#blocking-random-assignment-crossing-1",
+    "href": "lectures/08_four-designs.html#blocking-random-assignment-crossing-1",
+    "title": "Four Desgins",
+    "section": "Blocking + Random Assignment + Crossing",
+    "text": "Blocking + Random Assignment + Crossing\nDesign 4: Split Plot/Repeated Measures Design"
+  },
+  {
+    "objectID": "lectures/08_four-designs.html#time-to-work-on-mp1",
+    "href": "lectures/08_four-designs.html#time-to-work-on-mp1",
+    "title": "Four Desgins",
+    "section": "Time to work on MP1",
+    "text": "Time to work on MP1\n\nLog in to Qualtrics and enter your Smith credentials.\n\nI usually just Google “Smith Qualtrics”"
   }
 ]

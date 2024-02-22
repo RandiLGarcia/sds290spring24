@@ -26,34 +26,25 @@ ds <- Diamonds %>%
 ## Announcements
 
 -   Grades for HW3 posted
--   HW4 due Friday 11:55p\
--   Office hours **all on Zoom** this week!
-    -   Wed 10:50-12:05p (drop in)
-    -   Thurs 1:20-2:35p (drop in)
-    -   Friday office hours full for this week
-    -   or by appointment
--   No class on Thursday (work on MP1)\
+-   HW4 due Friday 11:55p
+-   Office hours (Bass 412)
+    -   Today cancelled due to Rally Day
+    -   Friday (tomorrow): 10:50a - 12:05p
 -   Where to get HW help
     -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301.
     -   Post questions to #homework4-questions channel on Slack!
-    -   Direct message me on Slack.
 
-## 5.59c and sampling error
+## Agenda
+
+-   Finish up multiple comparisons
+-   Four designs
+-   MP1 topics time
+
+## HW4 Problem 5.59c and sampling error
 
 > **Question:** Explain why it's not sufficient to examine the four sample means, note that they all differ, and conclude that all races do have birth weight distributions that differ from each other.
 
 **Answer:** Because this is just one a sample from a population. If we collected another sample we would see slightly different mean birth weights for the four groups. We need to consider if the group differences we see in this sample are greater than the differences we would expect from sample to sample.
-
-## Adjusting for Multiple Comparisons
-
-When we do multiple significance tests (or construct multiple confidence intervals), our effective type I error rate is inflated. Most statisticians agree that we should adjust our type I error rate to account for our multiple tests, and control the **familywise** error rate.
-
-Four methods for controlling the familywise :
-
-1.  Fisher Least Significant Difference (Fisher's LSD)
-2.  Tukey Honest Significant Difference (Tukey's HSD)
-3.  Scheffe test
-4.  The Bonferroni correction
 
 ## Adjusting for Multiple Comparisons
 
@@ -154,15 +145,11 @@ summary(antsMod)
 
 Using multiple regression with a bonferroni correction applied, what do we conclude about the differences in ants between filling conditions? Which comparison is missing?
 
-## Agenda
-
--   Four designs
--   Introduction to Qualtrics
--   MP1 topics time
-
 ## Kelly's Hamster Study
 
-![](02_four_designs-figure/pumpkin2.png) \## Kelly's Hamster Study
+![](02_four_designs-figure/pumpkin2.png)
+
+## Kelly's Hamster Study
 
 ![](02_four_designs-figure/SP_RM_data.png)
 
@@ -192,10 +179,15 @@ Design 3: Two-Way Factorial Design
 
 Design 4: Split Plot/Repeated Measures Design
 
-![](02_four_designs-figure/SP_RM_data.png) ![](02_four_designs-figure/SP_RM_small.png)
+![](02_four_designs-figure/SP_RM_data.png) 
 
-## Introduction to Qualtrics
+## Blocking + Random Assignment + Crossing
+
+Design 4: Split Plot/Repeated Measures Design
+
+![](02_four_designs-figure/SP_RM_small.png)
+
+## Time to work on MP1
 
 -   Log in to [Qualtrics](smithcollege.qualtrics.com) and enter your Smith credentials.
     -   I usually just Google "Smith Qualtrics"
-
