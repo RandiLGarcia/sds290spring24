@@ -108,7 +108,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   Work on Qualtrics survey for MP1
     
-:::
 
 #### Thurs, Feb 22
 
@@ -122,6 +121,8 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
     -   **HW #4 due on today at 11:55p**
+
+:::
 
 ## Week 6
 

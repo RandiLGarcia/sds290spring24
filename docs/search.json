@@ -158,7 +158,7 @@
     "href": "schedule.html#week-5",
     "title": "Schedule",
     "section": "Week 5",
-    "text": "Week 5\n\nTue, Feb 20\n\nMultiple comparisons\nTime to work on MP1\nHomework due today:\n\nWork on Qualtrics survey for MP1"
+    "text": "Week 5\n\nTue, Feb 20\n\nMultiple comparisons\nTime to work on MP1\nHomework due today:\n\nWork on Qualtrics survey for MP1\n\n\n\n\nThurs, Feb 22\n\nFour basic designs\nHomework due today:\n\nRead Cobb Ch. 1.1-1.3 (PDF on Moodle)\n\nOffice hours: cancelled Rally Day\n\n\n\nFri, Feb 23\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nHW #4 due on today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-6",
@@ -1923,5 +1923,152 @@
     "title": "Four Desgins",
     "section": "Time to work on MP1",
     "text": "Time to work on MP1\n\nLog in to Qualtrics and enter your Smith credentials.\n\nI usually just Google “Smith Qualtrics”"
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#announcements",
+    "href": "lectures/09_intro_to_blocking.html#announcements",
+    "title": "Introduction to Blocking",
+    "section": "Announcements",
+    "text": "Announcements\n\nHW4 being graded now\nOffice hours (Bass 412)\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get MP1 help\n\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#mp1-pre-approval",
+    "href": "lectures/09_intro_to_blocking.html#mp1-pre-approval",
+    "title": "Introduction to Blocking",
+    "section": "MP1 Pre-Approval",
+    "text": "MP1 Pre-Approval\nYour completed Qualtrics experiments are due for Pre-Approval by Fri Mar 1 11:55p on Moodle.\n\nExport your survey as a Word doc. Include the survey flow and any skip logic you used.\nUpload the Word doc to Moodle.\n\nI should be able to see any images you used or links to media. I’ll be paying particular attention to your consent form. It’s not unusual for me to ask for revisions before you launch your study."
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#next-steps",
+    "href": "lectures/09_intro_to_blocking.html#next-steps",
+    "title": "Introduction to Blocking",
+    "section": "Next steps:",
+    "text": "Next steps:\nI will give you approval or revisions via Slack direct messages. Watch out for those!\nOnce you have completed any revisions and receive approval from me you can complete the following checklist and then share your anonymous survey link.\n\nProof read for errors.\nTest (preview) your survey multiple times, creating fake data.\nDownload the data and make sure it makes sense.\nZero out the randomization counts in the survey flow.\nDelete all of the fake responses.\nUpgrade your Qualtrics account with the code: SDS290Spring2024.\nPublish/Activate your survey.\nGet the anonymous survey link!"
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#agenda",
+    "href": "lectures/09_intro_to_blocking.html#agenda",
+    "title": "Introduction to Blocking",
+    "section": "Agenda",
+    "text": "Agenda\n\nIntroduction to Blocking\nTime for MP1"
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#example---one-way-complete-block-design",
+    "href": "lectures/09_intro_to_blocking.html#example---one-way-complete-block-design",
+    "title": "Introduction to Blocking",
+    "section": "Example - One-Way Complete Block Design",
+    "text": "Example - One-Way Complete Block Design\nModern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. Three branches are randomly selected from each tree, and 3 cm by 3 cm patches are marked on each branch. The number of mealybugs on the patch is counted. The three treatments then get randomly assigned to the three branches for each tree. After three days the mealybugs are counted again. The change in number of mealybugs is computed (\\(before-after\\)).\nImage of cycads"
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#example---one-way-randomized-design",
+    "href": "lectures/09_intro_to_blocking.html#example---one-way-randomized-design",
+    "title": "Introduction to Blocking",
+    "section": "Example - One-Way Randomized Design",
+    "text": "Example - One-Way Randomized Design\nModern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. The number of mealybugs on each tree is counted. The three treatments then get randomly assigned to the three trees each. After three days the mealybugs are counted again. The change in number of mealybugs is computed (\\(before-after\\))."
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#example---one-way-complete-block-design-1",
+    "href": "lectures/09_intro_to_blocking.html#example---one-way-complete-block-design-1",
+    "title": "Introduction to Blocking",
+    "section": "Example - One-Way Complete Block Design",
+    "text": "Example - One-Way Complete Block Design\nMale albino laboratory rats are used routinely in many kinds of experiments. This experiment was designed to determine the requirements for protein in their food. Specifically, the experiment is interested in testing five levels of protein (8.68, 12, 15, 18, and 21% of diet). Baby rats were separated into ten groups of 5 to form groups of approximately the same weight. The 5 rats in each group were randomly assigned to each of the 5 conditions. Body weight and food consumption were measured twice weekly, and the average daily weight gain over 21 days was recorded."
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#example---one-way-randomized-design-1",
+    "href": "lectures/09_intro_to_blocking.html#example---one-way-randomized-design-1",
+    "title": "Introduction to Blocking",
+    "section": "Example - One-Way Randomized Design",
+    "text": "Example - One-Way Randomized Design\nMale albino laboratory rats are used routinely in many kinds of experiments. This experiment was designed to determine the requirements for protein in their food. Specifically, the experiment is interested in testing five levels of protein (8.68, 12, 15, 18, and 21% of diet). 50 baby rats were randomly assigned to each of the 5 conditions. Body weight and food consumption were measured twice weekly, and the average daily weight gain over 21 days was recorded."
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#example---one-way-complete-block-design-2",
+    "href": "lectures/09_intro_to_blocking.html#example---one-way-complete-block-design-2",
+    "title": "Introduction to Blocking",
+    "section": "Example - One-Way Complete Block Design",
+    "text": "Example - One-Way Complete Block Design\nThis experiment is interested in the blood concentration of a drug after it has been administered. The concentration will start at zero, then go up, and back down as it is metabolized. This curve may differ depending on the form of the drug (a solution, a tablet, or a capsule). We will use three subjects, and each subject will be given the drug three times, once for each method. The area under the time-concentration curve is recorded for each subject after each method of drug delivery."
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#example---one-way-randomized-design-2",
+    "href": "lectures/09_intro_to_blocking.html#example---one-way-randomized-design-2",
+    "title": "Introduction to Blocking",
+    "section": "Example - One-Way Randomized Design",
+    "text": "Example - One-Way Randomized Design\nThis experiment is interested in the blood concentration of a drug after it has been administered. The concentration will start at zero, then go up, and back down as it is metabolized. This curve may differ depending on the form of the drug (a solution, a tablet, or a capsule). We will use nine subjects, and randomly assign subjects to one of the three delivery methods. The area under the time-concentration curve is recorded for each subject after being given the drug."
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#design-principal-blocking",
+    "href": "lectures/09_intro_to_blocking.html#design-principal-blocking",
+    "title": "Introduction to Blocking",
+    "section": "Design Principal: Blocking",
+    "text": "Design Principal: Blocking\n\nBlocking is using a factor that is not of research interest – But there may be differences across blocks on the response variable\nA “block” is a level of a blocking factor\nWe use blocking to improve precision/statistical power of our factor of interest"
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#three-ways-to-block",
+    "href": "lectures/09_intro_to_blocking.html#three-ways-to-block",
+    "title": "Introduction to Blocking",
+    "section": "Three Ways to Block",
+    "text": "Three Ways to Block\n\nSort units into similar groups\n\nAlbino rats\n\nSubdivide larger chunks of material into sets of smaller pieces\n\nMealybug trees\n\nReuse subjects or material in each of several times slots\n\nDrug study"
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#complete-block-design",
+    "href": "lectures/09_intro_to_blocking.html#complete-block-design",
+    "title": "Introduction to Blocking",
+    "section": "Complete Block Design",
+    "text": "Complete Block Design\n\nExperimental material are separated into groups (or reused) to create similar units\nThen each unit within a block is then is assigned one level of the factor of interest\n“Complete Block” means that every block x treatment combination is tested"
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#inappropriate-insects",
+    "href": "lectures/09_intro_to_blocking.html#inappropriate-insects",
+    "title": "Introduction to Blocking",
+    "section": "Inappropriate Insects",
+    "text": "Inappropriate Insects\nModern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. Three branches are randomly selected from each tree, and 3 cm by 3 cm patches are marked on each branch. The number of mealybugs on the patch is counted. The three treatments then get randomly assigned to the three branches for each tree. After three days the mealybugs are counted again. The change in number of mealybugs is computed (\\(before-after\\))."
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#inappropriate-insects-1",
+    "href": "lectures/09_intro_to_blocking.html#inappropriate-insects-1",
+    "title": "Introduction to Blocking",
+    "section": "Inappropriate Insects",
+    "text": "Inappropriate Insects\n\n\n\n\n\ntreatment\ntree1\ntree2\ntree3\ntree4\ntree5\n\n\n\n\noil\n4\n29\n14\n14\n7\n\n\nspores\n-4\n29\n4\n-2\n11\n\n\nwater\n-9\n18\n10\n9\n-6\n\n\n\n\n\nDraw the factor diagram."
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#formal-anova-for-complete-block-design",
+    "href": "lectures/09_intro_to_blocking.html#formal-anova-for-complete-block-design",
+    "title": "Introduction to Blocking",
+    "section": "Formal ANOVA for Complete Block Design",
+    "text": "Formal ANOVA for Complete Block Design\n\\[{y}_{ijk}={\\mu}+{\\tau}_{i}+{\\beta}_{j}+{e}_{ijk}\\]\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment\n\\(\\sum_{i=1}^{a}b(\\bar{y}_{i.}-\\bar{y}_{..})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{T}}{{df}_{T}}\\)\n\\(\\frac{{MS}_{T}}{{MS}_{E}}\\)\n\n\nBlocks\n\\(\\sum_{j=1}^{b}a(\\bar{y}_{.j}-\\bar{y}_{..})^{2}\\)\n\\(b-1\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{b}({y}_{ij}-\\bar{y}_{i.}-\\bar{y}_{.j}+\\bar{y}_{..})^{2}\\)\n\\((a-1)(b-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#data-analysis-structure",
+    "href": "lectures/09_intro_to_blocking.html#data-analysis-structure",
+    "title": "Introduction to Blocking",
+    "section": "Data Analysis Structure",
+    "text": "Data Analysis Structure\n\nmealybugs\n\n    tree treatment bugs_change\n1  tree1     water          -9\n2  tree1    spores          -4\n3  tree1       oil           4\n4  tree2     water          18\n5  tree2    spores          29\n6  tree2       oil          29\n7  tree3     water          10\n8  tree3    spores           4\n9  tree3       oil          14\n10 tree4     water           9\n11 tree4    spores          -2\n12 tree4       oil          14\n13 tree5     water          -6\n14 tree5    spores          11\n15 tree5       oil           7"
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#informal-analysis-structure",
+    "href": "lectures/09_intro_to_blocking.html#informal-analysis-structure",
+    "title": "Introduction to Blocking",
+    "section": "Informal Analysis Structure",
+    "text": "Informal Analysis Structure\n\nlibrary(tidyr)\n\nmealybugs %&gt;%\n  spread(treatment, bugs_change)\n\n   tree oil spores water\n1 tree1   4     -4    -9\n2 tree2  29     29    18\n3 tree3  14      4    10\n4 tree4  14     -2     9\n5 tree5   7     11    -6"
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#formal-anova",
+    "href": "lectures/09_intro_to_blocking.html#formal-anova",
+    "title": "Introduction to Blocking",
+    "section": "Formal ANOVA",
+    "text": "Formal ANOVA\n\nmod &lt;- lm(bugs_change ~ treatment + tree, data = mealybugs)\n\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: bugs_change\n          Df  Sum Sq Mean Sq F value   Pr(&gt;F)   \ntreatment  2  218.13  109.07  2.9963 0.106846   \ntree       4 1316.40  329.10  9.0412 0.004603 **\nResiduals  8  291.20   36.40                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nWrite a sentence interpreting the results of the F-test for treatment and a sentence interpreting the F-test for tree in the context of the problem."
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#formal-anova-1",
+    "href": "lectures/09_intro_to_blocking.html#formal-anova-1",
+    "title": "Introduction to Blocking",
+    "section": "Formal ANOVA",
+    "text": "Formal ANOVA\n\nmod &lt;- lm(bugs_change ~ treatment + tree, data = mealybugs)\n\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: bugs_change\n          Df  Sum Sq Mean Sq F value   Pr(&gt;F)   \ntreatment  2  218.13  109.07  2.9963 0.106846   \ntree       4 1316.40  329.10  9.0412 0.004603 **\nResiduals  8  291.20   36.40                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nThere are no statistically significant differences in the reduction in mealy bugs between the three treatment conditions, \\(F(2, 8) = 3.00\\), \\(p = .107\\). There are significant differences in the reduction in mealy bugs across trees, however, \\(F(4, 8) = 9.04\\), \\(p = .005\\). That is, some trees improved more than other trees."
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#mp1-time",
+    "href": "lectures/09_intro_to_blocking.html#mp1-time",
+    "title": "Introduction to Blocking",
+    "section": "MP1 time",
+    "text": "MP1 time\nRaise your hand if you have any questions!"
   }
 ]

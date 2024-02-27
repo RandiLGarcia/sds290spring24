@@ -46,8 +46,8 @@ website:
           href: lectures/07_multiple-comparisons.html
         - text: 08 - Four Designs
           href: lectures/08_four-designs.html
-        # - text: 09 - Intro to Blocking
-        #   href: lectures/09_intro_to_blocking.html  
+        - text: 09 - Intro to Blocking
+          href: lectures/09_intro_to_blocking.html  
         # - text: 10 - Analysis of Complete Block
         #   href: lectures/10_complete_block.html       
         # - text: 11 - Assessing the Complete Block  
