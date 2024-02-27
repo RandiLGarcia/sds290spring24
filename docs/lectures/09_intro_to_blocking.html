@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Prof Randi Garcia, SDS 290">
   <meta name="dcterms.date" content="2024-02-27">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -222,7 +222,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -420,7 +421,7 @@ Prof Randi Garcia, SDS 290
 </ul></li>
 </ul>
 </section>
-<section id="mp1-pre-approval" class="slide level2">
+<section id="mp1-pre-approval" class="slide level2 scrollable">
 <h2>MP1 Pre-Approval</h2>
 <p>Your completed Qualtrics experiments are due for Pre-Approval by <strong>Fri Mar 1 11:55p</strong> on Moodle.</p>
 <ol type="1">
@@ -429,7 +430,7 @@ Prof Randi Garcia, SDS 290
 </ol>
 <p>I should be able to see any images you used or links to media. I’ll be paying particular attention to your consent form. It’s not unusual for me to ask for revisions before you launch your study.</p>
 </section>
-<section id="next-steps" class="slide level2">
+<section id="next-steps" class="slide level2 scrollable">
 <h2>Next steps:</h2>
 <p>I will give you approval or revisions via Slack direct messages. Watch out for those!</p>
 <p>Once you have completed any revisions and receive approval from me you can complete the following <strong>checklist</strong> and then share your anonymous survey link.</p>
@@ -444,7 +445,7 @@ Prof Randi Garcia, SDS 290
 <li>Get the <a href="https://www.qualtrics.com/support/survey-platform/distributions-module/distributions-overview/">anonymous survey link</a>!</li>
 </ol>
 </section>
-<section id="agenda" class="slide level2">
+<section id="agenda" class="slide level2 scrollable">
 <h2>Agenda</h2>
 <ol type="1">
 <li>Introduction to Blocking</li>
@@ -458,7 +459,7 @@ Prof Randi Garcia, SDS 290
 </section>
 <section id="example---one-way-randomized-design" class="slide level2">
 <h2>Example - One-Way Randomized Design</h2>
-<p>Modern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. The number of mealybugs on each tree is counted. The three treatments then get randomly assigned to the three trees each. After three days the mealybugs are counted again. The change in number of mealybugs is computed (<span class="math inline">\(before-after\)</span>).</p>
+<p>Modern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. The number of mealybugs on each tree is counted. The three treatments then get randomly assigned to the treatments, three trees each treatment. After three days the mealybugs are counted again. The change in number of mealybugs is computed (<span class="math inline">\(before-after\)</span>).</p>
 </section>
 <section id="example---one-way-complete-block-design-1" class="slide level2">
 <h2>Example - One-Way Complete Block Design</h2>
@@ -484,7 +485,7 @@ Prof Randi Garcia, SDS 290
 <li>We use blocking to improve precision/statistical power of our factor of interest</li>
 </ul>
 </section>
-<section id="three-ways-to-block" class="slide level2">
+<section id="three-ways-to-block" class="slide level2 scrollable">
 <h2>Three Ways to Block</h2>
 <ol type="1">
 <li>Sort units into similar groups
@@ -607,7 +608,7 @@ Prof Randi Garcia, SDS 290
 <section id="data-analysis-structure" class="slide level2">
 <h2>Data Analysis Structure</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>mealybugs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>mealybugs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    tree treatment bugs_change
 1  tree1     water          -9
@@ -631,10 +632,10 @@ Prof Randi Garcia, SDS 290
 <section id="informal-analysis-structure" class="slide level2">
 <h2>Informal Analysis Structure</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb3-2"><a href="#cb3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3"></a>mealybugs <span class="sc">%&gt;%</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">spread</span>(treatment, bugs_change)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a>mealybugs <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">spread</span>(treatment, bugs_change)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   tree oil spores water
 1 tree1   4     -4    -9
@@ -644,13 +645,38 @@ Prof Randi Garcia, SDS 290
 5 tree5   7     11    -6</code></pre>
 </div>
 </div>
+<p>This structure will be useful for checking ANOVA conditions.</p>
+</section>
+<section id="data-analysis-structure-1" class="slide level2">
+<h2>Data Analysis Structure</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>mealybugs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    tree treatment bugs_change
+1  tree1     water          -9
+2  tree1    spores          -4
+3  tree1       oil           4
+4  tree2     water          18
+5  tree2    spores          29
+6  tree2       oil          29
+7  tree3     water          10
+8  tree3    spores           4
+9  tree3       oil          14
+10 tree4     water           9
+11 tree4    spores          -2
+12 tree4       oil          14
+13 tree5     water          -6
+14 tree5    spores          11
+15 tree5       oil           7</code></pre>
+</div>
+</div>
 </section>
 <section id="formal-anova" class="slide level2">
 <h2>Formal ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
-<span id="cb5-2"><a href="#cb5-2"></a></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -668,9 +694,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="formal-anova-1" class="slide level2">
 <h2>Formal ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
-<span id="cb7-2"><a href="#cb7-2"></a></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -715,11 +741,12 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <!-- ## Tuplips -->
 <!-- A plant breeder wishes to study the effects of soil drainage and variety of tulip bulbs on flower production. Twelve 3m by 10m experimental sites are available in the test garden--each is a .5m deep trench. You can manipulate soil drainage by changing the ratio of sand to clay for the soil you put in a trench. After talking to your collaborator, you decided that four different levels of soil drainage would suffice. You'll be testing 15 different types of tulips, and measuring flower production in the spring.  -->
 <!-- ## Bioequivalence of drug delivery -->
-
 <!-- This experiment is interested in the blood concentration of a drug after it has been administered. The concentration will start at zero, then go up, and back down as it is metabolized. This curve may differ depending on the form of the drug (a solution, a tablet, or a capsule). We will use three subjects, and each subject will be given the drug three times, once for each method. The area under the time-concentration curve is recorded for each subject after each method of drug delivery.   -->
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -748,7 +775,6 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1047,10 +1073,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1060,8 +1085,17 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

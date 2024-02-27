@@ -8,7 +8,6 @@ format:
     theme: default
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
 ```
@@ -71,7 +70,7 @@ Modern zoos try to reproduce natural habitats in their exhibits as much as possi
 
 ## Example - One-Way Randomized Design
 
-Modern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. The number of mealybugs on each tree is counted. The three treatments then get randomly assigned to the three trees each. After three days the mealybugs are counted again. The change in number of mealybugs is computed ($before-after$).
+Modern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. The number of mealybugs on each tree is counted. The three treatments then get randomly assigned to the treatments, three trees each treatment. After three days the mealybugs are counted again. The change in number of mealybugs is computed ($before-after$).
 
 ## Example - One-Way Complete Block Design
 
@@ -157,6 +156,14 @@ library(tidyr)
 
 mealybugs %>%
   spread(treatment, bugs_change)
+```
+
+This structure will be useful for checking ANOVA conditions.
+
+## Data Analysis Structure
+
+```{r}
+mealybugs
 ```
 
 ## Formal ANOVA

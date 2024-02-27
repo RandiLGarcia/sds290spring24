@@ -1964,7 +1964,7 @@
     "href": "lectures/09_intro_to_blocking.html#example---one-way-randomized-design",
     "title": "Introduction to Blocking",
     "section": "Example - One-Way Randomized Design",
-    "text": "Example - One-Way Randomized Design\nModern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. The number of mealybugs on each tree is counted. The three treatments then get randomly assigned to the three trees each. After three days the mealybugs are counted again. The change in number of mealybugs is computed (\\(before-after\\))."
+    "text": "Example - One-Way Randomized Design\nModern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. The number of mealybugs on each tree is counted. The three treatments then get randomly assigned to the treatments, three trees each treatment. After three days the mealybugs are counted again. The change in number of mealybugs is computed (\\(before-after\\))."
   },
   {
     "objectID": "lectures/09_intro_to_blocking.html#example---one-way-complete-block-design-1",
@@ -2048,7 +2048,7 @@
     "href": "lectures/09_intro_to_blocking.html#informal-analysis-structure",
     "title": "Introduction to Blocking",
     "section": "Informal Analysis Structure",
-    "text": "Informal Analysis Structure\n\nlibrary(tidyr)\n\nmealybugs %&gt;%\n  spread(treatment, bugs_change)\n\n   tree oil spores water\n1 tree1   4     -4    -9\n2 tree2  29     29    18\n3 tree3  14      4    10\n4 tree4  14     -2     9\n5 tree5   7     11    -6"
+    "text": "Informal Analysis Structure\n\nlibrary(tidyr)\n\nmealybugs %&gt;%\n  spread(treatment, bugs_change)\n\n   tree oil spores water\n1 tree1   4     -4    -9\n2 tree2  29     29    18\n3 tree3  14      4    10\n4 tree4  14     -2     9\n5 tree5   7     11    -6\n\n\nThis structure will be useful for checking ANOVA conditions."
   },
   {
     "objectID": "lectures/09_intro_to_blocking.html#formal-anova",
@@ -2070,5 +2070,12 @@
     "title": "Introduction to Blocking",
     "section": "MP1 time",
     "text": "MP1 time\nRaise your hand if you have any questions!"
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#data-analysis-structure-1",
+    "href": "lectures/09_intro_to_blocking.html#data-analysis-structure-1",
+    "title": "Introduction to Blocking",
+    "section": "Data Analysis Structure",
+    "text": "Data Analysis Structure\n\nmealybugs\n\n    tree treatment bugs_change\n1  tree1     water          -9\n2  tree1    spores          -4\n3  tree1       oil           4\n4  tree2     water          18\n5  tree2    spores          29\n6  tree2       oil          29\n7  tree3     water          10\n8  tree3    spores           4\n9  tree3       oil          14\n10 tree4     water           9\n11 tree4    spores          -2\n12 tree4       oil          14\n13 tree5     water          -6\n14 tree5    spores          11\n15 tree5       oil           7"
   }
 ]
