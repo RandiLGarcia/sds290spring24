@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="SDS 290">
+<meta name="dcterms.date" content="2021-10-14">
+
+<title>SDS 290 - Spring 2024 - Assessing the Complete Block Design</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SDS 290 - Spring 2024</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li class="dropdown-header">Helpful Links</li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lectures" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Lectures</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-lectures">    
+        <li>
+    <a class="dropdown-item" href="../lectures/01_intro_to_experimental.html" rel="" target="">
+ <span class="dropdown-text">01 - Intro to Experimental Design</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/02_one-way-ANOVA.html" rel="" target="">
+ <span class="dropdown-text">02 - One-Way ANOVA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/03_one-way-ANOVAII.html" rel="" target="">
+ <span class="dropdown-text">03 - One-Way ANOVA II</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/04_inference-ANOVA.html" rel="" target="">
+ <span class="dropdown-text">04 - Inference for ANOVA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/05_ANOVA-conditions.html" rel="" target="">
+ <span class="dropdown-text">05 - ANOVA Conditions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/06_CI-effect-sizes.html" rel="" target="">
+ <span class="dropdown-text">06 - Confidence Intervals and Effect Sizes</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/07_multiple-comparisons.html" rel="" target="">
+ <span class="dropdown-text">07 - Multiple Comparisons</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/08_four-designs.html" rel="" target="">
+ <span class="dropdown-text">08 - Four Designs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/09_intro_to_blocking.html" rel="" target="">
+ <span class="dropdown-text">09 - Intro to Blocking</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/10_complete_block.html" rel="" target="">
+ <span class="dropdown-text">10 - Analysis of Complete Block</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-code" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Code</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-code">    
+        <li>
+    <a class="dropdown-item" href="../code/01_animal_data.qmd" rel="" target="">
+ <span class="dropdown-text">01 - Animal Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../code/02_informal_anova.qmd" rel="" target="">
+ <span class="dropdown-text">02 - Informal ANOVA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../code/SandwichAnts analysis.qmd" rel="" target="">
+ <span class="dropdown-text">SandwichAnts Analysis</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-homework" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Homework</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-homework">    
+        <li>
+    <a class="dropdown-item" href="http://moodle.smith.edu" rel="" target="">
+ <span class="dropdown-text">HW1a: Record your names on Moodle</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../pdfs/HW 1b_CITI Training.pdf" rel="" target="">
+ <span class="dropdown-text">HW1b: CITI Training</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../homework.html" rel="" target="">
+ <span class="dropdown-text">HW2: Click Here</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../homework.html" rel="" target="">
+ <span class="dropdown-text">HW #3: 5.32, 5.38, 5.54</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../homework.html" rel="" target="">
+ <span class="dropdown-text">HW4: 5.59, 5.60, 5.70, 5.36, 5.43</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../project/mini-project-1.html" rel="" target="">
+ <span class="dropdown-text">Mini project 1</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#announcements" id="toc-announcements" class="nav-link active" data-scroll-target="#announcements">Announcements</a></li>
+  <li><a href="#presentation-of-the-sds-major" id="toc-presentation-of-the-sds-major" class="nav-link" data-scroll-target="#presentation-of-the-sds-major">Presentation of the SDS Major</a></li>
+  <li><a href="#agenda" id="toc-agenda" class="nav-link" data-scroll-target="#agenda">Agenda</a></li>
+  <li><a href="#mp1-data-collection" id="toc-mp1-data-collection" class="nav-link" data-scroll-target="#mp1-data-collection">MP1 data collection</a></li>
+  <li><a href="#inappropriate-insects" id="toc-inappropriate-insects" class="nav-link" data-scroll-target="#inappropriate-insects">Inappropriate Insects</a></li>
+  <li><a href="#side-by-side-dotplot" id="toc-side-by-side-dotplot" class="nav-link" data-scroll-target="#side-by-side-dotplot">Side-by-side dotplot</a></li>
+  <li><a href="#formal-anova-for-complete-block-design" id="toc-formal-anova-for-complete-block-design" class="nav-link" data-scroll-target="#formal-anova-for-complete-block-design">Formal ANOVA for Complete Block Design</a></li>
+  <li><a href="#data-analysis-structure" id="toc-data-analysis-structure" class="nav-link" data-scroll-target="#data-analysis-structure">Data Analysis Structure</a></li>
+  <li><a href="#formal-anova" id="toc-formal-anova" class="nav-link" data-scroll-target="#formal-anova">Formal ANOVA</a></li>
+  <li><a href="#informal-analysis-structure" id="toc-informal-analysis-structure" class="nav-link" data-scroll-target="#informal-analysis-structure">Informal Analysis Structure</a></li>
+  <li><a href="#how-to-check-assumptions" id="toc-how-to-check-assumptions" class="nav-link" data-scroll-target="#how-to-check-assumptions">How to check assumptions</a></li>
+  <li><a href="#anscombe-block-plots" id="toc-anscombe-block-plots" class="nav-link" data-scroll-target="#anscombe-block-plots">Anscombe Block Plots</a></li>
+  <li><a href="#informal-analysis-structure-1" id="toc-informal-analysis-structure-1" class="nav-link" data-scroll-target="#informal-analysis-structure-1">Informal Analysis Structure</a></li>
+  <li><a href="#anscombe-block-plots-1" id="toc-anscombe-block-plots-1" class="nav-link" data-scroll-target="#anscombe-block-plots-1">Anscombe Block Plots</a></li>
+  <li><a href="#anscombe-block-plots-2" id="toc-anscombe-block-plots-2" class="nav-link" data-scroll-target="#anscombe-block-plots-2">Anscombe Block Plots</a></li>
+  <li><a href="#anscombe-block-plots-3" id="toc-anscombe-block-plots-3" class="nav-link" data-scroll-target="#anscombe-block-plots-3">Anscombe Block Plots</a></li>
+  <li><a href="#assessing-s-condition" id="toc-assessing-s-condition" class="nav-link" data-scroll-target="#assessing-s-condition">Assessing S Condition</a></li>
+  <li><a href="#assessing-s-condition-1" id="toc-assessing-s-condition-1" class="nav-link" data-scroll-target="#assessing-s-condition-1">Assessing S Condition</a></li>
+  <li><a href="#assessing-n-condition" id="toc-assessing-n-condition" class="nav-link" data-scroll-target="#assessing-n-condition">Assessing N Condition</a></li>
+  <li><a href="#assessing-the-z-condition" id="toc-assessing-the-z-condition" class="nav-link" data-scroll-target="#assessing-the-z-condition">Assessing the Z Condition</a></li>
+  <li><a href="#sleeping-shrews" id="toc-sleeping-shrews" class="nav-link" data-scroll-target="#sleeping-shrews">Sleeping Shrews</a></li>
+  <li><a href="#testing-condition-for-sleeping-shrews-data" id="toc-testing-condition-for-sleeping-shrews-data" class="nav-link" data-scroll-target="#testing-condition-for-sleeping-shrews-data">Testing Condition for Sleeping Shrews Data</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assessing the Complete Block Design</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>SDS 290 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 14, 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="announcements" class="level2">
+<h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
+<ul>
+<li>HW 5 due Friday 11:55p</li>
+<li>Office hours
+<ul>
+<li>Friday office hours 12:15p-3:00p
+<ul>
+<li>Appointment slots are open!</li>
+</ul></li>
+</ul></li>
+<li>Where to get HW help
+<ul>
+<li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301.</li>
+<li>Post questions to #homework5-questions channel on Slack!</li>
+</ul></li>
+<li>Applications open for DSC-WAV (more info <a href="https://dsc-wav.github.io/www/students.html#Eligibility">here</a>)</li>
+</ul>
+</section>
+<section id="presentation-of-the-sds-major" class="level2">
+<h2 class="anchored" data-anchor-id="presentation-of-the-sds-major">Presentation of the SDS Major</h2>
+<ul>
+<li>SDS Presentation of the Major <strong>Tuesday 10/19 at 12:15pm</strong>. There are three ways to participate:
+<ol type="1">
+<li>In-person in the Ford Hall Atrium: Only <strong>undeclared majors/minors may attend in-person</strong>. Advance sign-up is required in this <a href="https://docs.google.com/forms/d/e/1FAIpQLSel3YWGLxjvr-UBweuwBL_d3U8lb_4E0rLeCrAAVh-Jam8ibw/viewform">Google Form</a>. To guarantee your free grab-and-go lunch option, please confirm by Thursday 10/14 at 3pm.</li>
+<li>Zoom: Anyone may attend at https://smith.zoom.us/j/95165936231</li>
+<li>A recording of the presentation will be shared afterwards on this mailing list</li>
+</ol></li>
+</ul>
+<p><img src="pom.png" class="img-fluid"></p>
+</section>
+<section id="agenda" class="level2">
+<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
+<ol type="1">
+<li>MP1 data collection!</li>
+<li>Complete Block design</li>
+</ol>
+<ul>
+<li>Diagnostic plots</li>
+<li>ANOVA</li>
+</ul>
+</section>
+<section id="mp1-data-collection" class="level2">
+<h2 class="anchored" data-anchor-id="mp1-data-collection">MP1 data collection</h2>
+<p><strong>Step 1:</strong></p>
+<ul>
+<li>If you’re approved:
+<ul>
+<li>15 minutes to go through the <a href="https://randilgarcia.github.io/sds290fall21/lectures/10_complete_block.html#4">checklist</a>.</li>
+<li>Paste anonymous survey link in the <a href="https://docs.google.com/spreadsheets/d/1JHUJNT5cBdl5koxthakEIdgagAMpv7VV6zkELpNyz7E/edit#gid=0">spreadsheet</a>.</li>
+<li>If you’re ready, work on your homework!</li>
+</ul></li>
+<li>If you’re <strong>NOT</strong> approved
+<ul>
+<li>Use this time to work on your revisions.</li>
+</ul></li>
+</ul>
+<p><strong>Step 2:</strong></p>
+<ul>
+<li>20 min to participate in as many studies as you can!
+<ul>
+<li>Note: see content warnings</li>
+<li>Please only participate in audio studies if you have headphones</li>
+<li><strong>We’ll collect data again on Tuesday</strong>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="inappropriate-insects" class="level2">
+<h2 class="anchored" data-anchor-id="inappropriate-insects">Inappropriate Insects</h2>
+<p>Modern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. Three branches are randomly selected from each tree, and 3 cm by 3 cm patches are marked on each branch. The number of mealybugs on the patch is counted. The three treatments then get randomly assigned to the three branches for each tree. After three days the mealybugs are counted again. The change in number of mealybugs is computed (<span class="math inline">\(before-after\)</span>).</p>
+</section>
+<section id="side-by-side-dotplot" class="level2">
+<h2 class="anchored" data-anchor-id="side-by-side-dotplot">Side-by-side dotplot</h2>
+<p>We add our blocking factor as <code>color</code> and also as <code>group</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> bugs_change, <span class="at">color =</span> tree, <span class="at">group =</span> tree, <span class="at">data =</span> mealybugs) <span class="sc">+</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="11_assessing_cb_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>We can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not.</p>
+<!-- ## Side-by-side dotplot (adjusted for effect of blocks) -->
+<!-- ```{r, include=FALSE} -->
+<!-- mealybugs <- mealybugs %>% -->
+<!--   ungroup() %>% -->
+<!--   mutate(grand = mean(bugs_change)) %>% -->
+<!--   group_by(tree) %>% -->
+<!--   mutate(tree_mean = mean(bugs_change), -->
+<!--          tree_effect = tree_mean - grand, -->
+<!--          bugs_change_adj = bugs_change - tree_effect) %>% -->
+<!--   ungroup() %>% -->
+<!--   group_by(treatment) %>% -->
+<!--   mutate(treatment_effect = mean(bugs_change)) -->
+<!-- ``` -->
+<!-- ```{r} -->
+<!-- qplot(x = treatment, bugs_change_adj, data = mealybugs) -->
+<!-- ``` -->
+</section>
+<section id="formal-anova-for-complete-block-design" class="level2">
+<h2 class="anchored" data-anchor-id="formal-anova-for-complete-block-design">Formal ANOVA for Complete Block Design</h2>
+<p><span class="math display">\[{y}_{ij}={\mu}+{\tau}_{i}+{\beta}_{j}+{e}_{ij}\]</span></p>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Source</th>
+<th style="text-align: center;">SS</th>
+<th style="text-align: center;">df</th>
+<th style="text-align: center;">MS</th>
+<th style="text-align: center;">F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Treatment</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}b(\bar{y}_{i.}-\bar{y}_{..})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(a-1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{T}}{{df}_{T}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{T}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Blocks</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{j=1}^{b}a(\bar{y}_{.j}-\bar{y}_{..})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(b-1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{B}}{{df}_{B}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{B}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Error</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}\sum_{j=1}^{b}({y}_{ij}-\bar{y}_{i.}-\bar{y}_{.j}+\bar{y}_{..})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((a-1)(b-1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{E}}{{df}_{E}}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-analysis-structure" class="level2">
+<h2 class="anchored" data-anchor-id="data-analysis-structure">Data Analysis Structure</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mealybugs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    tree treatment bugs_change
+1  tree1     water          -9
+2  tree1    spores          -4
+3  tree1       oil           4
+4  tree2     water          18
+5  tree2    spores          29
+6  tree2       oil          29
+7  tree3     water          10
+8  tree3    spores           4
+9  tree3       oil          14
+10 tree4     water           9
+11 tree4    spores          -2
+12 tree4       oil          14
+13 tree5     water          -6
+14 tree5    spores          11
+15 tree5       oil           7</code></pre>
+</div>
+</div>
+</section>
+<section id="formal-anova" class="level2">
+<h2 class="anchored" data-anchor-id="formal-anova">Formal ANOVA</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
+
+Response: bugs_change
+          Df  Sum Sq Mean Sq F value   Pr(&gt;F)   
+treatment  2  218.13  109.07  2.9963 0.106846   
+tree       4 1316.40  329.10  9.0412 0.004603 **
+Residuals  8  291.20   36.40                    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>There are no statistically significant differences in the reduction in mealy bugs between the three treatment conditions, <span class="math inline">\(F(2, 8) = 3.00\)</span>, <span class="math inline">\(p = .107\)</span>. There are significant differences in the reduction in mealy bugs across trees, however, <span class="math inline">\(F(4, 8) = 9.04\)</span>, <span class="math inline">\(p = .005\)</span>. That is, some trees improved more than other trees.</p>
+</section>
+<section id="informal-analysis-structure" class="level2">
+<h2 class="anchored" data-anchor-id="informal-analysis-structure">Informal Analysis Structure</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mealybugs_wide <span class="ot">&lt;-</span> mealybugs <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> treatment, <span class="at">values_from =</span> bugs_change)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>mealybugs_wide</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 4
+  tree  water spores   oil
+  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+1 tree1    -9     -4     4
+2 tree2    18     29    29
+3 tree3    10      4    14
+4 tree4     9     -2    14
+5 tree5    -6     11     7</code></pre>
+</div>
+</div>
+</section>
+<section id="how-to-check-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-check-assumptions">How to check assumptions</h2>
+<ul>
+<li><p>C. <strong>Constant effects</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>A. <strong>Additive effects</strong> – check Anscombe block plots.</p></li>
+<li><p>S. <strong>Same standard deviations</strong> – is the biggest SD less than two times as large as the smallest? check residual versus fitted plot: <em>does the plot thicken</em>?</p></li>
+<li><p>I. <strong>Independent residuals</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>N. <strong>Normally distributed residuals</strong> – construct a histogram or normal probability plot of residuals.</p></li>
+<li><p>Z. <strong>Zero mean residuals</strong> – construct a histogram or normal probability plot of residuals.</p></li>
+</ul>
+</section>
+<section id="anscombe-block-plots" class="level2">
+<h2 class="anchored" data-anchor-id="anscombe-block-plots">Anscombe Block Plots</h2>
+<ul>
+<li>Scatterplots of two levels of the factor of interest.</li>
+<li>Used for
+<ul>
+<li>exploring the data, and</li>
+<li>assessing the <strong>additivity (A)</strong> condition.</li>
+</ul></li>
+</ul>
+</section>
+<section id="informal-analysis-structure-1" class="level2">
+<h2 class="anchored" data-anchor-id="informal-analysis-structure-1">Informal Analysis Structure</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mealybugs_wide <span class="ot">&lt;-</span> mealybugs <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> treatment, <span class="at">values_from =</span> bugs_change)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>mealybugs_wide</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 4
+  tree  water spores   oil
+  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+1 tree1    -9     -4     4
+2 tree2    18     29    29
+3 tree3    10      4    14
+4 tree4     9     -2    14
+5 tree5    -6     11     7</code></pre>
+</div>
+</div>
+</section>
+<section id="anscombe-block-plots-1" class="level2">
+<h2 class="anchored" data-anchor-id="anscombe-block-plots-1">Anscombe Block Plots</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> spores, <span class="at">y =</span> oil, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">13.6-7.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="11_assessing_cb_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="anscombe-block-plots-2" class="level2">
+<h2 class="anchored" data-anchor-id="anscombe-block-plots-2">Anscombe Block Plots</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> spores, <span class="at">y =</span> water, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">4.4</span> <span class="sc">-</span> <span class="fl">13.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="11_assessing_cb_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="anscombe-block-plots-3" class="level2">
+<h2 class="anchored" data-anchor-id="anscombe-block-plots-3">Anscombe Block Plots</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> oil, <span class="at">y =</span> water, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">4.4</span> <span class="sc">-</span> <span class="fl">13.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="11_assessing_cb_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="assessing-s-condition" class="level2">
+<h2 class="anchored" data-anchor-id="assessing-s-condition">Assessing S Condition</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mealybugs <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(treatment) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">mean</span>(bugs_change),</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(bugs_change))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  treatment     m    sd
+  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;
+1 oil        13.6  9.66
+2 spores      7.6 13.3 
+3 water       4.4 11.5 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>mealybugs <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(treatment) <span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">mean</span>(bugs_change),</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(bugs_change)) <span class="sc">%&gt;%</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="fu">max</span>(sd)<span class="sc">/</span><span class="fu">min</span>(sd)) <span class="co">#calculating using min and max function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  `max(sd)/min(sd)`
+              &lt;dbl&gt;
+1              1.38</code></pre>
+</div>
+</div>
+</section>
+<section id="assessing-s-condition-1" class="level2">
+<h2 class="anchored" data-anchor-id="assessing-s-condition-1">Assessing S Condition</h2>
+<p><span class="math display">\[\hat{{y}}_{ij}={\mu}+{\tau}_{i}+{\beta}_{j}\]</span></p>
+<ul>
+<li>Where <span class="math inline">\(\hat{{y}}_{ij}\)</span> are the <strong>fitted values</strong>, that is, everything but the ticket at the end of the assembly line.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mod, <span class="at">which =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="11_assessing_cb_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>If the <strong>plot thickens</strong>, that is, has a patterning that looks like a funnel, then the S condition is not satisfied.</p>
+</section>
+<section id="assessing-n-condition" class="level2">
+<h2 class="anchored" data-anchor-id="assessing-n-condition">Assessing N Condition</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mod, <span class="at">which =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="11_assessing_cb_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>We’re looking for residuals to be on the line. If so, then we can say they are normally distributed.</p>
+</section>
+<section id="assessing-the-z-condition" class="level2">
+<h2 class="anchored" data-anchor-id="assessing-the-z-condition">Assessing the Z Condition</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(mod<span class="sc">$</span>residuals, <span class="at">bins =</span> <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="11_assessing_cb_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>If the histogram centered at zero? Then the Z condition is satisfied.</p>
+</section>
+<section id="sleeping-shrews" class="level2">
+<h2 class="anchored" data-anchor-id="sleeping-shrews">Sleeping Shrews</h2>
+<p>Assess the CA-SINZ conditions for the <code>SleepingShrews</code> dataset from example 6.7b in your textbook.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Stat2Data)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"SleepingShrews"</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co">#You'll need the WIDE dataset for the Anscombe block plots</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>SleepingShrews_wide <span class="ot">&lt;-</span> SleepingShrews <span class="sc">%&gt;%</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>ID) <span class="sc">%&gt;%</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Phase, <span class="at">values_from =</span> Rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="testing-condition-for-sleeping-shrews-data" class="level2">
+<h2 class="anchored" data-anchor-id="testing-condition-for-sleeping-shrews-data">Testing Condition for Sleeping Shrews Data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> DSW, <span class="at">y =</span> LSW, <span class="at">data =</span> SleepingShrews_wide) <span class="sc">+</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">2</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span>   </span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>) <span class="co">#A condition</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> DSW, <span class="at">y =</span> REM, <span class="at">data =</span> SleepingShrews_wide) <span class="sc">+</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">2</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span>   </span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>) <span class="co">#A condition</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> LSW, <span class="at">y =</span> REM, <span class="at">data =</span> SleepingShrews_wide) <span class="sc">+</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="sc">-</span><span class="dv">2</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span>   </span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>) <span class="co">#A condition</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>SleepingShrews <span class="sc">%&gt;%</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Phase) <span class="sc">%&gt;%</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">mean</span>(Rate),</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(Rate)) <span class="sc">%&gt;%</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="fu">max</span>(sd)<span class="sc">/</span><span class="fu">min</span>(sd)) <span class="co">#S condition</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(Rate <span class="sc">~</span> Phase <span class="sc">+</span> Shrew, <span class="at">data =</span> SleepingShrews)</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mod, <span class="at">which =</span> <span class="dv">1</span>) <span class="co">#S condition</span></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mod, <span class="at">which =</span> <span class="dv">2</span>) <span class="co">#N condition</span></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(mod<span class="sc">$</span>residuals, <span class="at">bins =</span> <span class="dv">6</span>) <span class="co">#N and Z conditions</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

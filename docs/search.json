@@ -165,7 +165,7 @@
     "href": "schedule.html#week-6",
     "title": "Schedule",
     "section": "Week 6",
-    "text": "Week 6\n\nTue, Feb 27\n\nBlocking\nHomework due today:\n\nRead Ch Stat2 Ch 6.1-6.2\n\n\n\n\nThurs, Feb 29\n\nFitting the model for a block design\nHomework due today:\n\nRead Ch Stat2 Ch 6.3\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Mar 1\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nMP1 Qualtrics survey due for pre-approval by 11:55p"
+    "text": "Week 6\n\nTue, Feb 27\n\nBlocking\nHomework due today:\n\nRead Ch Stat2 Ch 6.1-6.2"
   },
   {
     "objectID": "schedule.html#week-7",
@@ -2077,5 +2077,299 @@
     "title": "Introduction to Blocking",
     "section": "Data Analysis Structure",
     "text": "Data Analysis Structure\n\nmealybugs\n\n    tree treatment bugs_change\n1  tree1     water          -9\n2  tree1    spores          -4\n3  tree1       oil           4\n4  tree2     water          18\n5  tree2    spores          29\n6  tree2       oil          29\n7  tree3     water          10\n8  tree3    spores           4\n9  tree3       oil          14\n10 tree4     water           9\n11 tree4    spores          -2\n12 tree4       oil          14\n13 tree5     water          -6\n14 tree5    spores          11\n15 tree5       oil           7"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#announcements",
+    "href": "lectures/10_complete_block.html#announcements",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Announcements",
+    "text": "Announcements\n\nMP1 pre-approval due Friday 11:55p\n\nPlease submit as soon as you can\n\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get MP1 help\n\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#mp1-pre-approval",
+    "href": "lectures/10_complete_block.html#mp1-pre-approval",
+    "title": "Analysis of the Complete Block Design",
+    "section": "MP1 Pre-Approval",
+    "text": "MP1 Pre-Approval\nYour completed Qualtrics experiments are due for Pre-Approval by Fri Mar 1 11:55p.\n\nExport your survey as a Word doc. Include the survey flow and any skip logic you used.\nUpload the Word doc to Moodle.\n\nI should be able to see any images you used or links to media. I’ll be paying particular attention to your consent form. It’s not unusual for me to ask for revisions before you launch your study."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#next-steps",
+    "href": "lectures/10_complete_block.html#next-steps",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Next steps:",
+    "text": "Next steps:\nI will give you approval or revisions via Slack direct messages. Watch out for those!\nOnce you have completed any revisions and receive approval from me you can complete the following checklist and then share your anonymous survey link.\n\nProof read for errors.\nTest (preview) your survey multiple times, creating fake data.\nDownload the data and make sure it makes sense.\nZero out the randomization counts in the survey flow.\nDelete all of the fake responses.\nUpgrade your Qualtrics account with the code SDS290Spring2024.\nActivate your survey.\nGet the anonymous survey link!"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#agenda",
+    "href": "lectures/10_complete_block.html#agenda",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Agenda",
+    "text": "Agenda\n\nDiscuss your MP1 ideas in groups!\nComplete Block design"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#mp1-discussions",
+    "href": "lectures/10_complete_block.html#mp1-discussions",
+    "title": "Analysis of the Complete Block Design",
+    "section": "MP1 discussions",
+    "text": "MP1 discussions\n\nGroups of about four.\nTake turns describing your plan for MP1.\nHelp your group mates think about what features of their stimuli they’ll want to try to control (“hold constant”) across conditions."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#inappropriate-insects",
+    "href": "lectures/10_complete_block.html#inappropriate-insects",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Inappropriate Insects",
+    "text": "Inappropriate Insects\nModern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. Three branches are randomly selected from each tree, and 3 cm by 3 cm patches are marked on each branch. The number of mealybugs on the patch is counted. The three treatments then get randomly assigned to the three branches for each tree. After three days the mealybugs are counted again. The change in number of mealybugs is computed (\\(before-after\\))."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#complete-block-design",
+    "href": "lectures/10_complete_block.html#complete-block-design",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Complete Block Design",
+    "text": "Complete Block Design\n\nExperimental material are separated into groups (or reused) to create similar units\nThen each unit within a block is then is assigned one level of the factor of interest\n“Complete Block” means that every block x treatment combination is tested"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#inappropriate-insects-1",
+    "href": "lectures/10_complete_block.html#inappropriate-insects-1",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Inappropriate Insects",
+    "text": "Inappropriate Insects\n\n\n\n\n\ntreatment\ntree1\ntree2\ntree3\ntree4\ntree5\n\n\n\n\noil\n4\n29\n14\n14\n7\n\n\nspores\n-4\n29\n4\n-2\n11\n\n\nwater\n-9\n18\n10\n9\n-6\n\n\n\n\n\nDraw the factor diagram."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#more-design-terminology",
+    "href": "lectures/10_complete_block.html#more-design-terminology",
+    "title": "Analysis of the Complete Block Design",
+    "section": "MORE Design Terminology",
+    "text": "MORE Design Terminology\n\nThe two factors Trees and Treatment are crossed. This means that we collect data on all combinations of Trees and Treatment. A cell is a particular combination.\nMain effect refers to the effect for a single factor. For a block design there are two sets of main effects, for blocks and for treatments (e.g., Trees and Treatment).\nThe two sets of main effects are called additive if each treatment adds or subtracts the same amount to the response variable for all blocks.\nA factor of interest is Treatment, which is directly related to the goal of the study. A nuisance factor is Trees which is included as a factor only because it is a source of variation and its inclusion will reduce the sum of squares for error (residuals).\nTypically, factors of interest are fixed, which means their effects are an unknown constant. Nuisance factors are random, which means their effects behave according to chance (the levels themselves are samples from a population)."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#side-by-side-dotplot",
+    "href": "lectures/10_complete_block.html#side-by-side-dotplot",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Side-by-side dotplot",
+    "text": "Side-by-side dotplot\nWe add our blocking factor as color and also as group.\n\nqplot(x = treatment, y = bugs_change, color = tree, group = tree, data = mealybugs) + \n  geom_line()\n\n\nWe can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#formal-anova-for-complete-block-design",
+    "href": "lectures/10_complete_block.html#formal-anova-for-complete-block-design",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Formal ANOVA for Complete Block Design",
+    "text": "Formal ANOVA for Complete Block Design\n\\[{y}_{ijk}={\\mu}+{\\tau}_{i}+{\\beta}_{j}+{e}_{ijk}\\]\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment\n\\(\\sum_{i=1}^{a}b(\\bar{y}_{i.}-\\bar{y}_{..})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{T}}{{df}_{T}}\\)\n\\(\\frac{{MS}_{T}}{{MS}_{E}}\\)\n\n\nBlocks\n\\(\\sum_{j=1}^{b}a(\\bar{y}_{.j}-\\bar{y}_{..})^{2}\\)\n\\(b-1\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{b}({y}_{ij}-\\bar{y}_{i.}-\\bar{y}_{.j}+\\bar{y}_{..})^{2}\\)\n\\((a-1)(b-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#data-analysis-structure",
+    "href": "lectures/10_complete_block.html#data-analysis-structure",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Data Analysis Structure",
+    "text": "Data Analysis Structure\n\nmealybugs\n\n    tree treatment bugs_change\n1  tree1     water          -9\n2  tree1    spores          -4\n3  tree1       oil           4\n4  tree2     water          18\n5  tree2    spores          29\n6  tree2       oil          29\n7  tree3     water          10\n8  tree3    spores           4\n9  tree3       oil          14\n10 tree4     water           9\n11 tree4    spores          -2\n12 tree4       oil          14\n13 tree5     water          -6\n14 tree5    spores          11\n15 tree5       oil           7"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#formal-anova",
+    "href": "lectures/10_complete_block.html#formal-anova",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Formal ANOVA",
+    "text": "Formal ANOVA\n\nmod &lt;- lm(bugs_change ~ treatment + tree, data = mealybugs)\n\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: bugs_change\n          Df  Sum Sq Mean Sq F value   Pr(&gt;F)   \ntreatment  2  218.13  109.07  2.9963 0.106846   \ntree       4 1316.40  329.10  9.0412 0.004603 **\nResiduals  8  291.20   36.40                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nWrite a sentence interpreting the results of the F-test for treatment and a sentence interpreting the F-test for tree in the context of the problem."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#formal-anova-1",
+    "href": "lectures/10_complete_block.html#formal-anova-1",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Formal ANOVA",
+    "text": "Formal ANOVA\n\nmod &lt;- lm(bugs_change ~ treatment + tree, data = mealybugs)\n\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: bugs_change\n          Df  Sum Sq Mean Sq F value   Pr(&gt;F)   \ntreatment  2  218.13  109.07  2.9963 0.106846   \ntree       4 1316.40  329.10  9.0412 0.004603 **\nResiduals  8  291.20   36.40                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nThere are no statistically significant differences in the reduction in mealy bugs between the three treatment conditions, \\(F(2, 8) = 3.00\\), \\(p = .107\\). There are significant differences in the reduction in mealy bugs across trees, however, \\(F(4, 8) = 9.04\\), \\(p = .005\\). That is, some trees improved more than other trees."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#informal-analysis-structure",
+    "href": "lectures/10_complete_block.html#informal-analysis-structure",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Informal Analysis Structure",
+    "text": "Informal Analysis Structure\n\nmealybugs_wide &lt;- mealybugs %&gt;%\n  spread(treatment, bugs_change)\n\nmealybugs_wide\n\n   tree oil spores water\n1 tree1   4     -4    -9\n2 tree2  29     29    18\n3 tree3  14      4    10\n4 tree4  14     -2     9\n5 tree5   7     11    -6"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#anscombe-block-plots",
+    "href": "lectures/10_complete_block.html#anscombe-block-plots",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Anscombe Block Plots",
+    "text": "Anscombe Block Plots\n\nScatterplots of two levels of the factor of interest.\nUsed for\n\nexploring the data, and\nassessing the additivity (A) condition."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#scatterplots",
+    "href": "lectures/10_complete_block.html#scatterplots",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Scatterplots",
+    "text": "Scatterplots\n\nqplot(x = spores, y = oil, data = mealybugs_wide) +\n  geom_abline(intercept = 13.6-7.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#scatterplots-1",
+    "href": "lectures/10_complete_block.html#scatterplots-1",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Scatterplots",
+    "text": "Scatterplots\n\nqplot(x = spores, y = water, data = mealybugs_wide) +\n  geom_abline(intercept = 4.4 - 13.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#scatterplots-2",
+    "href": "lectures/10_complete_block.html#scatterplots-2",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Scatterplots",
+    "text": "Scatterplots\n\nqplot(x = oil, y = water, data = mealybugs_wide) +\n  geom_abline(intercept = 4.4 - 13.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html",
+    "href": "lectures/11_assessing_cb.html",
+    "title": "Assessing the Complete Block Design",
+    "section": "",
+    "text": "HW 5 due Friday 11:55p\nOffice hours\n\nFriday office hours 12:15p-3:00p\n\nAppointment slots are open!\n\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework5-questions channel on Slack!\n\nApplications open for DSC-WAV (more info here)"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#announcements",
+    "href": "lectures/11_assessing_cb.html#announcements",
+    "title": "Assessing the Complete Block Design",
+    "section": "",
+    "text": "HW 5 due Friday 11:55p\nOffice hours\n\nFriday office hours 12:15p-3:00p\n\nAppointment slots are open!\n\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework5-questions channel on Slack!\n\nApplications open for DSC-WAV (more info here)"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#presentation-of-the-sds-major",
+    "href": "lectures/11_assessing_cb.html#presentation-of-the-sds-major",
+    "title": "Assessing the Complete Block Design",
+    "section": "Presentation of the SDS Major",
+    "text": "Presentation of the SDS Major\n\nSDS Presentation of the Major Tuesday 10/19 at 12:15pm. There are three ways to participate:\n\nIn-person in the Ford Hall Atrium: Only undeclared majors/minors may attend in-person. Advance sign-up is required in this Google Form. To guarantee your free grab-and-go lunch option, please confirm by Thursday 10/14 at 3pm.\nZoom: Anyone may attend at https://smith.zoom.us/j/95165936231\nA recording of the presentation will be shared afterwards on this mailing list"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#agenda",
+    "href": "lectures/11_assessing_cb.html#agenda",
+    "title": "Assessing the Complete Block Design",
+    "section": "Agenda",
+    "text": "Agenda\n\nMP1 data collection!\nComplete Block design\n\n\nDiagnostic plots\nANOVA"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#mp1-data-collection",
+    "href": "lectures/11_assessing_cb.html#mp1-data-collection",
+    "title": "Assessing the Complete Block Design",
+    "section": "MP1 data collection",
+    "text": "MP1 data collection\nStep 1:\n\nIf you’re approved:\n\n15 minutes to go through the checklist.\nPaste anonymous survey link in the spreadsheet.\nIf you’re ready, work on your homework!\n\nIf you’re NOT approved\n\nUse this time to work on your revisions.\n\n\nStep 2:\n\n20 min to participate in as many studies as you can!\n\nNote: see content warnings\nPlease only participate in audio studies if you have headphones\nWe’ll collect data again on Tuesday."
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#inappropriate-insects",
+    "href": "lectures/11_assessing_cb.html#inappropriate-insects",
+    "title": "Assessing the Complete Block Design",
+    "section": "Inappropriate Insects",
+    "text": "Inappropriate Insects\nModern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. Three branches are randomly selected from each tree, and 3 cm by 3 cm patches are marked on each branch. The number of mealybugs on the patch is counted. The three treatments then get randomly assigned to the three branches for each tree. After three days the mealybugs are counted again. The change in number of mealybugs is computed (\\(before-after\\))."
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#side-by-side-dotplot",
+    "href": "lectures/11_assessing_cb.html#side-by-side-dotplot",
+    "title": "Assessing the Complete Block Design",
+    "section": "Side-by-side dotplot",
+    "text": "Side-by-side dotplot\nWe add our blocking factor as color and also as group.\n\nqplot(x = treatment, y = bugs_change, color = tree, group = tree, data = mealybugs) + \n  geom_line()\n\n\n\n\nWe can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not."
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#formal-anova-for-complete-block-design",
+    "href": "lectures/11_assessing_cb.html#formal-anova-for-complete-block-design",
+    "title": "Assessing the Complete Block Design",
+    "section": "Formal ANOVA for Complete Block Design",
+    "text": "Formal ANOVA for Complete Block Design\n\\[{y}_{ij}={\\mu}+{\\tau}_{i}+{\\beta}_{j}+{e}_{ij}\\]\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment\n\\(\\sum_{i=1}^{a}b(\\bar{y}_{i.}-\\bar{y}_{..})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{T}}{{df}_{T}}\\)\n\\(\\frac{{MS}_{T}}{{MS}_{E}}\\)\n\n\nBlocks\n\\(\\sum_{j=1}^{b}a(\\bar{y}_{.j}-\\bar{y}_{..})^{2}\\)\n\\(b-1\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{b}({y}_{ij}-\\bar{y}_{i.}-\\bar{y}_{.j}+\\bar{y}_{..})^{2}\\)\n\\((a-1)(b-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#data-analysis-structure",
+    "href": "lectures/11_assessing_cb.html#data-analysis-structure",
+    "title": "Assessing the Complete Block Design",
+    "section": "Data Analysis Structure",
+    "text": "Data Analysis Structure\n\nmealybugs\n\n    tree treatment bugs_change\n1  tree1     water          -9\n2  tree1    spores          -4\n3  tree1       oil           4\n4  tree2     water          18\n5  tree2    spores          29\n6  tree2       oil          29\n7  tree3     water          10\n8  tree3    spores           4\n9  tree3       oil          14\n10 tree4     water           9\n11 tree4    spores          -2\n12 tree4       oil          14\n13 tree5     water          -6\n14 tree5    spores          11\n15 tree5       oil           7"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#formal-anova",
+    "href": "lectures/11_assessing_cb.html#formal-anova",
+    "title": "Assessing the Complete Block Design",
+    "section": "Formal ANOVA",
+    "text": "Formal ANOVA\n\nmod &lt;- lm(bugs_change ~ treatment + tree, data = mealybugs)\n\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: bugs_change\n          Df  Sum Sq Mean Sq F value   Pr(&gt;F)   \ntreatment  2  218.13  109.07  2.9963 0.106846   \ntree       4 1316.40  329.10  9.0412 0.004603 **\nResiduals  8  291.20   36.40                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nThere are no statistically significant differences in the reduction in mealy bugs between the three treatment conditions, \\(F(2, 8) = 3.00\\), \\(p = .107\\). There are significant differences in the reduction in mealy bugs across trees, however, \\(F(4, 8) = 9.04\\), \\(p = .005\\). That is, some trees improved more than other trees."
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#informal-analysis-structure",
+    "href": "lectures/11_assessing_cb.html#informal-analysis-structure",
+    "title": "Assessing the Complete Block Design",
+    "section": "Informal Analysis Structure",
+    "text": "Informal Analysis Structure\n\nmealybugs_wide &lt;- mealybugs %&gt;%\n  pivot_wider(names_from = treatment, values_from = bugs_change)\n\nmealybugs_wide\n\n# A tibble: 5 × 4\n  tree  water spores   oil\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 tree1    -9     -4     4\n2 tree2    18     29    29\n3 tree3    10      4    14\n4 tree4     9     -2    14\n5 tree5    -6     11     7"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#how-to-check-assumptions",
+    "href": "lectures/11_assessing_cb.html#how-to-check-assumptions",
+    "title": "Assessing the Complete Block Design",
+    "section": "How to check assumptions",
+    "text": "How to check assumptions\n\nC. Constant effects – think about whether it is reasonable.\nA. Additive effects – check Anscombe block plots.\nS. Same standard deviations – is the biggest SD less than two times as large as the smallest? check residual versus fitted plot: does the plot thicken?\nI. Independent residuals – think about whether it is reasonable.\nN. Normally distributed residuals – construct a histogram or normal probability plot of residuals.\nZ. Zero mean residuals – construct a histogram or normal probability plot of residuals."
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#anscombe-block-plots",
+    "href": "lectures/11_assessing_cb.html#anscombe-block-plots",
+    "title": "Assessing the Complete Block Design",
+    "section": "Anscombe Block Plots",
+    "text": "Anscombe Block Plots\n\nScatterplots of two levels of the factor of interest.\nUsed for\n\nexploring the data, and\nassessing the additivity (A) condition."
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#informal-analysis-structure-1",
+    "href": "lectures/11_assessing_cb.html#informal-analysis-structure-1",
+    "title": "Assessing the Complete Block Design",
+    "section": "Informal Analysis Structure",
+    "text": "Informal Analysis Structure\n\nmealybugs_wide &lt;- mealybugs %&gt;%\n  pivot_wider(names_from = treatment, values_from = bugs_change)\n\nmealybugs_wide\n\n# A tibble: 5 × 4\n  tree  water spores   oil\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 tree1    -9     -4     4\n2 tree2    18     29    29\n3 tree3    10      4    14\n4 tree4     9     -2    14\n5 tree5    -6     11     7"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#anscombe-block-plots-1",
+    "href": "lectures/11_assessing_cb.html#anscombe-block-plots-1",
+    "title": "Assessing the Complete Block Design",
+    "section": "Anscombe Block Plots",
+    "text": "Anscombe Block Plots\n\nqplot(x = spores, y = oil, data = mealybugs_wide) +\n  geom_abline(intercept = 13.6-7.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#anscombe-block-plots-2",
+    "href": "lectures/11_assessing_cb.html#anscombe-block-plots-2",
+    "title": "Assessing the Complete Block Design",
+    "section": "Anscombe Block Plots",
+    "text": "Anscombe Block Plots\n\nqplot(x = spores, y = water, data = mealybugs_wide) +\n  geom_abline(intercept = 4.4 - 13.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#anscombe-block-plots-3",
+    "href": "lectures/11_assessing_cb.html#anscombe-block-plots-3",
+    "title": "Assessing the Complete Block Design",
+    "section": "Anscombe Block Plots",
+    "text": "Anscombe Block Plots\n\nqplot(x = oil, y = water, data = mealybugs_wide) +\n  geom_abline(intercept = 4.4 - 13.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#assessing-s-condition",
+    "href": "lectures/11_assessing_cb.html#assessing-s-condition",
+    "title": "Assessing the Complete Block Design",
+    "section": "Assessing S Condition",
+    "text": "Assessing S Condition\n\nmealybugs %&gt;%\n  group_by(treatment) %&gt;%\n  summarize(m = mean(bugs_change),\n            sd = sd(bugs_change))\n\n# A tibble: 3 × 3\n  treatment     m    sd\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;\n1 oil        13.6  9.66\n2 spores      7.6 13.3 \n3 water       4.4 11.5 \n\nmealybugs %&gt;%\n  group_by(treatment) %&gt;%\n  summarize(m = mean(bugs_change),\n            sd = sd(bugs_change)) %&gt;%\n  summarize(max(sd)/min(sd)) #calculating using min and max function\n\n# A tibble: 1 × 1\n  `max(sd)/min(sd)`\n              &lt;dbl&gt;\n1              1.38"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#assessing-s-condition-1",
+    "href": "lectures/11_assessing_cb.html#assessing-s-condition-1",
+    "title": "Assessing the Complete Block Design",
+    "section": "Assessing S Condition",
+    "text": "Assessing S Condition\n\\[\\hat{{y}}_{ij}={\\mu}+{\\tau}_{i}+{\\beta}_{j}\\]\n\nWhere \\(\\hat{{y}}_{ij}\\) are the fitted values, that is, everything but the ticket at the end of the assembly line.\n\n\nplot(mod, which = 1)\n\n\n\n\nIf the plot thickens, that is, has a patterning that looks like a funnel, then the S condition is not satisfied."
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#assessing-n-condition",
+    "href": "lectures/11_assessing_cb.html#assessing-n-condition",
+    "title": "Assessing the Complete Block Design",
+    "section": "Assessing N Condition",
+    "text": "Assessing N Condition\n\nplot(mod, which = 2)\n\n\n\n\nWe’re looking for residuals to be on the line. If so, then we can say they are normally distributed."
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#assessing-the-z-condition",
+    "href": "lectures/11_assessing_cb.html#assessing-the-z-condition",
+    "title": "Assessing the Complete Block Design",
+    "section": "Assessing the Z Condition",
+    "text": "Assessing the Z Condition\n\nqplot(mod$residuals, bins = 6)\n\n\n\n\nIf the histogram centered at zero? Then the Z condition is satisfied."
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#sleeping-shrews",
+    "href": "lectures/11_assessing_cb.html#sleeping-shrews",
+    "title": "Assessing the Complete Block Design",
+    "section": "Sleeping Shrews",
+    "text": "Sleeping Shrews\nAssess the CA-SINZ conditions for the SleepingShrews dataset from example 6.7b in your textbook.\n\nlibrary(Stat2Data)\ndata(\"SleepingShrews\")\n\n#You'll need the WIDE dataset for the Anscombe block plots\nSleepingShrews_wide &lt;- SleepingShrews %&gt;%\n  select(-ID) %&gt;%\n  pivot_wider(names_from = Phase, values_from = Rate)"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#testing-condition-for-sleeping-shrews-data",
+    "href": "lectures/11_assessing_cb.html#testing-condition-for-sleeping-shrews-data",
+    "title": "Assessing the Complete Block Design",
+    "section": "Testing Condition for Sleeping Shrews Data",
+    "text": "Testing Condition for Sleeping Shrews Data\n\nqplot(x = DSW, y = LSW, data = SleepingShrews_wide) +\n  geom_abline(intercept = 2, slope = 1, color = \"blue\", linetype = 2) +   \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\") #A condition\n\nqplot(x = DSW, y = REM, data = SleepingShrews_wide) +\n  geom_abline(intercept = 2, slope = 1, color = \"blue\", linetype = 2) +   \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\") #A condition\n\nqplot(x = LSW, y = REM, data = SleepingShrews_wide) +\n  geom_abline(intercept = -2, slope = 1, color = \"blue\", linetype = 2) +   \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\") #A condition\n\nSleepingShrews %&gt;%\n  group_by(Phase) %&gt;%\n  summarize(m = mean(Rate),\n            sd = sd(Rate)) %&gt;%\n  summarize(max(sd)/min(sd)) #S condition\n\nmod &lt;- lm(Rate ~ Phase + Shrew, data = SleepingShrews)\nplot(mod, which = 1) #S condition\nplot(mod, which = 2) #N condition\nqplot(mod$residuals, bins = 6) #N and Z conditions"
   }
 ]

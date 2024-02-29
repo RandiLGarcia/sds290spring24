@@ -122,8 +122,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **HW #4 due on today at 11:55p**
 
-:::
-
 ## Week 6
 
 #### Tue, Feb 27
@@ -131,6 +129,8 @@ Please read the specified sections *before* class that day.
 -   Blocking
 -   Homework due today:
     -   Read Ch **Stat2** Ch 6.1-6.2
+
+:::
 
 #### Thurs, Feb 29
 
