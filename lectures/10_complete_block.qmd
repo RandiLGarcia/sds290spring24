@@ -14,6 +14,8 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
 
 ## Announcements
 
+-   Grades posted for HW4
+-   HW5 is now posted, due Fri Mar 8
 -   MP1 pre-approval due Friday 11:55p
     -   Please submit as soon as you can
 -   Office hours (Bass 412)
