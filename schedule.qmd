@@ -98,7 +98,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **HW #3 due on today at 11:55p**
 
-
 ## Week 5
 
 #### Tue, Feb 20
@@ -107,7 +106,6 @@ Please read the specified sections *before* class that day.
 -   Time to work on MP1
 -   Homework due today:
     -   Work on Qualtrics survey for MP1
-    
 
 #### Thurs, Feb 22
 
@@ -142,7 +140,6 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
     -   **MP1 Qualtrics survey due for pre-approval by 11:55p**
-
 :::
 
 ## Week 7
