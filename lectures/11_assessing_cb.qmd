@@ -1,12 +1,13 @@
 ---
 title: "Assessing the Complete Block Design"
-author: "SDS 290"
-date: "October 14, 2021"
-output: 
-  ioslides_presentation:
-    widescreen: true
-    smaller: true
+author: Prof Randi Garcia, SDS 290
+date: March 5, 2024
+format: 
+  revealjs:
+    scrollable: true
+    theme: default
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(message = FALSE, warning = FALSE)
