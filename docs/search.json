@@ -2216,14 +2216,14 @@
     "href": "lectures/11_assessing_cb.html",
     "title": "Assessing the Complete Block Design",
     "section": "",
-    "text": "HW 5 due Friday 11:55p\nOffice hours\n\nFriday office hours 12:15p-3:00p\n\nAppointment slots are open!\n\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework5-questions channel on Slack!\n\nApplications open for DSC-WAV (more info here)"
+    "text": "HW 5 due Friday 11:59p\nExam 1 next Thursday\nOffice hours (Bass 412)\n\nNo OH on Thurs\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw5-questions channel on Slack!"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#announcements",
     "href": "lectures/11_assessing_cb.html#announcements",
     "title": "Assessing the Complete Block Design",
-    "section": "Announcements",
-    "text": "Announcements\n\nHW 5 due Friday 11:59p\nExam 1 next Thursday\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw5-questions channel on Slack!"
+    "section": "",
+    "text": "HW 5 due Friday 11:59p\nExam 1 next Thursday\nOffice hours (Bass 412)\n\nNo OH on Thurs\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw5-questions channel on Slack!"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#presentation-of-the-sds-major",
@@ -2237,7 +2237,7 @@
     "href": "lectures/11_assessing_cb.html#agenda",
     "title": "Assessing the Complete Block Design",
     "section": "Agenda",
-    "text": "Agenda\n\nMP1 data collection!\nComplete Block design\n\n\nDiagnostic plots\nANOVA"
+    "text": "Agenda\n\nMP1 data collection!\nComplete Block design"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#mp1-data-collection",
@@ -2258,7 +2258,7 @@
     "href": "lectures/11_assessing_cb.html#side-by-side-dotplot",
     "title": "Assessing the Complete Block Design",
     "section": "Side-by-side dotplot",
-    "text": "Side-by-side dotplot\nWe add our blocking factor as color and also as group.\n\nWe can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not."
+    "text": "Side-by-side dotplot\nWe add our blocking factor as color and also as group.\n\nqplot(x = treatment, y = bugs_change, color = tree, group = tree, data = mealybugs) + \n  geom_line()\n\n\n\n\nWe can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#formal-anova-for-complete-block-design",
@@ -2272,21 +2272,21 @@
     "href": "lectures/11_assessing_cb.html#data-analysis-structure",
     "title": "Assessing the Complete Block Design",
     "section": "Data Analysis Structure",
-    "text": "Data Analysis Structure\n\n\n    tree treatment bugs_change\n1  tree1     water          -9\n2  tree1    spores          -4\n3  tree1       oil           4\n4  tree2     water          18\n5  tree2    spores          29\n6  tree2       oil          29\n7  tree3     water          10\n8  tree3    spores           4\n9  tree3       oil          14\n10 tree4     water           9\n11 tree4    spores          -2\n12 tree4       oil          14\n13 tree5     water          -6\n14 tree5    spores          11\n15 tree5       oil           7"
+    "text": "Data Analysis Structure\n\nmealybugs\n\n    tree treatment bugs_change\n1  tree1     water          -9\n2  tree1    spores          -4\n3  tree1       oil           4\n4  tree2     water          18\n5  tree2    spores          29\n6  tree2       oil          29\n7  tree3     water          10\n8  tree3    spores           4\n9  tree3       oil          14\n10 tree4     water           9\n11 tree4    spores          -2\n12 tree4       oil          14\n13 tree5     water          -6\n14 tree5    spores          11\n15 tree5       oil           7"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#formal-anova",
     "href": "lectures/11_assessing_cb.html#formal-anova",
     "title": "Assessing the Complete Block Design",
     "section": "Formal ANOVA",
-    "text": "Formal ANOVA\n\n\nAnalysis of Variance Table\n\nResponse: bugs_change\n          Df  Sum Sq Mean Sq F value   Pr(&gt;F)   \ntreatment  2  218.13  109.07  2.9963 0.106846   \ntree       4 1316.40  329.10  9.0412 0.004603 **\nResiduals  8  291.20   36.40                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nThere are no statistically significant differences in the reduction in mealy bugs between the three treatment conditions, \\(F(2, 8) = 3.00\\), \\(p = .107\\). There are significant differences in the reduction in mealy bugs across trees, however, \\(F(4, 8) = 9.04\\), \\(p = .005\\). That is, some trees improved more than other trees."
+    "text": "Formal ANOVA\n\nmod &lt;- lm(bugs_change ~ treatment + tree, data = mealybugs)\n\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: bugs_change\n          Df  Sum Sq Mean Sq F value   Pr(&gt;F)   \ntreatment  2  218.13  109.07  2.9963 0.106846   \ntree       4 1316.40  329.10  9.0412 0.004603 **\nResiduals  8  291.20   36.40                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nThere are no statistically significant differences in the reduction in mealy bugs between the three treatment conditions, \\(F(2, 8) = 3.00\\), \\(p = .107\\). There are significant differences in the reduction in mealy bugs across trees, however, \\(F(4, 8) = 9.04\\), \\(p = .005\\). That is, some trees improved more than other trees."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#informal-analysis-structure",
     "href": "lectures/11_assessing_cb.html#informal-analysis-structure",
     "title": "Assessing the Complete Block Design",
     "section": "Informal Analysis Structure",
-    "text": "Informal Analysis Structure\n\n\n# A tibble: 5 × 4\n  tree  water spores   oil\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 tree1    -9     -4     4\n2 tree2    18     29    29\n3 tree3    10      4    14\n4 tree4     9     -2    14\n5 tree5    -6     11     7"
+    "text": "Informal Analysis Structure\n\nmealybugs_wide &lt;- mealybugs %&gt;%\n  pivot_wider(names_from = treatment, values_from = bugs_change)\n\nmealybugs_wide\n\n# A tibble: 5 × 4\n  tree  water spores   oil\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 tree1    -9     -4     4\n2 tree2    18     29    29\n3 tree3    10      4    14\n4 tree4     9     -2    14\n5 tree5    -6     11     7"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#how-to-check-assumptions",
@@ -2307,69 +2307,69 @@
     "href": "lectures/11_assessing_cb.html#informal-analysis-structure-1",
     "title": "Assessing the Complete Block Design",
     "section": "Informal Analysis Structure",
-    "text": "Informal Analysis Structure\n\n\n# A tibble: 5 × 4\n  tree  water spores   oil\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 tree1    -9     -4     4\n2 tree2    18     29    29\n3 tree3    10      4    14\n4 tree4     9     -2    14\n5 tree5    -6     11     7"
+    "text": "Informal Analysis Structure\n\nmealybugs_wide &lt;- mealybugs %&gt;%\n  pivot_wider(names_from = treatment, values_from = bugs_change)\n\nmealybugs_wide\n\n# A tibble: 5 × 4\n  tree  water spores   oil\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 tree1    -9     -4     4\n2 tree2    18     29    29\n3 tree3    10      4    14\n4 tree4     9     -2    14\n5 tree5    -6     11     7"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#anscombe-block-plots-1",
     "href": "lectures/11_assessing_cb.html#anscombe-block-plots-1",
     "title": "Assessing the Complete Block Design",
     "section": "Anscombe Block Plots",
-    "text": "Anscombe Block Plots"
+    "text": "Anscombe Block Plots\n\nqplot(x = spores, y = oil, data = mealybugs_wide) +\n  geom_abline(intercept = 13.6-7.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#anscombe-block-plots-2",
     "href": "lectures/11_assessing_cb.html#anscombe-block-plots-2",
     "title": "Assessing the Complete Block Design",
     "section": "Anscombe Block Plots",
-    "text": "Anscombe Block Plots"
+    "text": "Anscombe Block Plots\n\nqplot(x = spores, y = water, data = mealybugs_wide) +\n  geom_abline(intercept = 4.4 - 13.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#anscombe-block-plots-3",
     "href": "lectures/11_assessing_cb.html#anscombe-block-plots-3",
     "title": "Assessing the Complete Block Design",
     "section": "Anscombe Block Plots",
-    "text": "Anscombe Block Plots"
+    "text": "Anscombe Block Plots\n\nqplot(x = oil, y = water, data = mealybugs_wide) +\n  geom_abline(intercept = 4.4 - 13.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#assessing-s-condition",
     "href": "lectures/11_assessing_cb.html#assessing-s-condition",
     "title": "Assessing the Complete Block Design",
     "section": "Assessing S Condition",
-    "text": "Assessing S Condition\n\n\n# A tibble: 3 × 3\n  treatment     m    sd\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;\n1 oil        13.6  9.66\n2 spores      7.6 13.3 \n3 water       4.4 11.5 \n\n\n# A tibble: 1 × 1\n  `max(sd)/min(sd)`\n              &lt;dbl&gt;\n1              1.38"
+    "text": "Assessing S Condition\n\nmealybugs %&gt;%\n  group_by(treatment) %&gt;%\n  summarize(m = mean(bugs_change),\n            sd = sd(bugs_change))\n\n# A tibble: 3 × 3\n  treatment     m    sd\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;\n1 oil        13.6  9.66\n2 spores      7.6 13.3 \n3 water       4.4 11.5 \n\nmealybugs %&gt;%\n  group_by(treatment) %&gt;%\n  summarize(m = mean(bugs_change),\n            sd = sd(bugs_change)) %&gt;%\n  summarize(max(sd)/min(sd)) #calculating using min and max function\n\n# A tibble: 1 × 1\n  `max(sd)/min(sd)`\n              &lt;dbl&gt;\n1              1.38"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#assessing-s-condition-1",
     "href": "lectures/11_assessing_cb.html#assessing-s-condition-1",
     "title": "Assessing the Complete Block Design",
     "section": "Assessing S Condition",
-    "text": "Assessing S Condition\n\\[\\hat{{y}}_{ij}={\\mu}+{\\tau}_{i}+{\\beta}_{j}\\]\n\nWhere \\(\\hat{{y}}_{ij}\\) are the fitted values, that is, everything but the ticket at the end of the assembly line.\n\n\nIf the plot thickens, that is, has a patterning that looks like a funnel, then the S condition is not satisfied."
+    "text": "Assessing S Condition\n\\[\\hat{{y}}_{ij}={\\mu}+{\\tau}_{i}+{\\beta}_{j}\\]\n\nWhere \\(\\hat{{y}}_{ij}\\) are the fitted values, that is, everything but the ticket at the end of the assembly line.\n\n\nplot(mod, which = 1)\n\n\n\n\nIf the plot thickens, that is, has a patterning that looks like a funnel, then the S condition is not satisfied."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#assessing-n-condition",
     "href": "lectures/11_assessing_cb.html#assessing-n-condition",
     "title": "Assessing the Complete Block Design",
     "section": "Assessing N Condition",
-    "text": "Assessing N Condition\n\nWe’re looking for residuals to be on the line. If so, then we can say they are normally distributed."
+    "text": "Assessing N Condition\n\nplot(mod, which = 2)\n\n\n\n\nWe’re looking for residuals to be on the line. If so, then we can say they are normally distributed."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#assessing-the-z-condition",
     "href": "lectures/11_assessing_cb.html#assessing-the-z-condition",
     "title": "Assessing the Complete Block Design",
     "section": "Assessing the Z Condition",
-    "text": "Assessing the Z Condition\n\nIf the histogram centered at zero? Then the Z condition is satisfied."
+    "text": "Assessing the Z Condition\n\nqplot(mod$residuals, bins = 6)\n\n\n\n\nIf the histogram centered at zero? Then the Z condition is satisfied."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#sleeping-shrews",
     "href": "lectures/11_assessing_cb.html#sleeping-shrews",
     "title": "Assessing the Complete Block Design",
     "section": "Sleeping Shrews",
-    "text": "Sleeping Shrews\nAssess the CA-SINZ conditions for the SleepingShrews dataset from example 6.7b in your textbook."
+    "text": "Sleeping Shrews\nAssess the CA-SINZ conditions for the SleepingShrews dataset from example 6.7b in your textbook.\n\nlibrary(Stat2Data)\ndata(\"SleepingShrews\")\n\n#You'll need the WIDE dataset for the Anscombe block plots\nSleepingShrews_wide &lt;- SleepingShrews %&gt;%\n  select(-ID) %&gt;%\n  pivot_wider(names_from = Phase, values_from = Rate)"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#testing-condition-for-sleeping-shrews-data",
     "href": "lectures/11_assessing_cb.html#testing-condition-for-sleeping-shrews-data",
     "title": "Assessing the Complete Block Design",
     "section": "Testing Condition for Sleeping Shrews Data",
-    "text": "Testing Condition for Sleeping Shrews Data"
+    "text": "Testing Condition for Sleeping Shrews Data\n\nqplot(x = DSW, y = LSW, data = SleepingShrews_wide) +\n  geom_abline(intercept = 2, slope = 1, color = \"blue\", linetype = 2) +   \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\") #A condition\n\nqplot(x = DSW, y = REM, data = SleepingShrews_wide) +\n  geom_abline(intercept = 2, slope = 1, color = \"blue\", linetype = 2) +   \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\") #A condition\n\nqplot(x = LSW, y = REM, data = SleepingShrews_wide) +\n  geom_abline(intercept = -2, slope = 1, color = \"blue\", linetype = 2) +   \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\") #A condition\n\nSleepingShrews %&gt;%\n  group_by(Phase) %&gt;%\n  summarize(m = mean(Rate),\n            sd = sd(Rate)) %&gt;%\n  summarize(max(sd)/min(sd)) #S condition\n\nmod &lt;- lm(Rate ~ Phase + Shrew, data = SleepingShrews)\nplot(mod, which = 1) #S condition\nplot(mod, which = 2) #N condition\nqplot(mod$residuals, bins = 6) #N and Z conditions"
   }
 ]

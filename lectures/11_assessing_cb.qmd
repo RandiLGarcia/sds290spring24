@@ -8,8 +8,12 @@ format:
     theme: default
 ---
 
+```{r, include=FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
+```
 
-```{r setup, include=FALSE}
+
+```{r, include=FALSE}
 knitr::opts_chunk$set(message = FALSE, warning = FALSE)
 library(tidyverse)
 tree <- c(rep("tree1",3), rep("tree2",3), rep("tree3", 3),rep("tree4", 3), rep("tree5", 3))
@@ -24,7 +28,7 @@ mealybugs <- data.frame(tree, treatment, bugs_change)
 -   HW 5 due Friday 11:59p
 -   Exam 1 next Thursday
 -   Office hours (Bass 412)
-    -   Today: 2:45p - 4:00p
+    -   No OH on Thurs
     -   Friday: 10:50a - 12:05p
 -   Where to get HW help
     -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301.
@@ -34,9 +38,6 @@ mealybugs <- data.frame(tree, treatment, bugs_change)
 
 1.  MP1 data collection!
 2.  Complete Block design
-
--   Diagnostic plots
--   ANOVA
 
 ## MP1 data collection
 
