@@ -140,7 +140,6 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
     -   **MP1 Qualtrics survey due for pre-approval by 11:55p**
-:::
 
 ## Week 7
 
@@ -149,12 +148,14 @@ Please read the specified sections *before* class that day.
 -   MP1 Data Collection Day
 -   Assessing the block design
 
+:::
+
 #### Thurs, Mar 7
 
 -   Using the block design
 -   Homework due today:
     -   Read Ch **Stat2** 6.4-6.5
--   **Office hours**: 2:45p - 4:00p
+-   **Office hours**: Cancelled today
 
 #### Fri, Mar 8
 
