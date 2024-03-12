@@ -172,7 +172,7 @@
     "href": "schedule.html#week-7",
     "title": "Schedule",
     "section": "Week 7",
-    "text": "Week 7\n\nTue, Mar 4\n\nMP1 Data Collection Day\nAssessing the block design"
+    "text": "Week 7\n\nTue, Mar 4\n\nMP1 Data Collection Day\nAssessing the block design\n\n\n\nThurs, Mar 7\n\nUsing the block design\nHomework due today:\n\nRead Ch Stat2 6.4-6.5\n\nOffice hours: Cancelled today\n\n\n\nFri, Mar 8\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nHW #5 due tonight at 11:55p"
   },
   {
     "objectID": "schedule.html#week-8",
@@ -291,7 +291,7 @@
     "href": "schedule.html#week-8---exam-1",
     "title": "Schedule",
     "section": "Week 8 - Exam 1",
-    "text": "Week 8 - Exam 1\n\nTue, Mar 12\n\nReview for Exam 1\nAnalysis of MP1 data\n\n\n\nThurs, Mar 14\n\nTime to work on Exam 1\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Mar 15\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nExam 1 due tonight at 11:55p"
+    "text": "Week 8 - Exam 1\n\nTue, Mar 12\n\nReview for Exam 1\nAnalysis of MP1 data\n\n\n\nThurs, Mar 14\n\nTime to work on Exam 1\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Mar 15\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nExam 1 due tonight at 11:59p on Gradescope"
   },
   {
     "objectID": "schedule.html#week-10---mp1-due",
@@ -2222,8 +2222,8 @@
     "objectID": "lectures/11_assessing_cb.html#announcements",
     "href": "lectures/11_assessing_cb.html#announcements",
     "title": "Assessing the Complete Block Design",
-    "section": "Announcements",
-    "text": "Announcements\n\nHW 5 due Friday 11:59p\nExam 1 next Thursday\nOffice hours (Bass 412)\n\nNo OH on Thurs\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw5-questions channel on Slack!"
+    "section": "",
+    "text": "HW 5 due Friday 11:59p\nExam 1 next Thursday\nOffice hours (Bass 412)\n\nNo OH on Thurs\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw5-questions channel on Slack!"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#presentation-of-the-sds-major",
@@ -2258,7 +2258,7 @@
     "href": "lectures/11_assessing_cb.html#side-by-side-dotplot",
     "title": "Assessing the Complete Block Design",
     "section": "Side-by-side dotplot",
-    "text": "Side-by-side dotplot\nWe add our blocking factor as color and also as group.\n\nqplot(x = treatment, y = bugs_change, color = tree, group = tree, data = mealybugs) + \n  geom_line()\n\n\nWe can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not."
+    "text": "Side-by-side dotplot\nWe add our blocking factor as color and also as group.\n\nqplot(x = treatment, y = bugs_change, color = tree, group = tree, data = mealybugs) + \n  geom_line()\n\n\n\n\n\n\n\n\nWe can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#formal-anova-for-complete-block-design",
@@ -2342,21 +2342,21 @@
     "href": "lectures/11_assessing_cb.html#assessing-s-condition-1",
     "title": "Assessing the Complete Block Design",
     "section": "Assessing S Condition",
-    "text": "Assessing S Condition\n\\[\\hat{{y}}_{ij}={\\mu}+{\\tau}_{i}+{\\beta}_{j}\\]\n\nWhere \\(\\hat{{y}}_{ij}\\) are the fitted values, that is, everything but the ticket at the end of the assembly line.\n\n\nplot(mod, which = 1)\n\n\nIf the plot thickens, that is, has a patterning that looks like a funnel, then the S condition is not satisfied."
+    "text": "Assessing S Condition\n\\[\\hat{{y}}_{ij}={\\mu}+{\\tau}_{i}+{\\beta}_{j}\\]\n\nWhere \\(\\hat{{y}}_{ij}\\) are the fitted values, that is, everything but the ticket at the end of the assembly line.\n\n\nplot(mod, which = 1)\n\n\n\n\n\n\n\n\nIf the plot thickens, that is, has a patterning that looks like a funnel, then the S condition is not satisfied."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#assessing-n-condition",
     "href": "lectures/11_assessing_cb.html#assessing-n-condition",
     "title": "Assessing the Complete Block Design",
     "section": "Assessing N Condition",
-    "text": "Assessing N Condition\n\nplot(mod, which = 2)\n\n\nWe’re looking for residuals to be on the line. If so, then we can say they are normally distributed."
+    "text": "Assessing N Condition\n\nplot(mod, which = 2)\n\n\n\n\n\n\n\n\nWe’re looking for residuals to be on the line. If so, then we can say they are normally distributed."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#assessing-the-z-condition",
     "href": "lectures/11_assessing_cb.html#assessing-the-z-condition",
     "title": "Assessing the Complete Block Design",
     "section": "Assessing the Z Condition",
-    "text": "Assessing the Z Condition\n\nqplot(mod$residuals, bins = 6)\n\n\nIf the histogram centered at zero? Then the Z condition is satisfied."
+    "text": "Assessing the Z Condition\n\nqplot(mod$residuals, bins = 6)\n\n\n\n\n\n\n\n\nIf the histogram centered at zero? Then the Z condition is satisfied."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#sleeping-shrews",
@@ -2378,5 +2378,89 @@
     "title": "Four Desgins",
     "section": "",
     "text": "Grades for HW3 posted\nHW4 due Friday 11:55p\nOffice hours (Bass 412)\n\nToday cancelled due to Rally Day\nFriday (tomorrow): 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework4-questions channel on Slack!"
+  },
+  {
+    "objectID": "lectures/12_exam1_review.html",
+    "href": "lectures/12_exam1_review.html",
+    "title": "Exam 1 Review",
+    "section": "",
+    "text": "Exam 1 distributed on Thursday 10:50a on Gradescope\n\nTime to work in class\nDue on Friday night on Gradescope\n\nOffice hours\n\nThurs 2:45p - 4:00p\nFriday 10:50a - 12:05p"
+  },
+  {
+    "objectID": "lectures/12_exam1_review.html#announcements",
+    "href": "lectures/12_exam1_review.html#announcements",
+    "title": "Exam 1 Review",
+    "section": "Announcements",
+    "text": "Announcements\n\nExam 1 distributed on Thursday 10:50a on Gradescope\n\nTime to work in class\nDue on Friday night on Gradescope\n\nOffice hours\n\nThurs 2:45p - 4:00p\nFriday 10:50a - 12:05p"
+  },
+  {
+    "objectID": "lectures/12_exam1_review.html#agenda",
+    "href": "lectures/12_exam1_review.html#agenda",
+    "title": "Exam 1 Review",
+    "section": "Agenda",
+    "text": "Agenda\n\nMP1 hypotheses and steps for analysis\nMP1 data analysis plan\nExam 1 review"
+  },
+  {
+    "objectID": "lectures/12_exam1_review.html#exam-1",
+    "href": "lectures/12_exam1_review.html#exam-1",
+    "title": "Exam 1 Review",
+    "section": "Exam 1",
+    "text": "Exam 1\n\nOpen notes\nOpen book\nOpen slides\nCLOSED Google/ChatGPT/Etc\nContent:\n\nconceptual questions and data analysis questions\nsome multiple choice and true/false questions\nquestions about interpreting output\nyou will need to do analysis in R!\n\nRender your Quarto file as PDF and those pages to your Exam."
+  },
+  {
+    "objectID": "lectures/12_exam1_review.html#mp1-hypotheses",
+    "href": "lectures/12_exam1_review.html#mp1-hypotheses",
+    "title": "Exam 1 Review",
+    "section": "MP1 hypotheses",
+    "text": "MP1 hypotheses\nBefore we analyze our data, we should be very clear about our research hypotheses. Please write down your research hypotheses. These will be:\n\nlike the alternative hypothesis for inference testing,\nwritten in the words of the context of the problem, and\nat least one will be directional.\n\nFor example…\n\nI hypothesize that people will feel different depending on which greeting they got.\nI hypothesize that people who got the “What’s up?” greeting will feel better than those who got the “Hello” greeting or the “Hi” greeting.\nI hypothesize that poeple who got the “Hello” greeting will feel worse than those who got the “hi” greeting."
+  },
+  {
+    "objectID": "lectures/12_exam1_review.html#mp1-data-analysis-plan",
+    "href": "lectures/12_exam1_review.html#mp1-data-analysis-plan",
+    "title": "Exam 1 Review",
+    "section": "MP1 data analysis plan",
+    "text": "MP1 data analysis plan\nBasic analysis plan…\n\nI will download the data and clean it.\nI will make a box plot to visualize the differences between groups.\nI will calculate descriptive statistics and check…\nIf my N condition appears violated from the boxplots and/or my S condition is violated from the descriptive statistics I will try a log transformation if that seems like the obvious choice, or I will make a diagnostic plot by plotting log(sd) versus log(m).\nIf I decided to do a data transformation I will re-plot and re-test my conditions.\nI will then run the one-way ANOVA model and state my conclusions based on appropriate statistics.\nI will test or think about the rest of my ANOVA conditions.\nI will then test pairwise comparisons using the Fisher’s LSD method.\nI will also calculate effect sizes for these differences, confidence intervals, and the overall \\(R^2\\).\nI will write up all of my analyses clearly in words and proofread before I submit my report!"
+  },
+  {
+    "objectID": "lectures/12_exam1_review.html#radioactive-twins",
+    "href": "lectures/12_exam1_review.html#radioactive-twins",
+    "title": "Exam 1 Review",
+    "section": "Radioactive Twins",
+    "text": "Radioactive Twins\nMost people believe that country air is better to breather than city air, but how would you test it? You might start by choosing a response that narrows down what you mean by “better.” One feature of healthy lungs is tracheobronchial clearance—how fast they get rid of nasty stuff. To test this idea, investigators found 7 sets of mono-zygotic twins where one was living in the country and one in the city. Each person inhaled an aerosol of radioactive Teflon particles. Then the level of radioactivity was measured once right after inhaling, and again an hour later. The percent of the original radioactivity remaining was calculated."
+  },
+  {
+    "objectID": "lectures/12_exam1_review.html#bioequivalence-of-drug-delivery",
+    "href": "lectures/12_exam1_review.html#bioequivalence-of-drug-delivery",
+    "title": "Exam 1 Review",
+    "section": "Bioequivalence of drug delivery",
+    "text": "Bioequivalence of drug delivery\nThis experiment is interested in the blood concentration of a drug after it has been administered. The concentration will start at zero, then go up, and back down as it is metabolized. This curve may differ depending on the form of the drug (a solution, a tablet, or a capsule). We will use three subjects, and each subject will be given the drug three times, once for each method. The area under the time-concentration curve is recorded for each subject after each method of drug delivery."
+  },
+  {
+    "objectID": "lectures/12_exam1_review.html#leafhopper-survival",
+    "href": "lectures/12_exam1_review.html#leafhopper-survival",
+    "title": "Exam 1 Review",
+    "section": "Leafhopper survival",
+    "text": "Leafhopper survival\nIt is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group."
+  },
+  {
+    "objectID": "lectures/12_exam1_review.html#walking-babies",
+    "href": "lectures/12_exam1_review.html#walking-babies",
+    "title": "Exam 1 Review",
+    "section": "Walking Babies",
+    "text": "Walking Babies\nAs a rule it takes about a year before a baby takes its first steps alone. Scientists wondered if they could get babies to walk sooner by prescribing a set of special exercises. They decided to compare babies given special exercises with a control group of babies. But the scientists recognized that just showing an interest in the babies and their parents could cause a placebo effect. That is, the attention alone could influence parents and their babies in ways that would shorten the time to walk. 24 babies were randomly assigned to one of four conditions:\n\nSpecial exercises: Shown special exercises and parents are called weekly and asked it their baby was walking.\nExercise control: No special exercises but parents were told to have baby exercise for 15 min every day. Parents were called each week.\nWeekly report: No exercises but parents were called each week.\nFinal report: Only a report at the end on the study.\n\nThey recorded the age (in months) the babies first walked."
+  },
+  {
+    "objectID": "lectures/12_exam1_review.html#albino-rats",
+    "href": "lectures/12_exam1_review.html#albino-rats",
+    "title": "Exam 1 Review",
+    "section": "Albino Rats",
+    "text": "Albino Rats\nMale albino laboratory rats are used routinely in many kinds of experiments. This experiment was designed to determine the requirements for protein in their food. Specifically, the experiment is interested in testing five levels of protein (8.68, 12, 15, 18, and 21% of diet). 50 baby rats were randomly assigned to each of the 5 conditions. Body weight and food consumption were measured twice weekly, and the average daily weight gain over 21 days was recorded."
+  },
+  {
+    "objectID": "lectures/12_exam1_review.html#albino-rats-1",
+    "href": "lectures/12_exam1_review.html#albino-rats-1",
+    "title": "Exam 1 Review",
+    "section": "Albino Rats",
+    "text": "Albino Rats\nMale albino laboratory rats are used routinely in many kinds of experiments. This experiment was designed to determine the requirements for protein in their food. Specifically, the experiment is interested in testing five levels of protein (8.68, 12, 15, 18, and 21% of diet). Baby rats were separated into ten groups of 5 to form groups of approximately the same weight. The 5 rats in each group were randomly assigned to each of the 5 conditions. Body weight and food consumption were measured twice weekly, and the average daily weight gain over 21 days was recorded."
   }
 ]

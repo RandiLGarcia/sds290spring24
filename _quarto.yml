@@ -52,8 +52,8 @@ website:
           href: lectures/10_complete_block.html       
         - text: 11 - Assessing the Complete Block  
           href: lectures/11_assessing_cb.html
-        # - text: Exam 1 Review
-        #   href: lectures/12_exam1_review.html
+        - text: Exam 1 Review
+          href: lectures/12_exam1_review.html
         # - text: 13 - Two-Way Factorial
         #   href: lectures/13_two-way_factorial.html   
         # - text: 14 - Two-Way Factorial (cont.)

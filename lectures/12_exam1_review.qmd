@@ -1,0 +1,101 @@
+---
+title: "Exam 1 Review"
+author: Prof Randi Garcia, SDS 290
+date: March 12, 2024
+format: 
+  revealjs:
+    scrollable: true
+    theme: default
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
+```
+
+## Announcements
+
+-   Exam 1 distributed on Thursday 10:50a on Gradescope
+    -   Time to work in class
+    -   Due on Friday night on Gradescope
+-   Office hours
+    -   Thurs 2:45p - 4:00p
+    -   Friday 10:50a - 12:05p
+
+## Agenda
+
+1.  MP1 hypotheses and steps for analysis
+2.  MP1 data analysis plan 
+3.  Exam 1 review
+
+## Exam 1
+
+-   Open notes
+-   Open book
+-   Open slides
+-   CLOSED Google/ChatGPT/Etc
+-   Content:
+    -   conceptual questions and data analysis questions
+    -   some multiple choice and true/false questions
+    -   questions about interpreting output
+    -   you will need to do analysis in R!
+        -   Render your Quarto file as PDF and those pages to your Exam.
+
+## MP1 hypotheses
+
+Before we analyze our data, we should be very clear about our **research hypotheses**. Please write down your *research* hypotheses. These will be:
+
+-   like the **alternative hypothesis** for inference testing,
+-   written in the words of the context of the problem, and
+-   at least one will be directional.
+
+**For example...**
+
+-   I hypothesize that people will feel **different** depending on which greeting they got.
+-   I hypothesize that people who got the "What's up?" greeting will feel **better** than those who got the "Hello" greeting or the "Hi" greeting.
+-   I hypothesize that poeple who got the "Hello" greeting will feel **worse** than those who got the "hi" greeting.
+
+## MP1 data analysis plan
+
+Basic analysis plan...
+
+1.  I will download the data and clean it.
+2.  I will make a box plot to visualize the differences between groups.
+3.  I will calculate descriptive statistics and check...
+4.  If my **N** condition appears violated from the boxplots and/or my **S** condition is violated from the descriptive statistics I will try a log transformation if that seems like the obvious choice, or I will make a diagnostic plot by plotting log(sd) versus log(m).
+5.  If I decided to do a data transformation I will re-plot and re-test my conditions.
+6.  I will then run the one-way ANOVA model and state my conclusions based on appropriate statistics.
+7.  I will test or think about the rest of my ANOVA conditions.
+8.  I will then test pairwise comparisons using the Fisher's LSD method.
+9.  I will also calculate effect sizes for these differences, confidence intervals, and the overall $R^2$.
+10. I will write up all of my analyses clearly in words and proofread before I submit my report!
+
+## Radioactive Twins
+
+Most people believe that country air is better to breather than city air, but how would you test it? You might start by choosing a response that narrows down what you mean by "better." One feature of healthy lungs is tracheobronchial clearance---how fast they get rid of nasty stuff. To test this idea, investigators found 7 sets of mono-zygotic twins where one was living in the country and one in the city. Each person inhaled an aerosol of radioactive Teflon particles. Then the level of radioactivity was measured once right after inhaling, and again an hour later. The percent of the original radioactivity remaining was calculated.
+
+## Bioequivalence of drug delivery
+
+This experiment is interested in the blood concentration of a drug after it has been administered. The concentration will start at zero, then go up, and back down as it is metabolized. This curve may differ depending on the form of the drug (a solution, a tablet, or a capsule). We will use three subjects, and each subject will be given the drug three times, once for each method. The area under the time-concentration curve is recorded for each subject after each method of drug delivery.
+
+## Leafhopper survival
+
+It is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group.
+
+## Walking Babies
+
+As a rule it takes about a year before a baby takes its first steps alone. Scientists wondered if they could get babies to walk sooner by prescribing a set of special exercises. They decided to compare babies given special exercises with a control group of babies. But the scientists recognized that just showing an interest in the babies and their parents could cause a placebo effect. That is, the attention alone could influence parents and their babies in ways that would shorten the time to walk. 24 babies were randomly assigned to one of four conditions:
+
+1.  **Special exercises**: Shown special exercises and parents are called weekly and asked it their baby was walking.
+2.  **Exercise control**: No special exercises but parents were told to have baby exercise for 15 min every day. Parents were called each week.
+3.  **Weekly report**: No exercises but parents were called each week.
+4.  **Final report**: Only a report at the end on the study.
+
+They recorded the age (in months) the babies first walked.
+
+## Albino Rats
+
+Male albino laboratory rats are used routinely in many kinds of experiments. This experiment was designed to determine the requirements for protein in their food. Specifically, the experiment is interested in testing five levels of protein (8.68, 12, 15, 18, and 21% of diet). 50 baby rats were randomly assigned to each of the 5 conditions. Body weight and food consumption were measured twice weekly, and the average daily weight gain over 21 days was recorded.
+
+## Albino Rats
+
+Male albino laboratory rats are used routinely in many kinds of experiments. This experiment was designed to determine the requirements for protein in their food. Specifically, the experiment is interested in testing five levels of protein (8.68, 12, 15, 18, and 21% of diet). Baby rats were separated into ten groups of 5 to form groups of approximately the same weight. The 5 rats in each group were randomly assigned to each of the 5 conditions. Body weight and food consumption were measured twice weekly, and the average daily weight gain over 21 days was recorded.

@@ -148,8 +148,6 @@ Please read the specified sections *before* class that day.
 -   MP1 Data Collection Day
 -   Assessing the block design
 
-:::
-
 #### Thurs, Mar 7
 
 -   Using the block design
@@ -162,6 +160,8 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
     -   **HW #5 due tonight at 11:55p**
+
+:::
 
 ## Week 8 - Exam 1
 
@@ -179,7 +179,7 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
-    -   **Exam 1 due tonight at 11:55p**
+    -   **Exam 1 due tonight at 11:59p on Gradescope**
 
 ## Spring Break
 
