@@ -54,8 +54,8 @@ website:
           href: lectures/11_assessing_cb.html
         - text: Exam 1 Review
           href: lectures/12_exam1_review.html
-        # - text: 13 - Two-Way Factorial
-        #   href: lectures/13_two-way_factorial.html   
+        - text: 13 - Two-Way Factorial
+          href: lectures/13_two-way_factorial.html   
         # - text: 14 - Two-Way Factorial (cont.)
         #   href: lectures/14_two-way_factorial_II.html 
         # - text: 15 - Assessing Two-Way Factorial Designs
@@ -76,16 +76,14 @@ website:
         #   href: lectures/22_exam2_review.html       
       - text: Code
         menu:
-          - text: 01 - Animal Data
+          - text: Animal Data
             href: code/01_animal_data.qmd
-          - text: 02 - Informal ANOVA
+          - text: Informal ANOVA
             href: code/02_informal_anova.qmd
           - text: SandwichAnts Analysis
             href: code/SandwichAnts analysis.qmd
-          # - text: 04 - SandwichAnts Analysis
-          #   href: lectures/SandwichAnts_analysis.rmd
-          # - text: 05 - Two-Way Factorial Design
-          #   href: lectures/09_two-way_fac_inR.Rmd    
+          - text: Two-Way Factorial Design
+            href: code/09_two-way_fac_inR.qmd    
           # - text: 06 - Complete Block, Spilt-Plot Design in R
           #   href: lectures/13_spitplot_design_inR.Rmd       
           # - text: 06 - Extensions in R

@@ -103,5 +103,11 @@
   },
   "lectures/12_exam1_review.qmd": {
     "12_exam1_review.html": "5d725696"
+  },
+  "lectures/14_two-way_factorial_II.Rmd": {
+    "14_two-way_factorial_II.html": "7ec67664"
+  },
+  "lectures/13_two-way_factorial.qmd": {
+    "13_two-way_factorial.html": "dcf67436"
   }
 }

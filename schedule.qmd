@@ -161,8 +161,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **HW #5 due tonight at 11:55p**
 
-:::
-
 ## Week 8 - Exam 1
 
 #### Tue, Mar 12
@@ -195,6 +193,8 @@ Please read the specified sections *before* class that day.
 
 -   No class - Spring Break
 
+:::
+
 ## Week 10 - MP1 due
 
 #### Tue, Mar 26
@@ -216,7 +216,7 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
-    -   **Mini Project 1 due 11:55p** (upload to Moodle by Midnight)
+    -   **Mini Project 1 due 11:59p** (upload to Moodle by Midnight)
 
 ## Week 11
 
@@ -230,7 +230,7 @@ Please read the specified sections *before* class that day.
 #### Thurs, Apr 4
 
 -   Practice designs
--   **Office hours**: 2:45p - 4:00p
+-   **Office hours**: Cancelled today
 
 #### Fri, Apr 5
 
@@ -244,13 +244,13 @@ Please read the specified sections *before* class that day.
 
 -   Assessing two-way design
 -   Practice designs
+-   MP2 group assignments
 -   Homework due today:
     -   Read Ch **Stat2** 7.5
 
 #### Thurs, Apr 11
 
 -   Chapter 7 catch-up
--   MP2 group assignments
 -   Homework due today:
     -   No reading
 -   **Office hours**: 2:45p - 4:00p
@@ -259,7 +259,7 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
-    -   [**HW #7 due thurs at 11:55p**](homework.html)
+    -   [**HW #7 due today at 11:55p**](homework.html)
 
 ## Week 13
 
@@ -283,7 +283,7 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
     -   [**HW #8 due today at 9:20a**](homework.html)
-    -   **MP2 Pre-approval due tonight 11:55p**
+    -   **MP2 Pre-approval due tonight 11:55p** (upload to Moodle)
 
 ## Week 14
 
@@ -291,15 +291,14 @@ Please read the specified sections *before* class that day.
 
 -   MP2 Data Collection
 -   Homework due today:
-    -   Read Ch **Stat2** 8.6
-    -   Read Ch **Stat2** 8.4
+    -   Read Ch **Stat2** 8.4 
 
 #### Thurs, Apr 25
 
 -   MP2 Data Analysis
 -   Repeated measures designs
 -   Homework due today:
-    -   Read Ch **Stat2** 8.7-6.8
+    -   Read Ch **Stat2** 8.7-8.8
 -   **Office hours**: 2:45p - 4:00p
 
 #### Fri, Apr 26
@@ -323,7 +322,7 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
-    -   **Exam 2 due tonight at 11:55p**
+    -   **Exam 2 due tonight at 11:59p** (upload to Gradescope)
 
 ## Finals Week - MP2 due
 
@@ -337,4 +336,4 @@ Please read the specified sections *before* class that day.
 
 #### Fri, May 10
 
--   **MP2 due today at 11:55p**
+-   **MP2 due today at 11:59p** (upload to Moodle by Midnight)
