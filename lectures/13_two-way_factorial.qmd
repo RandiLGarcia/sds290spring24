@@ -53,21 +53,6 @@ Basic analysis plan...
 9.  I will also calculate effect sizes for these differences, confidence intervals, and the overall $R^2$.
 10. I will write up all of my analyses clearly in words and proofread before I submit my report!
 
-## MP1 data analysis plan
-
-Basic analysis plan...
-
-1.  **I will download the data and clean it.**
-2.  I will make a box plot to visualize the differences between groups.
-3.  I will calculate descriptive statistics and check the S assumption. Check for sample sizes in each condition.
-4.  If my **N** condition appears violated from the boxplots and/or my **S** condition is violated from the descriptive statistics I will try a log transformation if that seems like the obvious choice, or I will make a diagnostic plot by plotting log(sd) versus log(m).
-5.  If I decided to do a data transformation I will re-plot and re-test my conditions.
-6.  I will then run the one-way ANOVA model and state my conclusions based on appropriate statistics.
-7.  I will test or think about the rest of my ANOVA conditions.
-8.  I will then test pairwise comparisons using the Fisher's LSD method.
-9.  I will also calculate effect sizes for these differences, confidence intervals, and the overall $R^2$.
-10. I will write up all of my analyses clearly in words and proofread before I submit my report!
-
 ## Formal ANOVA for Complete Block Design
 
 $${y}_{ij}={\mu}+{\tau}_{i}+{\beta}_{j}+{e}_{ij}$$
