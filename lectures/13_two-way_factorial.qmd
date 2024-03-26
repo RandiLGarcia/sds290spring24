@@ -1,7 +1,7 @@
 ---
 title: "Two-Way Factorial Designs"
 author: Prof Randi Garcia, SDS 290
-date: March 25, 2024
+date: March 26, 2024
 format: 
   revealjs:
     scrollable: true
@@ -17,19 +17,19 @@ library(Stat2Data)
 ## Announcements
 
 -   Still grading Exam 1 (expect next week)
--   Mini-Project 1 Technical Report due on Friday 11:55p on Moodle
+-   Mini-Project 1 Technical Report due on Friday 11:59p on Moodle
 -   Office hours
     -   Thurs 2:45p - 4:00p
     -   Friday 10:50a - 12:05p
 -   Where to get MP1 help
     -   Office hours
     -   Post questions to #mini-project1 channel on Slack!
-    -   Direct message me on Slack.    
+    -   Direct message me on Slack.
 
 ## Agenda
 
 1.  Mid-semester Assessment
-2.  MP1 data pre-processing
+2.  MP1 data processing
 3.  Review blocking
     a.  Assessing conditions in block designs
 4.  Two-Way Factorial Design
