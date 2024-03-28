@@ -193,8 +193,6 @@ Please read the specified sections *before* class that day.
 
 -   No class - Spring Break
 
-:::
-
 ## Week 10 - MP1 due
 
 #### Tue, Mar 26
@@ -203,6 +201,8 @@ Please read the specified sections *before* class that day.
 -   Two-way factorial designs
 -   Homework due today:
     -   Read Ch **Stat2** 7.1-7.2
+
+:::
 
 #### Thurs, Mar 28
 
@@ -291,7 +291,7 @@ Please read the specified sections *before* class that day.
 
 -   MP2 Data Collection
 -   Homework due today:
-    -   Read Ch **Stat2** 8.4 
+    -   Read Ch **Stat2** 8.4
 
 #### Thurs, Apr 25
 

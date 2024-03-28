@@ -298,7 +298,7 @@
     "href": "schedule.html#week-10---mp1-due",
     "title": "Schedule",
     "section": "Week 10 - MP1 due",
-    "text": "Week 10 - MP1 due\n\nTue, Mar 26\n\nInteractions\nTwo-way factorial designs\nHomework due today:\n\nRead Ch Stat2 7.1-7.2\n\n\n\n\nThurs, Mar 28\n\nFitting two-way ANOVA\nPractice designs\nHomework due today:\n\nRead Ch Stat2 7.3\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Mar 29\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nMini Project 1 due 11:59p (upload to Moodle by Midnight)"
+    "text": "Week 10 - MP1 due\n\nTue, Mar 26\n\nInteractions\nTwo-way factorial designs\nHomework due today:\n\nRead Ch Stat2 7.1-7.2"
   },
   {
     "objectID": "schedule.html#week-15---exam-2",
@@ -2732,9 +2732,9 @@
   {
     "objectID": "lectures/14_two-way_factorial_II.html#announcements",
     "href": "lectures/14_two-way_factorial_II.html#announcements",
-    "title": "Two-Way Factorial Design (cont.)",
-    "section": "",
-    "text": "Expect Exam 1 grade next week\nMini-Project 1 due tomorrow 11:55p on Moodle\nOffice hours\n\nFriday office hours 12:15p-3:00p (slots open!)\n\nWhere to get MP1 help\n\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
+    "title": "Two-Way Factorial Designs II",
+    "section": "Announcements",
+    "text": "Announcements\n\nExpect Exam 1 grade next week\nMini-Project 1 due tomorrow 11:59p on Moodle\nOffice hours\n\nToday: 2:45p - 4:00p\nTomorrow: 10:50a - 12:05p\n\nWhere to get MP1 help\n\nOffice hours\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#agenda",
@@ -2879,106 +2879,617 @@
   {
     "objectID": "lectures/14_two-way_factorial_II.html#piglets",
     "href": "lectures/14_two-way_factorial_II.html#piglets",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Piglets",
     "text": "Piglets\nIt seems natural to think that adding the right vitamins to a pig’s diet might produce fatter pigs faster. You’ve decided to study the effects of B12 in two doses (0mg and 5mg). But pigs have bacteria living in their intestines that might prevent the uptake of vitamins, so you decided to give antibiotics to the pigs in one of two doses (0mg or 40 mg). You design your experiment in such a way that 3 piglets are randomly assigned to each of the 4 treatment conditions. You measure their weight every day, and take each pig’s average daily weight gain as your final number recorded."
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#two-way-factorial-design-factor-diagram",
     "href": "lectures/14_two-way_factorial_II.html#two-way-factorial-design-factor-diagram",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Two-Way Factorial Design Factor Diagram",
     "text": "Two-Way Factorial Design Factor Diagram\n\n\nDraw the factor diagram"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#research-questions-in-a-two-way-factorial-design",
     "href": "lectures/14_two-way_factorial_II.html#research-questions-in-a-two-way-factorial-design",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Research Questions in a Two-Way Factorial Design",
     "text": "Research Questions in a Two-Way Factorial Design\n\nDoes treatment A have an effect on the response variable?\n\nIs there a main effect of factor A?\n\nDoes treatment B have an effect on the response variable?\n\nIs there a main effect of factor B?\n\nDoes being in a specific combination of treatments have an effect over and above the additive effects of treatment A and B alone?\n\nIs there an interaction between factor A and factor B?"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#two-way-factorial-design-formulas",
     "href": "lectures/14_two-way_factorial_II.html#two-way-factorial-design-formulas",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Two-Way Factorial Design Formulas",
     "text": "Two-Way Factorial Design Formulas\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j}+{\\alpha\\beta}_{ij}+{e}_{ijk}\\]\n\nWhere \\(i\\), from 1 to \\(a\\), is the level of the first factor,\n\\(j\\), from 1 to \\(b\\), is the level of the second factor,\nand \\(k\\), from 1 to \\(n\\), is the observation in each cell."
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#sum-of-squares-ss",
     "href": "lectures/14_two-way_factorial_II.html#sum-of-squares-ss",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Sum of Squares (SS)",
     "text": "Sum of Squares (SS)\n\\[{SS}_{A} = \\sum_{i=1}^{a}bn(\\bar{y}_{i..}-\\bar{y}_{…})^{2}\\]\n\\[{SS}_{B} = \\sum_{j=1}^{b}an(\\bar{y}_{.j.}-\\bar{y}_{…})^{2}\\]\n\\[{SS}_{AB} = n\\sum_{i=1}^{a}\\sum_{j=1}^{b}(\\bar{y}_{ij.}-\\bar{y}_{i..}-\\bar{y}_{.j.}+\\bar{y}_{…})^{2}\\]\n\\[{SS}_{E} = \\sum_{i=1}^{a}\\sum_{j=1}^{b}\\sum_{k=1}^{n}({y}_{ijk}-\\bar{y}_{ij.})^{2}\\]"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#degrees-of-freedom-df",
     "href": "lectures/14_two-way_factorial_II.html#degrees-of-freedom-df",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Degrees of Freedom (df)",
     "text": "Degrees of Freedom (df)\n\\[{df}_{A}=a-1\\]\n\\[{df}_{B}=b-1\\]\n\\[{df}_{AB}=(a-1)(b-1)\\]\n\\[{df}_{E}=ab(n-1)\\]"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#mean-squares-ms",
     "href": "lectures/14_two-way_factorial_II.html#mean-squares-ms",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Mean Squares (MS)",
     "text": "Mean Squares (MS)\n\\[{MS}_{A}=\\frac{{SS}_{A}}{{df}_{A}}\\]\n\\[{MS}_{B}=\\frac{{SS}_{B}}{{df}_{B}}\\]\n\\[{MS}_{AB}=\\frac{{SS}_{AB}}{{df}_{AB}}\\]\n\\[{MS}_{E}=\\frac{{SS}_{E}}{{df}_{E}}\\]"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#f-ratios-and-the-f-distribution",
     "href": "lectures/14_two-way_factorial_II.html#f-ratios-and-the-f-distribution",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "F-ratios and the F-distribution",
     "text": "F-ratios and the F-distribution\nThe ultimate statistics we want to calculate is Variability in treatment effects/Variability in residuals. The F-ratio.\n\\[F = \\frac{{MS}_{A}}{{MS}_{E}}\\]\n\\[F = \\frac{{MS}_{B}}{{MS}_{E}}\\]\n\\[F = \\frac{{MS}_{AB}}{{MS}_{E}}\\]"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#anova-source-table-for-two-way-factorial",
     "href": "lectures/14_two-way_factorial_II.html#anova-source-table-for-two-way-factorial",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "ANOVA Source Table for Two-Way Factorial",
     "text": "ANOVA Source Table for Two-Way Factorial\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j}+{\\alpha\\beta}_{ij}+{e}_{ijk}\\]\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment A\n\\(\\sum_{i=1}^{a}bn(\\bar{y}_{i..}-\\bar{y}_{…})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{A}}{{df}_{A}}\\)\n\\(\\frac{{MS}_{A}}{{MS}_{E}}\\)\n\n\nTreatment B\n\\(\\sum_{j=1}^{b}an(\\bar{y}_{.j.}-\\bar{y}_{…})^{2}\\)\n\\(b-1\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nInteraction AB\n\\(n\\sum_{i=1}^{a}\\sum_{j=1}^{b}(\\bar{y}_{ij.}-\\bar{y}_{i..}-\\bar{y}_{.j.}+\\bar{y}_{…})^{2}\\)\n\\((a-1)(b-1)\\)\n\\(\\frac{{SS}_{AB}}{{df}_{AB}}\\)\n\\(\\frac{{MS}_{AB}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{b}\\sum_{k=1}^{n}({y}_{ijk}-\\bar{y}_{ij.})^{2}\\)\n\\(ab(n-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#interaction-graphs",
     "href": "lectures/14_two-way_factorial_II.html#interaction-graphs",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Interaction Graphs",
     "text": "Interaction Graphs\nFor each of the following interaction graphs, answer the following questions with YES or NO.\n\nIs there a main effect of B12?\nIs there a main effect of antibiotics?\nIs there an interaction between B12 and antibiotics?"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#practice-1",
     "href": "lectures/14_two-way_factorial_II.html#practice-1",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Practice 1",
     "text": "Practice 1"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#practice-1-1",
     "href": "lectures/14_two-way_factorial_II.html#practice-1-1",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Practice 1",
-    "text": "Practice 1\n\n\n\n\n\n\n\nYES\nYES\nNO"
+    "text": "Practice 1"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#practice-2",
     "href": "lectures/14_two-way_factorial_II.html#practice-2",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Practice 2",
     "text": "Practice 2"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#practice-2-1",
     "href": "lectures/14_two-way_factorial_II.html#practice-2-1",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Practice 2",
-    "text": "Practice 2\n\n\n\n\n\n\n\nNO\nYES\nNO"
+    "text": "Practice 2"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#two-way-factorial-in-r",
     "href": "lectures/14_two-way_factorial_II.html#two-way-factorial-in-r",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Two-Way Factorial in R",
     "text": "Two-Way Factorial in R\nSee Two-Way Factorial code"
+  },
+  {
+    "objectID": "lectures/13_two-way_factorial.html#teaching-methods",
+    "href": "lectures/13_two-way_factorial.html#teaching-methods",
+    "title": "Two-Way Factorial Designs",
+    "section": "Teaching Methods",
+    "text": "Teaching Methods\nA professor wanted to compare three different teaching methods to determine how students\nwould perceive the course: 1) instructionist, 2) inquiry-based, and 3) team-based. She randomly assigned the same class (same topic different students) from 6 different semesters to treatments. At the end of the semester students were asked to rate the course on a 5-point scale, and the average class rating was calculated."
+  },
+  {
+    "objectID": "lectures/13_two-way_factorial.html#anxiety-and-memory",
+    "href": "lectures/13_two-way_factorial.html#anxiety-and-memory",
+    "title": "Two-Way Factorial Designs",
+    "section": "Anxiety and Memory",
+    "text": "Anxiety and Memory\nA psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded $5 for participation and $10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded $5 for participation and $100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded."
+  },
+  {
+    "objectID": "lectures/14_two-way_factorial_II.html#teaching-methods",
+    "href": "lectures/14_two-way_factorial_II.html#teaching-methods",
+    "title": "Two-Way Factorial Designs II",
+    "section": "Teaching Methods",
+    "text": "Teaching Methods\nA professor wanted to compare three different teaching methods to determine how students\nwould perceive the course: 1) instructionist, 2) inquiry-based, and 3) team-based. She randomly assigned the same class (same topic different students) from 6 different semesters to treatments. At the end of the semester students were asked to rate the course on a 5-point scale, and the average class rating was calculated."
+  },
+  {
+    "objectID": "lectures/14_two-way_factorial_II.html#anxiety-and-memory",
+    "href": "lectures/14_two-way_factorial_II.html#anxiety-and-memory",
+    "title": "Two-Way Factorial Designs II",
+    "section": "Anxiety and Memory",
+    "text": "Anxiety and Memory\nA psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded $5 for participation and $10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded $5 for participation and $100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded."
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html",
+    "href": "lectures/15_assess_factorial.html",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "",
+    "text": "Exam 1 grades posted\nHW 6 posted and due Friday Nov 5 11:55p\nIn-person Office hours (Bass 412)\n\nWed (tomorrow) 10:50-12:05p\n\nZoom Office hours\n\nFriday 12:15-3p\nSlots open on Thurs morning\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework6-questions channel on Slack!\nDirect message me on Slack.\n\nApplications open for DSC-WAV (more info here)"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#announcements",
+    "href": "lectures/15_assess_factorial.html#announcements",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "",
+    "text": "Exam 1 grades posted\nHW 6 posted and due Friday Nov 5 11:55p\nIn-person Office hours (Bass 412)\n\nWed (tomorrow) 10:50-12:05p\n\nZoom Office hours\n\nFriday 12:15-3p\nSlots open on Thurs morning\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework6-questions channel on Slack!\nDirect message me on Slack.\n\nApplications open for DSC-WAV (more info here)"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#agenda",
+    "href": "lectures/15_assess_factorial.html#agenda",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Agenda",
+    "text": "Agenda\n\nMid-Semester Assessment feedback\nTwo-Way Factorial Design\n\nInteractions\nFitting the ANOVA model"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#sds-290-hows-things",
+    "href": "lectures/15_assess_factorial.html#sds-290-hows-things",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "SDS 290: How’s things?",
+    "text": "SDS 290: How’s things?\n\n“I really like it! Doing MP1 has super fun and it’s a really nice way to see all of our work come together.”\n“Overall great, I think I can master the material so far.”\n“I really like it, one of my favorite classes this semester!”\n“Great! The work is intense but I learnt a lot from it.”\n“It is okay”\n“I think SDS290 is going well. I feel like I am learning a lot and I really like the way the class is structured”\n“Okay! The content is understandable although not riveting but what can you do.”\n“The class is going pretty smoothly. However, the work is generally difficult and takes a long time. I appreciate all the help and extra support I get from the professor and my peers.”\n“This class is a lot harder than I expected, especially coming from a non-SDS background. I feel as if things haven’t fully sunk in and I just keep getting more and more lost”"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#sds-290-things-going-so-well",
+    "href": "lectures/15_assess_factorial.html#sds-290-things-going-so-well",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "SDS 290 things going so well…",
+    "text": "SDS 290 things going so well…\n\n“I really have been doing well on the weekly homework assignments. I think that the homework problems have been good and helpful. I also think that the lectures are super helpful.”\n“Lectures are always useful, especially when we go through code for various experimental aspects in class adn work through example problems.”\n“I really like the opportunity to discuss questions in pairs/small groups, and feel like the balance between that and lectures has been very good.”\n“I like mini-project one, where we got to design an experiment for something that interests us and explore other people’s interests.”\n“I like how I can have guidance and assistance from Professor Garcia whenever I need. And the resources of the class is easily accessible, I can navigate to the course material I need from moodle and the website. Everything is well-organized.”\n“I like the pace of the lecture. And I can feel this class really helps my other classes (especially when I look at the paper in psychology)”\n“I like the fact that this class includes lots of assignments that need to be done in R studio. One of the main reasons for me to take SDS 290 is to learn more about R in general. I also like the slack channel we have which is very useful and efficient. I appreciate that you always answer our questions on slack.”"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#sds-290-things-not-going-so-well",
+    "href": "lectures/15_assess_factorial.html#sds-290-things-not-going-so-well",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "SDS 290 things not going so well",
+    "text": "SDS 290 things not going so well\n\n“I think that the textbook is not super necessary, and sometimes confuses me. Your lectures are really the heart and soul of the class and are the reason that I feel like I am learning so much.”\n“I found some phrases and paragraphs in the textbook difficult to understand.”\n“Understanding why certain code does the task we want is a bit difficult at times.”\n“I would like for us to have answers to some of the questions from the textbook, so I have an idea of how to do them when I’m doing the homework.”\n“I would also appreciate a consolidated place with notes/things we’ve learned throughout the semester to revise before exams instead of having to go through the class sides which aren’t always filled with the details.”\n“I would like to see more psychology-centered scenarios or examples of ANOVA/blocking being used in a real-life research paper”\n“I wish the classroom content in lectures would be paced a little bit slower because the content is difficult and takes long to digest (and understand).”\n“Keeping up with lectures is not going very well for me. Sometimes I have trouble understanding and organizing the lecture notes.”\n“I also keep struggling and forgetting to add the homework slack channels so am always lost in the beginning of the week.”"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#sds-290-what-i-can-do",
+    "href": "lectures/15_assess_factorial.html#sds-290-what-i-can-do",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "SDS 290 what I can do",
+    "text": "SDS 290 what I can do\n\nTime in class for everyone to the homework Slack channels on Tuesdays.\nGive review sheet with topics we’ve covered for Exam 2.\n\nMore structured review session too.\n\nMore detail on lecture slides.\nMake sure to always have answers for example problems in slides.\nExamples from Psychology: finding peer-reviewed journal articles using ANOVA.\n\nTry to stick to one term for a concept:\n\n“I would greatly appreciate if the language you used would be more cohesive. Example: when you say assumptions and conditions they mean the same thing? But it is confusing when they are used interchangeably because it causes me to second guess myself. I would appreciate if we stuck to a general term and then possibly learned the others as a bonus. But exams and homework we stuck with the decided upon term.”"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#sds-290-what-you-can-do",
+    "href": "lectures/15_assess_factorial.html#sds-290-what-you-can-do",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "SDS 290 what you can do",
+    "text": "SDS 290 what you can do\n\n“I can work on doing the readings more in depth, I often only read the big boxes that are important. I can also try and ask more questions in class to further my understanding.”\n“Working through example problems in the book and practicing with code more frequently”\n“Start the homework earlier and read the textbook more thoroughly”\n“I think maybe re-reading the textbook chapter after the class to further solidify what I learned in class.”\n“I could participate more and ask more questions”\n“I need to keep up with the class content more and ask questions when I am feeling lost.”"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#design-name-disambiguation",
+    "href": "lectures/15_assess_factorial.html#design-name-disambiguation",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Design Name Disambiguation",
+    "text": "Design Name Disambiguation\nOne-Way Design\n\nIf the factor is a true experimental factor\n\nOne-Way Randomized Design\n\nWe analyze data this design with\n\nOne-Way ANOVA\n\n\nBlock design\n\nIf the factor of interest is experimental\n\nRandomized Block Design\n\nIf every block gets every treatment\n\nComplete Block Design\n\n\nIf every block gets every treatment and the factor of interest is experimental\n\nRandomized Complete Block Design\n\n\nWe analyze data from this design with\n\nTwo-Way additive ANOVA"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#design-name-disambiguation-1",
+    "href": "lectures/15_assess_factorial.html#design-name-disambiguation-1",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Design Name Disambiguation",
+    "text": "Design Name Disambiguation\nTwo-Way Factorial Design\n\nIf the factor of interest is experimental\n\nRandomized Two-Way Factorial design\n\nWe analyze data from this design with\n\nTwo-Way ANOVA\n\nThere is no blocking in this design"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#piglets",
+    "href": "lectures/15_assess_factorial.html#piglets",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Piglets",
+    "text": "Piglets\nIt seems natural to think that adding the right vitamins to a pig’s diet might produce fatter pigs faster. You’ve decided to study the effects of B12 in two doses (0mg and 5mg). But pigs have bacteria living in their intestines that might prevent the uptake of vitamins, so you decided to give antibiotics to the pigs in one of two doses (0mg or 40 mg). You design your experiment in such a way that 3 piglets are randomly assigned to each of the 4 treatment conditions. You measure their weight every day, and take each pig’s average daily weight gain as your final number recorded."
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#two-way-factorial-design-factor-diagram",
+    "href": "lectures/15_assess_factorial.html#two-way-factorial-design-factor-diagram",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Two-Way Factorial Design Factor Diagram",
+    "text": "Two-Way Factorial Design Factor Diagram\n\n\nDraw the factor diagram"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#research-questions-in-a-two-way-factorial-design",
+    "href": "lectures/15_assess_factorial.html#research-questions-in-a-two-way-factorial-design",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Research Questions in a Two-Way Factorial Design",
+    "text": "Research Questions in a Two-Way Factorial Design\n\nDoes treatment A have an effect on the response variable?\n\nIs there a main effect of factor A?\n\nDoes treatment B have an effect on the response variable?\n\nIs there a main effect of factor B?\n\nDoes being in a specific combination of treatments have an effect over and above the additive effects of treatment A and B alone?\n\nIs there an interaction between factor A and factor B?"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#interaction-graphs",
+    "href": "lectures/15_assess_factorial.html#interaction-graphs",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Interaction Graphs",
+    "text": "Interaction Graphs\nFor each of the following interaction graphs, answer the following questions with YES or NO.\n\nIs there a main effect of B12?\nIs there a main effect of antibiotics?\nIs there an interaction between B12 and antibiotics?"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#example",
+    "href": "lectures/15_assess_factorial.html#example",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#example-answers",
+    "href": "lectures/15_assess_factorial.html#example-answers",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Example: Answers",
+    "text": "Example: Answers\n\n\n\n\n\n\nYES\nYES\nYES"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#practice-1",
+    "href": "lectures/15_assess_factorial.html#practice-1",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Practice 1",
+    "text": "Practice 1"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#practice-1-1",
+    "href": "lectures/15_assess_factorial.html#practice-1-1",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Practice 1",
+    "text": "Practice 1\n\n\n\n\n\n\nNO\nNO\nYES"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#practice-2",
+    "href": "lectures/15_assess_factorial.html#practice-2",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Practice 2",
+    "text": "Practice 2"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#practice-2-1",
+    "href": "lectures/15_assess_factorial.html#practice-2-1",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Practice 2",
+    "text": "Practice 2\n\n\n\n\n\n\nYES\nYES\nNO"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#practice-3",
+    "href": "lectures/15_assess_factorial.html#practice-3",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Practice 3",
+    "text": "Practice 3"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#practice-3-1",
+    "href": "lectures/15_assess_factorial.html#practice-3-1",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Practice 3",
+    "text": "Practice 3\n\n\n\n\n\n\nNO\nYES\nNO"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#two-way-factorial-design-formulas",
+    "href": "lectures/15_assess_factorial.html#two-way-factorial-design-formulas",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Two-Way Factorial Design Formulas",
+    "text": "Two-Way Factorial Design Formulas\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j}+{\\alpha\\beta}_{ij}+{e}_{ijk}\\]\n\nWhere \\(i\\), from 1 to \\(a\\), is the level of the first factor,\n\\(j\\), from 1 to \\(b\\), is the level of the second factor,\nand \\(k\\), from 1 to \\(n\\), is the observation in each cell."
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#sum-of-squares-ss",
+    "href": "lectures/15_assess_factorial.html#sum-of-squares-ss",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Sum of Squares (SS)",
+    "text": "Sum of Squares (SS)\n\\[{SS}_{A} = \\sum_{i=1}^{a}bn(\\bar{y}_{i..}-\\bar{y}_{…})^{2}\\]\n\\[{SS}_{B} = \\sum_{j=1}^{b}an(\\bar{y}_{.j.}-\\bar{y}_{…})^{2}\\]\n\\[{SS}_{AB} = n\\sum_{i=1}^{a}\\sum_{j=1}^{b}(\\bar{y}_{ij.}-\\bar{y}_{i..}-\\bar{y}_{.j.}+\\bar{y}_{…})^{2}\\]\n\\[{SS}_{E} = \\sum_{i=1}^{a}\\sum_{j=1}^{b}\\sum_{k=1}^{n}({y}_{ijk}-\\bar{y}_{ij.})^{2}\\]"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#degrees-of-freedom-df",
+    "href": "lectures/15_assess_factorial.html#degrees-of-freedom-df",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Degrees of Freedom (df)",
+    "text": "Degrees of Freedom (df)\n\\[{df}_{A}=a-1\\]\n\\[{df}_{B}=b-1\\]\n\\[{df}_{AB}=(a-1)(b-1)\\]\n\\[{df}_{E}=ab(n-1)\\]"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#mean-squares-ms",
+    "href": "lectures/15_assess_factorial.html#mean-squares-ms",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Mean Squares (MS)",
+    "text": "Mean Squares (MS)\n\\[{MS}_{A}=\\frac{{SS}_{A}}{{df}_{A}}\\]\n\\[{MS}_{B}=\\frac{{SS}_{B}}{{df}_{B}}\\]\n\\[{MS}_{AB}=\\frac{{SS}_{AB}}{{df}_{AB}}\\]\n\\[{MS}_{E}=\\frac{{SS}_{E}}{{df}_{E}}\\]"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#three-research-questions-three-f-ratios",
+    "href": "lectures/15_assess_factorial.html#three-research-questions-three-f-ratios",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Three Research Questions, Three F-ratios",
+    "text": "Three Research Questions, Three F-ratios\n\nIs there a significant main effect of factor A?\nIs there a significant main effect of factor B?\nIs there an significant interaction between factor A and factor B?"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#f-ratios-and-the-f-distribution",
+    "href": "lectures/15_assess_factorial.html#f-ratios-and-the-f-distribution",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "F-ratios and the F-distribution",
+    "text": "F-ratios and the F-distribution\nThe ultimate statistics we want to calculate is Variability in treatment effects/Variability in residuals. The F-ratio.\n\\[F = \\frac{{MS}_{A}}{{MS}_{E}}\\]\n\\[F = \\frac{{MS}_{B}}{{MS}_{E}}\\]\n\\[F = \\frac{{MS}_{AB}}{{MS}_{E}}\\]"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#anova-source-table-for-two-way-factorial",
+    "href": "lectures/15_assess_factorial.html#anova-source-table-for-two-way-factorial",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "ANOVA Source Table for Two-Way Factorial",
+    "text": "ANOVA Source Table for Two-Way Factorial\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j}+{\\alpha\\beta}_{ij}+{e}_{ijk}\\]\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment A\n\\(\\sum_{i=1}^{a}bn(\\bar{y}_{i..}-\\bar{y}_{…})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{A}}{{df}_{A}}\\)\n\\(\\frac{{MS}_{A}}{{MS}_{E}}\\)\n\n\nTreatment B\n\\(\\sum_{j=1}^{b}an(\\bar{y}_{.j.}-\\bar{y}_{…})^{2}\\)\n\\(b-1\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nInteraction AB\n\\(n\\sum_{i=1}^{a}\\sum_{j=1}^{b}(\\bar{y}_{ij.}-\\bar{y}_{i..}-\\bar{y}_{.j.}+\\bar{y}_{…})^{2}\\)\n\\((a-1)(b-1)\\)\n\\(\\frac{{SS}_{AB}}{{df}_{AB}}\\)\n\\(\\frac{{MS}_{AB}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{b}\\sum_{k=1}^{n}({y}_{ijk}-\\bar{y}_{ij.})^{2}\\)\n\\(ab(n-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/15_assess_factorial.html#two-way-factorial-in-r",
+    "href": "lectures/15_assess_factorial.html#two-way-factorial-in-r",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Two-Way Factorial in R",
+    "text": "Two-Way Factorial in R\nSee Two-Way Factorial code"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html",
+    "href": "lectures/16_fit_factorial.html",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "",
+    "text": "HW 6 grades posted; MP1 grades are (mostly) posted\nHW 7 posted and due Friday Nov 12 11:55p\n\nFind a research article that uses ANOVA\n\nIn-person Office hours (Bass 412)\n\nWed (tomorrow) 10:50-12:05p\n\nZoom Office hours\n\nFriday 12:15-3p\nSlots open on Thurs morning\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework7-questions channel on Slack!\nDirect message me on Slack.\n\nApplications open for DSC-WAV (more info here)\n\nDue tomorrow"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#announcements",
+    "href": "lectures/16_fit_factorial.html#announcements",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "",
+    "text": "HW 6 grades posted; MP1 grades are (mostly) posted\nHW 7 posted and due Friday Nov 12 11:55p\n\nFind a research article that uses ANOVA\n\nIn-person Office hours (Bass 412)\n\nWed (tomorrow) 10:50-12:05p\n\nZoom Office hours\n\nFriday 12:15-3p\nSlots open on Thurs morning\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework7-questions channel on Slack!\nDirect message me on Slack.\n\nApplications open for DSC-WAV (more info here)\n\nDue tomorrow"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#sds-biostatistics-job-candidates",
+    "href": "lectures/16_fit_factorial.html#sds-biostatistics-job-candidates",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "SDS Biostatistics Job Candidates",
+    "text": "SDS Biostatistics Job Candidates\n\nTea with candidates 3:30-4:30 p.m. Fri and 4:00-4:45 p.m. Mon Wed (sign-up here!)\nResearch talks with grab-and-go lunches (12:25-1:20 p.m., Ford 240 or McConnell 103)\nTeaching demonstrations (5:00-6:00 p.m., Sabin-Reed 301)\n\nFriday November 12, 2021: Kaitlyn Cook “Statistical Methods for Cluster-Randomized Infectious Disease Prevention Trial”. Research talk: Ford 240.\nMonday November 15, 2021: Anny-Claude Joseph “The Timing of Geographic Power”. Research talk: Ford 240.\nWednesday November 17, 2021: Jacob Fiksel “Generalized Bayes Quantification Learning with Applications to Mortality Surveillance”. Research talk: McConnell 103."
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#agenda",
+    "href": "lectures/16_fit_factorial.html#agenda",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Agenda",
+    "text": "Agenda\n\nMP2 Assignment\nTwo-Way Factorial Design (continued)\n\nMore interactions!\nFitting the ANOVA model"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#mp2-assignment",
+    "href": "lectures/16_fit_factorial.html#mp2-assignment",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "MP2 Assignment",
+    "text": "MP2 Assignment\n\nMP2 instructions\nMP2 group selection survey"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#interaction-graphs",
+    "href": "lectures/16_fit_factorial.html#interaction-graphs",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Interaction Graphs",
+    "text": "Interaction Graphs\nFor each of the following interaction graphs, answer the following questions with YES or NO.\n\nIs there a main effect of B12?\nIs there a main effect of antibiotics?\nIs there an interaction between B12 and antibiotics?"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#practice-1",
+    "href": "lectures/16_fit_factorial.html#practice-1",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Practice 1",
+    "text": "Practice 1"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#practice-1-1",
+    "href": "lectures/16_fit_factorial.html#practice-1-1",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Practice 1",
+    "text": "Practice 1\n\n\n\n\n\n\nNO\nNO\nYES"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#practice-2",
+    "href": "lectures/16_fit_factorial.html#practice-2",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Practice 2",
+    "text": "Practice 2"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#practice-2-1",
+    "href": "lectures/16_fit_factorial.html#practice-2-1",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Practice 2",
+    "text": "Practice 2\n\n\n\n\n\n\nYES\nYES\nNO"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#practice-3",
+    "href": "lectures/16_fit_factorial.html#practice-3",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Practice 3",
+    "text": "Practice 3"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#practice-3-1",
+    "href": "lectures/16_fit_factorial.html#practice-3-1",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Practice 3",
+    "text": "Practice 3\n\n\n\n\n\n\nNO\nYES\nNO"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#two-way-factorial-design-formulas",
+    "href": "lectures/16_fit_factorial.html#two-way-factorial-design-formulas",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Two-Way Factorial Design Formulas",
+    "text": "Two-Way Factorial Design Formulas\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j}+{\\alpha\\beta}_{ij}+{e}_{ijk}\\]\n\nWhere \\(i\\), from 1 to \\(a\\), is the level of the first factor,\n\\(j\\), from 1 to \\(b\\), is the level of the second factor,\nand \\(k\\), from 1 to \\(n\\), is the observation in each cell."
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#sum-of-squares-ss",
+    "href": "lectures/16_fit_factorial.html#sum-of-squares-ss",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Sum of Squares (SS)",
+    "text": "Sum of Squares (SS)\n\\[{SS}_{A} = \\sum_{i=1}^{a}bn(\\bar{y}_{i..}-\\bar{y}_{…})^{2}\\]\n\\[{SS}_{B} = \\sum_{j=1}^{b}an(\\bar{y}_{.j.}-\\bar{y}_{…})^{2}\\]\n\\[{SS}_{AB} = n\\sum_{i=1}^{a}\\sum_{j=1}^{b}(\\bar{y}_{ij.}-\\bar{y}_{i..}-\\bar{y}_{.j.}+\\bar{y}_{…})^{2}\\]\n\\[{SS}_{E} = \\sum_{i=1}^{a}\\sum_{j=1}^{b}\\sum_{k=1}^{n}({y}_{ijk}-\\bar{y}_{ij.})^{2}\\]"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#degrees-of-freedom-df",
+    "href": "lectures/16_fit_factorial.html#degrees-of-freedom-df",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Degrees of Freedom (df)",
+    "text": "Degrees of Freedom (df)\n\\[{df}_{A}=a-1\\]\n\\[{df}_{B}=b-1\\]\n\\[{df}_{AB}=(a-1)(b-1)\\]\n\\[{df}_{E}=ab(n-1)\\]"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#mean-squares-ms",
+    "href": "lectures/16_fit_factorial.html#mean-squares-ms",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Mean Squares (MS)",
+    "text": "Mean Squares (MS)\n\\[{MS}_{A}=\\frac{{SS}_{A}}{{df}_{A}}\\]\n\\[{MS}_{B}=\\frac{{SS}_{B}}{{df}_{B}}\\]\n\\[{MS}_{AB}=\\frac{{SS}_{AB}}{{df}_{AB}}\\]\n\\[{MS}_{E}=\\frac{{SS}_{E}}{{df}_{E}}\\]"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#three-research-questions-three-f-ratios",
+    "href": "lectures/16_fit_factorial.html#three-research-questions-three-f-ratios",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Three Research Questions, Three F-ratios",
+    "text": "Three Research Questions, Three F-ratios\n\nIs there a significant main effect of factor A?\nIs there a significant main effect of factor B?\nIs there an significant interaction between factor A and factor B?"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#f-ratios-and-the-f-distribution",
+    "href": "lectures/16_fit_factorial.html#f-ratios-and-the-f-distribution",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "F-ratios and the F-distribution",
+    "text": "F-ratios and the F-distribution\nThe ultimate statistics we want to calculate is Variability in treatment effects/Variability in residuals. The F-ratio.\n\\[F = \\frac{{MS}_{A}}{{MS}_{E}}\\]\n\\[F = \\frac{{MS}_{B}}{{MS}_{E}}\\]\n\\[F = \\frac{{MS}_{AB}}{{MS}_{E}}\\]"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#anova-source-table-for-two-way-factorial",
+    "href": "lectures/16_fit_factorial.html#anova-source-table-for-two-way-factorial",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "ANOVA Source Table for Two-Way Factorial",
+    "text": "ANOVA Source Table for Two-Way Factorial\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j}+{\\alpha\\beta}_{ij}+{e}_{ijk}\\]\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment A\n\\(\\sum_{i=1}^{a}bn(\\bar{y}_{i..}-\\bar{y}_{…})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{A}}{{df}_{A}}\\)\n\\(\\frac{{MS}_{A}}{{MS}_{E}}\\)\n\n\nTreatment B\n\\(\\sum_{j=1}^{b}an(\\bar{y}_{.j.}-\\bar{y}_{…})^{2}\\)\n\\(b-1\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nInteraction AB\n\\(n\\sum_{i=1}^{a}\\sum_{j=1}^{b}(\\bar{y}_{ij.}-\\bar{y}_{i..}-\\bar{y}_{.j.}+\\bar{y}_{…})^{2}\\)\n\\((a-1)(b-1)\\)\n\\(\\frac{{SS}_{AB}}{{df}_{AB}}\\)\n\\(\\frac{{MS}_{AB}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{b}\\sum_{k=1}^{n}({y}_{ijk}-\\bar{y}_{ij.})^{2}\\)\n\\(ab(n-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#two-way-factorial-in-r",
+    "href": "lectures/16_fit_factorial.html#two-way-factorial-in-r",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Two-Way Factorial in R",
+    "text": "Two-Way Factorial in R\nSee Two-Way Factorial code"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html",
+    "href": "lectures/17_catch-up_factorial.html",
+    "title": "Chapter 7 Catch-up",
+    "section": "",
+    "text": "MP1 grades are posted\nHW 7 posted and due tomorrow Nov 12 11:55p\n\nFind a research article that uses ANOVA!\n\nZoom Office hours\n\nFriday 2:00-4p\nSlots are open\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework7-questions channel on Slack!\nDirect message me on Slack.\n\nSDS Graduate School PanelNov 22 7-8p via Zoom\n\nSee Moodle for more details."
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#announcements",
+    "href": "lectures/17_catch-up_factorial.html#announcements",
+    "title": "Chapter 7 Catch-up",
+    "section": "",
+    "text": "MP1 grades are posted\nHW 7 posted and due tomorrow Nov 12 11:55p\n\nFind a research article that uses ANOVA!\n\nZoom Office hours\n\nFriday 2:00-4p\nSlots are open\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework7-questions channel on Slack!\nDirect message me on Slack.\n\nSDS Graduate School PanelNov 22 7-8p via Zoom\n\nSee Moodle for more details."
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#sds-biostatistics-job-candidate---friday",
+    "href": "lectures/17_catch-up_factorial.html#sds-biostatistics-job-candidate---friday",
+    "title": "Chapter 7 Catch-up",
+    "section": "SDS Biostatistics Job Candidate - Friday",
+    "text": "SDS Biostatistics Job Candidate - Friday\nKaitlyn Cook tomorrow!!\n\nTea with candidates 3:30-4:30 p.m. (all set for students for this one!)\nResearch talk with grab-and-go lunch (12:25-1:20 p.m., Ford 240)\n\n“Statistical Methods for Cluster-Randomized Infectious Disease Prevention Trial”\n\nTeaching demonstration (5:00-6:00 p.m., Sabin-Reed 301)\n\n“Introduction to Logistic Regression”"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#sds-biostatistics-job-candidate---monday",
+    "href": "lectures/17_catch-up_factorial.html#sds-biostatistics-job-candidate---monday",
+    "title": "Chapter 7 Catch-up",
+    "section": "SDS Biostatistics Job Candidate - Monday",
+    "text": "SDS Biostatistics Job Candidate - Monday\nAnny-Claude Joseph on Monday!!\n\nTea with candidates 3:30-4:30 p.m. (all set for students for this one too!)\nResearch talk with grab-and-go lunch (12:25-1:20 p.m., Ford 240)\n\n“The Timing of Geographic Power”\n\nTeaching demonstration (5:00-6:00 p.m., Sabin-Reed 301)"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#agenda",
+    "href": "lectures/17_catch-up_factorial.html#agenda",
+    "title": "Chapter 7 Catch-up",
+    "section": "Agenda",
+    "text": "Agenda\n\nFitting the Two-Way Factorial ANOVA model\n\nDegrees of freedom\n\nConditions for the Two-Way Factorial ANOVA\n\nConfidence intervals and effect sizes\nMP2 project groups!"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#warm-up-teaching-methods",
+    "href": "lectures/17_catch-up_factorial.html#warm-up-teaching-methods",
+    "title": "Chapter 7 Catch-up",
+    "section": "Warm-up: Teaching Methods",
+    "text": "Warm-up: Teaching Methods\nA professor wanted to compare three different teaching methods to determine how students would perceive the course: 1) instructionist, 2) inquiry-based, and 3) team-based. She randomly assigned the same class (same topic different students) from 6 different semesters to treatments. At the end of the semester students were asked to rate the course on a 5-point scale, and the average class rating was calculated."
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#warm-up-swimsuitsweater-study",
+    "href": "lectures/17_catch-up_factorial.html#warm-up-swimsuitsweater-study",
+    "title": "Chapter 7 Catch-up",
+    "section": "Warm-up: Swimsuit/Sweater Study",
+    "text": "Warm-up: Swimsuit/Sweater Study\nObjectification theory (Fredrickson & Roberts, 1997) posits that American culture socializes women to adopt observers’ perspectives on their physical selves. This self-objectification is hypothesized to (a) produce body shame, which in turn leads to restrained eating, and (b) consume attentional resources, which is manifested in diminished mental performance on a math test. An experiment manipulated self-objectification by having participants try on a swimsuit or a sweater. Further, it tested 20 women and 20 men, in each condition, and found that the effects on math performance were present for women only."
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#warm-up-anxiety-and-memory",
+    "href": "lectures/17_catch-up_factorial.html#warm-up-anxiety-and-memory",
+    "title": "Chapter 7 Catch-up",
+    "section": "Warm-up: Anxiety and Memory",
+    "text": "Warm-up: Anxiety and Memory\nA psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded $5 for participation and $10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded $5 for participation and $100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded."
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#anova-source-table-for-two-way-factorial",
+    "href": "lectures/17_catch-up_factorial.html#anova-source-table-for-two-way-factorial",
+    "title": "Chapter 7 Catch-up",
+    "section": "ANOVA Source Table for Two-Way Factorial",
+    "text": "ANOVA Source Table for Two-Way Factorial\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j}+{\\alpha\\beta}_{ij}+{e}_{ijk}\\]\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment A\n\\(\\sum_{i=1}^{a}bn(\\bar{y}_{i..}-\\bar{y}_{…})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{A}}{{df}_{A}}\\)\n\\(\\frac{{MS}_{A}}{{MS}_{E}}\\)\n\n\nTreatment B\n\\(\\sum_{j=1}^{b}an(\\bar{y}_{.j.}-\\bar{y}_{…})^{2}\\)\n\\(b-1\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nInteraction AB\n\\(n\\sum_{i=1}^{a}\\sum_{j=1}^{b}(\\bar{y}_{ij.}-\\bar{y}_{i..}-\\bar{y}_{.j.}+\\bar{y}_{…})^{2}\\)\n\\((a-1)(b-1)\\)\n\\(\\frac{{SS}_{AB}}{{df}_{AB}}\\)\n\\(\\frac{{MS}_{AB}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{b}\\sum_{k=1}^{n}({y}_{ijk}-\\bar{y}_{ij.})^{2}\\)\n\\(ab(n-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#degrees-of-freedom-df",
+    "href": "lectures/17_catch-up_factorial.html#degrees-of-freedom-df",
+    "title": "Chapter 7 Catch-up",
+    "section": "Degrees of Freedom (df)",
+    "text": "Degrees of Freedom (df)\n\\[{df}_{A}=a-1\\]\n\\[{df}_{B}=b-1\\]\n\\[{df}_{AB}=(a-1)(b-1)\\]\n\\[{df}_{E}=ab(n-1)\\]"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#mean-squares-ms",
+    "href": "lectures/17_catch-up_factorial.html#mean-squares-ms",
+    "title": "Chapter 7 Catch-up",
+    "section": "Mean Squares (MS)",
+    "text": "Mean Squares (MS)\n\\[{MS}_{A}=\\frac{{SS}_{A}}{{df}_{A}}\\]\n\\[{MS}_{B}=\\frac{{SS}_{B}}{{df}_{B}}\\]\n\\[{MS}_{AB}=\\frac{{SS}_{AB}}{{df}_{AB}}\\]\n\\[{MS}_{E}=\\frac{{SS}_{E}}{{df}_{E}}\\]"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#three-research-questions-three-f-ratios",
+    "href": "lectures/17_catch-up_factorial.html#three-research-questions-three-f-ratios",
+    "title": "Chapter 7 Catch-up",
+    "section": "Three Research Questions, Three F-ratios",
+    "text": "Three Research Questions, Three F-ratios\n\nIs there a significant main effect of factor A?\nIs there a significant main effect of factor B?\nIs there an significant interaction between factor A and factor B?"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#f-ratios-and-the-f-distribution",
+    "href": "lectures/17_catch-up_factorial.html#f-ratios-and-the-f-distribution",
+    "title": "Chapter 7 Catch-up",
+    "section": "F-ratios and the F-distribution",
+    "text": "F-ratios and the F-distribution\nThe ultimate statistics we want to calculate is Variability in treatment effects/Variability in residuals. The F-ratio.\n\\[F = \\frac{{MS}_{A}}{{MS}_{E}}\\]\n\\[F = \\frac{{MS}_{B}}{{MS}_{E}}\\]\n\\[F = \\frac{{MS}_{AB}}{{MS}_{E}}\\]"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#anova-source-table-for-two-way-factorial-1",
+    "href": "lectures/17_catch-up_factorial.html#anova-source-table-for-two-way-factorial-1",
+    "title": "Chapter 7 Catch-up",
+    "section": "ANOVA Source Table for Two-Way Factorial",
+    "text": "ANOVA Source Table for Two-Way Factorial\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j}+{\\alpha\\beta}_{ij}+{e}_{ijk}\\]\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment A\n\\(\\sum_{i=1}^{a}bn(\\bar{y}_{i..}-\\bar{y}_{…})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{A}}{{df}_{A}}\\)\n\\(\\frac{{MS}_{A}}{{MS}_{E}}\\)\n\n\nTreatment B\n\\(\\sum_{j=1}^{b}an(\\bar{y}_{.j.}-\\bar{y}_{…})^{2}\\)\n\\(b-1\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nInteraction AB\n\\(n\\sum_{i=1}^{a}\\sum_{j=1}^{b}(\\bar{y}_{ij.}-\\bar{y}_{i..}-\\bar{y}_{.j.}+\\bar{y}_{…})^{2}\\)\n\\((a-1)(b-1)\\)\n\\(\\frac{{SS}_{AB}}{{df}_{AB}}\\)\n\\(\\frac{{MS}_{AB}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{b}\\sum_{k=1}^{n}({y}_{ijk}-\\bar{y}_{ij.})^{2}\\)\n\\(ab(n-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#confidence-intervals-and-effect-sizes",
+    "href": "lectures/17_catch-up_factorial.html#confidence-intervals-and-effect-sizes",
+    "title": "Chapter 7 Catch-up",
+    "section": "Confidence intervals and effect sizes",
+    "text": "Confidence intervals and effect sizes\n\nIf the interaction is significant\n\nCalculate CIs and effect sizes for sets of conditional averages (also called “simple effects”)\nFor example, for the 0mg antibiotics condition, what’s the effect size for B12\n\nIf the interaction is NOT significant\n\nCalculate CIs and effect sizes for sets of marginal averages (also called “main effects”)\nFor example, what is the effect size for B12 overall?"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#conditional-averages-and-marginal-averages",
+    "href": "lectures/17_catch-up_factorial.html#conditional-averages-and-marginal-averages",
+    "title": "Chapter 7 Catch-up",
+    "section": "Conditional Averages and Marginal Averages",
+    "text": "Conditional Averages and Marginal Averages\n\n\nThe numbers in blue are Marginal Averages\nThe numbers in green are Conditional Averages"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#confidence-intervals-and-effect-sizes-1",
+    "href": "lectures/17_catch-up_factorial.html#confidence-intervals-and-effect-sizes-1",
+    "title": "Chapter 7 Catch-up",
+    "section": "Confidence Intervals and Effect Sizes",
+    "text": "Confidence Intervals and Effect Sizes\n\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\n\n\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#two-way-factorial-in-r",
+    "href": "lectures/17_catch-up_factorial.html#two-way-factorial-in-r",
+    "title": "Chapter 7 Catch-up",
+    "section": "Two-Way Factorial in R",
+    "text": "Two-Way Factorial in R\nSee Two-Way Factorial code"
+  },
+  {
+    "objectID": "lectures/17_catch-up_factorial.html#mp2-groups",
+    "href": "lectures/17_catch-up_factorial.html#mp2-groups",
+    "title": "Chapter 7 Catch-up",
+    "section": "MP2 Groups",
+    "text": "MP2 Groups\n\nI have now assigned MP2 groups\n\nPlease let me know in a private direct message on Slack if for any reason you would like to be re-assigned\n\nTime to discuss your MP1 projects and start brainstorming!"
   }
 ]

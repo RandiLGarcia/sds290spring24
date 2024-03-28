@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="SDS 290">
+<meta name="dcterms.date" content="2021-11-02">
+
+<title>SDS 290 - Spring 2024 - Fitting Two-Way Factorial Designs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SDS 290 - Spring 2024</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li class="dropdown-header">Helpful Links</li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lectures" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Lectures</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-lectures">    
+        <li>
+    <a class="dropdown-item" href="../lectures/01_intro_to_experimental.html" rel="" target="">
+ <span class="dropdown-text">01 - Intro to Experimental Design</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/02_one-way-ANOVA.html" rel="" target="">
+ <span class="dropdown-text">02 - One-Way ANOVA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/03_one-way-ANOVAII.html" rel="" target="">
+ <span class="dropdown-text">03 - One-Way ANOVA II</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/04_inference-ANOVA.html" rel="" target="">
+ <span class="dropdown-text">04 - Inference for ANOVA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/05_ANOVA-conditions.html" rel="" target="">
+ <span class="dropdown-text">05 - ANOVA Conditions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/06_CI-effect-sizes.html" rel="" target="">
+ <span class="dropdown-text">06 - Confidence Intervals and Effect Sizes</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/07_multiple-comparisons.html" rel="" target="">
+ <span class="dropdown-text">07 - Multiple Comparisons</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/08_four-designs.html" rel="" target="">
+ <span class="dropdown-text">08 - Four Designs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/09_intro_to_blocking.html" rel="" target="">
+ <span class="dropdown-text">09 - Intro to Blocking</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/10_complete_block.html" rel="" target="">
+ <span class="dropdown-text">10 - Analysis of Complete Block</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/11_assessing_cb.html" rel="" target="">
+ <span class="dropdown-text">11 - Assessing the Complete Block</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/12_exam1_review.html" rel="" target="">
+ <span class="dropdown-text">Exam 1 Review</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/13_two-way_factorial.html" rel="" target="">
+ <span class="dropdown-text">13 - Two-Way Factorial</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/14_two-way_factorial_II.html" rel="" target="">
+ <span class="dropdown-text">14 - Two-Way Factorial (cont.)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-code" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Code</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-code">    
+        <li>
+    <a class="dropdown-item" href="../code/01_animal_data.qmd" rel="" target="">
+ <span class="dropdown-text">Animal Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../code/02_informal_anova.qmd" rel="" target="">
+ <span class="dropdown-text">Informal ANOVA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../code/SandwichAnts analysis.qmd" rel="" target="">
+ <span class="dropdown-text">SandwichAnts Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../code/09_two-way_fac_inR.qmd" rel="" target="">
+ <span class="dropdown-text">Two-Way Factorial Design</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-homework" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Homework</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-homework">    
+        <li>
+    <a class="dropdown-item" href="http://moodle.smith.edu" rel="" target="">
+ <span class="dropdown-text">HW1a: Record your names on Moodle</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../pdfs/HW 1b_CITI Training.pdf" rel="" target="">
+ <span class="dropdown-text">HW1b: CITI Training</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../homework.html" rel="" target="">
+ <span class="dropdown-text">HW2: Click Here</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../homework.html" rel="" target="">
+ <span class="dropdown-text">HW #3: 5.32, 5.38, 5.54</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../homework.html" rel="" target="">
+ <span class="dropdown-text">HW4: 5.59, 5.60, 5.70, 5.36, 5.43</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../homework.html" rel="" target="">
+ <span class="dropdown-text">HW5: 5.46, 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../project/mini-project-1.html" rel="" target="">
+ <span class="dropdown-text">Mini project 1</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#announcements" id="toc-announcements" class="nav-link active" data-scroll-target="#announcements">Announcements</a></li>
+  <li><a href="#agenda" id="toc-agenda" class="nav-link" data-scroll-target="#agenda">Agenda</a></li>
+  <li><a href="#sds-290-hows-things" id="toc-sds-290-hows-things" class="nav-link" data-scroll-target="#sds-290-hows-things">SDS 290: How’s things?</a></li>
+  <li><a href="#sds-290-things-going-so-well" id="toc-sds-290-things-going-so-well" class="nav-link" data-scroll-target="#sds-290-things-going-so-well">SDS 290 things going so well…</a></li>
+  <li><a href="#sds-290-things-not-going-so-well" id="toc-sds-290-things-not-going-so-well" class="nav-link" data-scroll-target="#sds-290-things-not-going-so-well">SDS 290 things not going so well</a></li>
+  <li><a href="#sds-290-what-i-can-do" id="toc-sds-290-what-i-can-do" class="nav-link" data-scroll-target="#sds-290-what-i-can-do">SDS 290 what I can do</a></li>
+  <li><a href="#sds-290-what-you-can-do" id="toc-sds-290-what-you-can-do" class="nav-link" data-scroll-target="#sds-290-what-you-can-do">SDS 290 what you can do</a></li>
+  <li><a href="#design-name-disambiguation" id="toc-design-name-disambiguation" class="nav-link" data-scroll-target="#design-name-disambiguation">Design Name Disambiguation</a></li>
+  <li><a href="#design-name-disambiguation-1" id="toc-design-name-disambiguation-1" class="nav-link" data-scroll-target="#design-name-disambiguation-1">Design Name Disambiguation</a></li>
+  <li><a href="#piglets" id="toc-piglets" class="nav-link" data-scroll-target="#piglets">Piglets</a></li>
+  <li><a href="#two-way-factorial-design-factor-diagram" id="toc-two-way-factorial-design-factor-diagram" class="nav-link" data-scroll-target="#two-way-factorial-design-factor-diagram">Two-Way Factorial Design Factor Diagram</a></li>
+  <li><a href="#research-questions-in-a-two-way-factorial-design" id="toc-research-questions-in-a-two-way-factorial-design" class="nav-link" data-scroll-target="#research-questions-in-a-two-way-factorial-design">Research Questions in a Two-Way Factorial Design</a></li>
+  <li><a href="#interaction-graphs" id="toc-interaction-graphs" class="nav-link" data-scroll-target="#interaction-graphs">Interaction Graphs</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#example-answers" id="toc-example-answers" class="nav-link" data-scroll-target="#example-answers">Example: Answers</a></li>
+  <li><a href="#practice-1" id="toc-practice-1" class="nav-link" data-scroll-target="#practice-1">Practice 1</a></li>
+  <li><a href="#practice-1-1" id="toc-practice-1-1" class="nav-link" data-scroll-target="#practice-1-1">Practice 1</a></li>
+  <li><a href="#practice-2" id="toc-practice-2" class="nav-link" data-scroll-target="#practice-2">Practice 2</a></li>
+  <li><a href="#practice-2-1" id="toc-practice-2-1" class="nav-link" data-scroll-target="#practice-2-1">Practice 2</a></li>
+  <li><a href="#practice-3" id="toc-practice-3" class="nav-link" data-scroll-target="#practice-3">Practice 3</a></li>
+  <li><a href="#practice-3-1" id="toc-practice-3-1" class="nav-link" data-scroll-target="#practice-3-1">Practice 3</a></li>
+  <li><a href="#two-way-factorial-design-formulas" id="toc-two-way-factorial-design-formulas" class="nav-link" data-scroll-target="#two-way-factorial-design-formulas">Two-Way Factorial Design Formulas</a></li>
+  <li><a href="#sum-of-squares-ss" id="toc-sum-of-squares-ss" class="nav-link" data-scroll-target="#sum-of-squares-ss">Sum of Squares (SS)</a></li>
+  <li><a href="#degrees-of-freedom-df" id="toc-degrees-of-freedom-df" class="nav-link" data-scroll-target="#degrees-of-freedom-df">Degrees of Freedom (df)</a></li>
+  <li><a href="#mean-squares-ms" id="toc-mean-squares-ms" class="nav-link" data-scroll-target="#mean-squares-ms">Mean Squares (MS)</a></li>
+  <li><a href="#three-research-questions-three-f-ratios" id="toc-three-research-questions-three-f-ratios" class="nav-link" data-scroll-target="#three-research-questions-three-f-ratios">Three Research Questions, Three F-ratios</a></li>
+  <li><a href="#f-ratios-and-the-f-distribution" id="toc-f-ratios-and-the-f-distribution" class="nav-link" data-scroll-target="#f-ratios-and-the-f-distribution">F-ratios and the F-distribution</a></li>
+  <li><a href="#anova-source-table-for-two-way-factorial" id="toc-anova-source-table-for-two-way-factorial" class="nav-link" data-scroll-target="#anova-source-table-for-two-way-factorial">ANOVA Source Table for Two-Way Factorial</a></li>
+  <li><a href="#two-way-factorial-in-r" id="toc-two-way-factorial-in-r" class="nav-link" data-scroll-target="#two-way-factorial-in-r">Two-Way Factorial in R</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Fitting Two-Way Factorial Designs</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>SDS 290 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 2, 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="announcements" class="level2">
+<h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
+<ul>
+<li>Exam 1 grades posted</li>
+<li>HW 6 posted and due Friday Nov 5 11:55p</li>
+<li>In-person Office hours (Bass 412)
+<ul>
+<li>Wed (tomorrow) 10:50-12:05p</li>
+</ul></li>
+<li>Zoom Office hours
+<ul>
+<li>Friday 12:15-3p</li>
+<li>Slots open on Thurs morning</li>
+</ul></li>
+<li>Where to get HW help
+<ul>
+<li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301.</li>
+<li>Post questions to #homework6-questions channel on Slack!</li>
+<li>Direct message me on Slack.</li>
+</ul></li>
+<li>Applications open for DSC-WAV (more info <a href="https://dsc-wav.github.io/www/students.html#Eligibility">here</a>)</li>
+</ul>
+</section>
+<section id="agenda" class="level2">
+<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
+<ol start="2" type="1">
+<li>Mid-Semester Assessment feedback</li>
+<li>Two-Way Factorial Design
+<ul>
+<li>Interactions</li>
+<li>Fitting the ANOVA model</li>
+</ul></li>
+</ol>
+</section>
+<section id="sds-290-hows-things" class="level2">
+<h2 class="anchored" data-anchor-id="sds-290-hows-things">SDS 290: How’s things?</h2>
+<ul>
+<li>“I really like it! Doing MP1 has super fun and it’s a really nice way to see all of our work come together.”</li>
+<li>“Overall great, I think I can master the material so far.”</li>
+<li>“I really like it, one of my favorite classes this semester!”</li>
+<li>“Great! The work is intense but I learnt a lot from it.”</li>
+<li>“It is okay”</li>
+<li>“I think SDS290 is going well. I feel like I am learning a lot and I really like the way the class is structured”</li>
+<li>“Okay! The content is understandable although not riveting but what can you do.”</li>
+<li>“The class is going pretty smoothly. However, the work is generally difficult and takes a long time. I appreciate all the help and extra support I get from the professor and my peers.”</li>
+<li>“This class is a lot harder than I expected, especially coming from a non-SDS background. I feel as if things haven’t fully sunk in and I just keep getting more and more lost”</li>
+</ul>
+</section>
+<section id="sds-290-things-going-so-well" class="level2">
+<h2 class="anchored" data-anchor-id="sds-290-things-going-so-well">SDS 290 things going so well…</h2>
+<ul>
+<li>“I really have been doing well on the weekly homework assignments. I think that the homework problems have been good and helpful. I also think that the lectures are super helpful.”</li>
+<li>“Lectures are always useful, especially when we go through code for various experimental aspects in class adn work through example problems.”</li>
+<li>“I really like the opportunity to discuss questions in pairs/small groups, and feel like the balance between that and lectures has been very good.”</li>
+<li>“I like mini-project one, where we got to design an experiment for something that interests us and explore other people’s interests.”</li>
+<li>“I like how I can have guidance and assistance from Professor Garcia whenever I need. And the resources of the class is easily accessible, I can navigate to the course material I need from moodle and the website. Everything is well-organized.”</li>
+<li>“I like the pace of the lecture. And I can feel this class really helps my other classes (especially when I look at the paper in psychology)”</li>
+<li>“I like the fact that this class includes lots of assignments that need to be done in R studio. One of the main reasons for me to take SDS 290 is to learn more about R in general. I also like the slack channel we have which is very useful and efficient. I appreciate that you always answer our questions on slack.”</li>
+</ul>
+</section>
+<section id="sds-290-things-not-going-so-well" class="level2">
+<h2 class="anchored" data-anchor-id="sds-290-things-not-going-so-well">SDS 290 things not going so well</h2>
+<ul>
+<li>“I think that the textbook is not super necessary, and sometimes confuses me. Your lectures are really the heart and soul of the class and are the reason that I feel like I am learning so much.”</li>
+<li>“I found some phrases and paragraphs in the textbook difficult to understand.”</li>
+<li>“Understanding why certain code does the task we want is a bit difficult at times.”</li>
+<li>“I would like for us to have answers to some of the questions from the textbook, so I have an idea of how to do them when I’m doing the homework.”</li>
+<li>“I would also appreciate a consolidated place with notes/things we’ve learned throughout the semester to revise before exams instead of having to go through the class sides which aren’t always filled with the details.”</li>
+<li>“I would like to see more psychology-centered scenarios or examples of ANOVA/blocking being used in a real-life research paper”</li>
+<li>“I wish the classroom content in lectures would be paced a little bit slower because the content is difficult and takes long to digest (and understand).”</li>
+<li>“Keeping up with lectures is not going very well for me. Sometimes I have trouble understanding and organizing the lecture notes.”</li>
+<li>“I also keep struggling and forgetting to add the homework slack channels so am always lost in the beginning of the week.”</li>
+</ul>
+</section>
+<section id="sds-290-what-i-can-do" class="level2">
+<h2 class="anchored" data-anchor-id="sds-290-what-i-can-do">SDS 290 what I can do</h2>
+<ul>
+<li>Time in class for everyone to the homework Slack channels on Tuesdays.</li>
+<li>Give review sheet with topics we’ve covered for Exam 2.
+<ul>
+<li>More structured review session too.</li>
+</ul></li>
+<li>More detail on lecture slides.</li>
+<li>Make sure to always have answers for example problems in slides.</li>
+<li>Examples from Psychology: finding peer-reviewed journal articles using ANOVA.<br>
+</li>
+<li>Try to stick to one term for a concept:
+<ul>
+<li>“I would greatly appreciate if the language you used would be more cohesive. Example: when you say assumptions and conditions they mean the same thing? But it is confusing when they are used interchangeably because it causes me to second guess myself. I would appreciate if we stuck to a general term and then possibly learned the others as a bonus. But exams and homework we stuck with the decided upon term.”</li>
+</ul></li>
+</ul>
+</section>
+<section id="sds-290-what-you-can-do" class="level2">
+<h2 class="anchored" data-anchor-id="sds-290-what-you-can-do">SDS 290 what you can do</h2>
+<ul>
+<li>“I can work on doing the readings more in depth, I often only read the big boxes that are important. I can also try and ask more questions in class to further my understanding.”</li>
+<li>“Working through example problems in the book and practicing with code more frequently”</li>
+<li>“Start the homework earlier and read the textbook more thoroughly”</li>
+<li>“I think maybe re-reading the textbook chapter after the class to further solidify what I learned in class.”</li>
+<li>“I could participate more and ask more questions”</li>
+<li>“I need to keep up with the class content more and ask questions when I am feeling lost.”</li>
+</ul>
+</section>
+<section id="design-name-disambiguation" class="level2">
+<h2 class="anchored" data-anchor-id="design-name-disambiguation">Design Name Disambiguation</h2>
+<p><strong>One-Way Design</strong></p>
+<ul>
+<li>If the factor is a true experimental factor
+<ul>
+<li>One-Way <strong>Randomized</strong> Design</li>
+</ul></li>
+<li>We analyze data this design with
+<ul>
+<li><strong>One-Way ANOVA</strong></li>
+</ul></li>
+</ul>
+<p><strong>Block design</strong></p>
+<ul>
+<li>If the factor of interest is experimental
+<ul>
+<li><strong>Randomized</strong> Block Design</li>
+</ul></li>
+<li>If every block gets every treatment
+<ul>
+<li><strong>Complete</strong> Block Design<br>
+</li>
+</ul></li>
+<li>If every block gets every treatment and the factor of interest is experimental
+<ul>
+<li><strong>Randomized Complete</strong> Block Design<br>
+</li>
+</ul></li>
+<li>We analyze data from this design with
+<ul>
+<li><strong>Two-Way additive ANOVA</strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="design-name-disambiguation-1" class="level2">
+<h2 class="anchored" data-anchor-id="design-name-disambiguation-1">Design Name Disambiguation</h2>
+<p><strong>Two-Way Factorial Design</strong></p>
+<ul>
+<li>If the factor of interest is experimental
+<ul>
+<li><strong>Randomized</strong> Two-Way Factorial design</li>
+</ul></li>
+<li>We analyze data from this design with
+<ul>
+<li><strong>Two-Way ANOVA</strong></li>
+</ul></li>
+<li>There is no blocking in this design</li>
+</ul>
+</section>
+<section id="piglets" class="level2">
+<h2 class="anchored" data-anchor-id="piglets">Piglets</h2>
+<p>It seems natural to think that adding the right vitamins to a pig’s diet might produce fatter pigs faster. You’ve decided to study the effects of B12 in two doses (0mg and 5mg). But pigs have bacteria living in their intestines that might prevent the uptake of vitamins, so you decided to give antibiotics to the pigs in one of two doses (0mg or 40 mg). You design your experiment in such a way that 3 piglets are randomly assigned to each of the 4 treatment conditions. You measure their weight every day, and take each pig’s average daily weight gain as your final number recorded.</p>
+</section>
+<section id="two-way-factorial-design-factor-diagram" class="level2">
+<h2 class="anchored" data-anchor-id="two-way-factorial-design-factor-diagram">Two-Way Factorial Design Factor Diagram</h2>
+<p><img src="09_bf2_design-figure/piglets.png" class="img-fluid"></p>
+<ul>
+<li>Draw the factor diagram</li>
+</ul>
+</section>
+<section id="research-questions-in-a-two-way-factorial-design" class="level2">
+<h2 class="anchored" data-anchor-id="research-questions-in-a-two-way-factorial-design">Research Questions in a Two-Way Factorial Design</h2>
+<ol type="1">
+<li>Does treatment A have an effect on the response variable?
+<ul>
+<li>Is there a main effect of factor A?</li>
+</ul></li>
+<li>Does treatment B have an effect on the response variable?
+<ul>
+<li>Is there a main effect of factor B?</li>
+</ul></li>
+<li>Does being in a specific combination of treatments have an effect over and above the additive effects of treatment A and B alone?
+<ul>
+<li>Is there an interaction between factor A and factor B?</li>
+</ul></li>
+</ol>
+</section>
+<section id="interaction-graphs" class="level2">
+<h2 class="anchored" data-anchor-id="interaction-graphs">Interaction Graphs</h2>
+<p>For each of the following interaction graphs, answer the following questions with <strong>YES</strong> or <strong>NO</strong>.</p>
+<ol type="1">
+<li>Is there a main effect of B12?</li>
+<li>Is there a main effect of antibiotics?</li>
+<li>Is there an interaction between B12 and antibiotics?</li>
+</ol>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="15_assess_factorial_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="example-answers" class="level2">
+<h2 class="anchored" data-anchor-id="example-answers">Example: Answers</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="15_assess_factorial_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ol type="1">
+<li>YES</li>
+<li>YES</li>
+<li>YES</li>
+</ol>
+</section>
+<section id="practice-1" class="level2">
+<h2 class="anchored" data-anchor-id="practice-1">Practice 1</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="15_assess_factorial_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="practice-1-1" class="level2">
+<h2 class="anchored" data-anchor-id="practice-1-1">Practice 1</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="15_assess_factorial_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ol type="1">
+<li>NO</li>
+<li>NO</li>
+<li>YES</li>
+</ol>
+</section>
+<section id="practice-2" class="level2">
+<h2 class="anchored" data-anchor-id="practice-2">Practice 2</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="15_assess_factorial_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="practice-2-1" class="level2">
+<h2 class="anchored" data-anchor-id="practice-2-1">Practice 2</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="15_assess_factorial_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ol type="1">
+<li>YES</li>
+<li>YES</li>
+<li>NO</li>
+</ol>
+</section>
+<section id="practice-3" class="level2">
+<h2 class="anchored" data-anchor-id="practice-3">Practice 3</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="15_assess_factorial_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="practice-3-1" class="level2">
+<h2 class="anchored" data-anchor-id="practice-3-1">Practice 3</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="15_assess_factorial_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ol type="1">
+<li>NO</li>
+<li>YES</li>
+<li>NO</li>
+</ol>
+</section>
+<section id="two-way-factorial-design-formulas" class="level2">
+<h2 class="anchored" data-anchor-id="two-way-factorial-design-formulas">Two-Way Factorial Design Formulas</h2>
+<p><span class="math display">\[{y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}\]</span></p>
+<ul>
+<li>Where <span class="math inline">\(i\)</span>, from 1 to <span class="math inline">\(a\)</span>, is the level of the first factor,</li>
+<li><span class="math inline">\(j\)</span>, from 1 to <span class="math inline">\(b\)</span>, is the level of the second factor,</li>
+<li>and <span class="math inline">\(k\)</span>, from 1 to <span class="math inline">\(n\)</span>, is the observation in each cell.</li>
+</ul>
+</section>
+<section id="sum-of-squares-ss" class="level2">
+<h2 class="anchored" data-anchor-id="sum-of-squares-ss">Sum of Squares (SS)</h2>
+<p><span class="math display">\[{SS}_{A} = \sum_{i=1}^{a}bn(\bar{y}_{i..}-\bar{y}_{…})^{2}\]</span></p>
+<p><span class="math display">\[{SS}_{B} = \sum_{j=1}^{b}an(\bar{y}_{.j.}-\bar{y}_{…})^{2}\]</span></p>
+<p><span class="math display">\[{SS}_{AB} = n\sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{y}_{ij.}-\bar{y}_{i..}-\bar{y}_{.j.}+\bar{y}_{…})^{2}\]</span></p>
+<p><span class="math display">\[{SS}_{E} = \sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{n}({y}_{ijk}-\bar{y}_{ij.})^{2}\]</span></p>
+</section>
+<section id="degrees-of-freedom-df" class="level2">
+<h2 class="anchored" data-anchor-id="degrees-of-freedom-df">Degrees of Freedom (df)</h2>
+<p><span class="math display">\[{df}_{A}=a-1\]</span></p>
+<p><span class="math display">\[{df}_{B}=b-1\]</span></p>
+<p><span class="math display">\[{df}_{AB}=(a-1)(b-1)\]</span></p>
+<p><span class="math display">\[{df}_{E}=ab(n-1)\]</span></p>
+</section>
+<section id="mean-squares-ms" class="level2">
+<h2 class="anchored" data-anchor-id="mean-squares-ms">Mean Squares (MS)</h2>
+<p><span class="math display">\[{MS}_{A}=\frac{{SS}_{A}}{{df}_{A}}\]</span></p>
+<p><span class="math display">\[{MS}_{B}=\frac{{SS}_{B}}{{df}_{B}}\]</span></p>
+<p><span class="math display">\[{MS}_{AB}=\frac{{SS}_{AB}}{{df}_{AB}}\]</span></p>
+<p><span class="math display">\[{MS}_{E}=\frac{{SS}_{E}}{{df}_{E}}\]</span></p>
+</section>
+<section id="three-research-questions-three-f-ratios" class="level2">
+<h2 class="anchored" data-anchor-id="three-research-questions-three-f-ratios">Three Research Questions, Three F-ratios</h2>
+<ol type="1">
+<li>Is there a significant main effect of factor A?</li>
+<li>Is there a significant main effect of factor B?</li>
+<li>Is there an significant interaction between factor A and factor B?</li>
+</ol>
+</section>
+<section id="f-ratios-and-the-f-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="f-ratios-and-the-f-distribution">F-ratios and the F-distribution</h2>
+<p>The ultimate statistics we want to calculate is Variability in treatment effects/Variability in residuals. The F-ratio.</p>
+<p><span class="math display">\[F = \frac{{MS}_{A}}{{MS}_{E}}\]</span></p>
+<p><span class="math display">\[F = \frac{{MS}_{B}}{{MS}_{E}}\]</span></p>
+<p><span class="math display">\[F = \frac{{MS}_{AB}}{{MS}_{E}}\]</span></p>
+</section>
+<section id="anova-source-table-for-two-way-factorial" class="level2">
+<h2 class="anchored" data-anchor-id="anova-source-table-for-two-way-factorial">ANOVA Source Table for Two-Way Factorial</h2>
+<p><span class="math display">\[{y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}\]</span></p>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Source</th>
+<th style="text-align: center;">SS</th>
+<th style="text-align: center;">df</th>
+<th style="text-align: center;">MS</th>
+<th style="text-align: center;">F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Treatment A</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}bn(\bar{y}_{i..}-\bar{y}_{…})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(a-1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{A}}{{df}_{A}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{A}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Treatment B</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{j=1}^{b}an(\bar{y}_{.j.}-\bar{y}_{…})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(b-1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{B}}{{df}_{B}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{B}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Interaction AB</td>
+<td style="text-align: center;"><span class="math inline">\(n\sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{y}_{ij.}-\bar{y}_{i..}-\bar{y}_{.j.}+\bar{y}_{…})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((a-1)(b-1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{AB}}{{df}_{AB}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{AB}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Error</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{n}({y}_{ijk}-\bar{y}_{ij.})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(ab(n-1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{E}}{{df}_{E}}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="two-way-factorial-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="two-way-factorial-in-r">Two-Way Factorial in R</h2>
+<p><a href="https://randilgarcia.github.io/sds290fall21/lectures/09_two-way_fac_inR.Rmd">See Two-Way Factorial code</a></p>
+<!-- ## Teaching Methods -->
+<!-- A professor wanted to compare three different teaching methods to determine how students  -->
+<!-- would perceive the course: 1) instructionist, 2) inquiry-based, and 3) team-based. She randomly assigned the same class (same topic different students) from 6 different semesters to treatments. At the end of the semester students were asked to rate the course on a 5-point scale, and the average class rating was calculated.  -->
+<!-- ## Anxiety and Memory -->
+<!-- A psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded \$5 for participation and \$10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded \$5 for participation and \$100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded.      -->
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
