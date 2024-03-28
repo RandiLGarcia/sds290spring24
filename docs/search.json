@@ -2466,16 +2466,16 @@
   {
     "objectID": "lectures/13_two-way_factorial.html",
     "href": "lectures/13_two-way_factorial.html",
-    "title": "Exam 1 Review",
+    "title": "Two-Way Factorial Designs",
     "section": "",
-    "text": "Still grading Exam 1 (expect next week)\nMini-Project 1 Technical Report due on Friday 11:55p on Moodle\nOffice hours\n\nThurs 2:45p - 4:00p\nFriday 10:50a - 12:05p\n\nWhere to get MP1 help\n\nOffice hours\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
+    "text": "Still grading Exam 1 (expect next week)\nMini-Project 1 Technical Report due on Friday 11:59p on Moodle\nOffice hours\n\nThurs 2:45p - 4:00p\nFriday 10:50a - 12:05p\n\nWhere to get MP1 help\n\nOffice hours\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/13_two-way_factorial.html#announcements",
     "href": "lectures/13_two-way_factorial.html#announcements",
     "title": "Two-Way Factorial Designs",
-    "section": "Announcements",
-    "text": "Announcements\n\nStill grading Exam 1 (expect next week)\nMini-Project 1 Technical Report due on Friday 11:59p on Moodle\nOffice hours\n\nThurs 2:45p - 4:00p\nFriday 10:50a - 12:05p\n\nWhere to get MP1 help\n\nOffice hours\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
+    "section": "",
+    "text": "Still grading Exam 1 (expect next week)\nMini-Project 1 Technical Report due on Friday 11:59p on Moodle\nOffice hours\n\nThurs 2:45p - 4:00p\nFriday 10:50a - 12:05p\n\nWhere to get MP1 help\n\nOffice hours\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/13_two-way_factorial.html#agenda",
@@ -2699,7 +2699,7 @@
     "href": "lectures/13_two-way_factorial.html#practice-1-1",
     "title": "Two-Way Factorial Designs",
     "section": "Practice 1",
-    "text": "Practice 1"
+    "text": "Practice 1\n\n\n\n\n\n\n\nYES\nYES\nNO"
   },
   {
     "objectID": "lectures/13_two-way_factorial.html#practice-2",
@@ -2713,7 +2713,7 @@
     "href": "lectures/13_two-way_factorial.html#practice-2-1",
     "title": "Two-Way Factorial Designs",
     "section": "Practice 2",
-    "text": "Practice 2"
+    "text": "Practice 2\n\n\n\n\n\n\n\nNO\nYES\nNO"
   },
   {
     "objectID": "lectures/13_two-way_factorial.html#two-way-factorial-in-r",
