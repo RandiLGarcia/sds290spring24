@@ -24,9 +24,9 @@ title: 'Homework'
 
     -   HW #5: 5.46, 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)
 
-    <!-- 6.  Due Friday, November 5th: -->
+6.  Due Friday, April 5th:
 
-    <!--     -   HW #6: 6.1, 6.5, 6.26, 6.36, 6.37 -->
+    -   HW #6: 6.1, 6.5, 6.26, 6.36, 6.37
 
     <!-- 7.  Due Friday, November 12th: -->
 

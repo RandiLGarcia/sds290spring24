@@ -202,8 +202,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   Read Ch **Stat2** 7.1-7.2
 
-:::
-
 #### Thurs, Mar 28
 
 -   Fitting two-way ANOVA
@@ -217,6 +215,8 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
     -   **Mini Project 1 due 11:59p** (upload to Moodle by Midnight)
+
+:::
 
 ## Week 11
 

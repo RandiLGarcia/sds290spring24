@@ -104,8 +104,8 @@ website:
           href: homework.html
         - text: 'HW5: 5.46, 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)'
           href: homework.html
-        # - text: 'HW6: 6.1, 6.5, 6.26, 6.36, 6.37'
-        #   href: homework.html
+        - text: 'HW6: 6.1, 6.5, 6.26, 6.36, 6.37'
+          href: homework.html
         # - text: 'HW7: 7.5, 7.7, 7.8, 7.11, 7.12, journal article'
         #   href: homework.html  
         # - text: 'HW8: 7.20, 7.21, 7.22, 7.34, 7.38'
