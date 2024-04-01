@@ -121,5 +121,8 @@
   },
   "lectures/15_assess_factorial.Rmd": {
     "15_assess_factorial.html": "1a9890c9"
+  },
+  "lectures/15_assess_factorial.qmd": {
+    "15_assess_factorial.html": "58e8b2d6"
   }
 }
