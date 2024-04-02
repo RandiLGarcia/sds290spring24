@@ -150,4 +150,3 @@ UL_B12_antiYES
 mean_B12_antiNO/SD
 mean_B12_antiYES/SD
 ```
-
