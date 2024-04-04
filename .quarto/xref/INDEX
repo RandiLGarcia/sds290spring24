@@ -124,5 +124,11 @@
   },
   "lectures/15_assess_factorial.qmd": {
     "15_assess_factorial.html": "58e8b2d6"
+  },
+  "project/mini-project-2.qmd": {
+    "mini-project-2.html": "0a8cc7ba"
+  },
+  "lectures/16_fit_factorial.qmd": {
+    "16_fit_factorial.html": "a2cf9904"
   }
 }

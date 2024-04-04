@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="SDS 290">
-<meta name="dcterms.date" content="2021-11-09">
+<meta name="author" content="Prof Randi Garcia, SDS 290">
+<meta name="dcterms.date" content="2024-04-04">
 
 <title>SDS 290 - Spring 2024 - Fitting Two-Way Factorial Designs</title>
 <style>
@@ -166,6 +166,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../lectures/14_two-way_factorial_II.html" rel="" target="">
  <span class="dropdown-text">14 - Two-Way Factorial (cont.)</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/15_assess_factorial.html" rel="" target="">
+ <span class="dropdown-text">15 - Assessing Two-Way Factorial Designs</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -220,6 +224,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../homework.html" rel="" target="">
  <span class="dropdown-text">HW5: 5.46, 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../homework.html" rel="" target="">
+ <span class="dropdown-text">HW6: 6.1, 6.5, 6.26, 6.36, 6.37</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -250,8 +258,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#announcements" id="toc-announcements" class="nav-link active" data-scroll-target="#announcements">Announcements</a></li>
-  <li><a href="#sds-biostatistics-job-candidates" id="toc-sds-biostatistics-job-candidates" class="nav-link" data-scroll-target="#sds-biostatistics-job-candidates">SDS Biostatistics Job Candidates</a></li>
   <li><a href="#agenda" id="toc-agenda" class="nav-link" data-scroll-target="#agenda">Agenda</a></li>
+  <li><a href="#sds-290-hows-things" id="toc-sds-290-hows-things" class="nav-link" data-scroll-target="#sds-290-hows-things">SDS 290: How’s things?</a></li>
+  <li><a href="#sds-290-things-going-so-well" id="toc-sds-290-things-going-so-well" class="nav-link" data-scroll-target="#sds-290-things-going-so-well">SDS 290 things going so well…</a></li>
+  <li><a href="#sds-290-things-not-going-so-well" id="toc-sds-290-things-not-going-so-well" class="nav-link" data-scroll-target="#sds-290-things-not-going-so-well">SDS 290 things not going so well</a></li>
+  <li><a href="#sds-290-what-i-can-do" id="toc-sds-290-what-i-can-do" class="nav-link" data-scroll-target="#sds-290-what-i-can-do">SDS 290 what I can do</a></li>
+  <li><a href="#sds-290-what-you-can-do" id="toc-sds-290-what-you-can-do" class="nav-link" data-scroll-target="#sds-290-what-you-can-do">SDS 290 what you can do</a></li>
   <li><a href="#mp2-assignment" id="toc-mp2-assignment" class="nav-link" data-scroll-target="#mp2-assignment">MP2 Assignment</a></li>
   <li><a href="#interaction-graphs" id="toc-interaction-graphs" class="nav-link" data-scroll-target="#interaction-graphs">Interaction Graphs</a></li>
   <li><a href="#practice-1" id="toc-practice-1" class="nav-link" data-scroll-target="#practice-1">Practice 1</a></li>
@@ -269,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#anova-source-table-for-two-way-factorial" id="toc-anova-source-table-for-two-way-factorial" class="nav-link" data-scroll-target="#anova-source-table-for-two-way-factorial">ANOVA Source Table for Two-Way Factorial</a></li>
   <li><a href="#two-way-factorial-in-r" id="toc-two-way-factorial-in-r" class="nav-link" data-scroll-target="#two-way-factorial-in-r">Two-Way Factorial in R</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="16_fit_factorial.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -286,14 +298,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>SDS 290 </p>
+             <p>Prof Randi Garcia, SDS 290 </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 9, 2021</p>
+      <p class="date">April 4, 2024</p>
     </div>
   </div>
   
@@ -306,53 +318,62 @@ ul.task-list li input[type="checkbox"] {
 <section id="announcements" class="level2">
 <h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
 <ul>
-<li>HW 6 grades posted; MP1 grades are (mostly) posted</li>
-<li>HW 7 posted and due Friday Nov 12 11:55p
+<li>Exam 1 grades posted</li>
+<li>HW 6 due tomorrow at 11:59p</li>
+<li>Office hours
 <ul>
-<li>Find a research article that uses ANOVA</li>
-</ul></li>
-<li>In-person Office hours (Bass 412)
-<ul>
-<li>Wed (tomorrow) 10:50-12:05p</li>
-</ul></li>
-<li>Zoom Office hours
-<ul>
-<li>Friday 12:15-3p</li>
-<li>Slots open on Thurs morning</li>
+<li>Today: Cancelled</li>
+<li>Tomorrow: 10:50a - 12:05p</li>
 </ul></li>
 <li>Where to get HW help
 <ul>
 <li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301.</li>
-<li>Post questions to #homework7-questions channel on Slack!</li>
+<li>Post questions to #hw6-questions channel on Slack!</li>
 <li>Direct message me on Slack.</li>
 </ul></li>
-<li>Applications open for DSC-WAV (more info <a href="https://dsc-wav.github.io/www/students.html#Eligibility">here</a>)
-<ul>
-<li>Due tomorrow</li>
-</ul></li>
 </ul>
-</section>
-<section id="sds-biostatistics-job-candidates" class="level2">
-<h2 class="anchored" data-anchor-id="sds-biostatistics-job-candidates">SDS Biostatistics Job Candidates</h2>
-<ol type="1">
-<li>Tea with candidates 3:30-4:30 p.m. Fri and 4:00-4:45 p.m. Mon Wed (<a href="https://docs.google.com/spreadsheets/d/1uuFRI2TPpYdSWXImIFO9JaXkXgHTihuBtqXOr3NmbjQ/edit#gid=0">sign-up here!</a>)</li>
-<li>Research talks with grab-and-go lunches (12:25-1:20 p.m., Ford 240 or McConnell 103)</li>
-<li>Teaching demonstrations (5:00-6:00 p.m., Sabin-Reed 301)</li>
-</ol>
-<p><strong>Friday November 12, 2021</strong>: Kaitlyn Cook “Statistical Methods for Cluster-Randomized Infectious Disease Prevention Trial”. Research talk: <strong>Ford 240</strong>.</p>
-<p><strong>Monday November 15, 2021</strong>: Anny-Claude Joseph “The Timing of Geographic Power”. Research talk: <strong>Ford 240</strong>.</p>
-<p><strong>Wednesday November 17, 2021</strong>: Jacob Fiksel “Generalized Bayes Quantification Learning with Applications to Mortality Surveillance”. Research talk: <strong>McConnell 103</strong>.</p>
 </section>
 <section id="agenda" class="level2">
 <h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
 <ol type="1">
+<li>MSA Feedback</li>
 <li>MP2 Assignment</li>
-<li>Two-Way Factorial Design (continued)
+<li>Two-Way Factorial Design
 <ul>
-<li>More interactions!</li>
+<li>Interactions</li>
 <li>Fitting the ANOVA model</li>
 </ul></li>
 </ol>
+</section>
+<section id="sds-290-hows-things" class="level2">
+<h2 class="anchored" data-anchor-id="sds-290-hows-things">SDS 290: How’s things?</h2>
+<ul>
+<li>“”</li>
+</ul>
+</section>
+<section id="sds-290-things-going-so-well" class="level2">
+<h2 class="anchored" data-anchor-id="sds-290-things-going-so-well">SDS 290 things going so well…</h2>
+<ul>
+<li>“”</li>
+</ul>
+</section>
+<section id="sds-290-things-not-going-so-well" class="level2">
+<h2 class="anchored" data-anchor-id="sds-290-things-not-going-so-well">SDS 290 things not going so well</h2>
+<ul>
+<li>“”</li>
+</ul>
+</section>
+<section id="sds-290-what-i-can-do" class="level2">
+<h2 class="anchored" data-anchor-id="sds-290-what-i-can-do">SDS 290 what I can do</h2>
+<ul>
+<li></li>
+</ul>
+</section>
+<section id="sds-290-what-you-can-do" class="level2">
+<h2 class="anchored" data-anchor-id="sds-290-what-you-can-do">SDS 290 what you can do</h2>
+<ul>
+<li>“”</li>
+</ul>
 </section>
 <section id="mp2-assignment" class="level2">
 <h2 class="anchored" data-anchor-id="mp2-assignment">MP2 Assignment</h2>
@@ -483,11 +504,11 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[{y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}\]</span></p>
 <table class="table">
 <colgroup>
-<col style="width: 18%">
-<col style="width: 18%">
-<col style="width: 18%">
-<col style="width: 21%">
-<col style="width: 21%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">

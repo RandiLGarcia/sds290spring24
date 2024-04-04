@@ -116,8 +116,8 @@ website:
         menu:
         - text: 'Mini project 1'
           href: project/mini-project-1.html
-    #    - text: 'Mini Project 2'
-    #      href: mini-project-2.html
+        - text: 'Mini Project 2'
+          href: mini-project-2.html
     #    - text: Advice
 
 format:
