@@ -221,14 +221,14 @@
     "href": "schedule.html#week-13",
     "title": "Schedule",
     "section": "Week 13",
-    "text": "Week 13\n\nTue, Apr 16\n\nMP2 project work time\nMultiple tests\nHomework due today:\n\nRead Ch Stat2 8.1 - 8.2\n\n\n\n\nThurs, Apr 18\n\nInference Test for S Condition\nMP2 project work time\nHomework due today:\n\nRead Ch Stat2 8.6\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Apr 19\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nHW #8 due today at 9:20a\nMP2 Pre-approval due tonight 11:55p (upload to Moodle)"
+    "text": "Week 13\n\nTue, Apr 16\n\nMP2 project work time\nMultiple tests\nHomework due today:\n\nRead Ch Stat2 8.1 - 8.2\n\n\n\n\nThurs, Apr 18\n\nInference Test for S Condition\nMP2 project work time\nHomework due today:\n\nRead Ch Stat2 8.6\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Apr 19\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nMP2 Pre-approval due tonight 11:55p (upload to Moodle)"
   },
   {
     "objectID": "schedule.html#week-14",
     "href": "schedule.html#week-14",
     "title": "Schedule",
     "section": "Week 14",
-    "text": "Week 14\n\nTue, Apr 23\n\nMP2 Data Collection\nHomework due today:\n\nRead Ch Stat2 8.4\n\n\n\n\nThurs, Apr 25\n\nMP2 Data Analysis\nRepeated measures designs\nHomework due today:\n\nRead Ch Stat2 8.7-8.8\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Apr 26\n\nHomework due today:\n\nHW #9 due today at 9:20a\n\nOffice hours: 10:50-12:05p"
+    "text": "Week 14\n\nTue, Apr 23\n\nMP2 Data Collection\nHomework due today:\n\nRead Ch Stat2 8.4\n\n\n\n\nThurs, Apr 25\n\nMP2 Data Analysis\nRepeated measures designs\nHomework due today:\n\nRead Ch Stat2 8.7-8.8\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Apr 26\n\nHomework due today:\n\nHW #8 due today at 9:20a\n\nOffice hours: 10:50-12:05p"
   },
   {
     "objectID": "schedule.html#week-15",
@@ -3014,14 +3014,14 @@
     "href": "lectures/15_assess_factorial.html",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "",
-    "text": "Exam 1 grades posted\nHW 6 posted and due Friday Nov 5 11:55p\nIn-person Office hours (Bass 412)\n\nWed (tomorrow) 10:50-12:05p\n\nZoom Office hours\n\nFriday 12:15-3p\nSlots open on Thurs morning\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework6-questions channel on Slack!\nDirect message me on Slack.\n\nApplications open for DSC-WAV (more info here)"
+    "text": "Exam 1 grades by Thursday\nMSA feedback on Thursday\nHW 6 posted and due Friday Apr 5 11:59p\nOffice hours\n\nThurs: Cancelled\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw6-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/15_assess_factorial.html#announcements",
     "href": "lectures/15_assess_factorial.html#announcements",
     "title": "Fitting Two-Way Factorial Designs",
-    "section": "Announcements",
-    "text": "Announcements\n\nExam 1 grades by Thursday\nMSA feedback on Thursday\nHW 6 posted and due Friday Apr 5 11:59p\nOffice hours\n\nThurs: Cancelled\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw6-questions channel on Slack!\nDirect message me on Slack."
+    "section": "",
+    "text": "Exam 1 grades by Thursday\nMSA feedback on Thursday\nHW 6 posted and due Friday Apr 5 11:59p\nOffice hours\n\nThurs: Cancelled\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw6-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/15_assess_factorial.html#agenda",
@@ -3119,7 +3119,7 @@
     "href": "lectures/15_assess_factorial.html#example-answers",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "Example: Answers",
-    "text": "Example: Answers\n\n\nYES\nYES\nYES"
+    "text": "Example: Answers\n\n\n\n\n\n\nYES\nYES\nYES"
   },
   {
     "objectID": "lectures/15_assess_factorial.html#practice-1",
@@ -3133,7 +3133,7 @@
     "href": "lectures/15_assess_factorial.html#practice-1-1",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "Practice 1",
-    "text": "Practice 1\n\n\nNO\nNO\nYES"
+    "text": "Practice 1\n\n\n\n\n\n\nNO\nNO\nYES"
   },
   {
     "objectID": "lectures/15_assess_factorial.html#practice-2",
@@ -3147,7 +3147,7 @@
     "href": "lectures/15_assess_factorial.html#practice-2-1",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "Practice 2",
-    "text": "Practice 2\n\n\nYES\nYES\nNO"
+    "text": "Practice 2\n\n\n\n\n\n\nYES\nYES\nNO"
   },
   {
     "objectID": "lectures/15_assess_factorial.html#practice-3",
@@ -3161,7 +3161,7 @@
     "href": "lectures/15_assess_factorial.html#practice-3-1",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "Practice 3",
-    "text": "Practice 3\n\n\nNO\nYES\nNO"
+    "text": "Practice 3\n\n\n\n\n\n\nNO\nYES\nNO"
   },
   {
     "objectID": "lectures/15_assess_factorial.html#two-way-factorial-design-formulas",
@@ -3230,8 +3230,8 @@
     "objectID": "lectures/16_fit_factorial.html#announcements",
     "href": "lectures/16_fit_factorial.html#announcements",
     "title": "Fitting Two-Way Factorial Designs",
-    "section": "",
-    "text": "Exam 1 grades posted\nHW 6 due tomorrow at 11:59p\nOffice hours\n\nToday: Cancelled\nTomorrow: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw6-questions channel on Slack!\nDirect message me on Slack."
+    "section": "Announcements",
+    "text": "Announcements\n\nExam 1 grades posted\nHW 6 due tomorrow at 11:59p\nOffice hours\n\nToday: Cancelled\nTomorrow: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw6-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/16_fit_factorial.html#sds-biostatistics-job-candidates",
@@ -3252,7 +3252,7 @@
     "href": "lectures/16_fit_factorial.html#mp2-assignment",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "MP2 Assignment",
-    "text": "MP2 Assignment\n\nMP2 instructions\nMP2 group selection survey"
+    "text": "MP2 Assignment\n\nMP2 instructions\nMP2 Group Preferences"
   },
   {
     "objectID": "lectures/16_fit_factorial.html#interaction-graphs",
@@ -3518,34 +3518,76 @@
     "href": "lectures/16_fit_factorial.html#sds-290-hows-things",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "SDS 290: How’s things?",
-    "text": "SDS 290: How’s things?\n\n“”"
+    "text": "SDS 290: How’s things?\n\n“I am enjoying the class.”\n“Not enjoying it but it’s my last requirement for the data science major. It’s something I need to get done.”\n“Good! Probably my favorite class this semester :)”\n“I have been really enjoying this class. I feel like I am learning a lot about research methods and experiment design, and I also get to apply the skills that I used in my previous stats classes in a practical manner.”\n“It’s going okay. I don’t like having things due on Friday nights, I would prefer Sunday nights for the sake of the rest of my life and having time to work on things. Sometimes I feel confused.”"
   },
   {
     "objectID": "lectures/16_fit_factorial.html#sds-290-things-going-so-well",
     "href": "lectures/16_fit_factorial.html#sds-290-things-going-so-well",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "SDS 290 things going so well…",
-    "text": "SDS 290 things going so well…\n\n“”"
+    "text": "SDS 290 things going so well…\n\n“I really enjoy the group in-class activities that we do as a whole class. I feel like it is very easy to ask questions when I am confused. I also like working with other classmates during class time and discussing the content.”\n“I find the lectures helpful, and the homework is a good way to reinforce what we’ve learned.”\n“I liked having the freedom to make our first mini projects about whatever we wanted to, I like when we get to code alongside you in class and have that as a crutch to fall back on for homeworks.”\n“I think that the homework problems, group projects, and lectures provide a solid background for understanding the course material.”\n“Not particularly. I’m doing okay in the class but I do it on my own. When we had in-class activities that was helpful.”"
   },
   {
     "objectID": "lectures/16_fit_factorial.html#sds-290-things-not-going-so-well",
     "href": "lectures/16_fit_factorial.html#sds-290-things-not-going-so-well",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "SDS 290 things not going so well",
-    "text": "SDS 290 things not going so well\n\n“”"
+    "text": "SDS 290 things not going so well\n\n“In-class work time is not especially helpful for me.”\n“Sometimes it’s hard to follow what’s going on in class. I wish the slides had more context in words then just pictures.”\n“I think the exam went quite poorly for me. It took me over 4 hours to complete. I felt I knew all the topics but compared to your estimated time to complete it, I was very disappointed in how long it took me.”\n“I wish we could work in pairs/groups in class a little more. Maybe even doing 1 problem from the homework in groups and going over?”\n“I think sometimes responses to homework help messages in Slack can be a little slower/late than other professors but because of the tone you set for the class I don’t ever get too worried about it.”\n“Working on the mini project in class more would be helpful, so we can ask questions to our peers and instructor.”\n“I feel that the notes are all over the place and it was pretty stressful studying for the exam. I actively take notes during class , and I do pretty good on the homework, but I feel like in terms of organization with notes on the slides, and notes written on.”"
   },
   {
     "objectID": "lectures/16_fit_factorial.html#sds-290-what-i-can-do",
     "href": "lectures/16_fit_factorial.html#sds-290-what-i-can-do",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "SDS 290 what I can do",
-    "text": "SDS 290 what I can do"
+    "text": "SDS 290 what I can do\n\nI will consider options to lighten the load for the rest of the semester.\nHW9 is cancelled!\nI will try to add in more group work in lectures.\nI will give you more in-class work time for MP2.\nI will consider re-formatting the textbook homework problems myself. (I may not be able to do this in a timely manner.)\nI will pay closer attention to the website formatting."
   },
   {
     "objectID": "lectures/16_fit_factorial.html#sds-290-what-you-can-do",
     "href": "lectures/16_fit_factorial.html#sds-290-what-you-can-do",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "SDS 290 what you can do",
-    "text": "SDS 290 what you can do\n\n“”"
+    "text": "SDS 290 what you can do\n\n“I should stay on top of the readings more than I have been.”\n“Paying more attention in class, getting more sleep.”\n“I could go to office hours more frequently to ask questions about coding and I could also reread the textbook examples if I don’t fully comprehend the material covered in class.”\n“Asking questions in class might be a good idea too. Though, it is a little hard when I need time to digest the information to create these questions.”\n“I could definitely begin assignments earlier in the week to not feel that stress all at once later on.”"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#warm-up-teaching-methods",
+    "href": "lectures/16_fit_factorial.html#warm-up-teaching-methods",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Warm-up: Teaching Methods",
+    "text": "Warm-up: Teaching Methods\nA professor wanted to compare three different teaching methods to determine how students would perceive the course: 1) instructionist, 2) inquiry-based, and 3) team-based. She randomly assigned the same class (same topic different students) from 6 different semesters to treatments. At the end of the semester students were asked to rate the course on a 5-point scale, and the average class rating was calculated."
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#warm-up-swimsuitsweater-study",
+    "href": "lectures/16_fit_factorial.html#warm-up-swimsuitsweater-study",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Warm-up: Swimsuit/Sweater Study",
+    "text": "Warm-up: Swimsuit/Sweater Study\nObjectification theory (Fredrickson & Roberts, 1997) posits that American culture socializes women to adopt observers’ perspectives on their physical selves. This self-objectification is hypothesized to (a) produce body shame, which in turn leads to restrained eating, and (b) consume attentional resources, which is manifested in diminished mental performance on a math test. An experiment manipulated self-objectification by having participants try on a swimsuit or a sweater. Further, it tested 20 women and 20 men, in each condition, and found that the effects on math performance were present for women only."
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#warm-up-anxiety-and-memory",
+    "href": "lectures/16_fit_factorial.html#warm-up-anxiety-and-memory",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Warm-up: Anxiety and Memory",
+    "text": "Warm-up: Anxiety and Memory\nA psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded $5 for participation and $10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded $5 for participation and $100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded."
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#conditional-averages-and-marginal-averages",
+    "href": "lectures/16_fit_factorial.html#conditional-averages-and-marginal-averages",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Conditional Averages and Marginal Averages",
+    "text": "Conditional Averages and Marginal Averages\n\n\nThe numbers in blue are Marginal Averages\nThe numbers in green are Conditional Averages"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#confidence-intervals-and-effect-sizes",
+    "href": "lectures/16_fit_factorial.html#confidence-intervals-and-effect-sizes",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Confidence intervals and effect sizes",
+    "text": "Confidence intervals and effect sizes\n\nIf the interaction is significant\n\nCalculate CIs and effect sizes for differences in conditional averages (also called “simple effects”)\nFor example, for the 0mg antibiotics condition, what’s the effect size for B12\n\nIf the interaction is NOT significant\n\nCalculate CIs and effect sizes for sets of marginal averages (also called “main effects”)\nFor example, what is the effect size for B12 overall?"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#confidence-intervals-and-effect-sizes-1",
+    "href": "lectures/16_fit_factorial.html#confidence-intervals-and-effect-sizes-1",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Confidence Intervals and Effect Sizes",
+    "text": "Confidence Intervals and Effect Sizes\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
   }
 ]
