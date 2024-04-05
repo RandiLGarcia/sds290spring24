@@ -216,7 +216,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **Mini Project 1 due 11:59p** (upload to Moodle by Midnight)
 
-
 ## Week 11
 
 #### Tue, Apr 2
@@ -225,7 +224,6 @@ Please read the specified sections *before* class that day.
 -   Practice designs
 -   Homework due today:
     -   Read Ch **Stat2** 7.4
-
 :::
 
 #### Thurs, Apr 4
