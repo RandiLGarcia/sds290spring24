@@ -16,6 +16,8 @@ library(Stat2Data)
 
 ## Announcements
 
+-   Added to the syllabus:
+    -   **I will be dropping the lowest exam grade at the end of the term.**
 -   HW 7 due Friday 11:59p
     -   Find a research article that uses ANOVA!
 -   Office hours
@@ -34,7 +36,7 @@ library(Stat2Data)
 
 ## Warm-up: Anxiety and Memory
 
-A psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded \$5 for participation and \$10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded \$5 for participation and \$100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded.                            |
+A psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded \$5 for participation and \$10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded \$5 for participation and \$100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded. \|
 
 ## Three Research Questions, Three F-ratios
 
@@ -89,7 +91,7 @@ $$D_{ij} = \frac{(\bar{y_i}-\bar{y_j})}{SD}$$
 
 -   [MP2 Group Assignments](https://docs.google.com/spreadsheets/d/1I-ugcxOiaXFEyQhE7jVys7cYBJ2gf9ycebU3hCm4Guo/edit#gid=0)
 -   Time to discuss your MP2 projects. Goals for today:
-  -   Decide on a topic
-  -   Discuss your design and run it by me
-  -   Discuss your stimuli
-  -   Divide up your work (finding/creating stimuli, creating Qualtrics survey, writing consent form, preparing R code, ect.)
+-   Decide on a topic
+-   Discuss your design and run it by me
+-   Discuss your stimuli
+-   Divide up your work (finding/creating stimuli, creating Qualtrics survey, writing consent form, preparing R code, ect.)
