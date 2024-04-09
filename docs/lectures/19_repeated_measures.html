@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Prof Randi Garcia, SDS 290">
-<meta name="dcterms.date" content="2024-04-04">
+<meta name="author" content="SDS 290">
+<meta name="dcterms.date" content="2021-11-18">
 
-<title>SDS 290 - Spring 2024 - Fitting Two-Way Factorial Designs</title>
+<title>SDS 290 - Spring 2024 - Repeated Measures</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -309,33 +343,39 @@ window.Quarto = {
   <ul>
   <li><a href="#announcements" id="toc-announcements" class="nav-link active" data-scroll-target="#announcements">Announcements</a></li>
   <li><a href="#agenda" id="toc-agenda" class="nav-link" data-scroll-target="#agenda">Agenda</a></li>
-  <li><a href="#sds-290-hows-things" id="toc-sds-290-hows-things" class="nav-link" data-scroll-target="#sds-290-hows-things">SDS 290: How’s things?</a></li>
-  <li><a href="#sds-290-things-going-so-well" id="toc-sds-290-things-going-so-well" class="nav-link" data-scroll-target="#sds-290-things-going-so-well">SDS 290 things going so well…</a></li>
-  <li><a href="#sds-290-things-not-going-so-well" id="toc-sds-290-things-not-going-so-well" class="nav-link" data-scroll-target="#sds-290-things-not-going-so-well">SDS 290 things not going so well</a></li>
-  <li><a href="#sds-290-what-you-can-do" id="toc-sds-290-what-you-can-do" class="nav-link" data-scroll-target="#sds-290-what-you-can-do">SDS 290 what you can do</a></li>
-  <li><a href="#sds-290-what-i-can-do" id="toc-sds-290-what-i-can-do" class="nav-link" data-scroll-target="#sds-290-what-i-can-do">SDS 290 what I can do</a></li>
-  <li><a href="#warm-up-teaching-methods" id="toc-warm-up-teaching-methods" class="nav-link" data-scroll-target="#warm-up-teaching-methods">Warm-up: Teaching Methods</a></li>
-  <li><a href="#warm-up-swimsuitsweater-study" id="toc-warm-up-swimsuitsweater-study" class="nav-link" data-scroll-target="#warm-up-swimsuitsweater-study">Warm-up: Swimsuit/Sweater Study</a></li>
-  <li><a href="#warm-up-anxiety-and-memory" id="toc-warm-up-anxiety-and-memory" class="nav-link" data-scroll-target="#warm-up-anxiety-and-memory">Warm-up: Anxiety and Memory</a></li>
-  <li><a href="#mp2-assignment" id="toc-mp2-assignment" class="nav-link" data-scroll-target="#mp2-assignment">MP2 Assignment</a></li>
-  <li><a href="#anova-source-table-for-two-way-factorial" id="toc-anova-source-table-for-two-way-factorial" class="nav-link" data-scroll-target="#anova-source-table-for-two-way-factorial">ANOVA Source Table for Two-Way Factorial</a></li>
-  <li><a href="#conditional-averages-and-marginal-averages" id="toc-conditional-averages-and-marginal-averages" class="nav-link" data-scroll-target="#conditional-averages-and-marginal-averages">Conditional Averages and Marginal Averages</a></li>
-  <li><a href="#confidence-intervals-and-effect-sizes" id="toc-confidence-intervals-and-effect-sizes" class="nav-link" data-scroll-target="#confidence-intervals-and-effect-sizes">Confidence intervals and effect sizes</a></li>
-  <li><a href="#confidence-intervals-and-effect-sizes-1" id="toc-confidence-intervals-and-effect-sizes-1" class="nav-link" data-scroll-target="#confidence-intervals-and-effect-sizes-1">Confidence Intervals and Effect Sizes</a>
+  <li><a href="#example-walking-babies" id="toc-example-walking-babies" class="nav-link" data-scroll-target="#example-walking-babies">Example: Walking Babies</a></li>
+  <li><a href="#example-walking-babies-1" id="toc-example-walking-babies-1" class="nav-link" data-scroll-target="#example-walking-babies-1">Example: Walking Babies</a></li>
+  <li><a href="#levenes-test" id="toc-levenes-test" class="nav-link" data-scroll-target="#levenes-test">Levene’s Test</a></li>
+  <li><a href="#levenes-test-in-r" id="toc-levenes-test-in-r" class="nav-link" data-scroll-target="#levenes-test-in-r">Levene’s Test in R</a></li>
+  <li><a href="#levenes-test-for-factorial-data" id="toc-levenes-test-for-factorial-data" class="nav-link" data-scroll-target="#levenes-test-for-factorial-data">Levene’s Test for Factorial Data</a></li>
+  <li><a href="#multiple-tests" id="toc-multiple-tests" class="nav-link" data-scroll-target="#multiple-tests">Multiple Tests</a></li>
+  <li><a href="#fishers-lsd-and-bonferroni-correction" id="toc-fishers-lsd-and-bonferroni-correction" class="nav-link" data-scroll-target="#fishers-lsd-and-bonferroni-correction">Fisher’s LSD and Bonferroni Correction</a></li>
+  <li><a href="#tukeys-hsd" id="toc-tukeys-hsd" class="nav-link" data-scroll-target="#tukeys-hsd">Tukey’s HSD</a></li>
+  <li><a href="#tuplips" id="toc-tuplips" class="nav-link" data-scroll-target="#tuplips">Tuplips</a></li>
+  <li><a href="#repeated-measures" id="toc-repeated-measures" class="nav-link" data-scroll-target="#repeated-measures">Repeated Measures</a>
   <ul class="collapse">
-  <li><a href="#confidence-intervals" id="toc-confidence-intervals" class="nav-link" data-scroll-target="#confidence-intervals">Confidence Intervals</a></li>
-  <li><a href="#effect-size" id="toc-effect-size" class="nav-link" data-scroll-target="#effect-size">Effect size</a></li>
+  <li><a href="#between-subjects-design" id="toc-between-subjects-design" class="nav-link" data-scroll-target="#between-subjects-design">Between Subjects Design</a></li>
+  <li><a href="#within-subjects-desgin-complete-block-design" id="toc-within-subjects-desgin-complete-block-design" class="nav-link" data-scroll-target="#within-subjects-desgin-complete-block-design">Within Subjects Desgin (Complete Block Design)</a></li>
+  <li><a href="#split-plot-design" id="toc-split-plot-design" class="nav-link" data-scroll-target="#split-plot-design">Split-Plot Design</a></li>
   </ul></li>
-  <li><a href="#two-way-factorial-in-r" id="toc-two-way-factorial-in-r" class="nav-link" data-scroll-target="#two-way-factorial-in-r">Two-Way Factorial in R</a></li>
+  <li><a href="#diabetic-dogs" id="toc-diabetic-dogs" class="nav-link" data-scroll-target="#diabetic-dogs">Diabetic Dogs</a></li>
+  <li><a href="#parsnip-plants" id="toc-parsnip-plants" class="nav-link" data-scroll-target="#parsnip-plants">Parsnip Plants</a></li>
+  <li><a href="#formal-anova-for-the-split-plot-design" id="toc-formal-anova-for-the-split-plot-design" class="nav-link" data-scroll-target="#formal-anova-for-the-split-plot-design">Formal ANOVA for the Split-Plot Design</a></li>
+  <li><a href="#anova-source-table-for-the-split-plot-design" id="toc-anova-source-table-for-the-split-plot-design" class="nav-link" data-scroll-target="#anova-source-table-for-the-split-plot-design">ANOVA Source Table for the Split-Plot Design</a></li>
+  <li><a href="#split-plot-analysis-in-r" id="toc-split-plot-analysis-in-r" class="nav-link" data-scroll-target="#split-plot-analysis-in-r">Split-Plot Analysis in R</a></li>
+  <li><a href="#crabgrass" id="toc-crabgrass" class="nav-link" data-scroll-target="#crabgrass">Crabgrass</a></li>
+  <li><a href="#osomoregulation" id="toc-osomoregulation" class="nav-link" data-scroll-target="#osomoregulation">Osomoregulation</a></li>
+  <li><a href="#creepy-animals" id="toc-creepy-animals" class="nav-link" data-scroll-target="#creepy-animals">Creepy Animals</a></li>
+  <li><a href="#mp2-work-time" id="toc-mp2-work-time" class="nav-link" data-scroll-target="#mp2-work-time">MP2 Work Time!!</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="16_fit_factorial.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Fitting Two-Way Factorial Designs</h1>
+<h1 class="title">Repeated Measures</h1>
 </div>
 
 
@@ -345,14 +385,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Prof Randi Garcia, SDS 290 </p>
+             <p>SDS 290 </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 4, 2024</p>
+      <p class="date">November 18, 2021</p>
     </div>
   </div>
   
@@ -367,115 +407,224 @@ window.Quarto = {
 <section id="announcements" class="level2">
 <h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
 <ul>
-<li>Exam 1 grades posted</li>
-<li>HW 6 due tomorrow at 11:59p</li>
-<li>Office hours
+<li>HW 8 due tomorrow Nov 19 11:55p</li>
+<li><strong>MP2 Pre-approval due TUESDAY Nov 23 at 11:55p</strong></li>
+<li>Zoom Office hours
 <ul>
-<li>Today: Cancelled</li>
-<li>Tomorrow: 10:50a - 12:05p</li>
+<li>Friday 1:30-3:30p</li>
+<li>Slots now open!</li>
 </ul></li>
 <li>Where to get HW help
 <ul>
 <li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301.</li>
-<li>Post questions to #hw6-questions channel on Slack!</li>
+<li>Post questions to #homework8-questions channel on Slack!</li>
 <li>Direct message me on Slack.</li>
+</ul></li>
+<li>SDS Graduate School Panel<strong>Nov 22 7-8p via Zoom</strong>
+<ul>
+<li>See Moodle for more details.</li>
+</ul></li>
+<li>Thank you for your help with Biostats candidates!
+<ul>
+<li><a href="bit.ly/SDSbiostats">Feedback form</a></li>
 </ul></li>
 </ul>
 </section>
 <section id="agenda" class="level2">
 <h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
 <ol type="1">
-<li>MSA Feedback</li>
-<li>MP2 Assignment</li>
-<li>Two-Way Factorial Design
-<ul>
-<li>Interactions</li>
-<li>Fitting the ANOVA model</li>
-</ul></li>
+<li>Levene’s Test</li>
+<li>Multiple comparisons</li>
+<li>Repeated measures</li>
+<li>MP2 work time</li>
 </ol>
 </section>
-<section id="sds-290-hows-things" class="level2">
-<h2 class="anchored" data-anchor-id="sds-290-hows-things">SDS 290: How’s things?</h2>
+<section id="example-walking-babies" class="level2">
+<h2 class="anchored" data-anchor-id="example-walking-babies">Example: Walking Babies</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"WalkingBabies"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ds <span class="ot">&lt;-</span> WalkingBabies <span class="sc">%&gt;%</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Group) <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean =</span> <span class="fu">mean</span>(Age),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(Age))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 4
+  Group                 n  mean    sd
+  &lt;fct&gt;             &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 exercise control      6  11.4 1.90 
+2 final report          6  12.4 0.871
+3 special exercises     6  10.1 1.45 
+4 weekly report         6  11.6 1.56 </code></pre>
+</div>
+</div>
+</section>
+<section id="example-walking-babies-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-walking-babies-1">Example: Walking Babies</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ds <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="fu">max</span>(sd)<span class="sc">/</span><span class="fu">min</span>(sd))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  `max(sd)/min(sd)`
+              &lt;dbl&gt;
+1              2.18</code></pre>
+</div>
+</div>
+<p>So we fail to meet the condition of equal variances? (The S condition)</p>
+</section>
+<section id="levenes-test" class="level2">
+<h2 class="anchored" data-anchor-id="levenes-test">Levene’s Test</h2>
+<p>The <strong>biggest SD not more than 2 times as large as the smallest SD</strong> is only a rule of thumb.</p>
+<p>Levene’s test is an ANOVA to test the null hypothesis:</p>
+<p><span class="math display">\[H_0 = \sigma^2_1=\sigma^2_2=\sigma^2_3=\sigma^2_4\]</span> <span class="math display">\[H_A= not\:all\:variances\:are\:equal\]</span></p>
+</section>
+<section id="levenes-test-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="levenes-test-in-r">Levene’s Test in R</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(Age <span class="sc">~</span> Group, <span class="at">data =</span> WalkingBabies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Levene's Test for Homogeneity of Variance (center = median)
+      Df F value Pr(&gt;F)
+group  3  0.3082 0.8191
+      20               </code></pre>
+</div>
+</div>
+<p>Using Levene’s Test for homogeneity of variance, we fail to reject the null hypothesis, that is we fail to find evidence that the S condition is not met, <span class="math inline">\(F(3, 20)=0.31\)</span>, <span class="math inline">\(p = .819\)</span>. We can proceed as if this condition is met.</p>
+</section>
+<section id="levenes-test-for-factorial-data" class="level2">
+<h2 class="anchored" data-anchor-id="levenes-test-for-factorial-data">Levene’s Test for Factorial Data</h2>
+<p>Let’s try it for the <code>PigFeed</code> data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"PigFeed"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(WgtGain <span class="sc">~</span> Antibiotic<span class="sc">*</span>B12, <span class="at">data =</span> PigFeed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Levene's Test for Homogeneity of Variance (center = median)
+      Df F value Pr(&gt;F)
+group  3  1.8089 0.2235
+       8               </code></pre>
+</div>
+</div>
+<p>Using Levene’s Test for homogeneity of variance, we fail to reject the null hypothesis, that is we fail to find evidence that the S condition is not met, <span class="math inline">\(F(3, 8)=1.81\)</span>, <span class="math inline">\(p = .224\)</span>. We can proceed as if this condition is met.</p>
+</section>
+<section id="multiple-tests" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-tests">Multiple Tests</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"Leafhoppers"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(Days <span class="sc">~</span> Diet, <span class="at">data =</span> Leafhoppers)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
+
+Response: Days
+          Df Sum Sq Mean Sq F value   Pr(&gt;F)   
+Diet       3   3.92  1.3067  17.422 0.009248 **
+Residuals  4   0.30  0.0750                    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+</section>
+<section id="fishers-lsd-and-bonferroni-correction" class="level2">
+<h2 class="anchored" data-anchor-id="fishers-lsd-and-bonferroni-correction">Fisher’s LSD and Bonferroni Correction</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(agricolae)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">LSD.test</span>(mod, <span class="st">"Diet"</span>, <span class="at">p.adj =</span> <span class="st">"none"</span>)<span class="sc">$</span>groups</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         Days groups
+Sucrose   3.8      a
+Glucose   2.8      b
+Fructose  2.2     bc
+Control   2.0      c</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">LSD.test</span>(mod, <span class="st">"Diet"</span>, <span class="at">p.adj =</span> <span class="st">"bonferroni"</span>)<span class="sc">$</span>groups</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         Days groups
+Sucrose   3.8      a
+Glucose   2.8     ab
+Fructose  2.2      b
+Control   2.0      b</code></pre>
+</div>
+</div>
+</section>
+<section id="tukeys-hsd" class="level2">
+<h2 class="anchored" data-anchor-id="tukeys-hsd">Tukey’s HSD</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">aov</span>(Days <span class="sc">~</span> Diet, <span class="at">data =</span> Leafhoppers)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">TukeyHSD</span>(mod, <span class="st">"Diet"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = Days ~ Diet, data = Leafhoppers)
+
+$Diet
+                 diff        lwr     upr     p adj
+Fructose-Control  0.2 -0.9148496 1.31485 0.8805808
+Glucose-Control   0.8 -0.3148496 1.91485 0.1337642
+Sucrose-Control   1.8  0.6851504 2.91485 0.0095276
+Glucose-Fructose  0.6 -0.5148496 1.71485 0.2677272
+Sucrose-Fructose  1.6  0.4851504 2.71485 0.0145912
+Sucrose-Glucose   1.0 -0.1148496 2.11485 0.0703156</code></pre>
+</div>
+</div>
+</section>
+<section id="tuplips" class="level2">
+<h2 class="anchored" data-anchor-id="tuplips">Tuplips</h2>
+<p>A plant breeder wishes to study the effects of soil drainage and variety of tulip bulbs on flower production. Twelve 3m by 10m experimental sites are available in the test garden–each is a .5m deep trench. You can manipulate soil drainage by changing the ratio of sand to clay for the soil you put in a trench. After talking to your collaborator, you decided that four different levels of soil drainage would suffice. You’ll be testing 15 different types of tulips, and measuring flower production in the spring.</p>
+</section>
+<section id="repeated-measures" class="level2">
+<h2 class="anchored" data-anchor-id="repeated-measures">Repeated Measures</h2>
+<section id="between-subjects-design" class="level3">
+<h3 class="anchored" data-anchor-id="between-subjects-design">Between Subjects Design</h3>
+</section>
+<section id="within-subjects-desgin-complete-block-design" class="level3">
+<h3 class="anchored" data-anchor-id="within-subjects-desgin-complete-block-design">Within Subjects Desgin (Complete Block Design)</h3>
+</section>
+<section id="split-plot-design" class="level3">
+<h3 class="anchored" data-anchor-id="split-plot-design">Split-Plot Design</h3>
+<p>If you suspect a design in a split-plot design, you should be able to answer the following questions:</p>
+<ol type="1">
+<li>What are the whole plots, that is, what is the nuisance factor?</li>
+<li>What is the between-blocks factor? Is it observational or experimental?</li>
+<li>What is the within-blocks factor? Is it observational or experimental?</li>
+</ol>
+</section>
+</section>
+<section id="diabetic-dogs" class="level2">
+<h2 class="anchored" data-anchor-id="diabetic-dogs">Diabetic Dogs</h2>
+<p>The disease diabetes affects the rate of turnover of lactic acid in a system of biochemical reactions called the Cori cycle. This experiment compares two methods of using radioactive carbon-14 to measure rate of turnover. Method 1 is injection all at once, and method 2 is infused continuously. 10 dogs were sorted into two groups, 5 were controls and 5 had their pancreas removed (to make it diabetic). The rate of turnover was then measured twice for each dog, once for each method. The order of the two methods was randomly assigned.</p>
+</section>
+<section id="parsnip-plants" class="level2">
+<h2 class="anchored" data-anchor-id="parsnip-plants">Parsnip Plants</h2>
+<p>Under the control conditions of this study, wild parsnip plants averaged about a thousand seeds from their first set of flowers (primary umbels), about twice as many from the second set of flowers, but only about 250 from the third set. For plants attacked by the parsnip webworm, which destroyed most of the primary umbels, the pattern was quite different: the seed production from primary, secondary, and tertiary umbels averaged about 200, 2400, and 1300, respectively.</p>
+</section>
+<section id="formal-anova-for-the-split-plot-design" class="level2">
+<h2 class="anchored" data-anchor-id="formal-anova-for-the-split-plot-design">Formal ANOVA for the Split-Plot Design</h2>
+<p><span class="math display">\[{y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j(i)}+{\gamma}_{k}+({\alpha\gamma})_{ik}+{e}_{ijk}\]</span></p>
 <ul>
-<li>“I am enjoying the class.”</li>
-<li>“Not enjoying it but it’s my last requirement for the data science major. It’s something I need to get done.”</li>
-<li>“Good! Probably my favorite class this semester :)”</li>
-<li>“I have been really enjoying this class. I feel like I am learning a lot about research methods and experiment design, and I also get to apply the skills that I used in my previous stats classes in a practical manner.”</li>
-<li>“It’s going okay. I don’t like having things due on Friday nights, I would prefer Sunday nights for the sake of the rest of my life and having time to work on things. Sometimes I feel confused.”</li>
+<li><span class="math inline">\({\mu}\)</span> is the benchmark</li>
+<li><span class="math inline">\({\alpha}_{i}\)</span> effect of level i of the between-blocks factor, <span class="math inline">\(i\)</span> from <span class="math inline">\(1\)</span> to <span class="math inline">\(a\)</span></li>
+<li><span class="math inline">\({\beta}_{j(i)}\)</span> effect of block <span class="math inline">\(j\)</span> (for level <span class="math inline">\(i\)</span> of the between block factor), <span class="math inline">\(j\)</span> from <span class="math inline">\(1\)</span> to <span class="math inline">\(n\)</span></li>
+<li><span class="math inline">\({\gamma}_{k}\)</span> effect of level <span class="math inline">\(k\)</span> of the within-block factor, <span class="math inline">\(k\)</span> from <span class="math inline">\(1\)</span> to <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(({\alpha\gamma})_{ik}\)</span> interaction effect for level <span class="math inline">\(i\)</span> of the between-blocks factor with level <span class="math inline">\(k\)</span> of the within-blocks factor</li>
 </ul>
 </section>
-<section id="sds-290-things-going-so-well" class="level2">
-<h2 class="anchored" data-anchor-id="sds-290-things-going-so-well">SDS 290 things going so well…</h2>
-<ul>
-<li>“I really enjoy the group in-class activities that we do as a whole class. I feel like it is very easy to ask questions when I am confused. I also like working with other classmates during class time and discussing the content.”</li>
-<li>“I find the lectures helpful, and the homework is a good way to reinforce what we’ve learned.”</li>
-<li>“I liked having the freedom to make our first mini projects about whatever we wanted to, I like when we get to code alongside you in class and have that as a crutch to fall back on for homeworks.”</li>
-<li>“I think that the homework problems, group projects, and lectures provide a solid background for understanding the course material.”</li>
-<li>“Not particularly. I’m doing okay in the class but I do it on my own. When we had in-class activities that was helpful.”</li>
-</ul>
-</section>
-<section id="sds-290-things-not-going-so-well" class="level2">
-<h2 class="anchored" data-anchor-id="sds-290-things-not-going-so-well">SDS 290 things not going so well</h2>
-<ul>
-<li>“In-class work time is not especially helpful for me.”</li>
-<li>“Sometimes it’s hard to follow what’s going on in class. I wish the slides had more context in words then just pictures.”</li>
-<li>“I think the exam went quite poorly for me. It took me over 4 hours to complete. I felt I knew all the topics but compared to your estimated time to complete it, I was very disappointed in how long it took me.”</li>
-<li>“I wish we could work in pairs/groups in class a little more. Maybe even doing 1 problem from the homework in groups and going over?”</li>
-<li>“I think sometimes responses to homework help messages in Slack can be a little slower/late than other professors but because of the tone you set for the class I don’t ever get too worried about it.”</li>
-<li>“Working on the mini project in class more would be helpful, so we can ask questions to our peers and instructor.”</li>
-<li>“I feel that the notes are all over the place and it was pretty stressful studying for the exam. I actively take notes during class , and I do pretty good on the homework, but I feel like in terms of organization with notes on the slides, and notes written on.”</li>
-</ul>
-</section>
-<section id="sds-290-what-you-can-do" class="level2">
-<h2 class="anchored" data-anchor-id="sds-290-what-you-can-do">SDS 290 what you can do</h2>
-<ul>
-<li>“I should stay on top of the readings more than I have been.”</li>
-<li>“Paying more attention in class, getting more sleep.”</li>
-<li>“I could go to office hours more frequently to ask questions about coding and I could also reread the textbook examples if I don’t fully comprehend the material covered in class.”</li>
-<li>“Asking questions in class might be a good idea too. Though, it is a little hard when I need time to digest the information to create these questions.”</li>
-<li>“I could definitely begin assignments earlier in the week to not feel that stress all at once later on.”</li>
-</ul>
-</section>
-<section id="sds-290-what-i-can-do" class="level2">
-<h2 class="anchored" data-anchor-id="sds-290-what-i-can-do">SDS 290 what I can do</h2>
-<ul>
-<li>I will consider options to lighten the load for the rest of the semester.</li>
-<li>HW9 is cancelled!</li>
-<li>I will try to add in more group work in lectures.</li>
-<li>I will give you more in-class work time for MP2.</li>
-<li>I will consider re-formatting the textbook homework problems myself. (I may not be able to do this in a timely manner.)</li>
-<li>I will pay closer attention to the website formatting.</li>
-</ul>
-</section>
-<section id="warm-up-teaching-methods" class="level2">
-<h2 class="anchored" data-anchor-id="warm-up-teaching-methods">Warm-up: Teaching Methods</h2>
-<p>A professor wanted to compare three different teaching methods to determine how students would perceive the course: 1) instructionist, 2) inquiry-based, and 3) team-based. She randomly assigned the same class (same topic different students) from 6 different semesters to treatments. At the end of the semester students were asked to rate the course on a 5-point scale, and the average class rating was calculated.</p>
-</section>
-<section id="warm-up-swimsuitsweater-study" class="level2">
-<h2 class="anchored" data-anchor-id="warm-up-swimsuitsweater-study">Warm-up: Swimsuit/Sweater Study</h2>
-<p>Objectification theory (Fredrickson &amp; Roberts, 1997) posits that American culture socializes women to adopt observers’ perspectives on their physical selves. This self-objectification is hypothesized to (a) produce body shame, which in turn leads to restrained eating, and (b) consume attentional resources, which is manifested in diminished mental performance on a math test. An experiment manipulated self-objectification by having participants try on a swimsuit or a sweater. Further, it tested 20 women and 20 men, in each condition, and found that the effects on math performance were present for women only.</p>
-</section>
-<section id="warm-up-anxiety-and-memory" class="level2">
-<h2 class="anchored" data-anchor-id="warm-up-anxiety-and-memory">Warm-up: Anxiety and Memory</h2>
-<p>A psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded $5 for participation and $10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded $5 for participation and $100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded.</p>
-</section>
-<section id="mp2-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="mp2-assignment">MP2 Assignment</h2>
-<ul>
-<li>MP2 instructions</li>
-<li><a href="https://docs.google.com/spreadsheets/d/1I-ugcxOiaXFEyQhE7jVys7cYBJ2gf9ycebU3hCm4Guo/edit#gid=0">MP2 Group Assignments</a></li>
-</ul>
-</section>
-<section id="anova-source-table-for-two-way-factorial" class="level2">
-<h2 class="anchored" data-anchor-id="anova-source-table-for-two-way-factorial">ANOVA Source Table for Two-Way Factorial</h2>
-<p><span class="math display">\[{y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}\]</span></p>
+<section id="anova-source-table-for-the-split-plot-design" class="level2">
+<h2 class="anchored" data-anchor-id="anova-source-table-for-the-split-plot-design">ANOVA Source Table for the Split-Plot Design</h2>
 <table class="table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 21%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -488,76 +637,68 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">Treatment A</td>
-<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}bn(\bar{y}_{i..}-\bar{y}_{…})^{2}\)</span></td>
+<td style="text-align: right;">Between</td>
+<td style="text-align: center;"><span class="math inline">\(t\frac{N}{a}\sum_{i=1}^{a}(\bar{y}_{i..}-\bar{y}_{...})^{2}\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(a-1\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{A}}{{df}_{A}}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{A}}{{MS}_{E}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{A}}{{MS}_{B}}\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">Treatment B</td>
-<td style="text-align: center;"><span class="math inline">\(\sum_{j=1}^{b}an(\bar{y}_{.j.}-\bar{y}_{…})^{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(b-1\)</span></td>
+<td style="text-align: right;">Blocks</td>
+<td style="text-align: center;"><span class="math inline">\(t\sum_{i=1}^{a}\sum_{j=1}^{n}(\bar{y}_{ij.}-\bar{y}_{i..})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N-a\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{B}}{{df}_{B}}\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{B}}{{MS}_{E}}\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">Interaction AB</td>
-<td style="text-align: center;"><span class="math inline">\(n\sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{y}_{ij.}-\bar{y}_{i..}-\bar{y}_{.j.}+\bar{y}_{…})^{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\((a-1)(b-1)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{AB}}{{df}_{AB}}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{AB}}{{MS}_{E}}\)</span></td>
+<td style="text-align: right;">Within</td>
+<td style="text-align: center;"><span class="math inline">\(Na\sum_{k=1}^{K}(\bar{y}_{..k}-\bar{y}_{...})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(t-1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{T}}{{df}_{T}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{T}}{{MS}_{E}}\)</span></td>
 </tr>
 <tr class="even">
+<td style="text-align: right;">Interaction</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}\sum_{k=1}^{t}\frac{N}{a}(\bar{y}_{i.k}-\bar{y}_{i..}-\bar{y}_{..k}+\bar{y}_{...})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((a-1)(t-1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{AT}}{{df}_{AT}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{AT}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="odd">
 <td style="text-align: right;">Error</td>
-<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{n}({y}_{ijk}-\bar{y}_{ij.})^{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(ab(n-1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}\sum_{j=1}^{N}\sum_{k=1}^{t}({y}_{ijk}-\bar{y}_{i.k}-\bar{y}_{.j.}-\bar{y}_{..k}+\bar{y}_{i..})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((N-a)(t-1)\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{E}}{{df}_{E}}\)</span></td>
 <td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="conditional-averages-and-marginal-averages" class="level2">
-<h2 class="anchored" data-anchor-id="conditional-averages-and-marginal-averages">Conditional Averages and Marginal Averages</h2>
-<p><img src="pics/marginalmeans.png" class="img-fluid"></p>
-<ul>
-<li>The numbers in blue are <em>Marginal Averages</em></li>
-<li>The numbers in green are <em>Conditional Averages</em></li>
-</ul>
+<section id="split-plot-analysis-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="split-plot-analysis-in-r">Split-Plot Analysis in R</h2>
+<p><a href="https://randilgarcia.github.io/sds290fall21/lectures/13_spitplot_design_inR.Rmd">See r code</a></p>
 </section>
-<section id="confidence-intervals-and-effect-sizes" class="level2">
-<h2 class="anchored" data-anchor-id="confidence-intervals-and-effect-sizes">Confidence intervals and effect sizes</h2>
+<section id="crabgrass" class="level2">
+<h2 class="anchored" data-anchor-id="crabgrass">Crabgrass</h2>
+<p>The purpose of this experiment was to study the way one species of crabgrass competed with itself and with another species for nitrogen (N), phosphorus (P), and potassium (K). Bunches of crabgrass were planted in vermiculite, in 16 Styrofoam cups; after the seeds head sprouted, the plants were thinned to 20 plants per cup. Each of the 16 cups were randomly assigned to get one of 8 nutrient combinations added to its vermiculite. For example, yes-nitrogen/no-phosphorus/yes-potassium. The response is mean dry weight per plant, in milligrams.</p>
+</section>
+<section id="osomoregulation" class="level2">
+<h2 class="anchored" data-anchor-id="osomoregulation">Osomoregulation</h2>
+<p>Worms that live at the mouth of a river must deal with varying concentrations of salt. Osomoregulating worms are able to maintain relatively constant concentration of salt in the body. An experiment wanted to test the effects of mixtures of salt water on two species of worms: Nereis virens (N) and Goldfingia gouldii (G). Eighteen worms of each species were weighted, then randomly assigned in equal numbers to one of three conditions. Six worms of each kind were placed in 100% sea water, 67% sea water, or 33% sea water. The worms were then weighted after 30, 60, and 90 minutes, then placed in 100% sea water and weighted one last time 30 minutes later. The response was body weight as percentage of initial body weight.</p>
+</section>
+<section id="creepy-animals" class="level2">
+<h2 class="anchored" data-anchor-id="creepy-animals">Creepy Animals</h2>
+<p>The effects of exposure to images of different domestic animal species in either aggressive or submissive postures on mood was tested with a split-plot/repeated measures design. Using a computer to randomize, participants were randomly assigned to either view images of dogs or images of cats. All participants saw both an aggressive animal and a submissive animal, and their moods were assessed via self-report after each image. The order of presentation (aggressive then submission, or submissive then aggressive) was randomized to control for order effects.</p>
+</section>
+<section id="mp2-work-time" class="level2">
+<h2 class="anchored" data-anchor-id="mp2-work-time">MP2 Work Time!!</h2>
 <ul>
-<li>If the <strong>interaction is significant</strong>
+<li><a href="https://docs.google.com/spreadsheets/d/1m5vEHBL0QUkYxiDhbLxQQd0RzIHBFlq9Sg16akAquXk/edit?usp=sharing">MP2 groups</a></li>
+<li>Time to discuss your MP2 projects. Goals for today
 <ul>
-<li>Calculate CIs and effect sizes for differences in <em>conditional averages</em> (also called “simple effects”)</li>
-<li>For example, for the 0mg antibiotics condition, what’s the effect size for B12</li>
+<li>Pre-approval surveys due on Tuesday Nov 23!!</li>
 </ul></li>
-<li>If the <strong>interaction is NOT significant</strong>
-<ul>
-<li>Calculate CIs and effect sizes for sets of <em>marginal averages</em> (also called “main effects”)</li>
-<li>For example, what is the effect size for B12 overall?</li>
-</ul></li>
 </ul>
-</section>
-<section id="confidence-intervals-and-effect-sizes-1" class="level2">
-<h2 class="anchored" data-anchor-id="confidence-intervals-and-effect-sizes-1">Confidence Intervals and Effect Sizes</h2>
-<section id="confidence-intervals" class="level3">
-<h3 class="anchored" data-anchor-id="confidence-intervals">Confidence Intervals</h3>
-<p><span class="math display">\[(\bar{y_i}-\bar{y_j}) \pm t^*\cdot SD \sqrt{1/n_i+1/n_j}\]</span></p>
-</section>
-<section id="effect-size" class="level3">
-<h3 class="anchored" data-anchor-id="effect-size">Effect size</h3>
-<p><span class="math display">\[D_{ij} = \frac{(\bar{y_i}-\bar{y_j})}{SD}\]</span></p>
-<ul>
-<li>Where <span class="math inline">\(SD = \sqrt{MSE}\)</span></li>
-</ul>
-</section>
-</section>
-<section id="two-way-factorial-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="two-way-factorial-in-r">Two-Way Factorial in R</h2>
-<p><a href="https://randilgarcia.github.io/sds290spring24/code/09_two-way_fac_inR.Rmd">See Two-Way Factorial code</a></p>
 
 
 </section>

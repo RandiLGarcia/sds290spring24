@@ -224,7 +224,6 @@ Please read the specified sections *before* class that day.
 -   Practice designs
 -   Homework due today:
     -   Read Ch **Stat2** 7.4
-:::
 
 #### Thurs, Apr 4
 
@@ -236,20 +235,20 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
     -   [**HW #6 due today at 11:55p**](homework.html)
+:::
 
 ## Week 12
 
 #### Tue, Apr 9
 
 -   Assessing two-way design
--   Practice designs
--   MP2 group assignments
+-   MP2 work time
 -   Homework due today:
     -   Read Ch **Stat2** 7.5
 
 #### Thurs, Apr 11
 
--   Chapter 7 catch-up
+-   MP2 work time
 -   Homework due today:
     -   No reading
 -   **Office hours**: 2:45p - 4:00p

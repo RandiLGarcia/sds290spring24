@@ -130,5 +130,17 @@
   },
   "lectures/16_fit_factorial.qmd": {
     "16_fit_factorial.html": "a2cf9904"
+  },
+  "lectures/17_catch-up_factorial.qmd": {
+    "17_catch-up_factorial.html": "ecb5afa8"
+  },
+  "lectures/19_repeated_measures.Rmd": {
+    "19_repeated_measures.html": "0474daeb"
+  },
+  "lectures/18_MP2_time.Rmd": {
+    "18_MP2_time.html": "5cad7cd3"
+  },
+  "lectures/20_repeated_measures_II.Rmd": {
+    "20_repeated_measures_II.html": "7c12f806"
   }
 }

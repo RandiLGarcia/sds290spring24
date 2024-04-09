@@ -207,14 +207,14 @@
     "href": "schedule.html#week-11",
     "title": "Schedule",
     "section": "Week 11",
-    "text": "Week 11\n\nTue, Apr 2\n\nFitting two-way design\nPractice designs\nHomework due today:\n\nRead Ch Stat2 7.4"
+    "text": "Week 11\n\nTue, Apr 2\n\nFitting two-way design\nPractice designs\nHomework due today:\n\nRead Ch Stat2 7.4\n\n\n\n\nThurs, Apr 4\n\nPractice designs\nOffice hours: Cancelled today\n\n\n\nFri, Apr 5\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nHW #6 due today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-12",
     "href": "schedule.html#week-12",
     "title": "Schedule",
     "section": "Week 12",
-    "text": "Week 12\n\nTue, Apr 9\n\nAssessing two-way design\nPractice designs\nMP2 group assignments\nHomework due today:\n\nRead Ch Stat2 7.5\n\n\n\n\nThurs, Apr 11\n\nChapter 7 catch-up\nHomework due today:\n\nNo reading\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Apr 12\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nHW #7 due today at 11:55p"
+    "text": "Week 12\n\nTue, Apr 9\n\nAssessing two-way design\nMP2 work time\nHomework due today:\n\nRead Ch Stat2 7.5\n\n\n\n\nThurs, Apr 11\n\nMP2 work time\nHomework due today:\n\nNo reading\n\nOffice hours: 2:45p - 4:00p\n\n\n\nFri, Apr 12\n\nOffice hours: 10:50-12:05p\nHomework due today:\n\nHW #7 due today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-13",
@@ -3230,8 +3230,8 @@
     "objectID": "lectures/16_fit_factorial.html#announcements",
     "href": "lectures/16_fit_factorial.html#announcements",
     "title": "Fitting Two-Way Factorial Designs",
-    "section": "Announcements",
-    "text": "Announcements\n\nExam 1 grades posted\nHW 6 due tomorrow at 11:59p\nOffice hours\n\nToday: Cancelled\nTomorrow: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw6-questions channel on Slack!\nDirect message me on Slack."
+    "section": "",
+    "text": "Exam 1 grades posted\nHW 6 due tomorrow at 11:59p\nOffice hours\n\nToday: Cancelled\nTomorrow: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw6-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/16_fit_factorial.html#sds-biostatistics-job-candidates",
@@ -3370,8 +3370,8 @@
     "objectID": "lectures/17_catch-up_factorial.html#announcements",
     "href": "lectures/17_catch-up_factorial.html#announcements",
     "title": "Chapter 7 Catch-up",
-    "section": "",
-    "text": "MP1 grades are posted\nHW 7 posted and due tomorrow Nov 12 11:55p\n\nFind a research article that uses ANOVA!\n\nZoom Office hours\n\nFriday 2:00-4p\nSlots are open\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework7-questions channel on Slack!\nDirect message me on Slack.\n\nSDS Graduate School PanelNov 22 7-8p via Zoom\n\nSee Moodle for more details."
+    "section": "Announcements",
+    "text": "Announcements\n\nHW 7 due Friday 11:59p\n\nFind a research article that uses ANOVA!\n\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw7-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#sds-biostatistics-job-candidate---friday",
@@ -3392,7 +3392,7 @@
     "href": "lectures/17_catch-up_factorial.html#agenda",
     "title": "Chapter 7 Catch-up",
     "section": "Agenda",
-    "text": "Agenda\n\nFitting the Two-Way Factorial ANOVA model\n\nDegrees of freedom\n\nConditions for the Two-Way Factorial ANOVA\n\nConfidence intervals and effect sizes\nMP2 project groups!"
+    "text": "Agenda\n\nConditions for the Two-Way Factorial ANOVA\nConfidence intervals and effect sizes\nMP2 work time"
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#warm-up-teaching-methods",
@@ -3413,7 +3413,7 @@
     "href": "lectures/17_catch-up_factorial.html#warm-up-anxiety-and-memory",
     "title": "Chapter 7 Catch-up",
     "section": "Warm-up: Anxiety and Memory",
-    "text": "Warm-up: Anxiety and Memory\nA psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded $5 for participation and $10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded $5 for participation and $100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded."
+    "text": "Warm-up: Anxiety and Memory\nA psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded $5 for participation and $10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded $5 for participation and $100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded. |"
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#anova-source-table-for-two-way-factorial",
@@ -3476,7 +3476,7 @@
     "href": "lectures/17_catch-up_factorial.html#confidence-intervals-and-effect-sizes-1",
     "title": "Chapter 7 Catch-up",
     "section": "Confidence Intervals and Effect Sizes",
-    "text": "Confidence Intervals and Effect Sizes\n\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\n\n\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
+    "text": "Confidence Intervals and Effect Sizes\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#two-way-factorial-in-r",
@@ -3490,7 +3490,7 @@
     "href": "lectures/17_catch-up_factorial.html#mp2-groups",
     "title": "Chapter 7 Catch-up",
     "section": "MP2 Groups",
-    "text": "MP2 Groups\n\nI have now assigned MP2 groups\n\nPlease let me know in a private direct message on Slack if for any reason you would like to be re-assigned\n\nTime to discuss your MP1 projects and start brainstorming!"
+    "text": "MP2 Groups\n\nMP2 Group Assignments\nTime to discuss your MP2 projects. Goals for today:\nDecide on a topic\nDiscuss your design and run it by me\nDiscuss your stimuli\nDivide up your work (finding/creating stimuli, creating Qualtrics survey, writing consent form, preparing R code, ect.)"
   },
   {
     "objectID": "lectures/15_assess_factorial.html#mp2-group-preferences",
@@ -3588,6 +3588,349 @@
     "href": "lectures/16_fit_factorial.html#confidence-intervals-and-effect-sizes-1",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "Confidence Intervals and Effect Sizes",
-    "text": "Confidence Intervals and Effect Sizes\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
+    "text": "Confidence Intervals and Effect Sizes\n\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\n\n\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html",
+    "href": "lectures/20_repeated_measures_II.html",
+    "title": "Repeated Measures (cont.)",
+    "section": "",
+    "text": "HW 9 posted and due Friday Dec 3 11:55p\nIn-person Office hours (Bass 412)\n\nWed (tomorrow) 10:50-12:05p\n\nZoom Office hours\n\nFriday exact times TBD\nSlots open on Thurs morning\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework9-questions channel on Slack!\nDirect message me on Slack.\n\nJob candidates!!"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#announcements",
+    "href": "lectures/20_repeated_measures_II.html#announcements",
+    "title": "Repeated Measures (cont.)",
+    "section": "",
+    "text": "HW 9 posted and due Friday Dec 3 11:55p\nIn-person Office hours (Bass 412)\n\nWed (tomorrow) 10:50-12:05p\n\nZoom Office hours\n\nFriday exact times TBD\nSlots open on Thurs morning\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework9-questions channel on Slack!\nDirect message me on Slack.\n\nJob candidates!!"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#sds-job-candidates-for-mass-mutual-position",
+    "href": "lectures/20_repeated_measures_II.html#sds-job-candidates-for-mass-mutual-position",
+    "title": "Repeated Measures (cont.)",
+    "section": "SDS Job Candidates for Mass Mutual position",
+    "text": "SDS Job Candidates for Mass Mutual position\nSign-up for tea here\nTue 11/30: Ryan Gallagher (he/him/they/them), Northeastern University\n\nResearch talk: “The Network Structure of Online Amplification”, 12:25-1:20pm, Ford Hall 240\nTea with students: sign-up here, 3:30pm - 4:25pm, McConnell 209\nTeaching demo: Joining two data tables, 5:00-6:00pm in Sabin-Reed 301"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#sds-job-candidates-for-mass-mutual-position-1",
+    "href": "lectures/20_repeated_measures_II.html#sds-job-candidates-for-mass-mutual-position-1",
+    "title": "Repeated Measures (cont.)",
+    "section": "SDS Job Candidates for Mass Mutual position",
+    "text": "SDS Job Candidates for Mass Mutual position\nSign-up for tea here\nThu 12/2: Karin Knudson (she/her/hers), Tufts University\n\nResearch talk: “Assessing neurodegenerative diseases and estimating racially polarized voting with models and tools that are flexible, interpretable, and usable”, 12:25-1:20pm in McConnell Hall 103\nTea with students: sign-up here, 3:00pm - 3:55pm, McConnell 209\nTeaching demo: Joining two data tables, 5:00-6:00pm, Sabin-Reed 301"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#sds-job-candidates-for-mass-mutual-position-2",
+    "href": "lectures/20_repeated_measures_II.html#sds-job-candidates-for-mass-mutual-position-2",
+    "title": "Repeated Measures (cont.)",
+    "section": "SDS Job Candidates for Mass Mutual position",
+    "text": "SDS Job Candidates for Mass Mutual position\nSign-up for tea here\nTue 12/7: Sarah Shugars (they/them), NYU Center for Data Science and GWU School of Media & Public Affairs\n\nResearch talk: “Why Keep Arguing? Engagement Dynamics in Online Political Conversations”, 12:25-1:20pm in Ford Hall 240\nTea with students: sign-up here, 3:00pm - 3:55pm, McConnell 209\nTeaching demo: Computing summary statistics on a single data table, 5:00-6:00p in Sabin-Reed 301"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#agenda",
+    "href": "lectures/20_repeated_measures_II.html#agenda",
+    "title": "Repeated Measures (cont.)",
+    "section": "Agenda",
+    "text": "Agenda\n\nMP2 Data Collection!!\nRepeated measures (cont.)"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#mp2-data-collection",
+    "href": "lectures/20_repeated_measures_II.html#mp2-data-collection",
+    "title": "Repeated Measures (cont.)",
+    "section": "MP2 data collection",
+    "text": "MP2 data collection\nStep 1:\n\nIf you’re approved:\n\n15 minutes to go through the checklist.\nPaste anonymous survey link in the spreadsheet.\nIf you’re ready, work on your homework!\n\n\nStep 2:\n\n20 min to participate in as many studies as you can!\n\nNote: see content warnings\nPlease only participate in audio studies if you have headphones\nLast chance to collect data in class"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#repeated-measures",
+    "href": "lectures/20_repeated_measures_II.html#repeated-measures",
+    "title": "Repeated Measures (cont.)",
+    "section": "Repeated Measures",
+    "text": "Repeated Measures\n\nBetween Subjects versus Within Subjects\nThought experiment:\n\nThink of your MP1 project. What would your study have been like if every participant saw every condition and gave a response after each condition?\n\nThis would have been a within-subjects design. What you actually did for MP1 was a between-subjects design.\n\n3-min free write: What would have been the pros and cons of doing your MP1 this way?"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#diabetic-dogs",
+    "href": "lectures/20_repeated_measures_II.html#diabetic-dogs",
+    "title": "Repeated Measures (cont.)",
+    "section": "Diabetic Dogs",
+    "text": "Diabetic Dogs\nThe disease diabetes affects the rate of turnover of lactic acid in a system of biochemical reactions called the Cori cycle. This experiment compares two methods of using radioactive carbon-14 to measure rate of turnover. Method 1 is injection all at once, and method 2 is infused continuously. 10 dogs were sorted into two groups, 5 were controls and 5 had their pancreas removed (to make it diabetic). The rate of turnover was then measured twice for each dog, once for each method. The order of the two methods was randomly assigned."
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#split-plot-design",
+    "href": "lectures/20_repeated_measures_II.html#split-plot-design",
+    "title": "Repeated Measures (cont.)",
+    "section": "Split-Plot Design",
+    "text": "Split-Plot Design\nIf you suspect a design in a split-plot design, you should be able to answer the following questions:\n\nWhat are the whole plots, that is, what is the nuisance factor?\nWhat is the between-blocks factor? Is it observational or experimental?\nWhat is the within-blocks factor? Is it observational or experimental?"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#osomoregulation",
+    "href": "lectures/20_repeated_measures_II.html#osomoregulation",
+    "title": "Repeated Measures (cont.)",
+    "section": "Osomoregulation",
+    "text": "Osomoregulation\nWorms that live at the mouth of a river must deal with varying concentrations of salt. Osomoregulating worms are able to maintain relatively constant concentration of salt in the body. An experiment wanted to test the effects of mixtures of salt water on two species of worms: Nereis virens (N) and Goldfingia gouldii (G). Eighteen worms of each species were weighted, then randomly assigned in equal numbers to one of three conditions. Six worms of each kind were placed in 100% sea water, 67% sea water, or 33% sea water. The worms were then weighted after 30, 60, and 90 minutes, then placed in 100% sea water and weighted one last time 30 minutes later. The response was body weight as percentage of initial body weight."
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#parsnip-plants",
+    "href": "lectures/20_repeated_measures_II.html#parsnip-plants",
+    "title": "Repeated Measures (cont.)",
+    "section": "Parsnip Plants",
+    "text": "Parsnip Plants\nUnder the control conditions of this study, wild parsnip plants averaged about a thousand seeds from their first set of flowers (primary umbels), about twice as many from the second set of flowers, but only about 250 from the third set. For plants attacked by the parsnip webworm, which destroyed most of the primary umbels, the pattern was quite different: the seed production from primary, secondary, and tertiary umbels averaged about 200, 2400, and 1300, respectively."
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#formal-anova-for-the-split-plot-design",
+    "href": "lectures/20_repeated_measures_II.html#formal-anova-for-the-split-plot-design",
+    "title": "Repeated Measures (cont.)",
+    "section": "Formal ANOVA for the Split-Plot Design",
+    "text": "Formal ANOVA for the Split-Plot Design\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j(i)}+{\\gamma}_{k}+({\\alpha\\gamma})_{ik}+{e}_{ijk}\\]\n\n\\({\\mu}\\) is the benchmark\n\\({\\alpha}_{i}\\) effect of level i of the between-blocks factor, \\(i\\) from \\(1\\) to \\(a\\)\n\\({\\beta}_{j(i)}\\) effect of block \\(j\\) (for level \\(i\\) of the between block factor), \\(j\\) from \\(1\\) to \\(n\\)\n\\({\\gamma}_{k}\\) effect of level \\(k\\) of the within-block factor, \\(k\\) from \\(1\\) to \\(t\\)\n\\(({\\alpha\\gamma})_{ik}\\) interaction effect for level \\(i\\) of the between-blocks factor with level \\(k\\) of the within-blocks factor"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#anova-source-table-for-the-split-plot-design",
+    "href": "lectures/20_repeated_measures_II.html#anova-source-table-for-the-split-plot-design",
+    "title": "Repeated Measures (cont.)",
+    "section": "ANOVA Source Table for the Split-Plot Design",
+    "text": "ANOVA Source Table for the Split-Plot Design\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nBetween\n\\(t\\frac{N}{a}\\sum_{i=1}^{a}(\\bar{y}_{i..}-\\bar{y}_{...})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{A}}{{df}_{A}}\\)\n\\(\\frac{{MS}_{A}}{{MS}_{B}}\\)\n\n\nBlocks\n\\(t\\sum_{i=1}^{a}\\sum_{j=1}^{n}(\\bar{y}_{ij.}-\\bar{y}_{i..})^{2}\\)\n\\(N-a\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nWithin\n\\(Na\\sum_{k=1}^{K}(\\bar{y}_{..k}-\\bar{y}_{...})^{2}\\)\n\\(t-1\\)\n\\(\\frac{{SS}_{T}}{{df}_{T}}\\)\n\\(\\frac{{MS}_{T}}{{MS}_{E}}\\)\n\n\nInteraction\n\\(\\sum_{i=1}^{a}\\sum_{k=1}^{t}\\frac{N}{a}(\\bar{y}_{i.k}-\\bar{y}_{i..}-\\bar{y}_{..k}+\\bar{y}_{...})^{2}\\)\n\\((a-1)(t-1)\\)\n\\(\\frac{{SS}_{AT}}{{df}_{AT}}\\)\n\\(\\frac{{MS}_{AT}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{N}\\sum_{k=1}^{t}({y}_{ijk}-\\bar{y}_{i.k}-\\bar{y}_{.j.}-\\bar{y}_{..k}+\\bar{y}_{i..})^{2}\\)\n\\((N-a)(t-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#split-plot-analysis-in-r",
+    "href": "lectures/20_repeated_measures_II.html#split-plot-analysis-in-r",
+    "title": "Repeated Measures (cont.)",
+    "section": "Split-Plot Analysis in R",
+    "text": "Split-Plot Analysis in R\nSee r code"
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#crabgrass",
+    "href": "lectures/20_repeated_measures_II.html#crabgrass",
+    "title": "Repeated Measures (cont.)",
+    "section": "Crabgrass",
+    "text": "Crabgrass\nThe purpose of this experiment was to study the way one species of crabgrass competed with itself and with another species for nitrogen (N), phosphorus (P), and potassium (K). Bunches of crabgrass were planted in vermiculite, in 16 Styrofoam cups; after the seeds head sprouted, the plants were thinned to 20 plants per cup. Each of the 16 cups were randomly assigned to get one of 8 nutrient combinations added to its vermiculite. For example, yes-nitrogen/no-phosphorus/yes-potassium. The response is mean dry weight per plant, in milligrams."
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#creepy-animals",
+    "href": "lectures/20_repeated_measures_II.html#creepy-animals",
+    "title": "Repeated Measures (cont.)",
+    "section": "Creepy Animals",
+    "text": "Creepy Animals\nThe effects of exposure to images of different domestic animal species in either aggressive or submissive postures on mood was tested with a split-plot/repeated measures design. Using a computer to randomize, participants were randomly assigned to either view images of dogs or images of cats. All participants saw both an aggressive animal and a submissive animal, and their moods were assessed via self-report after each image. The order of presentation (aggressive then submission, or submissive then aggressive) was randomized to control for order effects."
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html",
+    "href": "lectures/19_repeated_measures.html",
+    "title": "Repeated Measures",
+    "section": "",
+    "text": "HW 8 due tomorrow Nov 19 11:55p\nMP2 Pre-approval due TUESDAY Nov 23 at 11:55p\nZoom Office hours\n\nFriday 1:30-3:30p\nSlots now open!\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework8-questions channel on Slack!\nDirect message me on Slack.\n\nSDS Graduate School PanelNov 22 7-8p via Zoom\n\nSee Moodle for more details.\n\nThank you for your help with Biostats candidates!\n\nFeedback form"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#announcements",
+    "href": "lectures/19_repeated_measures.html#announcements",
+    "title": "Repeated Measures",
+    "section": "",
+    "text": "HW 8 due tomorrow Nov 19 11:55p\nMP2 Pre-approval due TUESDAY Nov 23 at 11:55p\nZoom Office hours\n\nFriday 1:30-3:30p\nSlots now open!\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework8-questions channel on Slack!\nDirect message me on Slack.\n\nSDS Graduate School PanelNov 22 7-8p via Zoom\n\nSee Moodle for more details.\n\nThank you for your help with Biostats candidates!\n\nFeedback form"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#agenda",
+    "href": "lectures/19_repeated_measures.html#agenda",
+    "title": "Repeated Measures",
+    "section": "Agenda",
+    "text": "Agenda\n\nLevene’s Test\nMultiple comparisons\nRepeated measures\nMP2 work time"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#example-walking-babies",
+    "href": "lectures/19_repeated_measures.html#example-walking-babies",
+    "title": "Repeated Measures",
+    "section": "Example: Walking Babies",
+    "text": "Example: Walking Babies\n\ndata(\"WalkingBabies\")\n\n\nds &lt;- WalkingBabies %&gt;%\n  group_by(Group) %&gt;%\n  summarize(n = n(),\n            mean = mean(Age),\n            sd = sd(Age))\n\nds\n\n# A tibble: 4 × 4\n  Group                 n  mean    sd\n  &lt;fct&gt;             &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 exercise control      6  11.4 1.90 \n2 final report          6  12.4 0.871\n3 special exercises     6  10.1 1.45 \n4 weekly report         6  11.6 1.56"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#example-walking-babies-1",
+    "href": "lectures/19_repeated_measures.html#example-walking-babies-1",
+    "title": "Repeated Measures",
+    "section": "Example: Walking Babies",
+    "text": "Example: Walking Babies\n\nds %&gt;%\n  summarize(max(sd)/min(sd))\n\n# A tibble: 1 × 1\n  `max(sd)/min(sd)`\n              &lt;dbl&gt;\n1              2.18\n\n\nSo we fail to meet the condition of equal variances? (The S condition)"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#levenes-test",
+    "href": "lectures/19_repeated_measures.html#levenes-test",
+    "title": "Repeated Measures",
+    "section": "Levene’s Test",
+    "text": "Levene’s Test\nThe biggest SD not more than 2 times as large as the smallest SD is only a rule of thumb.\nLevene’s test is an ANOVA to test the null hypothesis:\n\\[H_0 = \\sigma^2_1=\\sigma^2_2=\\sigma^2_3=\\sigma^2_4\\] \\[H_A= not\\:all\\:variances\\:are\\:equal\\]"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#levenes-test-in-r",
+    "href": "lectures/19_repeated_measures.html#levenes-test-in-r",
+    "title": "Repeated Measures",
+    "section": "Levene’s Test in R",
+    "text": "Levene’s Test in R\n\nlibrary(car)\n\nleveneTest(Age ~ Group, data = WalkingBabies)\n\nLevene's Test for Homogeneity of Variance (center = median)\n      Df F value Pr(&gt;F)\ngroup  3  0.3082 0.8191\n      20               \n\n\nUsing Levene’s Test for homogeneity of variance, we fail to reject the null hypothesis, that is we fail to find evidence that the S condition is not met, \\(F(3, 20)=0.31\\), \\(p = .819\\). We can proceed as if this condition is met."
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#levenes-test-for-factorial-data",
+    "href": "lectures/19_repeated_measures.html#levenes-test-for-factorial-data",
+    "title": "Repeated Measures",
+    "section": "Levene’s Test for Factorial Data",
+    "text": "Levene’s Test for Factorial Data\nLet’s try it for the PigFeed data.\n\ndata(\"PigFeed\")\nleveneTest(WgtGain ~ Antibiotic*B12, data = PigFeed)\n\nLevene's Test for Homogeneity of Variance (center = median)\n      Df F value Pr(&gt;F)\ngroup  3  1.8089 0.2235\n       8               \n\n\nUsing Levene’s Test for homogeneity of variance, we fail to reject the null hypothesis, that is we fail to find evidence that the S condition is not met, \\(F(3, 8)=1.81\\), \\(p = .224\\). We can proceed as if this condition is met."
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#multiple-tests",
+    "href": "lectures/19_repeated_measures.html#multiple-tests",
+    "title": "Repeated Measures",
+    "section": "Multiple Tests",
+    "text": "Multiple Tests\n\ndata(\"Leafhoppers\")\nmod &lt;- lm(Days ~ Diet, data = Leafhoppers)\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: Days\n          Df Sum Sq Mean Sq F value   Pr(&gt;F)   \nDiet       3   3.92  1.3067  17.422 0.009248 **\nResiduals  4   0.30  0.0750                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#fishers-lsd-and-bonferroni-correction",
+    "href": "lectures/19_repeated_measures.html#fishers-lsd-and-bonferroni-correction",
+    "title": "Repeated Measures",
+    "section": "Fisher’s LSD and Bonferroni Correction",
+    "text": "Fisher’s LSD and Bonferroni Correction\n\nlibrary(agricolae)\nLSD.test(mod, \"Diet\", p.adj = \"none\")$groups\n\n         Days groups\nSucrose   3.8      a\nGlucose   2.8      b\nFructose  2.2     bc\nControl   2.0      c\n\nLSD.test(mod, \"Diet\", p.adj = \"bonferroni\")$groups\n\n         Days groups\nSucrose   3.8      a\nGlucose   2.8     ab\nFructose  2.2      b\nControl   2.0      b"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#tukeys-hsd",
+    "href": "lectures/19_repeated_measures.html#tukeys-hsd",
+    "title": "Repeated Measures",
+    "section": "Tukey’s HSD",
+    "text": "Tukey’s HSD\n\nmod &lt;- aov(Days ~ Diet, data = Leafhoppers)\nTukeyHSD(mod, \"Diet\")\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = Days ~ Diet, data = Leafhoppers)\n\n$Diet\n                 diff        lwr     upr     p adj\nFructose-Control  0.2 -0.9148496 1.31485 0.8805808\nGlucose-Control   0.8 -0.3148496 1.91485 0.1337642\nSucrose-Control   1.8  0.6851504 2.91485 0.0095276\nGlucose-Fructose  0.6 -0.5148496 1.71485 0.2677272\nSucrose-Fructose  1.6  0.4851504 2.71485 0.0145912\nSucrose-Glucose   1.0 -0.1148496 2.11485 0.0703156"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#tuplips",
+    "href": "lectures/19_repeated_measures.html#tuplips",
+    "title": "Repeated Measures",
+    "section": "Tuplips",
+    "text": "Tuplips\nA plant breeder wishes to study the effects of soil drainage and variety of tulip bulbs on flower production. Twelve 3m by 10m experimental sites are available in the test garden–each is a .5m deep trench. You can manipulate soil drainage by changing the ratio of sand to clay for the soil you put in a trench. After talking to your collaborator, you decided that four different levels of soil drainage would suffice. You’ll be testing 15 different types of tulips, and measuring flower production in the spring."
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#repeated-measures",
+    "href": "lectures/19_repeated_measures.html#repeated-measures",
+    "title": "Repeated Measures",
+    "section": "Repeated Measures",
+    "text": "Repeated Measures\n\nBetween Subjects Design\n\n\nWithin Subjects Desgin (Complete Block Design)\n\n\nSplit-Plot Design\nIf you suspect a design in a split-plot design, you should be able to answer the following questions:\n\nWhat are the whole plots, that is, what is the nuisance factor?\nWhat is the between-blocks factor? Is it observational or experimental?\nWhat is the within-blocks factor? Is it observational or experimental?"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#diabetic-dogs",
+    "href": "lectures/19_repeated_measures.html#diabetic-dogs",
+    "title": "Repeated Measures",
+    "section": "Diabetic Dogs",
+    "text": "Diabetic Dogs\nThe disease diabetes affects the rate of turnover of lactic acid in a system of biochemical reactions called the Cori cycle. This experiment compares two methods of using radioactive carbon-14 to measure rate of turnover. Method 1 is injection all at once, and method 2 is infused continuously. 10 dogs were sorted into two groups, 5 were controls and 5 had their pancreas removed (to make it diabetic). The rate of turnover was then measured twice for each dog, once for each method. The order of the two methods was randomly assigned."
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#parsnip-plants",
+    "href": "lectures/19_repeated_measures.html#parsnip-plants",
+    "title": "Repeated Measures",
+    "section": "Parsnip Plants",
+    "text": "Parsnip Plants\nUnder the control conditions of this study, wild parsnip plants averaged about a thousand seeds from their first set of flowers (primary umbels), about twice as many from the second set of flowers, but only about 250 from the third set. For plants attacked by the parsnip webworm, which destroyed most of the primary umbels, the pattern was quite different: the seed production from primary, secondary, and tertiary umbels averaged about 200, 2400, and 1300, respectively."
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#formal-anova-for-the-split-plot-design",
+    "href": "lectures/19_repeated_measures.html#formal-anova-for-the-split-plot-design",
+    "title": "Repeated Measures",
+    "section": "Formal ANOVA for the Split-Plot Design",
+    "text": "Formal ANOVA for the Split-Plot Design\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j(i)}+{\\gamma}_{k}+({\\alpha\\gamma})_{ik}+{e}_{ijk}\\]\n\n\\({\\mu}\\) is the benchmark\n\\({\\alpha}_{i}\\) effect of level i of the between-blocks factor, \\(i\\) from \\(1\\) to \\(a\\)\n\\({\\beta}_{j(i)}\\) effect of block \\(j\\) (for level \\(i\\) of the between block factor), \\(j\\) from \\(1\\) to \\(n\\)\n\\({\\gamma}_{k}\\) effect of level \\(k\\) of the within-block factor, \\(k\\) from \\(1\\) to \\(t\\)\n\\(({\\alpha\\gamma})_{ik}\\) interaction effect for level \\(i\\) of the between-blocks factor with level \\(k\\) of the within-blocks factor"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#anova-source-table-for-the-split-plot-design",
+    "href": "lectures/19_repeated_measures.html#anova-source-table-for-the-split-plot-design",
+    "title": "Repeated Measures",
+    "section": "ANOVA Source Table for the Split-Plot Design",
+    "text": "ANOVA Source Table for the Split-Plot Design\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nBetween\n\\(t\\frac{N}{a}\\sum_{i=1}^{a}(\\bar{y}_{i..}-\\bar{y}_{...})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{A}}{{df}_{A}}\\)\n\\(\\frac{{MS}_{A}}{{MS}_{B}}\\)\n\n\nBlocks\n\\(t\\sum_{i=1}^{a}\\sum_{j=1}^{n}(\\bar{y}_{ij.}-\\bar{y}_{i..})^{2}\\)\n\\(N-a\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nWithin\n\\(Na\\sum_{k=1}^{K}(\\bar{y}_{..k}-\\bar{y}_{...})^{2}\\)\n\\(t-1\\)\n\\(\\frac{{SS}_{T}}{{df}_{T}}\\)\n\\(\\frac{{MS}_{T}}{{MS}_{E}}\\)\n\n\nInteraction\n\\(\\sum_{i=1}^{a}\\sum_{k=1}^{t}\\frac{N}{a}(\\bar{y}_{i.k}-\\bar{y}_{i..}-\\bar{y}_{..k}+\\bar{y}_{...})^{2}\\)\n\\((a-1)(t-1)\\)\n\\(\\frac{{SS}_{AT}}{{df}_{AT}}\\)\n\\(\\frac{{MS}_{AT}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{N}\\sum_{k=1}^{t}({y}_{ijk}-\\bar{y}_{i.k}-\\bar{y}_{.j.}-\\bar{y}_{..k}+\\bar{y}_{i..})^{2}\\)\n\\((N-a)(t-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#split-plot-analysis-in-r",
+    "href": "lectures/19_repeated_measures.html#split-plot-analysis-in-r",
+    "title": "Repeated Measures",
+    "section": "Split-Plot Analysis in R",
+    "text": "Split-Plot Analysis in R\nSee r code"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#crabgrass",
+    "href": "lectures/19_repeated_measures.html#crabgrass",
+    "title": "Repeated Measures",
+    "section": "Crabgrass",
+    "text": "Crabgrass\nThe purpose of this experiment was to study the way one species of crabgrass competed with itself and with another species for nitrogen (N), phosphorus (P), and potassium (K). Bunches of crabgrass were planted in vermiculite, in 16 Styrofoam cups; after the seeds head sprouted, the plants were thinned to 20 plants per cup. Each of the 16 cups were randomly assigned to get one of 8 nutrient combinations added to its vermiculite. For example, yes-nitrogen/no-phosphorus/yes-potassium. The response is mean dry weight per plant, in milligrams."
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#osomoregulation",
+    "href": "lectures/19_repeated_measures.html#osomoregulation",
+    "title": "Repeated Measures",
+    "section": "Osomoregulation",
+    "text": "Osomoregulation\nWorms that live at the mouth of a river must deal with varying concentrations of salt. Osomoregulating worms are able to maintain relatively constant concentration of salt in the body. An experiment wanted to test the effects of mixtures of salt water on two species of worms: Nereis virens (N) and Goldfingia gouldii (G). Eighteen worms of each species were weighted, then randomly assigned in equal numbers to one of three conditions. Six worms of each kind were placed in 100% sea water, 67% sea water, or 33% sea water. The worms were then weighted after 30, 60, and 90 minutes, then placed in 100% sea water and weighted one last time 30 minutes later. The response was body weight as percentage of initial body weight."
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#creepy-animals",
+    "href": "lectures/19_repeated_measures.html#creepy-animals",
+    "title": "Repeated Measures",
+    "section": "Creepy Animals",
+    "text": "Creepy Animals\nThe effects of exposure to images of different domestic animal species in either aggressive or submissive postures on mood was tested with a split-plot/repeated measures design. Using a computer to randomize, participants were randomly assigned to either view images of dogs or images of cats. All participants saw both an aggressive animal and a submissive animal, and their moods were assessed via self-report after each image. The order of presentation (aggressive then submission, or submissive then aggressive) was randomized to control for order effects."
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#mp2-work-time",
+    "href": "lectures/19_repeated_measures.html#mp2-work-time",
+    "title": "Repeated Measures",
+    "section": "MP2 Work Time!!",
+    "text": "MP2 Work Time!!\n\nMP2 groups\nTime to discuss your MP2 projects. Goals for today\n\nPre-approval surveys due on Tuesday Nov 23!!"
+  },
+  {
+    "objectID": "lectures/18_MP2_time.html",
+    "href": "lectures/18_MP2_time.html",
+    "title": "MP2 Work Time",
+    "section": "",
+    "text": "MP1 grades are ALL posted\nHW 8 posted and due Friday Nov 19 11:55p\nMP2 Pre-approval due TUESDAY Nov 23 at 11:55p\nIn-person Office hours (Bass 412)\n\nWed (tomorrow) 10:50-12:05p\n\nZoom Office hours\n\nFriday 1:30-3:30p\nSlots open on Thurs morning\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework8-questions channel on Slack!\nDirect message me on Slack.\n\nSDS Graduate School PanelNov 22 7-8p via Zoom\n\nSee Moodle for more details."
+  },
+  {
+    "objectID": "lectures/18_MP2_time.html#announcements",
+    "href": "lectures/18_MP2_time.html#announcements",
+    "title": "MP2 Work Time",
+    "section": "",
+    "text": "MP1 grades are ALL posted\nHW 8 posted and due Friday Nov 19 11:55p\nMP2 Pre-approval due TUESDAY Nov 23 at 11:55p\nIn-person Office hours (Bass 412)\n\nWed (tomorrow) 10:50-12:05p\n\nZoom Office hours\n\nFriday 1:30-3:30p\nSlots open on Thurs morning\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework8-questions channel on Slack!\nDirect message me on Slack.\n\nSDS Graduate School PanelNov 22 7-8p via Zoom\n\nSee Moodle for more details."
+  },
+  {
+    "objectID": "lectures/18_MP2_time.html#sds-biostatistics-job-candidate---wednesday",
+    "href": "lectures/18_MP2_time.html#sds-biostatistics-job-candidate---wednesday",
+    "title": "MP2 Work Time",
+    "section": "SDS Biostatistics Job Candidate - Wednesday",
+    "text": "SDS Biostatistics Job Candidate - Wednesday\nJacob Fiksel tomorrow!!!!\n\nTea with candidates 4:00-4:45 p.m. (all set for students, thank you!)\nResearch talk with grab-and-go lunch (12:25-1:15 p.m., Ford 240)\n\n“Generalized Bayes Quantification Learning with Applications to Mortality Surveillance”\n\nTeaching demonstration (5:00-6:00 p.m., Sabin-Reed 301)\n\n“Introduction to logistic regression”\n\nGive feedback at bit.ly/SDSbiostats"
+  },
+  {
+    "objectID": "lectures/18_MP2_time.html#agenda",
+    "href": "lectures/18_MP2_time.html#agenda",
+    "title": "MP2 Work Time",
+    "section": "Agenda",
+    "text": "Agenda\n\nFitting the Two-Way Factorial ANOVA model\n\nConfidence intervals and effect sizes\n\nMP2 work time"
+  },
+  {
+    "objectID": "lectures/18_MP2_time.html#anova-source-table-for-two-way-factorial",
+    "href": "lectures/18_MP2_time.html#anova-source-table-for-two-way-factorial",
+    "title": "MP2 Work Time",
+    "section": "ANOVA Source Table for Two-Way Factorial",
+    "text": "ANOVA Source Table for Two-Way Factorial\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j}+{\\alpha\\beta}_{ij}+{e}_{ijk}\\]\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment A\n\\(\\sum_{i=1}^{a}bn(\\bar{y}_{i..}-\\bar{y}_{…})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{A}}{{df}_{A}}\\)\n\\(\\frac{{MS}_{A}}{{MS}_{E}}\\)\n\n\nTreatment B\n\\(\\sum_{j=1}^{b}an(\\bar{y}_{.j.}-\\bar{y}_{…})^{2}\\)\n\\(b-1\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nInteraction AB\n\\(n\\sum_{i=1}^{a}\\sum_{j=1}^{b}(\\bar{y}_{ij.}-\\bar{y}_{i..}-\\bar{y}_{.j.}+\\bar{y}_{…})^{2}\\)\n\\((a-1)(b-1)\\)\n\\(\\frac{{SS}_{AB}}{{df}_{AB}}\\)\n\\(\\frac{{MS}_{AB}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{b}\\sum_{k=1}^{n}({y}_{ijk}-\\bar{y}_{ij.})^{2}\\)\n\\(ab(n-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/18_MP2_time.html#confidence-intervals-and-effect-sizes",
+    "href": "lectures/18_MP2_time.html#confidence-intervals-and-effect-sizes",
+    "title": "MP2 Work Time",
+    "section": "Confidence intervals and effect sizes",
+    "text": "Confidence intervals and effect sizes\n\nIf the interaction is significant\n\nCalculate CIs and effect sizes for sets of conditional averages (also called “simple effects”)\nFor example, for the 0mg antibiotics condition, what’s the effect size for B12\n\nIf the interaction is NOT significant\n\nCalculate CIs and effect sizes for sets of marginal averages (also called “main effects”)\nFor example, what is the effect size for B12 overall?"
+  },
+  {
+    "objectID": "lectures/18_MP2_time.html#conditional-averages-and-marginal-averages",
+    "href": "lectures/18_MP2_time.html#conditional-averages-and-marginal-averages",
+    "title": "MP2 Work Time",
+    "section": "Conditional Averages and Marginal Averages",
+    "text": "Conditional Averages and Marginal Averages\n\n\nThe numbers in blue are Marginal Averages\nThe numbers in green are Conditional Averages"
+  },
+  {
+    "objectID": "lectures/18_MP2_time.html#confidence-intervals-and-effect-sizes-1",
+    "href": "lectures/18_MP2_time.html#confidence-intervals-and-effect-sizes-1",
+    "title": "MP2 Work Time",
+    "section": "Confidence Intervals and Effect Sizes",
+    "text": "Confidence Intervals and Effect Sizes\n\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\n\n\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
+  },
+  {
+    "objectID": "lectures/18_MP2_time.html#two-way-factorial-in-r",
+    "href": "lectures/18_MP2_time.html#two-way-factorial-in-r",
+    "title": "MP2 Work Time",
+    "section": "Two-Way Factorial in R",
+    "text": "Two-Way Factorial in R\nSee Two-Way Factorial code"
+  },
+  {
+    "objectID": "lectures/18_MP2_time.html#mp2-work-time",
+    "href": "lectures/18_MP2_time.html#mp2-work-time",
+    "title": "MP2 Work Time",
+    "section": "MP2 Work Time!!",
+    "text": "MP2 Work Time!!\n\nMP2 groups\nTime to discuss your MP2 projects. Goals for today\n\nDecide on a topic\nDiscuss your design and run it by me\nDiscuss your stimuli\nDivide up your work (finding/creating stimuli, creating Qualtrics survey, writing consent form, preparing R code, ect.)"
   }
 ]

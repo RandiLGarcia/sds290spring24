@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="SDS 290">
+<meta name="dcterms.date" content="2021-11-30">
 
-<title>SDS 290 - Spring 2024 - Schedule</title>
+<title>SDS 290 - Spring 2024 - Repeated Measures (cont.)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,8 +69,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">SDS 290 - Spring 2024</span>
     </a>
   </div>
@@ -89,15 +120,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html"> 
+    <a class="nav-link" href="../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./schedule.html" aria-current="page"> 
+    <a class="nav-link" href="../schedule.html"> 
 <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -114,71 +145,71 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-lectures">    
         <li>
-    <a class="dropdown-item" href="./lectures/01_intro_to_experimental.html">
+    <a class="dropdown-item" href="../lectures/01_intro_to_experimental.html">
  <span class="dropdown-text">01 - Intro to Experimental Design</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/02_one-way-ANOVA.html">
+    <a class="dropdown-item" href="../lectures/02_one-way-ANOVA.html">
  <span class="dropdown-text">02 - One-Way ANOVA</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/03_one-way-ANOVAII.html">
+    <a class="dropdown-item" href="../lectures/03_one-way-ANOVAII.html">
  <span class="dropdown-text">03 - One-Way ANOVA II</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/04_inference-ANOVA.html">
+    <a class="dropdown-item" href="../lectures/04_inference-ANOVA.html">
  <span class="dropdown-text">04 - Inference for ANOVA</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/05_ANOVA-conditions.html">
+    <a class="dropdown-item" href="../lectures/05_ANOVA-conditions.html">
  <span class="dropdown-text">05 - ANOVA Conditions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/06_CI-effect-sizes.html">
+    <a class="dropdown-item" href="../lectures/06_CI-effect-sizes.html">
  <span class="dropdown-text">06 - Confidence Intervals and Effect Sizes</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/07_multiple-comparisons.html">
+    <a class="dropdown-item" href="../lectures/07_multiple-comparisons.html">
  <span class="dropdown-text">07 - Multiple Comparisons</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/08_four-designs.html">
+    <a class="dropdown-item" href="../lectures/08_four-designs.html">
  <span class="dropdown-text">08 - Four Designs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/09_intro_to_blocking.html">
+    <a class="dropdown-item" href="../lectures/09_intro_to_blocking.html">
  <span class="dropdown-text">09 - Intro to Blocking</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/10_complete_block.html">
+    <a class="dropdown-item" href="../lectures/10_complete_block.html">
  <span class="dropdown-text">10 - Analysis of Complete Block</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/11_assessing_cb.html">
+    <a class="dropdown-item" href="../lectures/11_assessing_cb.html">
  <span class="dropdown-text">11 - Assessing the Complete Block</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/12_exam1_review.html">
+    <a class="dropdown-item" href="../lectures/12_exam1_review.html">
  <span class="dropdown-text">Exam 1 Review</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/13_two-way_factorial.html">
+    <a class="dropdown-item" href="../lectures/13_two-way_factorial.html">
  <span class="dropdown-text">13 - Two-Way Factorial</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/14_two-way_factorial_II.html">
+    <a class="dropdown-item" href="../lectures/14_two-way_factorial_II.html">
  <span class="dropdown-text">14 - Two-Way Factorial (cont.)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/15_assess_factorial.html">
+    <a class="dropdown-item" href="../lectures/15_assess_factorial.html">
  <span class="dropdown-text">15 - Assessing Two-Way Factorial Designs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/16_fit_factorial.html">
+    <a class="dropdown-item" href="../lectures/16_fit_factorial.html">
  <span class="dropdown-text">16 - Fitting Two-Way Factorial Designs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/17_catch-up_factorial.html">
+    <a class="dropdown-item" href="../lectures/17_catch-up_factorial.html">
  <span class="dropdown-text">17 - Chapter 7 Catch-up</span></a>
   </li>  
     </ul>
@@ -189,19 +220,19 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-code">    
         <li>
-    <a class="dropdown-item" href="./code/01_animal_data.qmd">
+    <a class="dropdown-item" href="../code/01_animal_data.qmd">
  <span class="dropdown-text">Animal Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./code/02_informal_anova.qmd">
+    <a class="dropdown-item" href="../code/02_informal_anova.qmd">
  <span class="dropdown-text">Informal ANOVA</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./code/SandwichAnts analysis.qmd">
+    <a class="dropdown-item" href="../code/SandwichAnts analysis.qmd">
  <span class="dropdown-text">SandwichAnts Analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./code/09_two-way_fac_inR.qmd">
+    <a class="dropdown-item" href="../code/09_two-way_fac_inR.qmd">
  <span class="dropdown-text">Two-Way Factorial Design</span></a>
   </li>  
     </ul>
@@ -216,31 +247,31 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">HW1a: Record your names on Moodle</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./pdfs/HW 1b_CITI Training.pdf">
+    <a class="dropdown-item" href="../pdfs/HW 1b_CITI Training.pdf">
  <span class="dropdown-text">HW1b: CITI Training</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework.html">
+    <a class="dropdown-item" href="../homework.html">
  <span class="dropdown-text">HW2: Click Here</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework.html">
+    <a class="dropdown-item" href="../homework.html">
  <span class="dropdown-text">HW #3: 5.32, 5.38, 5.54</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework.html">
+    <a class="dropdown-item" href="../homework.html">
  <span class="dropdown-text">HW4: 5.59, 5.60, 5.70, 5.36, 5.43</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework.html">
+    <a class="dropdown-item" href="../homework.html">
  <span class="dropdown-text">HW5: 5.46, 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework.html">
+    <a class="dropdown-item" href="../homework.html">
  <span class="dropdown-text">HW6: 6.1, 6.5, 6.26, 6.36, 6.37</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework.html">
+    <a class="dropdown-item" href="../homework.html">
  <span class="dropdown-text">HW7: 7.5, 7.7, 7.8, 7.11, 7.12, journal article</span></a>
   </li>  
     </ul>
@@ -251,11 +282,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
         <li>
-    <a class="dropdown-item" href="./project/mini-project-1.html">
+    <a class="dropdown-item" href="../project/mini-project-1.html">
  <span class="dropdown-text">Mini project 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./project/mini-project-2.html">
+    <a class="dropdown-item" href="../project/mini-project-2.html">
  <span class="dropdown-text">Mini Project 2</span></a>
   </li>  
     </ul>
@@ -276,11 +307,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-12" id="toc-week-12" class="nav-link active" data-scroll-target="#week-12">Week 12</a></li>
-  <li><a href="#week-13" id="toc-week-13" class="nav-link" data-scroll-target="#week-13">Week 13</a></li>
-  <li><a href="#week-14" id="toc-week-14" class="nav-link" data-scroll-target="#week-14">Week 14</a></li>
-  <li><a href="#week-15---exam-2" id="toc-week-15---exam-2" class="nav-link" data-scroll-target="#week-15---exam-2">Week 15 - Exam 2</a></li>
-  <li><a href="#finals-week---mp2-due" id="toc-finals-week---mp2-due" class="nav-link" data-scroll-target="#finals-week---mp2-due">Finals Week - MP2 due</a></li>
+  <li><a href="#announcements" id="toc-announcements" class="nav-link active" data-scroll-target="#announcements">Announcements</a></li>
+  <li><a href="#sds-job-candidates-for-mass-mutual-position" id="toc-sds-job-candidates-for-mass-mutual-position" class="nav-link" data-scroll-target="#sds-job-candidates-for-mass-mutual-position">SDS Job Candidates for Mass Mutual position</a></li>
+  <li><a href="#sds-job-candidates-for-mass-mutual-position-1" id="toc-sds-job-candidates-for-mass-mutual-position-1" class="nav-link" data-scroll-target="#sds-job-candidates-for-mass-mutual-position-1">SDS Job Candidates for Mass Mutual position</a></li>
+  <li><a href="#sds-job-candidates-for-mass-mutual-position-2" id="toc-sds-job-candidates-for-mass-mutual-position-2" class="nav-link" data-scroll-target="#sds-job-candidates-for-mass-mutual-position-2">SDS Job Candidates for Mass Mutual position</a></li>
+  <li><a href="#agenda" id="toc-agenda" class="nav-link" data-scroll-target="#agenda">Agenda</a></li>
+  <li><a href="#mp2-data-collection" id="toc-mp2-data-collection" class="nav-link" data-scroll-target="#mp2-data-collection">MP2 data collection</a></li>
+  <li><a href="#repeated-measures" id="toc-repeated-measures" class="nav-link" data-scroll-target="#repeated-measures">Repeated Measures</a>
+  <ul class="collapse">
+  <li><a href="#between-subjects-versus-within-subjects" id="toc-between-subjects-versus-within-subjects" class="nav-link" data-scroll-target="#between-subjects-versus-within-subjects">Between Subjects versus Within Subjects</a></li>
+  </ul></li>
+  <li><a href="#diabetic-dogs" id="toc-diabetic-dogs" class="nav-link" data-scroll-target="#diabetic-dogs">Diabetic Dogs</a></li>
+  <li><a href="#split-plot-design" id="toc-split-plot-design" class="nav-link" data-scroll-target="#split-plot-design">Split-Plot Design</a></li>
+  <li><a href="#osomoregulation" id="toc-osomoregulation" class="nav-link" data-scroll-target="#osomoregulation">Osomoregulation</a></li>
+  <li><a href="#parsnip-plants" id="toc-parsnip-plants" class="nav-link" data-scroll-target="#parsnip-plants">Parsnip Plants</a></li>
+  <li><a href="#formal-anova-for-the-split-plot-design" id="toc-formal-anova-for-the-split-plot-design" class="nav-link" data-scroll-target="#formal-anova-for-the-split-plot-design">Formal ANOVA for the Split-Plot Design</a></li>
+  <li><a href="#anova-source-table-for-the-split-plot-design" id="toc-anova-source-table-for-the-split-plot-design" class="nav-link" data-scroll-target="#anova-source-table-for-the-split-plot-design">ANOVA Source Table for the Split-Plot Design</a></li>
+  <li><a href="#split-plot-analysis-in-r" id="toc-split-plot-analysis-in-r" class="nav-link" data-scroll-target="#split-plot-analysis-in-r">Split-Plot Analysis in R</a></li>
+  <li><a href="#crabgrass" id="toc-crabgrass" class="nav-link" data-scroll-target="#crabgrass">Crabgrass</a></li>
+  <li><a href="#creepy-animals" id="toc-creepy-animals" class="nav-link" data-scroll-target="#creepy-animals">Creepy Animals</a></li>
   </ul>
 </nav>
     </div>
@@ -289,14 +334,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Schedule</h1>
+<h1 class="title">Repeated Measures (cont.)</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>SDS 290 </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 30, 2021</p>
+    </div>
+  </div>
   
     
   </div>
@@ -306,521 +363,203 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Please read the specified sections <em>before</em> class that day.</p>
-<div id="past" style="color: lightgray">
-<section id="week-1" class="level2">
-<h2 class="anchored" data-anchor-id="week-1">Week 1</h2>
-<section id="tue-jan-23" class="level4">
-<h4 class="anchored" data-anchor-id="tue-jan-23">Tue, Jan 23</h4>
+<section id="announcements" class="level2">
+<h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
 <ul>
-<li>No class</li>
-</ul>
-</section>
-<section id="thurs-jan-25" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-jan-25">Thurs, Jan 25</h4>
+<li>HW 9 posted and due Friday Dec 3 11:55p</li>
+<li>In-person Office hours (Bass 412)
 <ul>
-<li>Introduction to the course</li>
-<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdzrD35V7bkrvaTUIMUMo9nzx6e5fmzpDg6ceiYFbZOBBPuPw/viewform?usp=sf_link">Course questionnaire</a></li>
-<li><a href="https://smithcollege.qualtrics.com/jfe/form/SV_71nqdhEpN8frd6B">Short experiment</a></li>
-<li>Homework:
-<ul>
-<li>HW #1a: record your name on Moodle</li>
-<li>HW #1b: CITI training</li>
+<li>Wed (tomorrow) 10:50-12:05p</li>
 </ul></li>
-<li><strong>Office hours</strong>: 2:45p - 4:00p</li>
+<li>Zoom Office hours
+<ul>
+<li>Friday <strong>exact times TBD</strong></li>
+<li>Slots open on Thurs morning</li>
+</ul></li>
+<li>Where to get HW help
+<ul>
+<li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301.</li>
+<li>Post questions to #homework9-questions channel on Slack!</li>
+<li>Direct message me on Slack.</li>
+</ul></li>
+<li>Job candidates!!</li>
 </ul>
 </section>
-<section id="fri-jan-26" class="level4">
-<h4 class="anchored" data-anchor-id="fri-jan-26">Fri, Jan 26</h4>
+<section id="sds-job-candidates-for-mass-mutual-position" class="level2">
+<h2 class="anchored" data-anchor-id="sds-job-candidates-for-mass-mutual-position">SDS Job Candidates for Mass Mutual position</h2>
+<p>Sign-up for tea <a href="https://docs.google.com/spreadsheets/d/1QWUtWID0t69ErMTWLlTdFB0X7i9bIlcHGxqQNt_0rzA/edit#gid=0">here</a></p>
+<p>Tue 11/30: <strong>Ryan Gallagher</strong> (he/him/they/them), Northeastern University</p>
 <ul>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-<li>Homework due today:
+<li>Research talk: “The Network Structure of Online Amplification”, 12:25-1:20pm, Ford Hall 240</li>
+<li>Tea with students: sign-up here, 3:30pm - 4:25pm, McConnell 209</li>
+<li>Teaching demo: Joining two data tables, 5:00-6:00pm in Sabin-Reed 301</li>
+</ul>
+</section>
+<section id="sds-job-candidates-for-mass-mutual-position-1" class="level2">
+<h2 class="anchored" data-anchor-id="sds-job-candidates-for-mass-mutual-position-1">SDS Job Candidates for Mass Mutual position</h2>
+<p>Sign-up for tea <a href="https://docs.google.com/spreadsheets/d/1QWUtWID0t69ErMTWLlTdFB0X7i9bIlcHGxqQNt_0rzA/edit#gid=0">here</a></p>
+<p>Thu 12/2: <strong>Karin Knudson</strong> (she/her/hers), Tufts University</p>
 <ul>
-<li>Read <strong>Stat2</strong> Ch. 0 (PDF on Moodle)</li>
-<li><strong>HW #1a due today at 11:55p</strong></li>
+<li>Research talk: “Assessing neurodegenerative diseases and estimating racially polarized voting with models and tools that are flexible, interpretable, and usable”, 12:25-1:20pm in McConnell Hall 103</li>
+<li>Tea with students: sign-up here, 3:00pm - 3:55pm, McConnell 209</li>
+<li>Teaching demo: Joining two data tables, 5:00-6:00pm, Sabin-Reed 301</li>
+</ul>
+</section>
+<section id="sds-job-candidates-for-mass-mutual-position-2" class="level2">
+<h2 class="anchored" data-anchor-id="sds-job-candidates-for-mass-mutual-position-2">SDS Job Candidates for Mass Mutual position</h2>
+<p>Sign-up for tea <a href="https://docs.google.com/spreadsheets/d/1QWUtWID0t69ErMTWLlTdFB0X7i9bIlcHGxqQNt_0rzA/edit#gid=0">here</a></p>
+<p>Tue 12/7: <strong>Sarah Shugars</strong> (they/them), NYU Center for Data Science and GWU School of Media &amp; Public Affairs</p>
+<ul>
+<li>Research talk: “Why Keep Arguing? Engagement Dynamics in Online Political Conversations”, 12:25-1:20pm in Ford Hall 240</li>
+<li>Tea with students: sign-up here, 3:00pm - 3:55pm, McConnell 209</li>
+<li>Teaching demo: Computing summary statistics on a single data table, 5:00-6:00p in Sabin-Reed 301</li>
+</ul>
+</section>
+<section id="agenda" class="level2">
+<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
+<ol type="1">
+<li>MP2 Data Collection!!</li>
+<li>Repeated measures (cont.)</li>
+</ol>
+</section>
+<section id="mp2-data-collection" class="level2">
+<h2 class="anchored" data-anchor-id="mp2-data-collection">MP2 data collection</h2>
+<p><strong>Step 1:</strong></p>
+<ul>
+<li>If you’re approved:
+<ul>
+<li>15 minutes to go through the <a href="https://randilgarcia.github.io/sds290fall21/lectures/10_complete_block.html#4">checklist</a>.</li>
+<li>Paste anonymous survey link in the <a href="https://docs.google.com/spreadsheets/d/1m5vEHBL0QUkYxiDhbLxQQd0RzIHBFlq9Sg16akAquXk/edit#gid=0">spreadsheet</a>.</li>
+<li>If you’re ready, work on your homework!</li>
 </ul></li>
 </ul>
-</section>
-</section>
-<section id="week-2" class="level2">
-<h2 class="anchored" data-anchor-id="week-2">Week 2</h2>
-<section id="tue-jan-30" class="level4">
-<h4 class="anchored" data-anchor-id="tue-jan-30">Tue, Jan 30</h4>
+<p><strong>Step 2:</strong></p>
 <ul>
-<li>Four-step process</li>
-<li>One-way ANOVA</li>
-<li>Homework due today:
+<li>20 min to participate in as many studies as you can!
 <ul>
-<li>Read <strong>Stat2</strong> Ch. 5.1-5.2 (Moodle)</li>
-</ul></li>
-</ul>
-</section>
-<section id="thurs-feb-1" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-feb-1">Thurs, Feb 1</h4>
-<ul>
-<li>One-way ANOVA (cont.)</li>
-<li>Homework due today:
-<ul>
-<li>Read <strong>Stat2</strong> Ch. 5.3</li>
-</ul></li>
-<li><strong>Office hours</strong>: 2:45p - 4:00p</li>
-</ul>
-</section>
-<section id="fri-feb-2" class="level4">
-<h4 class="anchored" data-anchor-id="fri-feb-2">Fri, Feb 2</h4>
-<ul>
-<li><strong>Office hours</strong>: cancelled today</li>
-<li>Homework due today:
-<ul>
-<li><strong>HW #1b due today at 11:55p</strong></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="week-3" class="level2">
-<h2 class="anchored" data-anchor-id="week-3">Week 3</h2>
-<section id="tue-feb-6" class="level4">
-<h4 class="anchored" data-anchor-id="tue-feb-6">Tue, Feb 6</h4>
-<ul>
-<li>Inference for ANOVA</li>
-<li>Homework due today:
-<ul>
-<li>Read <strong>Stat2</strong> Ch. 5.4</li>
+<li>Note: see content warnings</li>
+<li>Please only participate in audio studies if you have headphones</li>
+<li><strong>Last chance to collect data in class</strong></li>
 </ul></li>
 </ul>
 </section>
-<section id="thurs-feb-8" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-feb-8">Thurs, Feb 8</h4>
+<section id="repeated-measures" class="level2">
+<h2 class="anchored" data-anchor-id="repeated-measures">Repeated Measures</h2>
+<section id="between-subjects-versus-within-subjects" class="level3">
+<h3 class="anchored" data-anchor-id="between-subjects-versus-within-subjects">Between Subjects versus Within Subjects</h3>
+<p>Thought experiment:</p>
+<blockquote class="blockquote">
+<p>Think of your MP1 project. What would your study have been like if every participant saw every condition and gave a response after each condition?</p>
+</blockquote>
+<p>This would have been a <strong>within-subjects design</strong>. What you actually did for MP1 was a <strong>between-subjects design</strong>.</p>
+<section id="min-free-write-what-would-have-been-the-pros-and-cons-of-doing-your-mp1-this-way" class="level4">
+<h4 class="anchored" data-anchor-id="min-free-write-what-would-have-been-the-pros-and-cons-of-doing-your-mp1-this-way">3-min free write: What would have been the pros and cons of doing your MP1 this way?</h4>
+</section>
+</section>
+</section>
+<section id="diabetic-dogs" class="level2">
+<h2 class="anchored" data-anchor-id="diabetic-dogs">Diabetic Dogs</h2>
+<p>The disease diabetes affects the rate of turnover of lactic acid in a system of biochemical reactions called the Cori cycle. This experiment compares two methods of using radioactive carbon-14 to measure rate of turnover. Method 1 is injection all at once, and method 2 is infused continuously. 10 dogs were sorted into two groups, 5 were controls and 5 had their pancreas removed (to make it diabetic). The rate of turnover was then measured twice for each dog, once for each method. The order of the two methods was randomly assigned.</p>
+</section>
+<section id="split-plot-design" class="level2">
+<h2 class="anchored" data-anchor-id="split-plot-design">Split-Plot Design</h2>
+<p>If you suspect a design in a split-plot design, you should be able to answer the following questions:</p>
+<ol type="1">
+<li>What are the whole plots, that is, what is the nuisance factor?</li>
+<li>What is the between-blocks factor? Is it observational or experimental?</li>
+<li>What is the within-blocks factor? Is it observational or experimental?</li>
+</ol>
+</section>
+<section id="osomoregulation" class="level2">
+<h2 class="anchored" data-anchor-id="osomoregulation">Osomoregulation</h2>
+<p>Worms that live at the mouth of a river must deal with varying concentrations of salt. Osomoregulating worms are able to maintain relatively constant concentration of salt in the body. An experiment wanted to test the effects of mixtures of salt water on two species of worms: Nereis virens (N) and Goldfingia gouldii (G). Eighteen worms of each species were weighted, then randomly assigned in equal numbers to one of three conditions. Six worms of each kind were placed in 100% sea water, 67% sea water, or 33% sea water. The worms were then weighted after 30, 60, and 90 minutes, then placed in 100% sea water and weighted one last time 30 minutes later. The response was body weight as percentage of initial body weight.</p>
+</section>
+<section id="parsnip-plants" class="level2">
+<h2 class="anchored" data-anchor-id="parsnip-plants">Parsnip Plants</h2>
+<p>Under the control conditions of this study, wild parsnip plants averaged about a thousand seeds from their first set of flowers (primary umbels), about twice as many from the second set of flowers, but only about 250 from the third set. For plants attacked by the parsnip webworm, which destroyed most of the primary umbels, the pattern was quite different: the seed production from primary, secondary, and tertiary umbels averaged about 200, 2400, and 1300, respectively.</p>
+</section>
+<section id="formal-anova-for-the-split-plot-design" class="level2">
+<h2 class="anchored" data-anchor-id="formal-anova-for-the-split-plot-design">Formal ANOVA for the Split-Plot Design</h2>
+<p><span class="math display">\[{y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j(i)}+{\gamma}_{k}+({\alpha\gamma})_{ik}+{e}_{ijk}\]</span></p>
 <ul>
-<li>ANOVA Conditions</li>
-<li>MP1 assignment</li>
-<li>Homework due today:
-<ul>
-<li>No reading for today</li>
-</ul></li>
-<li><strong>Office hours</strong>: 2:45p - 4:00p</li>
+<li><span class="math inline">\({\mu}\)</span> is the benchmark</li>
+<li><span class="math inline">\({\alpha}_{i}\)</span> effect of level i of the between-blocks factor, <span class="math inline">\(i\)</span> from <span class="math inline">\(1\)</span> to <span class="math inline">\(a\)</span></li>
+<li><span class="math inline">\({\beta}_{j(i)}\)</span> effect of block <span class="math inline">\(j\)</span> (for level <span class="math inline">\(i\)</span> of the between block factor), <span class="math inline">\(j\)</span> from <span class="math inline">\(1\)</span> to <span class="math inline">\(n\)</span></li>
+<li><span class="math inline">\({\gamma}_{k}\)</span> effect of level <span class="math inline">\(k\)</span> of the within-block factor, <span class="math inline">\(k\)</span> from <span class="math inline">\(1\)</span> to <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(({\alpha\gamma})_{ik}\)</span> interaction effect for level <span class="math inline">\(i\)</span> of the between-blocks factor with level <span class="math inline">\(k\)</span> of the within-blocks factor</li>
 </ul>
 </section>
-<section id="fri-feb-9" class="level4">
-<h4 class="anchored" data-anchor-id="fri-feb-9">Fri, Feb 9</h4>
-<ul>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-<li>Homework due today:
-<ul>
-<li><strong>HW #2 due today at 11:55p</strong></li>
-</ul></li>
-</ul>
+<section id="anova-source-table-for-the-split-plot-design" class="level2">
+<h2 class="anchored" data-anchor-id="anova-source-table-for-the-split-plot-design">ANOVA Source Table for the Split-Plot Design</h2>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Source</th>
+<th style="text-align: center;">SS</th>
+<th style="text-align: center;">df</th>
+<th style="text-align: center;">MS</th>
+<th style="text-align: center;">F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Between</td>
+<td style="text-align: center;"><span class="math inline">\(t\frac{N}{a}\sum_{i=1}^{a}(\bar{y}_{i..}-\bar{y}_{...})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(a-1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{A}}{{df}_{A}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{A}}{{MS}_{B}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Blocks</td>
+<td style="text-align: center;"><span class="math inline">\(t\sum_{i=1}^{a}\sum_{j=1}^{n}(\bar{y}_{ij.}-\bar{y}_{i..})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N-a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{B}}{{df}_{B}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{B}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Within</td>
+<td style="text-align: center;"><span class="math inline">\(Na\sum_{k=1}^{K}(\bar{y}_{..k}-\bar{y}_{...})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(t-1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{T}}{{df}_{T}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{T}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Interaction</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}\sum_{k=1}^{t}\frac{N}{a}(\bar{y}_{i.k}-\bar{y}_{i..}-\bar{y}_{..k}+\bar{y}_{...})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((a-1)(t-1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{AT}}{{df}_{AT}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{AT}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Error</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}\sum_{j=1}^{N}\sum_{k=1}^{t}({y}_{ijk}-\bar{y}_{i.k}-\bar{y}_{.j.}-\bar{y}_{..k}+\bar{y}_{i..})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((N-a)(t-1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{E}}{{df}_{E}}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
 </section>
+<section id="split-plot-analysis-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="split-plot-analysis-in-r">Split-Plot Analysis in R</h2>
+<p><a href="https://randilgarcia.github.io/sds290fall21/lectures/13_spitplot_design_inR.Rmd">See r code</a></p>
 </section>
-<section id="week-4" class="level2">
-<h2 class="anchored" data-anchor-id="week-4">Week 4</h2>
-<section id="tue-feb-13" class="level4">
-<h4 class="anchored" data-anchor-id="tue-feb-13">Tue, Feb 13</h4>
-<ul>
-<li>Transformations</li>
-<li>MP1 topics</li>
-<li>Homework due today:
-<ul>
-<li>Brainstorm topics for MP1</li>
-<li>Read <strong>Stat2</strong> Ch. 5.5-5.6</li>
-</ul></li>
-</ul>
+<section id="crabgrass" class="level2">
+<h2 class="anchored" data-anchor-id="crabgrass">Crabgrass</h2>
+<p>The purpose of this experiment was to study the way one species of crabgrass competed with itself and with another species for nitrogen (N), phosphorus (P), and potassium (K). Bunches of crabgrass were planted in vermiculite, in 16 Styrofoam cups; after the seeds head sprouted, the plants were thinned to 20 plants per cup. Each of the 16 cups were randomly assigned to get one of 8 nutrient combinations added to its vermiculite. For example, yes-nitrogen/no-phosphorus/yes-potassium. The response is mean dry weight per plant, in milligrams.</p>
 </section>
-<section id="thurs-feb-15" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-feb-15">Thurs, Feb 15</h4>
-<ul>
-<li>Confidence intervals and effect sizes</li>
-<li>Introduction to Qualtrics</li>
-<li>Homework due today:
-<ul>
-<li>Find potential stimuli (images) for MP1</li>
-<li>Read <strong>Stat2</strong> 4.5 (up to, not including, example 4.10)</li>
-<li>Read <strong>Stat2</strong> 5.7</li>
-</ul></li>
-<li><strong>Office hours</strong>: 2:45p - 4:00p</li>
-</ul>
-</section>
-<section id="fri-feb-16" class="level4">
-<h4 class="anchored" data-anchor-id="fri-feb-16">Fri, Feb 16</h4>
-<ul>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-<li>Homework due today:
-<ul>
-<li><strong>HW #3 due on today at 11:55p</strong></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="week-5" class="level2">
-<h2 class="anchored" data-anchor-id="week-5">Week 5</h2>
-<section id="tue-feb-20" class="level4">
-<h4 class="anchored" data-anchor-id="tue-feb-20">Tue, Feb 20</h4>
-<ul>
-<li>Multiple comparisons</li>
-<li>Time to work on MP1</li>
-<li>Homework due today:
-<ul>
-<li>Work on Qualtrics survey for MP1</li>
-</ul></li>
-</ul>
-</section>
-<section id="thurs-feb-22" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-feb-22">Thurs, Feb 22</h4>
-<ul>
-<li>Four basic designs</li>
-<li>Homework due today:
-<ul>
-<li>Read <strong>Cobb</strong> Ch. 1.1-1.3 (PDF on Moodle)</li>
-</ul></li>
-<li><strong>Office hours</strong>: cancelled Rally Day</li>
-</ul>
-</section>
-<section id="fri-feb-23" class="level4">
-<h4 class="anchored" data-anchor-id="fri-feb-23">Fri, Feb 23</h4>
-<ul>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-<li>Homework due today:
-<ul>
-<li><strong>HW #4 due on today at 11:55p</strong></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="week-6" class="level2">
-<h2 class="anchored" data-anchor-id="week-6">Week 6</h2>
-<section id="tue-feb-27" class="level4">
-<h4 class="anchored" data-anchor-id="tue-feb-27">Tue, Feb 27</h4>
-<ul>
-<li>Blocking</li>
-<li>Homework due today:
-<ul>
-<li>Read Ch <strong>Stat2</strong> Ch 6.1-6.2</li>
-</ul></li>
-</ul>
-</section>
-<section id="thurs-feb-29" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-feb-29">Thurs, Feb 29</h4>
-<ul>
-<li>Fitting the model for a block design</li>
-<li>Homework due today:
-<ul>
-<li>Read Ch <strong>Stat2</strong> Ch 6.3</li>
-</ul></li>
-<li><strong>Office hours</strong>: 2:45p - 4:00p</li>
-</ul>
-</section>
-<section id="fri-mar-1" class="level4">
-<h4 class="anchored" data-anchor-id="fri-mar-1">Fri, Mar 1</h4>
-<ul>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-<li>Homework due today:
-<ul>
-<li><strong>MP1 Qualtrics survey due for pre-approval by 11:55p</strong></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="week-7" class="level2">
-<h2 class="anchored" data-anchor-id="week-7">Week 7</h2>
-<section id="tue-mar-4" class="level4">
-<h4 class="anchored" data-anchor-id="tue-mar-4">Tue, Mar 4</h4>
-<ul>
-<li>MP1 Data Collection Day</li>
-<li>Assessing the block design</li>
-</ul>
-</section>
-<section id="thurs-mar-7" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-mar-7">Thurs, Mar 7</h4>
-<ul>
-<li>Using the block design</li>
-<li>Homework due today:
-<ul>
-<li>Read Ch <strong>Stat2</strong> 6.4-6.5</li>
-</ul></li>
-<li><strong>Office hours</strong>: Cancelled today</li>
-</ul>
-</section>
-<section id="fri-mar-8" class="level4">
-<h4 class="anchored" data-anchor-id="fri-mar-8">Fri, Mar 8</h4>
-<ul>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-<li>Homework due today:
-<ul>
-<li><strong>HW #5 due tonight at 11:55p</strong></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="week-8---exam-1" class="level2">
-<h2 class="anchored" data-anchor-id="week-8---exam-1">Week 8 - Exam 1</h2>
-<section id="tue-mar-12" class="level4">
-<h4 class="anchored" data-anchor-id="tue-mar-12">Tue, Mar 12</h4>
-<ul>
-<li>Review for Exam 1</li>
-<li>Analysis of MP1 data</li>
-</ul>
-</section>
-<section id="thurs-mar-14" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-mar-14">Thurs, Mar 14</h4>
-<ul>
-<li><strong>Time to work on Exam 1</strong></li>
-<li><strong>Office hours</strong>: 2:45p - 4:00p</li>
-</ul>
-</section>
-<section id="fri-mar-15" class="level4">
-<h4 class="anchored" data-anchor-id="fri-mar-15">Fri, Mar 15</h4>
-<ul>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-<li>Homework due today:
-<ul>
-<li><strong>Exam 1 due tonight at 11:59p on Gradescope</strong></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="spring-break" class="level2">
-<h2 class="anchored" data-anchor-id="spring-break">Spring Break</h2>
-<section id="tue-mar-19" class="level4">
-<h4 class="anchored" data-anchor-id="tue-mar-19">Tue, Mar 19</h4>
-<ul>
-<li>No class - Spring Break</li>
-</ul>
-</section>
-<section id="thurs-mar-21" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-mar-21">Thurs, Mar 21</h4>
-<ul>
-<li>No class - Spring Break</li>
-</ul>
-</section>
-<section id="fri-mar-22" class="level4">
-<h4 class="anchored" data-anchor-id="fri-mar-22">Fri, Mar 22</h4>
-<ul>
-<li>No class - Spring Break</li>
-</ul>
-</section>
-</section>
-<section id="week-10---mp1-due" class="level2">
-<h2 class="anchored" data-anchor-id="week-10---mp1-due">Week 10 - MP1 due</h2>
-<section id="tue-mar-26" class="level4">
-<h4 class="anchored" data-anchor-id="tue-mar-26">Tue, Mar 26</h4>
-<ul>
-<li>Interactions</li>
-<li>Two-way factorial designs</li>
-<li>Homework due today:
-<ul>
-<li>Read Ch <strong>Stat2</strong> 7.1-7.2</li>
-</ul></li>
-</ul>
-</section>
-<section id="thurs-mar-28" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-mar-28">Thurs, Mar 28</h4>
-<ul>
-<li>Fitting two-way ANOVA</li>
-<li>Practice designs</li>
-<li>Homework due today:
-<ul>
-<li>Read Ch <strong>Stat2</strong> 7.3</li>
-</ul></li>
-<li><strong>Office hours</strong>: 2:45p - 4:00p</li>
-</ul>
-</section>
-<section id="fri-mar-29" class="level4">
-<h4 class="anchored" data-anchor-id="fri-mar-29">Fri, Mar 29</h4>
-<ul>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-<li>Homework due today:
-<ul>
-<li><strong>Mini Project 1 due 11:59p</strong> (upload to Moodle by Midnight)</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="week-11" class="level2">
-<h2 class="anchored" data-anchor-id="week-11">Week 11</h2>
-<section id="tue-apr-2" class="level4">
-<h4 class="anchored" data-anchor-id="tue-apr-2">Tue, Apr 2</h4>
-<ul>
-<li>Fitting two-way design</li>
-<li>Practice designs</li>
-<li>Homework due today:
-<ul>
-<li>Read Ch <strong>Stat2</strong> 7.4</li>
-</ul></li>
-</ul>
-</section>
-<section id="thurs-apr-4" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-apr-4">Thurs, Apr 4</h4>
-<ul>
-<li>Practice designs</li>
-<li><strong>Office hours</strong>: Cancelled today</li>
-</ul>
-</section>
-<section id="fri-apr-5" class="level4">
-<h4 class="anchored" data-anchor-id="fri-apr-5">Fri, Apr 5</h4>
-<ul>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-<li>Homework due today:
-<ul>
-<li><a href="homework.html"><strong>HW #6 due today at 11:55p</strong></a></li>
-</ul></li>
-</ul>
-</section>
-</section>
-</div>
-<section id="week-12" class="level2">
-<h2 class="anchored" data-anchor-id="week-12">Week 12</h2>
-<section id="tue-apr-9" class="level4">
-<h4 class="anchored" data-anchor-id="tue-apr-9">Tue, Apr 9</h4>
-<ul>
-<li>Assessing two-way design</li>
-<li>MP2 work time</li>
-<li>Homework due today:
-<ul>
-<li>Read Ch <strong>Stat2</strong> 7.5</li>
-</ul></li>
-</ul>
-</section>
-<section id="thurs-apr-11" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-apr-11">Thurs, Apr 11</h4>
-<ul>
-<li>MP2 work time</li>
-<li>Homework due today:
-<ul>
-<li>No reading</li>
-</ul></li>
-<li><strong>Office hours</strong>: 2:45p - 4:00p</li>
-</ul>
-</section>
-<section id="fri-apr-12" class="level4">
-<h4 class="anchored" data-anchor-id="fri-apr-12">Fri, Apr 12</h4>
-<ul>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-<li>Homework due today:
-<ul>
-<li><a href="homework.html"><strong>HW #7 due today at 11:55p</strong></a></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="week-13" class="level2">
-<h2 class="anchored" data-anchor-id="week-13">Week 13</h2>
-<section id="tue-apr-16" class="level4">
-<h4 class="anchored" data-anchor-id="tue-apr-16">Tue, Apr 16</h4>
-<ul>
-<li>MP2 project work time</li>
-<li>Multiple tests</li>
-<li>Homework due today:
-<ul>
-<li>Read Ch <strong>Stat2</strong> 8.1 - 8.2</li>
-</ul></li>
-</ul>
-</section>
-<section id="thurs-apr-18" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-apr-18">Thurs, Apr 18</h4>
-<ul>
-<li>Inference Test for S Condition</li>
-<li>MP2 project work time</li>
-<li>Homework due today:
-<ul>
-<li>Read Ch <strong>Stat2</strong> 8.6</li>
-</ul></li>
-<li><strong>Office hours</strong>: 2:45p - 4:00p</li>
-</ul>
-</section>
-<section id="fri-apr-19" class="level4">
-<h4 class="anchored" data-anchor-id="fri-apr-19">Fri, Apr 19</h4>
-<ul>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-<li>Homework due today:
-<ul>
-<li><strong>MP2 Pre-approval due tonight 11:55p</strong> (upload to Moodle)</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="week-14" class="level2">
-<h2 class="anchored" data-anchor-id="week-14">Week 14</h2>
-<section id="tue-apr-23" class="level4">
-<h4 class="anchored" data-anchor-id="tue-apr-23">Tue, Apr 23</h4>
-<ul>
-<li>MP2 Data Collection</li>
-<li>Homework due today:
-<ul>
-<li>Read Ch <strong>Stat2</strong> 8.4</li>
-</ul></li>
-</ul>
-</section>
-<section id="thurs-apr-25" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-apr-25">Thurs, Apr 25</h4>
-<ul>
-<li>MP2 Data Analysis</li>
-<li>Repeated measures designs</li>
-<li>Homework due today:
-<ul>
-<li>Read Ch <strong>Stat2</strong> 8.7-8.8</li>
-</ul></li>
-<li><strong>Office hours</strong>: 2:45p - 4:00p</li>
-</ul>
-</section>
-<section id="fri-apr-26" class="level4">
-<h4 class="anchored" data-anchor-id="fri-apr-26">Fri, Apr 26</h4>
-<ul>
-<li>Homework due today:
-<ul>
-<li><a href="homework.html"><strong>HW #8 due today at 9:20a</strong></a></li>
-</ul></li>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-</ul>
-</section>
-</section>
-<section id="week-15---exam-2" class="level2">
-<h2 class="anchored" data-anchor-id="week-15---exam-2">Week 15 - Exam 2</h2>
-<section id="tue-apr-30" class="level4">
-<h4 class="anchored" data-anchor-id="tue-apr-30">Tue, Apr 30</h4>
-<ul>
-<li>Review for Exam 2</li>
-</ul>
-</section>
-<section id="thurs-may-2" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-may-2">Thurs, May 2</h4>
-<ul>
-<li><strong>Exam 2 work time</strong></li>
-<li><strong>Office hours</strong>: 2:45p - 4:00p</li>
-</ul>
-</section>
-<section id="fri-may-3" class="level4">
-<h4 class="anchored" data-anchor-id="fri-may-3">Fri, May 3</h4>
-<ul>
-<li><strong>Office hours</strong>: 10:50-12:05p</li>
-<li>Homework due today:
-<ul>
-<li><strong>Exam 2 due tonight at 11:59p</strong> (upload to Gradescope)</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="finals-week---mp2-due" class="level2">
-<h2 class="anchored" data-anchor-id="finals-week---mp2-due">Finals Week - MP2 due</h2>
-<section id="tue-may-7" class="level4">
-<h4 class="anchored" data-anchor-id="tue-may-7">Tue, May 7</h4>
-<ul>
-<li><strong>Finals week</strong></li>
-</ul>
-</section>
-<section id="thurs-may-9" class="level4">
-<h4 class="anchored" data-anchor-id="thurs-may-9">Thurs, May 9</h4>
-<ul>
-<li><strong>Finals week</strong></li>
-</ul>
-</section>
-<section id="fri-may-10" class="level4">
-<h4 class="anchored" data-anchor-id="fri-may-10">Fri, May 10</h4>
-<ul>
-<li><strong>MP2 due today at 11:59p</strong> (upload to Moodle by Midnight)</li>
-</ul>
+<section id="creepy-animals" class="level2">
+<h2 class="anchored" data-anchor-id="creepy-animals">Creepy Animals</h2>
+<p>The effects of exposure to images of different domestic animal species in either aggressive or submissive postures on mood was tested with a split-plot/repeated measures design. Using a computer to randomize, participants were randomly assigned to either view images of dogs or images of cats. All participants saw both an aggressive animal and a submissive animal, and their moods were assessed via self-report after each image. The order of presentation (aggressive then submission, or submissive then aggressive) was randomized to control for order effects.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

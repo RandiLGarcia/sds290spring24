@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="SDS 290">
+<meta name="dcterms.date" content="2021-11-16">
 
-<title>SDS 290 - Spring 2024 - Homework</title>
+<title>SDS 290 - Spring 2024 - MP2 Work Time</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,8 +69,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">SDS 290 - Spring 2024</span>
     </a>
   </div>
@@ -89,15 +120,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html"> 
+    <a class="nav-link" href="../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./schedule.html"> 
+    <a class="nav-link" href="../schedule.html"> 
 <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -114,71 +145,71 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-lectures">    
         <li>
-    <a class="dropdown-item" href="./lectures/01_intro_to_experimental.html">
+    <a class="dropdown-item" href="../lectures/01_intro_to_experimental.html">
  <span class="dropdown-text">01 - Intro to Experimental Design</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/02_one-way-ANOVA.html">
+    <a class="dropdown-item" href="../lectures/02_one-way-ANOVA.html">
  <span class="dropdown-text">02 - One-Way ANOVA</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/03_one-way-ANOVAII.html">
+    <a class="dropdown-item" href="../lectures/03_one-way-ANOVAII.html">
  <span class="dropdown-text">03 - One-Way ANOVA II</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/04_inference-ANOVA.html">
+    <a class="dropdown-item" href="../lectures/04_inference-ANOVA.html">
  <span class="dropdown-text">04 - Inference for ANOVA</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/05_ANOVA-conditions.html">
+    <a class="dropdown-item" href="../lectures/05_ANOVA-conditions.html">
  <span class="dropdown-text">05 - ANOVA Conditions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/06_CI-effect-sizes.html">
+    <a class="dropdown-item" href="../lectures/06_CI-effect-sizes.html">
  <span class="dropdown-text">06 - Confidence Intervals and Effect Sizes</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/07_multiple-comparisons.html">
+    <a class="dropdown-item" href="../lectures/07_multiple-comparisons.html">
  <span class="dropdown-text">07 - Multiple Comparisons</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/08_four-designs.html">
+    <a class="dropdown-item" href="../lectures/08_four-designs.html">
  <span class="dropdown-text">08 - Four Designs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/09_intro_to_blocking.html">
+    <a class="dropdown-item" href="../lectures/09_intro_to_blocking.html">
  <span class="dropdown-text">09 - Intro to Blocking</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/10_complete_block.html">
+    <a class="dropdown-item" href="../lectures/10_complete_block.html">
  <span class="dropdown-text">10 - Analysis of Complete Block</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/11_assessing_cb.html">
+    <a class="dropdown-item" href="../lectures/11_assessing_cb.html">
  <span class="dropdown-text">11 - Assessing the Complete Block</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/12_exam1_review.html">
+    <a class="dropdown-item" href="../lectures/12_exam1_review.html">
  <span class="dropdown-text">Exam 1 Review</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/13_two-way_factorial.html">
+    <a class="dropdown-item" href="../lectures/13_two-way_factorial.html">
  <span class="dropdown-text">13 - Two-Way Factorial</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/14_two-way_factorial_II.html">
+    <a class="dropdown-item" href="../lectures/14_two-way_factorial_II.html">
  <span class="dropdown-text">14 - Two-Way Factorial (cont.)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/15_assess_factorial.html">
+    <a class="dropdown-item" href="../lectures/15_assess_factorial.html">
  <span class="dropdown-text">15 - Assessing Two-Way Factorial Designs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/16_fit_factorial.html">
+    <a class="dropdown-item" href="../lectures/16_fit_factorial.html">
  <span class="dropdown-text">16 - Fitting Two-Way Factorial Designs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lectures/17_catch-up_factorial.html">
+    <a class="dropdown-item" href="../lectures/17_catch-up_factorial.html">
  <span class="dropdown-text">17 - Chapter 7 Catch-up</span></a>
   </li>  
     </ul>
@@ -189,19 +220,19 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-code">    
         <li>
-    <a class="dropdown-item" href="./code/01_animal_data.qmd">
+    <a class="dropdown-item" href="../code/01_animal_data.qmd">
  <span class="dropdown-text">Animal Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./code/02_informal_anova.qmd">
+    <a class="dropdown-item" href="../code/02_informal_anova.qmd">
  <span class="dropdown-text">Informal ANOVA</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./code/SandwichAnts analysis.qmd">
+    <a class="dropdown-item" href="../code/SandwichAnts analysis.qmd">
  <span class="dropdown-text">SandwichAnts Analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./code/09_two-way_fac_inR.qmd">
+    <a class="dropdown-item" href="../code/09_two-way_fac_inR.qmd">
  <span class="dropdown-text">Two-Way Factorial Design</span></a>
   </li>  
     </ul>
@@ -216,31 +247,31 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">HW1a: Record your names on Moodle</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./pdfs/HW 1b_CITI Training.pdf">
+    <a class="dropdown-item" href="../pdfs/HW 1b_CITI Training.pdf">
  <span class="dropdown-text">HW1b: CITI Training</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework.html">
+    <a class="dropdown-item" href="../homework.html">
  <span class="dropdown-text">HW2: Click Here</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework.html">
+    <a class="dropdown-item" href="../homework.html">
  <span class="dropdown-text">HW #3: 5.32, 5.38, 5.54</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework.html">
+    <a class="dropdown-item" href="../homework.html">
  <span class="dropdown-text">HW4: 5.59, 5.60, 5.70, 5.36, 5.43</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework.html">
+    <a class="dropdown-item" href="../homework.html">
  <span class="dropdown-text">HW5: 5.46, 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework.html">
+    <a class="dropdown-item" href="../homework.html">
  <span class="dropdown-text">HW6: 6.1, 6.5, 6.26, 6.36, 6.37</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework.html">
+    <a class="dropdown-item" href="../homework.html">
  <span class="dropdown-text">HW7: 7.5, 7.7, 7.8, 7.11, 7.12, journal article</span></a>
   </li>  
     </ul>
@@ -251,11 +282,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
         <li>
-    <a class="dropdown-item" href="./project/mini-project-1.html">
+    <a class="dropdown-item" href="../project/mini-project-1.html">
  <span class="dropdown-text">Mini project 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./project/mini-project-2.html">
+    <a class="dropdown-item" href="../project/mini-project-2.html">
  <span class="dropdown-text">Mini Project 2</span></a>
   </li>  
     </ul>
@@ -272,21 +303,51 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#announcements" id="toc-announcements" class="nav-link active" data-scroll-target="#announcements">Announcements</a></li>
+  <li><a href="#sds-biostatistics-job-candidate---wednesday" id="toc-sds-biostatistics-job-candidate---wednesday" class="nav-link" data-scroll-target="#sds-biostatistics-job-candidate---wednesday">SDS Biostatistics Job Candidate - Wednesday</a></li>
+  <li><a href="#agenda" id="toc-agenda" class="nav-link" data-scroll-target="#agenda">Agenda</a></li>
+  <li><a href="#anova-source-table-for-two-way-factorial" id="toc-anova-source-table-for-two-way-factorial" class="nav-link" data-scroll-target="#anova-source-table-for-two-way-factorial">ANOVA Source Table for Two-Way Factorial</a></li>
+  <li><a href="#confidence-intervals-and-effect-sizes" id="toc-confidence-intervals-and-effect-sizes" class="nav-link" data-scroll-target="#confidence-intervals-and-effect-sizes">Confidence intervals and effect sizes</a></li>
+  <li><a href="#conditional-averages-and-marginal-averages" id="toc-conditional-averages-and-marginal-averages" class="nav-link" data-scroll-target="#conditional-averages-and-marginal-averages">Conditional Averages and Marginal Averages</a></li>
+  <li><a href="#confidence-intervals-and-effect-sizes-1" id="toc-confidence-intervals-and-effect-sizes-1" class="nav-link" data-scroll-target="#confidence-intervals-and-effect-sizes-1">Confidence Intervals and Effect Sizes</a>
+  <ul class="collapse">
+  <li><a href="#confidence-intervals" id="toc-confidence-intervals" class="nav-link" data-scroll-target="#confidence-intervals">Confidence Intervals</a></li>
+  <li><a href="#effect-size" id="toc-effect-size" class="nav-link" data-scroll-target="#effect-size">Effect size</a></li>
+  </ul></li>
+  <li><a href="#two-way-factorial-in-r" id="toc-two-way-factorial-in-r" class="nav-link" data-scroll-target="#two-way-factorial-in-r">Two-Way Factorial in R</a></li>
+  <li><a href="#mp2-work-time" id="toc-mp2-work-time" class="nav-link" data-scroll-target="#mp2-work-time">MP2 Work Time!!</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homework</h1>
+<h1 class="title">MP2 Work Time</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>SDS 290 </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 16, 2021</p>
+    </div>
+  </div>
   
     
   </div>
@@ -296,45 +357,167 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ol type="1">
-<li><p>Due Friday, January 26th and February 2nd:</p>
+<section id="announcements" class="level2">
+<h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
 <ul>
-<li>HW #1a: Record your names on Moodle name coach</li>
-<li>HW #1b: <a href="pdfs/HW 1b_CITI Training.pdf">CITI Training</a></li>
+<li>MP1 grades are ALL posted</li>
+<li>HW 8 posted and due Friday Nov 19 11:55p</li>
+<li><strong>MP2 Pre-approval due TUESDAY Nov 23 at 11:55p</strong></li>
+<li>In-person Office hours (Bass 412)
+<ul>
+<li>Wed (tomorrow) 10:50-12:05p</li>
 </ul></li>
-<li><p>Due Friday, February 9th:</p>
+<li>Zoom Office hours
 <ul>
-<li>HW #2: 0.23, 5.11, 5.16, 5.18, 5.27 (a only)</li>
-<li>Click <a href="pdfs/intro_to_r.html">here</a> for more introduction to R and RStudio</li>
+<li>Friday 1:30-3:30p</li>
+<li>Slots open on Thurs morning</li>
 </ul></li>
-<li><p>Due Friday, February 16th:</p>
+<li>Where to get HW help
 <ul>
-<li>HW #3: 5.32, 5.38, 5.54 (for part d there’s a typo in textbook – instead, compare answers from parts b and c)</li>
+<li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301.</li>
+<li>Post questions to #homework8-questions channel on Slack!</li>
+<li>Direct message me on Slack.</li>
 </ul></li>
-<li><p>Due Friday, February 23rd:</p>
+<li>SDS Graduate School Panel<strong>Nov 22 7-8p via Zoom</strong>
 <ul>
-<li>HW #4: 5.59, 5.60, 5.70, 5.36, 5.43</li>
+<li>See Moodle for more details.</li>
 </ul></li>
-<li><p>Due Friday, March 8th:</p>
-<ul>
-<li>HW #5: 5.46, 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)</li>
-</ul></li>
-<li><p>Due Friday, April 5th:</p>
-<ul>
-<li>HW #6: 6.1, 6.5, 6.26, 6.36, 6.37</li>
-</ul></li>
-<li><p>Due Friday, November 12th:</p>
-<ul>
-<li>HW #7: 7.5, 7.7, 7.8, 7.11, 7.12, find a peer-reviewed journal article that uses ANOVA and include a link.</li>
 </ul>
-<!-- 8.  Due Friday, November 19th: -->
-<!--     -   HW #8: 7.20, 7.21, 7.22, 7.34, 7.38 -->
-<!-- 9.  Due Friday, December 3rd: -->
-<!--     -   HW #9: 8.1, 8.3, 8.6, 8.12, 8.14 --></li>
+</section>
+<section id="sds-biostatistics-job-candidate---wednesday" class="level2">
+<h2 class="anchored" data-anchor-id="sds-biostatistics-job-candidate---wednesday">SDS Biostatistics Job Candidate - Wednesday</h2>
+<p><strong>Jacob Fiksel tomorrow!!!!</strong></p>
+<ol type="1">
+<li>Tea with candidates 4:00-4:45 p.m. (all set for students, thank you!)</li>
+<li>Research talk with grab-and-go lunch (<strong>12:25-1:15 p.m., Ford 240</strong>)
+<ul>
+<li>“Generalized Bayes Quantification Learning with Applications to Mortality Surveillance”</li>
+</ul></li>
+<li>Teaching demonstration (<strong>5:00-6:00 p.m., Sabin-Reed 301</strong>)
+<ul>
+<li>“Introduction to logistic regression”</li>
+</ul></li>
+<li>Give feedback at bit.ly/SDSbiostats</li>
 </ol>
-<p><img src="https://c.tenor.com/xATuBt2dRhwAAAAM/kitten-cat.gif" class="img-fluid"></p>
+</section>
+<section id="agenda" class="level2">
+<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
+<ol type="1">
+<li>Fitting the Two-Way Factorial ANOVA model
+<ul>
+<li>Confidence intervals and effect sizes</li>
+</ul></li>
+<li>MP2 work time</li>
+</ol>
+</section>
+<section id="anova-source-table-for-two-way-factorial" class="level2">
+<h2 class="anchored" data-anchor-id="anova-source-table-for-two-way-factorial">ANOVA Source Table for Two-Way Factorial</h2>
+<p><span class="math display">\[{y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}\]</span></p>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Source</th>
+<th style="text-align: center;">SS</th>
+<th style="text-align: center;">df</th>
+<th style="text-align: center;">MS</th>
+<th style="text-align: center;">F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Treatment A</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}bn(\bar{y}_{i..}-\bar{y}_{…})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(a-1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{A}}{{df}_{A}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{A}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Treatment B</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{j=1}^{b}an(\bar{y}_{.j.}-\bar{y}_{…})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(b-1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{B}}{{df}_{B}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{B}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Interaction AB</td>
+<td style="text-align: center;"><span class="math inline">\(n\sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{y}_{ij.}-\bar{y}_{i..}-\bar{y}_{.j.}+\bar{y}_{…})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((a-1)(b-1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{AB}}{{df}_{AB}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{AB}}{{MS}_{E}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Error</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{n}({y}_{ijk}-\bar{y}_{ij.})^{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(ab(n-1)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{E}}{{df}_{E}}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="confidence-intervals-and-effect-sizes" class="level2">
+<h2 class="anchored" data-anchor-id="confidence-intervals-and-effect-sizes">Confidence intervals and effect sizes</h2>
+<ul>
+<li>If the <strong>interaction is significant</strong>
+<ul>
+<li>Calculate CIs and effect sizes for sets of <em>conditional averages</em> (also called “simple effects”)</li>
+<li>For example, for the 0mg antibiotics condition, what’s the effect size for B12</li>
+</ul></li>
+<li>If the <strong>interaction is NOT significant</strong>
+<ul>
+<li>Calculate CIs and effect sizes for sets of <em>marginal averages</em> (also called “main effects”)</li>
+<li>For example, what is the effect size for B12 overall?</li>
+</ul></li>
+</ul>
+</section>
+<section id="conditional-averages-and-marginal-averages" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-averages-and-marginal-averages">Conditional Averages and Marginal Averages</h2>
+<p><img src="09_bf2_design-figure/marginalmeans.png" class="img-fluid"></p>
+<ul>
+<li>The numbers in blue are <em>Marginal Averages</em></li>
+<li>The numbers in green are <em>Conditional Averages</em></li>
+</ul>
+</section>
+<section id="confidence-intervals-and-effect-sizes-1" class="level2">
+<h2 class="anchored" data-anchor-id="confidence-intervals-and-effect-sizes-1">Confidence Intervals and Effect Sizes</h2>
+<section id="confidence-intervals" class="level3">
+<h3 class="anchored" data-anchor-id="confidence-intervals">Confidence Intervals</h3>
+<p><span class="math display">\[(\bar{y_i}-\bar{y_j}) \pm t^*\cdot SD \sqrt{1/n_i+1/n_j}\]</span></p>
+</section>
+<section id="effect-size" class="level3">
+<h3 class="anchored" data-anchor-id="effect-size">Effect size</h3>
+<p><span class="math display">\[D_{ij} = \frac{(\bar{y_i}-\bar{y_j})}{SD}\]</span></p>
+<ul>
+<li>Where <span class="math inline">\(SD = \sqrt{MSE}\)</span></li>
+</ul>
+</section>
+</section>
+<section id="two-way-factorial-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="two-way-factorial-in-r">Two-Way Factorial in R</h2>
+<p><a href="https://randilgarcia.github.io/sds290fall21/lectures/09_two-way_fac_inR.Rmd">See Two-Way Factorial code</a></p>
+</section>
+<section id="mp2-work-time" class="level2">
+<h2 class="anchored" data-anchor-id="mp2-work-time">MP2 Work Time!!</h2>
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1m5vEHBL0QUkYxiDhbLxQQd0RzIHBFlq9Sg16akAquXk/edit?usp=sharing">MP2 groups</a></li>
+<li>Time to discuss your MP2 projects. Goals for today
+<ul>
+<li>Decide on a topic</li>
+<li>Discuss your design and run it by me</li>
+<li>Discuss your stimuli</li>
+<li>Divide up your work (finding/creating stimuli, creating Qualtrics survey, writing consent form, preparing R code, ect.)</li>
+</ul></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

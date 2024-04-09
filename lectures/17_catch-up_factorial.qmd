@@ -1,0 +1,95 @@
+---
+title: "Chapter 7 Catch-up"
+author: Prof Randi Garcia, SDS 290
+date: April 9, 2024
+format: 
+  revealjs:
+    scrollable: true
+    theme: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
+library(tidyverse)
+library(Stat2Data)
+```
+
+## Announcements
+
+-   HW 7 due Friday 11:59p
+    -   Find a research article that uses ANOVA!
+-   Office hours
+    -   Thurs: 2:45p - 4:00p
+    -   Friday: 10:50a - 12:05p
+-   Where to get HW help
+    -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301.
+    -   Post questions to #hw7-questions channel on Slack!
+    -   Direct message me on Slack.
+
+## Agenda
+
+1.  Conditions for the Two-Way Factorial ANOVA
+2.  Confidence intervals and effect sizes
+3.  MP2 work time
+
+## Warm-up: Anxiety and Memory
+
+A psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded \$5 for participation and \$10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded \$5 for participation and \$100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded.                            |
+
+## Three Research Questions, Three F-ratios
+
+1.  Is there a significant main effect of factor A?
+2.  Is there a significant main effect of factor B?
+3.  Is there an significant interaction between factor A and factor B?
+
+## ANOVA Source Table for Two-Way Factorial
+
+$${y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}$$
+
+|         Source |                                             SS                                             |      df      |              MS               |              F               |
+|--------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+|    Treatment A |                     $\sum_{i=1}^{a}bn(\bar{y}_{i..}-\bar{y}_{…})^{2}$                      |    $a-1$     |  $\frac{{SS}_{A}}{{df}_{A}}$  | $\frac{{MS}_{A}}{{MS}_{E}}$  |
+|    Treatment B |                     $\sum_{j=1}^{b}an(\bar{y}_{.j.}-\bar{y}_{…})^{2}$                      |    $b-1$     |  $\frac{{SS}_{B}}{{df}_{B}}$  | $\frac{{MS}_{B}}{{MS}_{E}}$  |
+| Interaction AB | $n\sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{y}_{ij.}-\bar{y}_{i..}-\bar{y}_{.j.}+\bar{y}_{…})^{2}$ | $(a-1)(b-1)$ | $\frac{{SS}_{AB}}{{df}_{AB}}$ | $\frac{{MS}_{AB}}{{MS}_{E}}$ |
+|          Error |         $\sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{n}({y}_{ijk}-\bar{y}_{ij.})^{2}$          |  $ab(n-1)$   |  $\frac{{SS}_{E}}{{df}_{E}}$  |                              |
+
+## Confidence intervals and effect sizes
+
+-   If the **interaction is significant**
+    -   Calculate CIs and effect sizes for sets of *conditional averages* (also called "simple effects")
+    -   For example, for the 0mg antibiotics condition, what's the effect size for B12
+-   If the **interaction is NOT significant**
+    -   Calculate CIs and effect sizes for sets of *marginal averages* (also called "main effects")
+    -   For example, what is the effect size for B12 overall?
+
+## Conditional Averages and Marginal Averages
+
+![](pics/marginalmeans.png)
+
+-   The numbers in blue are *Marginal Averages*
+-   The numbers in green are *Conditional Averages*
+
+## Confidence Intervals and Effect Sizes
+
+### Confidence Intervals
+
+$$(\bar{y_i}-\bar{y_j}) \pm t^*\cdot SD \sqrt{1/n_i+1/n_j}$$
+
+### Effect size
+
+$$D_{ij} = \frac{(\bar{y_i}-\bar{y_j})}{SD}$$
+
+-   Where $SD = \sqrt{MSE}$
+
+## Two-Way Factorial in R
+
+[See Two-Way Factorial code](https://randilgarcia.github.io/sds290spring24/code/09_two-way_fac_inR.Rmd)
+
+## MP2 Groups
+
+-   [MP2 Group Assignments](https://docs.google.com/spreadsheets/d/1I-ugcxOiaXFEyQhE7jVys7cYBJ2gf9ycebU3hCm4Guo/edit#gid=0)
+-   Time to discuss your MP2 projects. Goals for today:
+  -   Decide on a topic
+  -   Discuss your design and run it by me
+  -   Discuss your stimuli
+  -   Divide up your work (finding/creating stimuli, creating Qualtrics survey, writing consent form, preparing R code, ect.)

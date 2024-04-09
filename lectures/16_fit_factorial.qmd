@@ -62,20 +62,20 @@ library(Stat2Data)
 
 ## SDS 290 what you can do
 
--  "I should stay on top of the readings more than I have been."
+-   "I should stay on top of the readings more than I have been."
 -   "Paying more attention in class, getting more sleep."
 -   "I could go to office hours more frequently to ask questions about coding and I could also reread the textbook examples if I don't fully comprehend the material covered in class."
 -   "Asking questions in class might be a good idea too. Though, it is a little hard when I need time to digest the information to create these questions."
--   "I could definitely begin assignments earlier in the week to not feel that stress all at once later on." 
+-   "I could definitely begin assignments earlier in the week to not feel that stress all at once later on."
 
 ## SDS 290 what I can do
 
--   I will consider options to lighten the load for the rest of the semester. 
-  -   HW9 is cancelled!
+-   I will consider options to lighten the load for the rest of the semester.
+-   HW9 is cancelled!
 -   I will try to add in more group work in lectures.
 -   I will give you more in-class work time for MP2.
 -   I will consider re-formatting the textbook homework problems myself. (I may not be able to do this in a timely manner.)
--   I will pay closer attention to the website formatting. 
+-   I will pay closer attention to the website formatting.
 
 ## Warm-up: Teaching Methods
 
@@ -104,7 +104,6 @@ $${y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}$$
 |    Treatment B |                     $\sum_{j=1}^{b}an(\bar{y}_{.j.}-\bar{y}_{…})^{2}$                      |    $b-1$     |  $\frac{{SS}_{B}}{{df}_{B}}$  | $\frac{{MS}_{B}}{{MS}_{E}}$  |
 | Interaction AB | $n\sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{y}_{ij.}-\bar{y}_{i..}-\bar{y}_{.j.}+\bar{y}_{…})^{2}$ | $(a-1)(b-1)$ | $\frac{{SS}_{AB}}{{df}_{AB}}$ | $\frac{{MS}_{AB}}{{MS}_{E}}$ |
 |          Error |         $\sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{n}({y}_{ijk}-\bar{y}_{ij.})^{2}$          |  $ab(n-1)$   |  $\frac{{SS}_{E}}{{df}_{E}}$  |                              |
-
 
 ## Conditional Averages and Marginal Averages
 
@@ -137,4 +136,3 @@ $$D_{ij} = \frac{(\bar{y_i}-\bar{y_j})}{SD}$$
 ## Two-Way Factorial in R
 
 [See Two-Way Factorial code](https://randilgarcia.github.io/sds290spring24/code/09_two-way_fac_inR.Rmd)
-
