@@ -3364,14 +3364,14 @@
     "href": "lectures/17_catch-up_factorial.html",
     "title": "Chapter 7 Catch-up",
     "section": "",
-    "text": "MP1 grades are posted\nHW 7 posted and due tomorrow Nov 12 11:55p\n\nFind a research article that uses ANOVA!\n\nZoom Office hours\n\nFriday 2:00-4p\nSlots are open\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework7-questions channel on Slack!\nDirect message me on Slack.\n\nSDS Graduate School PanelNov 22 7-8p via Zoom\n\nSee Moodle for more details."
+    "text": "Added to the syllabus:\n\nI will be dropping the lowest exam grade at the end of the term.\n\nHW 7 due Friday 11:59p\n\nFind a research article that uses ANOVA!\n\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw7-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#announcements",
     "href": "lectures/17_catch-up_factorial.html#announcements",
     "title": "Chapter 7 Catch-up",
-    "section": "Announcements",
-    "text": "Announcements\n\nAdded to the syllabus:\n\nI will be dropping the lowest exam grade at the end of the term.\n\nHW 7 due Friday 11:59p\n\nFind a research article that uses ANOVA!\n\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw7-questions channel on Slack!\nDirect message me on Slack."
+    "section": "",
+    "text": "Added to the syllabus:\n\nI will be dropping the lowest exam grade at the end of the term.\n\nHW 7 due Friday 11:59p\n\nFind a research article that uses ANOVA!\n\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw7-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#sds-biostatistics-job-candidate---friday",
@@ -3476,7 +3476,7 @@
     "href": "lectures/17_catch-up_factorial.html#confidence-intervals-and-effect-sizes-1",
     "title": "Chapter 7 Catch-up",
     "section": "Confidence Intervals and Effect Sizes",
-    "text": "Confidence Intervals and Effect Sizes\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
+    "text": "Confidence Intervals and Effect Sizes\n\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\n\n\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#two-way-factorial-in-r",
@@ -3714,14 +3714,14 @@
     "href": "lectures/19_repeated_measures.html",
     "title": "Repeated Measures",
     "section": "",
-    "text": "HW 8 due tomorrow Nov 19 11:55p\nMP2 Pre-approval due TUESDAY Nov 23 at 11:55p\nZoom Office hours\n\nFriday 1:30-3:30p\nSlots now open!\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework8-questions channel on Slack!\nDirect message me on Slack.\n\nSDS Graduate School PanelNov 22 7-8p via Zoom\n\nSee Moodle for more details.\n\nThank you for your help with Biostats candidates!\n\nFeedback form"
+    "text": "MP2 Pre-approval due Friday at 11:55p on Moodle\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get MP2 help\n\nDirect message me on Slack.\nOffice hours"
   },
   {
     "objectID": "lectures/19_repeated_measures.html#announcements",
     "href": "lectures/19_repeated_measures.html#announcements",
     "title": "Repeated Measures",
-    "section": "",
-    "text": "HW 8 due tomorrow Nov 19 11:55p\nMP2 Pre-approval due TUESDAY Nov 23 at 11:55p\nZoom Office hours\n\nFriday 1:30-3:30p\nSlots now open!\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework8-questions channel on Slack!\nDirect message me on Slack.\n\nSDS Graduate School PanelNov 22 7-8p via Zoom\n\nSee Moodle for more details.\n\nThank you for your help with Biostats candidates!\n\nFeedback form"
+    "section": "Announcements",
+    "text": "Announcements\n\nMP2 Pre-approval due Friday at 11:55p on Moodle\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get MP2 help\n\nDirect message me on Slack.\nOffice hours"
   },
   {
     "objectID": "lectures/19_repeated_measures.html#agenda",
@@ -3798,7 +3798,7 @@
     "href": "lectures/19_repeated_measures.html#repeated-measures",
     "title": "Repeated Measures",
     "section": "Repeated Measures",
-    "text": "Repeated Measures\n\nBetween Subjects Design\n\n\nWithin Subjects Desgin (Complete Block Design)\n\n\nSplit-Plot Design\nIf you suspect a design in a split-plot design, you should be able to answer the following questions:\n\nWhat are the whole plots, that is, what is the nuisance factor?\nWhat is the between-blocks factor? Is it observational or experimental?\nWhat is the within-blocks factor? Is it observational or experimental?"
+    "text": "Repeated Measures\nBetween Subjects Design\nWithin Subjects Desgin (Complete Block Design)\nSplit-Plot Design\nIf you suspect a design in a split-plot design, you should be able to answer the following questions:\n\nWhat are the whole plots, that is, what is the nuisance factor?\nWhat is the between-blocks factor? Is it observational or experimental?\nWhat is the within-blocks factor? Is it observational or experimental?"
   },
   {
     "objectID": "lectures/19_repeated_measures.html#diabetic-dogs",
@@ -3861,7 +3861,7 @@
     "href": "lectures/19_repeated_measures.html#mp2-work-time",
     "title": "Repeated Measures",
     "section": "MP2 Work Time!!",
-    "text": "MP2 Work Time!!\n\nMP2 groups\nTime to discuss your MP2 projects. Goals for today\n\nPre-approval surveys due on Tuesday Nov 23!!"
+    "text": "MP2 Work Time!!\n\nMP2 groups\nTime to discuss your MP2 projects. Goals for this week:\n\nPre-approval surveys due on Friday!!"
   },
   {
     "objectID": "lectures/18_MP2_time.html",
@@ -3932,5 +3932,12 @@
     "title": "MP2 Work Time",
     "section": "MP2 Work Time!!",
     "text": "MP2 Work Time!!\n\nMP2 groups\nTime to discuss your MP2 projects. Goals for today\n\nDecide on a topic\nDiscuss your design and run it by me\nDiscuss your stimuli\nDivide up your work (finding/creating stimuli, creating Qualtrics survey, writing consent form, preparing R code, ect.)"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#split-plot-design",
+    "href": "lectures/19_repeated_measures.html#split-plot-design",
+    "title": "Repeated Measures",
+    "section": "Split-Plot Design",
+    "text": "Split-Plot Design\nIf you suspect a design in a split-plot design, you should be able to answer the following questions:\n\nWhat are the whole plots, that is, what is the nuisance factor?\nWhat is the between-blocks factor? Is it observational or experimental?\nWhat is the within-blocks factor? Is it observational or experimental?"
   }
 ]

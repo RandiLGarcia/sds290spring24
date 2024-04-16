@@ -235,7 +235,6 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
     -   [**HW #6 due today at 11:55p**](homework.html)
-:::
 
 ## Week 12
 
@@ -258,6 +257,8 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:50-12:05p
 -   Homework due today:
     -   [**HW #7 due today at 11:55p**](homework.html)
+
+:::
 
 ## Week 13
 

@@ -87,7 +87,7 @@ PigFeed %>%
 Run two-way ANOVA without the interaction term using the original data.
 
 ```{r}
-mod1 <- lm(WgtGain ~ Antibiotic + B12, data = PigFeed)
+mod1 <- lm(WgtGain ~ Antibiotic + B12 + Antibiotic*B12, data = PigFeed)
 
 anova(mod1)
 ```
