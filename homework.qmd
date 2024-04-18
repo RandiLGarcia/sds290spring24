@@ -28,13 +28,13 @@ title: 'Homework'
 
     -   HW #6: 6.1, 6.5, 6.26, 6.36, 6.37
 
-7.  Due Friday, November 12th:
+7.  Due Friday, April 12th:
 
     -   HW #7: 7.5, 7.7, 7.8, 7.11, 7.12, find a peer-reviewed journal article that uses ANOVA and include a link.
 
-    <!-- 8.  Due Friday, November 19th: -->
+8.  Due Friday, April 26th:
 
-    <!--     -   HW #8: 7.20, 7.21, 7.22, 7.34, 7.38 -->
+    -   HW #8: 7.20, 7.21, 7.22, 7.34, 7.38
 
     <!-- 9.  Due Friday, December 3rd: -->
 
