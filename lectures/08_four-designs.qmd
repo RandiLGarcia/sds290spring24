@@ -179,7 +179,7 @@ Design 3: Two-Way Factorial Design
 
 Design 4: Split Plot/Repeated Measures Design
 
-![](02_four_designs-figure/SP_RM_data.png) 
+![](02_four_designs-figure/SP_RM_data.png)
 
 ## Blocking + Random Assignment + Crossing
 

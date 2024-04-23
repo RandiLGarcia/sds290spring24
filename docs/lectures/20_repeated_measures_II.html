@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Prof Randi Garcia, SDS 290">
   <meta name="dcterms.date" content="2024-04-23">
@@ -157,7 +157,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -356,7 +357,7 @@ Prof Randi Garcia, SDS 290
 </ul></li>
 </ul>
 </section>
-<section id="agenda" class="slide level2">
+<section id="agenda" class="slide level2 scrollable">
 <h2>Agenda</h2>
 <ol type="1">
 <li>MP2 Data Collection!!</li>
@@ -397,7 +398,7 @@ Prof Randi Garcia, SDS 290
 <h2>Diabetic Dogs</h2>
 <p>The disease diabetes affects the rate of turnover of lactic acid in a system of biochemical reactions called the Cori cycle. This experiment compares two methods of using radioactive carbon-14 to measure rate of turnover. Method 1 is injection all at once, and method 2 is infused continuously. 10 dogs were sorted into two groups, 5 were controls and 5 had their pancreas removed (to make it diabetic). The rate of turnover was then measured twice for each dog, once for each method. The order of the two methods was randomly assigned.</p>
 </section>
-<section id="split-plot-design" class="slide level2">
+<section id="split-plot-design" class="slide level2 scrollable">
 <h2>Split-Plot Design</h2>
 <p>If you suspect a design in a split-plot design, you should be able to answer the following questions:</p>
 <ol type="1">
@@ -483,6 +484,16 @@ Prof Randi Garcia, SDS 290
 </tbody>
 </table>
 </section>
+<section id="blocking-random-assignment-crossing" class="slide level2">
+<h2>Blocking + Random Assignment + Crossing</h2>
+<p>Design 4: Split Plot/Repeated Measures Design</p>
+
+<img data-src="02_four_designs-figure/SP_RM_data.png" class="r-stretch"></section>
+<section id="blocking-random-assignment-crossing-1" class="slide level2">
+<h2>Blocking + Random Assignment + Crossing</h2>
+<p>Design 4: Split Plot/Repeated Measures Design</p>
+
+<img data-src="02_four_designs-figure/SP_RM_small.png" class="r-stretch"></section>
 <section id="split-plot-analysis-in-r" class="slide level2">
 <h2>Split-Plot Analysis in R</h2>
 <p><a href="https://randilgarcia.github.io/sds290spring24/code/13_spitplot_design_inR.Rmd">See r code</a></p>
@@ -495,8 +506,10 @@ Prof Randi Garcia, SDS 290
 <h2>Creepy Animals</h2>
 <p>The effects of exposure to images of different domestic animal species in either aggressive or submissive postures on mood was tested with a split-plot/repeated measures design. Using a computer to randomize, participants were randomly assigned to either view images of dogs or images of cats. All participants saw both an aggressive animal and a submissive animal, and their moods were assessed via self-report after each image. The order of presentation (aggressive then submission, or submissive then aggressive) was randomized to control for order effects.</p>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -525,7 +538,6 @@ Prof Randi Garcia, SDS 290
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -824,10 +836,9 @@ Prof Randi Garcia, SDS 290
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -837,8 +848,17 @@ Prof Randi Garcia, SDS 290
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

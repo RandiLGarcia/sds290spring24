@@ -97,6 +97,18 @@ $${y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j(i)}+{\gamma}_{k}+({\alpha\gamma})_{ik}
 | Interaction |       $\sum_{i=1}^{a}\sum_{k=1}^{t}\frac{N}{a}(\bar{y}_{i.k}-\bar{y}_{i..}-\bar{y}_{..k}+\bar{y}_{...})^{2}$        | $(a-1)(t-1)$ | $\frac{{SS}_{AT}}{{df}_{AT}}$ | $\frac{{MS}_{AT}}{{MS}_{E}}$ |
 |       Error | $\sum_{i=1}^{a}\sum_{j=1}^{N}\sum_{k=1}^{t}({y}_{ijk}-\bar{y}_{i.k}-\bar{y}_{.j.}-\bar{y}_{..k}+\bar{y}_{i..})^{2}$ | $(N-a)(t-1)$ |  $\frac{{SS}_{E}}{{df}_{E}}$  |                              |
 
+## Blocking + Random Assignment + Crossing
+
+Design 4: Split Plot/Repeated Measures Design
+
+![](02_four_designs-figure/SP_RM_data.png)
+
+## Blocking + Random Assignment + Crossing
+
+Design 4: Split Plot/Repeated Measures Design
+
+![](02_four_designs-figure/SP_RM_small.png)
+
 ## Split-Plot Analysis in R
 
 [See r code](https://randilgarcia.github.io/sds290spring24/code/13_spitplot_design_inR.Rmd)
