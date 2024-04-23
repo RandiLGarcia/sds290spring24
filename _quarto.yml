@@ -68,8 +68,8 @@ website:
         #   href: lectures/18_MP2_time.html  
         - text: 19 - Repeated Measures
           href: lectures/19_repeated_measures.html  
-        # - text: 20 - Repeated Measures (cont.)
-        #   href: lectures/20_repeated_measures_II.html  
+        - text: 20 - Repeated Measures (cont.)
+          href: lectures/20_repeated_measures_II.html  
         # - text: 21 - MP2 Data Analysis
         #   href: lectures/21_mp2_data_analysis.html
         # - text: 22 - Exam 2 Review

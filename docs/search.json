@@ -1928,8 +1928,8 @@
     "objectID": "lectures/09_intro_to_blocking.html#announcements",
     "href": "lectures/09_intro_to_blocking.html#announcements",
     "title": "Introduction to Blocking",
-    "section": "Announcements",
-    "text": "Announcements\n\nHW4 being graded now\nOffice hours (Bass 412)\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get MP1 help\n\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
+    "section": "",
+    "text": "HW4 being graded now\nOffice hours (Bass 412)\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get MP1 help\n\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/09_intro_to_blocking.html#mp1-pre-approval",
@@ -3601,8 +3601,8 @@
     "objectID": "lectures/20_repeated_measures_II.html#announcements",
     "href": "lectures/20_repeated_measures_II.html#announcements",
     "title": "Repeated Measures (cont.)",
-    "section": "",
-    "text": "HW 9 posted and due Friday Dec 3 11:55p\nIn-person Office hours (Bass 412)\n\nWed (tomorrow) 10:50-12:05p\n\nZoom Office hours\n\nFriday exact times TBD\nSlots open on Thurs morning\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework9-questions channel on Slack!\nDirect message me on Slack.\n\nJob candidates!!"
+    "section": "Announcements",
+    "text": "Announcements\n\nHW 8 posted and due Friday Apr 26 11:59p\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw8-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/20_repeated_measures_II.html#sds-job-candidates-for-mass-mutual-position",
@@ -3637,14 +3637,14 @@
     "href": "lectures/20_repeated_measures_II.html#mp2-data-collection",
     "title": "Repeated Measures (cont.)",
     "section": "MP2 data collection",
-    "text": "MP2 data collection\nStep 1:\n\nIf you’re approved:\n\n15 minutes to go through the checklist.\nPaste anonymous survey link in the spreadsheet.\nIf you’re ready, work on your homework!\n\n\nStep 2:\n\n20 min to participate in as many studies as you can!\n\nNote: see content warnings\nPlease only participate in audio studies if you have headphones\nLast chance to collect data in class"
+    "text": "MP2 data collection\nStep 1:\n\nIf you’re approved:\n\n5 minutes to go through the checklist.\nPaste anonymous survey link in the spreadsheet.\nIf you’re ready, work on your homework!\n\n\nStep 2:\n\n20 min to participate in as many studies as you can!\n\nPlease only participate in audio studies if you have headphones\nLast chance to collect data in class"
   },
   {
     "objectID": "lectures/20_repeated_measures_II.html#repeated-measures",
     "href": "lectures/20_repeated_measures_II.html#repeated-measures",
     "title": "Repeated Measures (cont.)",
     "section": "Repeated Measures",
-    "text": "Repeated Measures\n\nBetween Subjects versus Within Subjects\nThought experiment:\n\nThink of your MP1 project. What would your study have been like if every participant saw every condition and gave a response after each condition?\n\nThis would have been a within-subjects design. What you actually did for MP1 was a between-subjects design.\n\n3-min free write: What would have been the pros and cons of doing your MP1 this way?"
+    "text": "Repeated Measures\nBetween Subjects versus Within Subjects\nThought experiment:\n\nThink of your MP1 project. What would your study have been like if every participant saw every condition and gave a response after each condition?\n\nThis would have been a within-subjects design. What you actually did for MP1 was a between-subjects design.\n3-min free write: What would have been the pros and cons of doing your MP1 this way?"
   },
   {
     "objectID": "lectures/20_repeated_measures_II.html#diabetic-dogs",
@@ -3720,8 +3720,8 @@
     "objectID": "lectures/19_repeated_measures.html#announcements",
     "href": "lectures/19_repeated_measures.html#announcements",
     "title": "Repeated Measures",
-    "section": "Announcements",
-    "text": "Announcements\n\nMP2 Pre-approval due Friday at 11:55p on Moodle\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get MP2 help\n\nDirect message me on Slack.\nOffice hours"
+    "section": "",
+    "text": "MP2 Pre-approval due Friday at 11:55p on Moodle\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get MP2 help\n\nDirect message me on Slack.\nOffice hours"
   },
   {
     "objectID": "lectures/19_repeated_measures.html#agenda",
@@ -3939,5 +3939,12 @@
     "title": "Repeated Measures",
     "section": "Split-Plot Design",
     "text": "Split-Plot Design\nIf you suspect a design in a split-plot design, you should be able to answer the following questions:\n\nWhat are the whole plots, that is, what is the nuisance factor?\nWhat is the between-blocks factor? Is it observational or experimental?\nWhat is the within-blocks factor? Is it observational or experimental?"
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html",
+    "href": "lectures/09_intro_to_blocking.html",
+    "title": "Introduction to Blocking",
+    "section": "",
+    "text": "HW4 being graded now\nOffice hours (Bass 412)\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get MP1 help\n\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
   }
 ]
