@@ -70,8 +70,8 @@ website:
           href: lectures/19_repeated_measures.html  
         - text: 20 - Repeated Measures (cont.)
           href: lectures/20_repeated_measures_II.html  
-        # - text: 21 - MP2 Data Analysis
-        #   href: lectures/21_mp2_data_analysis.html
+        - text: 21 - MP2 Data Analysis
+          href: lectures/21_mp2_data_analysis.html
         # - text: 22 - Exam 2 Review
         #   href: lectures/22_exam2_review.html       
       - text: Code

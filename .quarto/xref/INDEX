@@ -148,5 +148,14 @@
   },
   "lectures/20_repeated_measures_II.qmd": {
     "20_repeated_measures_II.html": "35c81f5f"
+  },
+  "lectures/22_exam2_review.Rmd": {
+    "22_exam2_review.html": "68e69421"
+  },
+  "lectures/21_mp2_data_analysis.Rmd": {
+    "21_mp2_data_analysis.html": "6dae77d8"
+  },
+  "lectures/21_mp2_data_analysis.qmd": {
+    "21_mp2_data_analysis.html": "f582a5ec"
   }
 }
