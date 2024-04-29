@@ -281,8 +281,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **MP2 Pre-approval due tonight 11:55p** (upload to Moodle)
 
-:::
-
 ## Week 14
 
 #### Tue, Apr 23
@@ -304,6 +302,8 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   [**HW #8 due today at 9:20a**](homework.html)
 -   **Office hours**: 10:50-12:05p
+
+:::
 
 ## Week 15 - Exam 2
 

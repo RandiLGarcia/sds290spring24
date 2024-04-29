@@ -24,7 +24,7 @@ library(Stat2Data)
     -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301.
     -   Post questions to #hw8-questions channel on Slack!
     -   Direct message me on Slack.
-    
+
 ## Agenda
 
 1.  Finish split plot designs

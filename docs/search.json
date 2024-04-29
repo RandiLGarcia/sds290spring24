@@ -3965,8 +3965,8 @@
     "objectID": "lectures/21_mp2_data_analysis.html#announcements",
     "href": "lectures/21_mp2_data_analysis.html#announcements",
     "title": "Repeated Measures (cont.)",
-    "section": "Announcements",
-    "text": "Announcements\n\nHW 8 posted and due Friday Apr 26 11:59p\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw8-questions channel on Slack!\nDirect message me on Slack."
+    "section": "",
+    "text": "HW 8 posted and due Friday Apr 26 11:59p\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw8-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/21_mp2_data_analysis.html#agenda",
@@ -4044,5 +4044,369 @@
     "title": "Repeated Measures (cont.)",
     "section": "MP2 data analysis and work time",
     "text": "MP2 data analysis and work time\n\nData Analysis\n\nTwo-Way Factorial Analysis in R\nSplit-Plot Analysis in R\n\nRecorded Oral Presentations or technical reports\n\nStart working on your slides or written report now!\nIf recording your group presenting your project, Zoom is best"
+  },
+  {
+    "objectID": "lectures/21_mp2_data_analysis.html",
+    "href": "lectures/21_mp2_data_analysis.html",
+    "title": "Repeated Measures (cont.)",
+    "section": "",
+    "text": "HW 8 posted and due Friday Apr 26 11:59p\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw8-questions channel on Slack!\nDirect message me on Slack."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html",
+    "href": "lectures/22_exam2_review.html",
+    "title": "Exam 2 Review",
+    "section": "",
+    "text": "HW 9 Extra Credit is now posted\nExam 2 released on Thursday (ON MOODLE)\n\nDue Friday night 11:59p (ON Gradescope)\nI’ll be available for the first half of class time on Thurs\n\nNormal office hours this week\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#announcements",
+    "href": "lectures/22_exam2_review.html#announcements",
+    "title": "Exam 2 Review",
+    "section": "Announcements",
+    "text": "Announcements\n\nHW 9 Extra Credit is now posted\nExam 2 released on Thursday (ON MOODLE)\n\nDue Friday night 11:59p (ON Gradescope)\nI’ll be available for the first half of class time on Thurs\n\nNormal office hours this week\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#agenda",
+    "href": "lectures/22_exam2_review.html#agenda",
+    "title": "Exam 2 Review",
+    "section": "Agenda",
+    "text": "Agenda\n\nCourse Feedback Questionnaire time\nExam 2 review"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#course-feedback-questionnaire",
+    "href": "lectures/22_exam2_review.html#course-feedback-questionnaire",
+    "title": "Exam 2 Review",
+    "section": "Course feedback questionnaire",
+    "text": "Course feedback questionnaire\n\nAbout 10 to 15 minutes to complete"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#exam-2",
+    "href": "lectures/22_exam2_review.html#exam-2",
+    "title": "Exam 2 Review",
+    "section": "Exam 2",
+    "text": "Exam 2\n\nOpen-book, open-notes, open-slides, open-internet\n\nCareful with use of the internet!\n\nNo talking with each other about the exam\nI can answer only clarifying questions\nThere are 4 (multi-part) short answer questions and 1 (multi-part) data analysis question\nExam will be given electronically via Moodle\n\nCheck Moodle at 10:50a on Thursday under Exams\nI’ll be available on the class Zoom link during class time\n\nSubmit your exam electronically on Moodle by 11:55pm on Friday Dec 11.\n\nNeeds to be in PDF format.\nYou can submit two PDF’s, but I’d prefer one.\n\n\nNo in-person class on Thursday"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#exam-2-review",
+    "href": "lectures/22_exam2_review.html#exam-2-review",
+    "title": "Exam 2 Review",
+    "section": "Exam 2 Review",
+    "text": "Exam 2 Review"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#design-names",
+    "href": "lectures/22_exam2_review.html#design-names",
+    "title": "Exam 2 Review",
+    "section": "Design Names",
+    "text": "Design Names\nOne-Way Design\n\nIf the factor is a true experimental factor\n\nOne-Way Randomized Design or"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#design-names-1",
+    "href": "lectures/22_exam2_review.html#design-names-1",
+    "title": "Exam 2 Review",
+    "section": "Design Names",
+    "text": "Design Names\nBlock design or Two-Way Additive Model\n\nThere is one factor of interest and one nuisance factor (the blocking factor).\nIf the factor of interest is experimental\n\nRandomized Block Design\n\nIf every block gets every treatment\n\nComplete Block Design"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#design-names-2",
+    "href": "lectures/22_exam2_review.html#design-names-2",
+    "title": "Exam 2 Review",
+    "section": "Design Names",
+    "text": "Design Names\nTwo-Way Factorial Design\n\nIf the factors of interest are experimental\n\nRandomized Two-Way Factorial\n\nThere is no blocking in this design"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#design-names-3",
+    "href": "lectures/22_exam2_review.html#design-names-3",
+    "title": "Exam 2 Review",
+    "section": "Design Names",
+    "text": "Design Names\nSplit-Plot Design\n\nThere is blocking in this design.\n\nThere is (at least) one between-blocks factor\nThere is (at least) one within-blocks factor"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#design-principal-blocking",
+    "href": "lectures/22_exam2_review.html#design-principal-blocking",
+    "title": "Exam 2 Review",
+    "section": "Design Principal: Blocking",
+    "text": "Design Principal: Blocking\n\nBlocking is using a factor that is not of research interest\n\nBut there may be differences across blocks on the response variable\n\nA “block” is a level of a blocking factor\nWe use blocking to improve precision/statistical power of our factor of interest"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#three-ways-to-block",
+    "href": "lectures/22_exam2_review.html#three-ways-to-block",
+    "title": "Exam 2 Review",
+    "section": "Three Ways to Block",
+    "text": "Three Ways to Block\n\nSort units into similar groups\nSubdivide larger chunks of material into sets of smaller pieces\nReuse subjects or material in each of several times slots"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#complete-block-design",
+    "href": "lectures/22_exam2_review.html#complete-block-design",
+    "title": "Exam 2 Review",
+    "section": "Complete Block Design",
+    "text": "Complete Block Design\n\nExperimental material are separated into groups (or reused) to create similar units\nThen each unit within a block is then is assigned one level of the factor of interest\n“Complete Block” means that every block x treatment combination is tested"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#more-design-terminology",
+    "href": "lectures/22_exam2_review.html#more-design-terminology",
+    "title": "Exam 2 Review",
+    "section": "More Design Terminology",
+    "text": "More Design Terminology\n\nThe two factors Trees and Treatment are crossed. This means that we collect data on all combinations of Trees and Treatment. A cell is a particular combination.\nMain effect refers to the effect for a single factor. For a block design there are two sets of main effects, for blocks and for treatments (e.g., Trees and Treatment).\nThe two sets of main effects are called additive if each treatment adds or subtracts the same amount to the response variable for all blocks.\nA factor of interest is Treatment, which is directly related to the goal of the study. A nuisance factor is Trees which is included as a factor only because it is a source of variation and its inclusion will reduce the sum of squares for error (residuals)."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#inappropriate-insects",
+    "href": "lectures/22_exam2_review.html#inappropriate-insects",
+    "title": "Exam 2 Review",
+    "section": "Inappropriate Insects",
+    "text": "Inappropriate Insects\n\n\n\n\n\ntreatment\ntree1\ntree2\ntree3\ntree4\ntree5\n\n\n\n\noil\n4\n29\n14\n14\n7\n\n\nspores\n-4\n29\n4\n-2\n11\n\n\nwater\n-9\n18\n10\n9\n-6\n\n\n\n\n\nDraw the factor diagram."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#formal-anova-for-complete-block-design",
+    "href": "lectures/22_exam2_review.html#formal-anova-for-complete-block-design",
+    "title": "Exam 2 Review",
+    "section": "Formal ANOVA for Complete Block Design",
+    "text": "Formal ANOVA for Complete Block Design\n\\[{y}_{ijk}={\\mu}+{\\tau}_{i}+{\\beta}_{j}+{e}_{ijk}\\]\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment\n\\(\\sum_{i=1}^{a}b(\\bar{y}_{i.}-\\bar{y}_{..})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{T}}{{df}_{T}}\\)\n\\(\\frac{{MS}_{T}}{{MS}_{E}}\\)\n\n\nBlocks\n\\(\\sum_{j=1}^{b}a(\\bar{y}_{.j}-\\bar{y}_{..})^{2}\\)\n\\(b-1\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{b}({y}_{ij}-\\bar{y}_{i.}-\\bar{y}_{.j}+\\bar{y}_{..})^{2}\\)\n\\((a-1)(b-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#formal-anova",
+    "href": "lectures/22_exam2_review.html#formal-anova",
+    "title": "Exam 2 Review",
+    "section": "Formal ANOVA",
+    "text": "Formal ANOVA\n\nmod &lt;- lm(bugs_change ~ treatment + tree, data = mealybugs)\n\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: bugs_change\n          Df  Sum Sq Mean Sq F value   Pr(&gt;F)   \ntreatment  2  218.13  109.07  2.9963 0.106846   \ntree       4 1316.40  329.10  9.0412 0.004603 **\nResiduals  8  291.20   36.40                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nThere are no statistically significant differences in the reduction in mealy bugs between the three treatment conditions, \\(F(2, 8) = 3.00\\), \\(p = .107\\). There are significant differences in the reduction in mealy bugs across trees, however, \\(F(4, 8) = 9.04\\), \\(p = .005\\). That is, some trees improved more than other trees."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#how-to-check-assumptions",
+    "href": "lectures/22_exam2_review.html#how-to-check-assumptions",
+    "title": "Exam 2 Review",
+    "section": "How to check assumptions",
+    "text": "How to check assumptions\n\nC. Constant effects – think about whether it is reasonable.\nA. Additive effects – check Anscombe block plots.\nS. Same standard deviations – is the biggest SD less than two times as large as the smallest? check residual versus fitted plot: does the plot thicken?\nI. Independent residuals – think about whether it is reasonable.\nN. Normally distributed residuals – construct a histogram or normal probability plot of residuals.\nZ. Zero mean residuals – construct a histogram or normal probability plot of residuals."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#anscombe-block-plots",
+    "href": "lectures/22_exam2_review.html#anscombe-block-plots",
+    "title": "Exam 2 Review",
+    "section": "Anscombe Block Plots",
+    "text": "Anscombe Block Plots\n\nScatterplots of two levels of the factor of interest.\nUsed for\n\nexploring the data, and\nassessing the additivity (A) condition."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#informal-analysis-structure",
+    "href": "lectures/22_exam2_review.html#informal-analysis-structure",
+    "title": "Exam 2 Review",
+    "section": "Informal Analysis Structure",
+    "text": "Informal Analysis Structure\n\nmealybugs_wide &lt;- mealybugs %&gt;%\n  pivot_wider(names_from = treatment, values_from = bugs_change)\n\nmealybugs_wide\n\n# A tibble: 5 × 4\n  tree  water spores   oil\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 tree1    -9     -4     4\n2 tree2    18     29    29\n3 tree3    10      4    14\n4 tree4     9     -2    14\n5 tree5    -6     11     7"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#scatterplots",
+    "href": "lectures/22_exam2_review.html#scatterplots",
+    "title": "Exam 2 Review",
+    "section": "Scatterplots",
+    "text": "Scatterplots\n\nqplot(x = spores, y = oil, data = mealybugs_wide) +\n  geom_abline(intercept = 13.6-7.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#scatterplots-1",
+    "href": "lectures/22_exam2_review.html#scatterplots-1",
+    "title": "Exam 2 Review",
+    "section": "Scatterplots",
+    "text": "Scatterplots\n\nqplot(x = spores, y = water, data = mealybugs_wide) +\n  geom_abline(intercept = 4.4 - 13.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#scatterplots-2",
+    "href": "lectures/22_exam2_review.html#scatterplots-2",
+    "title": "Exam 2 Review",
+    "section": "Scatterplots",
+    "text": "Scatterplots\n\nqplot(x = oil, y = water, data = mealybugs_wide) +\n  geom_abline(intercept = 4.4 - 13.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#two-way-factorial-design-factor-diagram",
+    "href": "lectures/22_exam2_review.html#two-way-factorial-design-factor-diagram",
+    "title": "Exam 2 Review",
+    "section": "Two-Way Factorial Design Factor Diagram",
+    "text": "Two-Way Factorial Design Factor Diagram\n\n\nDraw the factor diagram"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#research-questions-in-a-two-way-factorial-design",
+    "href": "lectures/22_exam2_review.html#research-questions-in-a-two-way-factorial-design",
+    "title": "Exam 2 Review",
+    "section": "Research Questions in a Two-Way Factorial Design",
+    "text": "Research Questions in a Two-Way Factorial Design\n\nDoes treatment A have an effect on the response variable?\n\nIs there a main effect of factor A?\n\nDoes treatment B have an effect on the response variable?\n\nIs there a main effect of factor B?\n\nDoes being in a specific combination of treatments have an effect over and above the additive effects of treatment A and B alone?\n\nIs there an interaction between factor A and factor B?"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#anova-source-table-for-two-way-factorial",
+    "href": "lectures/22_exam2_review.html#anova-source-table-for-two-way-factorial",
+    "title": "Exam 2 Review",
+    "section": "ANOVA Source Table for Two-Way Factorial",
+    "text": "ANOVA Source Table for Two-Way Factorial\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j}+{\\alpha\\beta}_{ij}+{e}_{ijk}\\]\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment A\n\\(\\sum_{i=1}^{a}bn(\\bar{y}_{i..}-\\bar{y}_{…})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{A}}{{df}_{A}}\\)\n\\(\\frac{{MS}_{A}}{{MS}_{E}}\\)\n\n\nTreatment B\n\\(\\sum_{j=1}^{b}an(\\bar{y}_{.j.}-\\bar{y}_{…})^{2}\\)\n\\(b-1\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nInteraction AB\n\\(n\\sum_{i=1}^{a}\\sum_{j=1}^{b}(\\bar{y}_{ij.}-\\bar{y}_{i..}-\\bar{y}_{.j.}+\\bar{y}_{…})^{2}\\)\n\\((a-1)(b-1)\\)\n\\(\\frac{{SS}_{AB}}{{df}_{AB}}\\)\n\\(\\frac{{MS}_{AB}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{b}\\sum_{k=1}^{n}({y}_{ijk}-\\bar{y}_{ij.})^{2}\\)\n\\(ab(n-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#interaction-graphs",
+    "href": "lectures/22_exam2_review.html#interaction-graphs",
+    "title": "Exam 2 Review",
+    "section": "Interaction Graphs",
+    "text": "Interaction Graphs\nFor each of the following interaction graphs, answer the following questions with YES or NO.\n\nIs there a main effect of B12?\nIs there a main effect of antibiotics?\nIs there an interaction between B12 and antibiotics?"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#practice-1",
+    "href": "lectures/22_exam2_review.html#practice-1",
+    "title": "Exam 2 Review",
+    "section": "Practice 1",
+    "text": "Practice 1"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#confidence-intervals-and-effect-sizes",
+    "href": "lectures/22_exam2_review.html#confidence-intervals-and-effect-sizes",
+    "title": "Exam 2 Review",
+    "section": "Confidence intervals and effect sizes",
+    "text": "Confidence intervals and effect sizes\n\nIf the interaction is significant\n\nCalculate CIs and effect sizes for sets of conditional averages (also called “simple effects”)\nFor example, for the 0mg antibiotics condition, what’s the effect size for B12\n\nIf the interaction is NOT significant\n\nCalculate CIs and effect sizes for sets of marginal averages (also called “main effects”)\nFor example, what is the effect size for B12 overall?"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#conditional-averages-and-marginal-averages",
+    "href": "lectures/22_exam2_review.html#conditional-averages-and-marginal-averages",
+    "title": "Exam 2 Review",
+    "section": "Conditional Averages and Marginal Averages",
+    "text": "Conditional Averages and Marginal Averages\n\n\nThe numbers in blue are Marginal Averages\nThe numbers in green are Conditional Averages"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#confidence-intervals-and-effect-sizes-1",
+    "href": "lectures/22_exam2_review.html#confidence-intervals-and-effect-sizes-1",
+    "title": "Exam 2 Review",
+    "section": "Confidence Intervals and Effect Sizes",
+    "text": "Confidence Intervals and Effect Sizes\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#example-walking-babies",
+    "href": "lectures/22_exam2_review.html#example-walking-babies",
+    "title": "Exam 2 Review",
+    "section": "Example: Walking Babies",
+    "text": "Example: Walking Babies\n\ndata(\"WalkingBabies\")\n\n\nds &lt;- WalkingBabies %&gt;%\n  group_by(Group) %&gt;%\n  summarize(n = n(),\n            mean = mean(Age),\n            sd = sd(Age))\n\nds\n\n# A tibble: 4 × 4\n  Group                 n  mean    sd\n  &lt;fct&gt;             &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 exercise control      6  11.4 1.90 \n2 final report          6  12.4 0.871\n3 special exercises     6  10.1 1.45 \n4 weekly report         6  11.6 1.56"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#example-walking-babies-1",
+    "href": "lectures/22_exam2_review.html#example-walking-babies-1",
+    "title": "Exam 2 Review",
+    "section": "Example: Walking Babies",
+    "text": "Example: Walking Babies\n\nds %&gt;%\n  summarize(max(sd)/min(sd))\n\n# A tibble: 1 × 1\n  `max(sd)/min(sd)`\n              &lt;dbl&gt;\n1              2.18\n\n\nSo we fail to meet the condition of equal variances? (The S condition)"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#levenes-test",
+    "href": "lectures/22_exam2_review.html#levenes-test",
+    "title": "Exam 2 Review",
+    "section": "Levene’s Test",
+    "text": "Levene’s Test\nThe biggest SD not more than 2 times as large as the smallest SD is only a rule of thumb.\nLevene’s test is an ANOVA to test the null hypothesis:\n\\[H_0 = \\sigma^2_1=\\sigma^2_2=\\sigma^2_3=\\sigma^2_4\\] \\[H_A= not\\:all\\:variances\\:are\\:equal\\]"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#levenes-test-in-r",
+    "href": "lectures/22_exam2_review.html#levenes-test-in-r",
+    "title": "Exam 2 Review",
+    "section": "Levene’s Test in R",
+    "text": "Levene’s Test in R\n\nlibrary(car)\n\nleveneTest(Age ~ Group, data = WalkingBabies)\n\nLevene's Test for Homogeneity of Variance (center = median)\n      Df F value Pr(&gt;F)\ngroup  3  0.3082 0.8191\n      20               \n\n\nUsing Levene’s Test for homogeneity of variance, we fail to reject the null hypothesis, that is we fail to find evidence that the S condition is not met, \\(F(3, 20)=0.31\\), \\(p = .819\\). We can proceed as if this condition is met."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#levenes-test-for-factorial-data",
+    "href": "lectures/22_exam2_review.html#levenes-test-for-factorial-data",
+    "title": "Exam 2 Review",
+    "section": "Levene’s Test for Factorial Data",
+    "text": "Levene’s Test for Factorial Data\nLet’s try it for the PigFeed data.\n\ndata(\"PigFeed\")\nleveneTest(WgtGain ~ Antibiotic*B12, data = PigFeed)\n\nLevene's Test for Homogeneity of Variance (center = median)\n      Df F value Pr(&gt;F)\ngroup  3  1.8089 0.2235\n       8               \n\n\nUsing Levene’s Test for homogeneity of variance, we fail to reject the null hypothesis, that is we fail to find evidence that the S condition is not met, \\(F(3, 8)=1.81\\), \\(p = .224\\). We can proceed as if this condition is met."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#multiple-tests",
+    "href": "lectures/22_exam2_review.html#multiple-tests",
+    "title": "Exam 2 Review",
+    "section": "Multiple Tests",
+    "text": "Multiple Tests\n\ndata(\"Leafhoppers\")\nmod &lt;- lm(Days ~ Diet, data = Leafhoppers)\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: Days\n          Df Sum Sq Mean Sq F value   Pr(&gt;F)   \nDiet       3   3.92  1.3067  17.422 0.009248 **\nResiduals  4   0.30  0.0750                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#fishers-lsd",
+    "href": "lectures/22_exam2_review.html#fishers-lsd",
+    "title": "Exam 2 Review",
+    "section": "Fisher’s LSD",
+    "text": "Fisher’s LSD\n\nlibrary(agricolae)\nLSD.test(mod, \"Diet\", p.adj = \"none\")$groups\n\n         Days groups\nSucrose   3.8      a\nGlucose   2.8      b\nFructose  2.2     bc\nControl   2.0      c"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#bonferroni-correction",
+    "href": "lectures/22_exam2_review.html#bonferroni-correction",
+    "title": "Exam 2 Review",
+    "section": "Bonferroni Correction",
+    "text": "Bonferroni Correction\n\nlibrary(agricolae)\nLSD.test(mod, \"Diet\", p.adj = \"bonferroni\")$groups\n\n         Days groups\nSucrose   3.8      a\nGlucose   2.8     ab\nFructose  2.2      b\nControl   2.0      b"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#tukeys-hsd",
+    "href": "lectures/22_exam2_review.html#tukeys-hsd",
+    "title": "Exam 2 Review",
+    "section": "Tukey’s HSD",
+    "text": "Tukey’s HSD\n\nmod &lt;- aov(Days ~ Diet, data = Leafhoppers)\nTukeyHSD(mod, \"Diet\")\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = Days ~ Diet, data = Leafhoppers)\n\n$Diet\n                 diff        lwr     upr     p adj\nFructose-Control  0.2 -0.9148496 1.31485 0.8805808\nGlucose-Control   0.8 -0.3148496 1.91485 0.1337642\nSucrose-Control   1.8  0.6851504 2.91485 0.0095276\nGlucose-Fructose  0.6 -0.5148496 1.71485 0.2677272\nSucrose-Fructose  1.6  0.4851504 2.71485 0.0145912\nSucrose-Glucose   1.0 -0.1148496 2.11485 0.0703156"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#split-plot-design",
+    "href": "lectures/22_exam2_review.html#split-plot-design",
+    "title": "Exam 2 Review",
+    "section": "Split-Plot Design",
+    "text": "Split-Plot Design\nIf you suspect a design in a split-plot design, you should be able to answer the following questions:\n\nWhat are the whole plots, that is, what is the nuisance factor?\nWhat is the between-blocks factor? Is it observational or experimental?\nWhat is the within-blocks factor? Is it observational or experimental?"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#formal-anova-for-the-split-plot-design",
+    "href": "lectures/22_exam2_review.html#formal-anova-for-the-split-plot-design",
+    "title": "Exam 2 Review",
+    "section": "Formal ANOVA for the Split-Plot Design",
+    "text": "Formal ANOVA for the Split-Plot Design\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j(i)}+{\\gamma}_{k}+({\\alpha\\gamma})_{ik}+{e}_{ijk}\\]\n\n\\({\\mu}\\) is the benchmark\n\\({\\alpha}_{i}\\) effect of level i of the between-blocks factor, \\(i\\) from \\(1\\) to \\(a\\)\n\\({\\beta}_{j(i)}\\) effect of block \\(j\\) (for level \\(i\\) of the between block factor), \\(j\\) from \\(1\\) to \\(n\\)\n\\({\\gamma}_{k}\\) effect of level \\(k\\) of the within-block factor, \\(k\\) from \\(1\\) to \\(t\\)\n\\(({\\alpha\\gamma})_{ik}\\) interaction effect for level \\(i\\) of the between-blocks factor with level \\(k\\) of the within-blocks factor"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#anova-source-table-for-the-split-plot-design",
+    "href": "lectures/22_exam2_review.html#anova-source-table-for-the-split-plot-design",
+    "title": "Exam 2 Review",
+    "section": "ANOVA Source Table for the Split-Plot Design",
+    "text": "ANOVA Source Table for the Split-Plot Design\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nBetween\n\\(t\\frac{N}{a}\\sum_{i=1}^{a}(\\bar{y}_{i..}-\\bar{y}_{...})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{A}}{{df}_{A}}\\)\n\\(\\frac{{MS}_{A}}{{MS}_{B}}\\)\n\n\nBlocks\n\\(t\\sum_{i=1}^{a}\\sum_{j=1}^{n}(\\bar{y}_{ij.}-\\bar{y}_{i..})^{2}\\)\n\\(N-a\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nWithin\n\\(Na\\sum_{k=1}^{K}(\\bar{y}_{..k}-\\bar{y}_{...})^{2}\\)\n\\(t-1\\)\n\\(\\frac{{SS}_{T}}{{df}_{T}}\\)\n\\(\\frac{{MS}_{T}}{{MS}_{E}}\\)\n\n\nInteraction\n\\(\\sum_{i=1}^{a}\\sum_{k=1}^{t}\\frac{N}{a}(\\bar{y}_{i.k}-\\bar{y}_{i..}-\\bar{y}_{..k}+\\bar{y}_{...})^{2}\\)\n\\((a-1)(t-1)\\)\n\\(\\frac{{SS}_{AT}}{{df}_{AT}}\\)\n\\(\\frac{{MS}_{AT}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{N}\\sum_{k=1}^{t}({y}_{ijk}-\\bar{y}_{i.k}-\\bar{y}_{.j.}-\\bar{y}_{..k}+\\bar{y}_{i..})^{2}\\)\n\\((N-a)(t-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#piglets",
+    "href": "lectures/22_exam2_review.html#piglets",
+    "title": "Exam 2 Review",
+    "section": "Piglets",
+    "text": "Piglets\nDesign: Two-Way Factorial Design\nIt seems natural to think that adding the right vitamins to a pig’s diet might produce fatter pigs faster. You’ve decided to study the effects of B12 in two doses (0mg and 5mg). But pigs have bacteria living in their intestines that might prevent the uptake of vitamins, so you decided to give antibiotics to the pigs in one of two doses (0mg or 40 mg). You design your experiment in such a way that 3 piglets are randomly assigned to each of the 4 treatment conditions. You measure their weight every day, and take each pig’s average daily weight gain as your final number recorded."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#albino-laboratory-rats",
+    "href": "lectures/22_exam2_review.html#albino-laboratory-rats",
+    "title": "Exam 2 Review",
+    "section": "Albino laboratory rats",
+    "text": "Albino laboratory rats\nDesign: Complete Block Design\nMale albino laboratory rats are used routinely in many kinds of experiments. This experiment was designed to determine the requirements for protein in their food. Specifically, the experiment is interested in testing five levels of protein (8.68, 12, 15, 18, and 21% of diet). Baby rats were separated into ten groups of 5 to form groups of approximately the same weight. The 5 rats in each group were randomly assigned to each of the 5 conditions. Body weight and food consumption were measured twice weekly, and the average daily weight gain over 21 days was recorded."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#blood-concentration",
+    "href": "lectures/22_exam2_review.html#blood-concentration",
+    "title": "Exam 2 Review",
+    "section": "Blood concentration",
+    "text": "Blood concentration\nDesign: Complete Block Design\nThis experiment is interested in the blood concentration of a drug after it has been administered. The concentration will start at zero, then go up, and back down as it is metabolized. This curve may differ depending on the form of the drug (a solution, a tablet, or a capsule). We will use three subjects, and each subject will be given the drug three times, once for each method. The area under the time-concentration curve is recorded for each subject after each method of drug delivery."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#paper-helicopters",
+    "href": "lectures/22_exam2_review.html#paper-helicopters",
+    "title": "Exam 2 Review",
+    "section": "Paper Helicopters",
+    "text": "Paper Helicopters\nDesign: Two-Way Factorial Design\nPaper helicopters can be cut from one half of an 8.5 by 11 sheet of paper. We can conduct an experiment by dropping helicopters from a fixed height and clocking the time it takes to drop. We can vary wing length: 4.25 in, 4.0 in, 3.75 in, and 3.5 in, as well as body width: 3.25 in, 3.75 in, 4.0 in, and 4.25 in. We’ll make 32 planes and randomly assign them to the 16 combinations."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#parks-and-recreation",
+    "href": "lectures/22_exam2_review.html#parks-and-recreation",
+    "title": "Exam 2 Review",
+    "section": "Parks and Recreation",
+    "text": "Parks and Recreation\nDesign: One-Way Design\nDeputy director of the Pawnee Parks and Rec department, Leslie Knope, needs to know how resistant different vegetative types are to trampling so that the number of visitors can be controlled in sensitive areas. Twenty lanes of a park are established, each .5 m wide and 1.5 m long. These twenty lanes are randomly assigned to five treatments: 0, 25, 75, 200, or 500 walking passes. Each pass consists of a 70-kg individual wearing boots, walking in a natural gait. One year after trampling, the average height of the vegetation along the lanes are measured."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#crabgrass",
+    "href": "lectures/22_exam2_review.html#crabgrass",
+    "title": "Exam 2 Review",
+    "section": "Crabgrass",
+    "text": "Crabgrass\nDesign: Three-Way Factorial Design\nThe purpose of this experiment was to study the way one species of crabgrass competed with itself and with another species for nitrogen (N), phosphorus (P), and potassium (K). Bunches of crabgrass were planted in vermiculite, in 16 Styrofoam cups; after the seeds head sprouted, the plants were thinned to 20 plants per cup. Each of the 16 cups were randomly assigned to get one of 8 nutrient combinations added to its vermiculite. For example, yes-nitrogen/no-phosphorus/yes-potassium. The response is mean dry weight per plant, in milligrams."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#osomoregulation",
+    "href": "lectures/22_exam2_review.html#osomoregulation",
+    "title": "Exam 2 Review",
+    "section": "Osomoregulation",
+    "text": "Osomoregulation\nDesign: Split-plot Design\n\nBlocking factor: Worms\nBetween-blocks factors: Water concentration; Species\nWithin-blocks factor: Time\n\nWorms that live at the mouth of a river must deal with varying concentrations of salt. Osomoregulating worms are able to maintain relatively constant concentration of salt in the body. An experiment wanted to test the effects of mixtures of salt water on two species of worms: Nereis virens (N) and Goldfingia gouldii (G). Eighteen worms of each species were weighted, then randomly assigned in equal numbers to one of three conditions. Six worms of each kind were placed in 100% sea water, 67% sea water, or 33% sea water. The worms were then weighted after 30, 60, and 90 minutes, then placed in 100% sea water and weighted one last time 30 minutes later. The response was body weight as percentage of initial body weight."
+  },
+  {
+    "objectID": "lectures/22_exam2_review.html#creepy-animals",
+    "href": "lectures/22_exam2_review.html#creepy-animals",
+    "title": "Exam 2 Review",
+    "section": "Creepy Animals",
+    "text": "Creepy Animals\nDesign: Split-plot Design\n\nBlocking factor: Students\nBetween-blocks factors: Animal\nWithin-blocks factor: Posture (scary/submissive)\n\nThe effects of exposure to images of different domestic animal species in either aggressive or submissive postures on mood was tested with a split-plot/repeated measures design. Using a computer to randomize, participants were randomly assigned to either view images of dogs or images of cats. All participants saw both an aggressive animal and a submissive animal, and their moods were assessed via self-report after each image. The order of presentation (aggressive then submission, or submissive then aggressive) was randomized to control for order effects."
   }
 ]
