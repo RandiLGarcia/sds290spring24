@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Prof Randi Garcia, SDS 290">
   <meta name="dcterms.date" content="2024-04-30">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -222,7 +222,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -413,14 +414,14 @@ Prof Randi Garcia, SDS 290
 <li>Due Friday night 11:59p (ON Gradescope)</li>
 <li>I’ll be available for the first half of class time on Thurs</li>
 </ul></li>
-<li>Normal office hours this week
+<li>Office hours this week
 <ul>
 <li>Thurs: 2:45p - 4:00p</li>
-<li>Friday: 10:50a - 12:05p</li>
+<li>Friday: cancelled</li>
 </ul></li>
 </ul>
 </section>
-<section id="agenda" class="slide level2">
+<section id="agenda" class="slide level2 scrollable">
 <h2>Agenda</h2>
 <ol type="1">
 <li>Course Feedback Questionnaire time</li>
@@ -517,7 +518,7 @@ Prof Randi Garcia, SDS 290
 <li>We use blocking to improve precision/statistical power of our factor of interest</li>
 </ul>
 </section>
-<section id="three-ways-to-block" class="slide level2">
+<section id="three-ways-to-block" class="slide level2 scrollable">
 <h2>Three Ways to Block</h2>
 <ol type="1">
 <li>Sort units into similar groups</li>
@@ -593,11 +594,11 @@ Prof Randi Garcia, SDS 290
 <p><span class="math display">\[{y}_{ijk}={\mu}+{\tau}_{i}+{\beta}_{j}+{e}_{ijk}\]</span></p>
 <table>
 <colgroup>
-<col style="width: 15%">
-<col style="width: 38%">
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 15%">
+<col style="width: 17%">
+<col style="width: 29%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -636,9 +637,9 @@ Prof Randi Garcia, SDS 290
 <section id="formal-anova" class="slide level2">
 <h2>Formal ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -678,10 +679,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="informal-analysis-structure" class="slide level2">
 <h2>Informal Analysis Structure</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>mealybugs_wide <span class="ot">&lt;-</span> mealybugs <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> treatment, <span class="at">values_from =</span> bugs_change)</span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a>mealybugs_wide</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>mealybugs_wide <span class="ot">&lt;-</span> mealybugs <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> treatment, <span class="at">values_from =</span> bugs_change)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a>mealybugs_wide</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 4
   tree  water spores   oil
@@ -697,30 +698,30 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="scatterplots" class="slide level2">
 <h2>Scatterplots</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> spores, <span class="at">y =</span> oil, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">13.6-7.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> spores, <span class="at">y =</span> oil, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">13.6-7.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb5-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="22_exam2_review_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<img data-src="22_exam2_review_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
 <section id="scatterplots-1" class="slide level2">
 <h2>Scatterplots</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> spores, <span class="at">y =</span> water, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">4.4</span> <span class="sc">-</span> <span class="fl">13.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> spores, <span class="at">y =</span> water, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">4.4</span> <span class="sc">-</span> <span class="fl">13.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb6-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="22_exam2_review_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<img data-src="22_exam2_review_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
 <section id="scatterplots-2" class="slide level2">
 <h2>Scatterplots</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> oil, <span class="at">y =</span> water, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">4.4</span> <span class="sc">-</span> <span class="fl">13.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> oil, <span class="at">y =</span> water, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">4.4</span> <span class="sc">-</span> <span class="fl">13.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb7-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="22_exam2_review_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<img data-src="22_exam2_review_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
 <section id="two-way-factorial-design-factor-diagram" class="slide level2">
 <h2>Two-Way Factorial Design Factor Diagram</h2>
 
@@ -728,7 +729,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <li>Draw the factor diagram</li>
 </ul>
 </section>
-<section id="research-questions-in-a-two-way-factorial-design" class="slide level2">
+<section id="research-questions-in-a-two-way-factorial-design" class="slide level2 scrollable">
 <h2>Research Questions in a Two-Way Factorial Design</h2>
 <ol type="1">
 <li>Does treatment A have an effect on the response variable?
@@ -750,11 +751,11 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p><span class="math display">\[{y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}\]</span></p>
 <table>
 <colgroup>
-<col style="width: 15%">
-<col style="width: 38%">
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 15%">
+<col style="width: 17%">
+<col style="width: 29%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -797,7 +798,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </tbody>
 </table>
 </section>
-<section id="interaction-graphs" class="slide level2">
+<section id="interaction-graphs" class="slide level2 scrollable">
 <h2>Interaction Graphs</h2>
 <p>For each of the following interaction graphs, answer the following questions with <strong>YES</strong> or <strong>NO</strong>.</p>
 <ol type="1">
@@ -809,7 +810,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="practice-1" class="slide level2">
 <h2>Practice 1</h2>
 
-<img data-src="22_exam2_review_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<img data-src="22_exam2_review_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
 <section id="confidence-intervals-and-effect-sizes" class="slide level2">
 <h2>Confidence intervals and effect sizes</h2>
 <ul>
@@ -846,16 +847,16 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="example-walking-babies" class="slide level2">
 <h2>Example: Walking Babies</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">data</span>(<span class="st">"WalkingBabies"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">data</span>(<span class="st">"WalkingBabies"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>ds <span class="ot">&lt;-</span> WalkingBabies <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">group_by</span>(Group) <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb9-4"><a href="#cb9-4"></a>            <span class="at">mean =</span> <span class="fu">mean</span>(Age),</span>
-<span id="cb9-5"><a href="#cb9-5"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(Age))</span>
-<span id="cb9-6"><a href="#cb9-6"></a></span>
-<span id="cb9-7"><a href="#cb9-7"></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>ds <span class="ot">&lt;-</span> WalkingBabies <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">group_by</span>(Group) <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb9-4"><a></a>            <span class="at">mean =</span> <span class="fu">mean</span>(Age),</span>
+<span id="cb9-5"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(Age))</span>
+<span id="cb9-6"><a></a></span>
+<span id="cb9-7"><a></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 4
   Group                 n  mean    sd
@@ -870,8 +871,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="example-walking-babies-1" class="slide level2">
 <h2>Example: Walking Babies</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>ds <span class="sc">%&gt;%</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">summarize</span>(<span class="fu">max</span>(sd)<span class="sc">/</span><span class="fu">min</span>(sd))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>ds <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">summarize</span>(<span class="fu">max</span>(sd)<span class="sc">/</span><span class="fu">min</span>(sd))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   `max(sd)/min(sd)`
@@ -890,9 +891,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="levenes-test-in-r" class="slide level2">
 <h2>Levene’s Test in R</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">library</span>(car)</span>
-<span id="cb13-2"><a href="#cb13-2"></a></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="fu">leveneTest</span>(Age <span class="sc">~</span> Group, <span class="at">data =</span> WalkingBabies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">library</span>(car)</span>
+<span id="cb13-2"><a></a></span>
+<span id="cb13-3"><a></a><span class="fu">leveneTest</span>(Age <span class="sc">~</span> Group, <span class="at">data =</span> WalkingBabies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(&gt;F)
@@ -906,8 +907,8 @@ group  3  0.3082 0.8191
 <h2>Levene’s Test for Factorial Data</h2>
 <p>Let’s try it for the <code>PigFeed</code> data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">data</span>(<span class="st">"PigFeed"</span>)</span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">leveneTest</span>(WgtGain <span class="sc">~</span> Antibiotic<span class="sc">*</span>B12, <span class="at">data =</span> PigFeed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">data</span>(<span class="st">"PigFeed"</span>)</span>
+<span id="cb15-2"><a></a><span class="fu">leveneTest</span>(WgtGain <span class="sc">~</span> Antibiotic<span class="sc">*</span>B12, <span class="at">data =</span> PigFeed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Levene's Test for Homogeneity of Variance (center = median)
       Df F value Pr(&gt;F)
@@ -920,9 +921,9 @@ group  3  1.8089 0.2235
 <section id="multiple-tests" class="slide level2">
 <h2>Multiple Tests</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">data</span>(<span class="st">"Leafhoppers"</span>)</span>
-<span id="cb17-2"><a href="#cb17-2"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(Days <span class="sc">~</span> Diet, <span class="at">data =</span> Leafhoppers)</span>
-<span id="cb17-3"><a href="#cb17-3"></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">data</span>(<span class="st">"Leafhoppers"</span>)</span>
+<span id="cb17-2"><a></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(Days <span class="sc">~</span> Diet, <span class="at">data =</span> Leafhoppers)</span>
+<span id="cb17-3"><a></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -938,8 +939,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="fishers-lsd" class="slide level2">
 <h2>Fisher’s LSD</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">library</span>(agricolae)</span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="fu">LSD.test</span>(mod, <span class="st">"Diet"</span>, <span class="at">p.adj =</span> <span class="st">"none"</span>)<span class="sc">$</span>groups</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">library</span>(agricolae)</span>
+<span id="cb19-2"><a></a><span class="fu">LSD.test</span>(mod, <span class="st">"Diet"</span>, <span class="at">p.adj =</span> <span class="st">"none"</span>)<span class="sc">$</span>groups</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         Days groups
 Sucrose   3.8      a
@@ -952,8 +953,8 @@ Control   2.0      c</code></pre>
 <section id="bonferroni-correction" class="slide level2">
 <h2>Bonferroni Correction</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">library</span>(agricolae)</span>
-<span id="cb21-2"><a href="#cb21-2"></a><span class="fu">LSD.test</span>(mod, <span class="st">"Diet"</span>, <span class="at">p.adj =</span> <span class="st">"bonferroni"</span>)<span class="sc">$</span>groups</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">library</span>(agricolae)</span>
+<span id="cb21-2"><a></a><span class="fu">LSD.test</span>(mod, <span class="st">"Diet"</span>, <span class="at">p.adj =</span> <span class="st">"bonferroni"</span>)<span class="sc">$</span>groups</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         Days groups
 Sucrose   3.8      a
@@ -966,8 +967,8 @@ Control   2.0      b</code></pre>
 <section id="tukeys-hsd" class="slide level2">
 <h2>Tukey’s HSD</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">aov</span>(Days <span class="sc">~</span> Diet, <span class="at">data =</span> Leafhoppers)</span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="fu">TukeyHSD</span>(mod, <span class="st">"Diet"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>mod <span class="ot">&lt;-</span> <span class="fu">aov</span>(Days <span class="sc">~</span> Diet, <span class="at">data =</span> Leafhoppers)</span>
+<span id="cb23-2"><a></a><span class="fu">TukeyHSD</span>(mod, <span class="st">"Diet"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Tukey multiple comparisons of means
     95% family-wise confidence level
@@ -985,7 +986,7 @@ Sucrose-Glucose   1.0 -0.1148496 2.11485 0.0703156</code></pre>
 </div>
 </div>
 </section>
-<section id="split-plot-design" class="slide level2">
+<section id="split-plot-design" class="slide level2 scrollable">
 <h2>Split-Plot Design</h2>
 <p>If you suspect a design in a split-plot design, you should be able to answer the following questions:</p>
 <ol type="1">
@@ -1007,13 +1008,13 @@ Sucrose-Glucose   1.0 -0.1148496 2.11485 0.0703156</code></pre>
 </section>
 <section id="anova-source-table-for-the-split-plot-design" class="slide level2">
 <h2>ANOVA Source Table for the Split-Plot Design</h2>
-<table style="width:100%;">
+<table>
 <colgroup>
-<col style="width: 13%">
-<col style="width: 44%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 13%">
+<col style="width: 16%">
+<col style="width: 34%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1113,8 +1114,10 @@ Sucrose-Glucose   1.0 -0.1148496 2.11485 0.0703156</code></pre>
 </ul>
 <p>The effects of exposure to images of different domestic animal species in either aggressive or submissive postures on mood was tested with a split-plot/repeated measures design. Using a computer to randomize, participants were randomly assigned to either view images of dogs or images of cats. All participants saw both an aggressive animal and a submissive animal, and their moods were assessed via self-report after each image. The order of presentation (aggressive then submission, or submissive then aggressive) was randomized to control for order effects.</p>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -1143,7 +1146,6 @@ Sucrose-Glucose   1.0 -0.1148496 2.11485 0.0703156</code></pre>
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1442,10 +1444,9 @@ Sucrose-Glucose   1.0 -0.1148496 2.11485 0.0703156</code></pre>
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1455,8 +1456,17 @@ Sucrose-Glucose   1.0 -0.1148496 2.11485 0.0703156</code></pre>
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

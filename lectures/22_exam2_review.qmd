@@ -20,9 +20,9 @@ library(Stat2Data)
 -   Exam 2 released on Thursday (ON MOODLE)
     -   Due Friday night 11:59p (ON Gradescope)
     -   I'll be available for the first half of class time on Thurs
--   Normal office hours this week
+-   Office hours this week
     -   Thurs: 2:45p - 4:00p
-    -   Friday: 10:50a - 12:05p
+    -   Friday: cancelled
 
 ## Agenda
 
@@ -135,7 +135,7 @@ Draw the factor diagram.
 $${y}_{ijk}={\mu}+{\tau}_{i}+{\beta}_{j}+{e}_{ijk}$$
 
 |    Source |                                         SS                                          |      df      |             MS              |              F              |
-|----------:|:--------------------------:|:---------:|:---------:|:---------:|
+|------------:|:--------------------:|:-----------:|:-----------:|:-----------:|
 | Treatment |                  $\sum_{i=1}^{a}b(\bar{y}_{i.}-\bar{y}_{..})^{2}$                   |    $a-1$     | $\frac{{SS}_{T}}{{df}_{T}}$ | $\frac{{MS}_{T}}{{MS}_{E}}$ |
 |    Blocks |                  $\sum_{j=1}^{b}a(\bar{y}_{.j}-\bar{y}_{..})^{2}$                   |    $b-1$     | $\frac{{SS}_{B}}{{df}_{B}}$ | $\frac{{MS}_{B}}{{MS}_{E}}$ |
 |     Error | $\sum_{i=1}^{a}\sum_{j=1}^{b}({y}_{ij}-\bar{y}_{i.}-\bar{y}_{.j}+\bar{y}_{..})^{2}$ | $(a-1)(b-1)$ | $\frac{{SS}_{E}}{{df}_{E}}$ |                             |
@@ -224,7 +224,7 @@ qplot(x = oil, y = water, data = mealybugs_wide) +
 $${y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}$$
 
 |         Source |                                             SS                                             |      df      |              MS               |              F               |
-|----------:|:--------------------------:|:---------:|:---------:|:---------:|
+|------------:|:--------------------:|:-----------:|:-----------:|:-----------:|
 |    Treatment A |                     $\sum_{i=1}^{a}bn(\bar{y}_{i..}-\bar{y}_{…})^{2}$                      |    $a-1$     |  $\frac{{SS}_{A}}{{df}_{A}}$  | $\frac{{MS}_{A}}{{MS}_{E}}$  |
 |    Treatment B |                     $\sum_{j=1}^{b}an(\bar{y}_{.j.}-\bar{y}_{…})^{2}$                      |    $b-1$     |  $\frac{{SS}_{B}}{{df}_{B}}$  | $\frac{{MS}_{B}}{{MS}_{E}}$  |
 | Interaction AB | $n\sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{y}_{ij.}-\bar{y}_{i..}-\bar{y}_{.j.}+\bar{y}_{…})^{2}$ | $(a-1)(b-1)$ | $\frac{{SS}_{AB}}{{df}_{AB}}$ | $\frac{{MS}_{AB}}{{MS}_{E}}$ |
@@ -393,7 +393,7 @@ $${y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j(i)}+{\gamma}_{k}+({\alpha\gamma})_{ik}
 ## ANOVA Source Table for the Split-Plot Design
 
 |      Source |                                                         SS                                                          |      df      |              MS               |              F               |
-|---------:|:------------------------------:|:--------:|:--------:|:--------:|
+|-----------:|:-----------------------:|:----------:|:----------:|:----------:|
 |     Between |                            $t\frac{N}{a}\sum_{i=1}^{a}(\bar{y}_{i..}-\bar{y}_{...})^{2}$                            |    $a-1$     |  $\frac{{SS}_{A}}{{df}_{A}}$  | $\frac{{MS}_{A}}{{MS}_{B}}$  |
 |      Blocks |                          $t\sum_{i=1}^{a}\sum_{j=1}^{n}(\bar{y}_{ij.}-\bar{y}_{i..})^{2}$                           |    $N-a$     |  $\frac{{SS}_{B}}{{df}_{B}}$  | $\frac{{MS}_{B}}{{MS}_{E}}$  |
 |      Within |                                 $Na\sum_{k=1}^{K}(\bar{y}_{..k}-\bar{y}_{...})^{2}$                                 |    $t-1$     |  $\frac{{SS}_{T}}{{df}_{T}}$  | $\frac{{MS}_{T}}{{MS}_{E}}$  |

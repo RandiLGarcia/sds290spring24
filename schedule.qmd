@@ -302,7 +302,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   [**HW #8 due today at 9:20a**](homework.html)
 -   **Office hours**: 10:50-12:05p
-
 :::
 
 ## Week 15 - Exam 2
@@ -318,7 +317,7 @@ Please read the specified sections *before* class that day.
 
 #### Fri, May 3
 
--   **Office hours**: 10:50-12:05p
+-   **Office hours**: Cancelled
 -   Homework due today:
     -   **Exam 2 due tonight at 11:59p** (upload to Gradescope)
 
